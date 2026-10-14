@@ -1,0 +1,1235 @@
+{
+  "description": "Authored English hotel-review contract cases, labeled before the robustness implementation. Synthetic, not a real-world accuracy dataset. Reserved cases are an additional check, not an independent blind evaluation. The adjective-coordination contract was updated for the 14 October 2026 grammar expansion.",
+  "cases": [
+    {
+      "split": "development",
+      "family": "baseline",
+      "text": "The room was not clean, but the staff were very helpful.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Cleanliness",
+          "Negative"
+        ],
+        [
+          "Staff",
+          "Helpfulness",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "baseline",
+      "text": "The food was delicious.",
+      "status": "complete",
+      "expected": [
+        [
+          "Food",
+          "Taste",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "baseline",
+      "text": "The service was average.",
+      "status": "complete",
+      "expected": [
+        [
+          "Service",
+          "Quality",
+          "Neutral"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "baseline",
+      "text": "The room was clean and quiet.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Cleanliness",
+          "Positive"
+        ],
+        [
+          "Room",
+          "Noise",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "baseline",
+      "text": "The staff were not bad.",
+      "status": "complete",
+      "expected": [
+        [
+          "Staff",
+          "Quality",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "baseline",
+      "text": "The room was odd but the staff were helpful.",
+      "status": "partial",
+      "expected": [
+        [
+          "Staff",
+          "Helpfulness",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "baseline",
+      "text": "The weather was odd.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "baseline",
+      "text": "The room was clean. Helpful.",
+      "status": "partial",
+      "expected": [
+        [
+          "Room",
+          "Cleanliness",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "functional",
+      "text": "The air conditioning was not working.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "functional",
+      "text": "The air conditioning was working.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "functional",
+      "text": "The AC is functioning.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "functional",
+      "text": "The AC is not functioning.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "functional",
+      "text": "The WiFi was operational.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "WiFi",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "functional",
+      "text": "The WiFi was not operational.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "WiFi",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "verb",
+      "text": "The AC works.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "verb",
+      "text": "The WiFi does not work.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "WiFi",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "verb",
+      "text": "The heater did not work.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Heating",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "verb",
+      "text": "The shower doesn't work.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Shower",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "verb",
+      "text": "The elevator didn\u2019t function.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Elevator",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "verb",
+      "text": "The TV does function.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Television",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "verb",
+      "text": "The fridge functions.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Refrigerator",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "verb",
+      "text": "The lights do work.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Lighting",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "phrase",
+      "text": "The elevator was out of order.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Elevator",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "phrase",
+      "text": "The lift was not out of order.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Elevator",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "phrase",
+      "text": "Out of order air conditioning.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "phrase",
+      "text": "The shower was busted.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Shower",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "attributive",
+      "text": "Rude staff.",
+      "status": "complete",
+      "expected": [
+        [
+          "Staff",
+          "Friendliness",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "attributive",
+      "text": "Delicious food.",
+      "status": "complete",
+      "expected": [
+        [
+          "Food",
+          "Taste",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "attributive",
+      "text": "Very slow service.",
+      "status": "complete",
+      "expected": [
+        [
+          "Service",
+          "Response Time",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "attributive",
+      "text": "The helpful staff.",
+      "status": "complete",
+      "expected": [
+        [
+          "Staff",
+          "Helpfulness",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "attributive",
+      "text": "A very quiet room.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Noise",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "attributive",
+      "text": "Not bad food.",
+      "status": "complete",
+      "expected": [
+        [
+          "Food",
+          "Quality",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "attributive",
+      "text": "Broken air conditioner.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "attributive",
+      "text": "The extremely helpful receptionist.",
+      "status": "complete",
+      "expected": [
+        [
+          "Staff",
+          "Helpfulness",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "vocabulary",
+      "text": "The bed was comfortable.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Comfort",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "vocabulary",
+      "text": "The mattress was uncomfortable.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Comfort",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "vocabulary",
+      "text": "The room was spacious.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Space",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "vocabulary",
+      "text": "The room was noisy.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Noise",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "vocabulary",
+      "text": "Comfy beds.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Comfort",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "vocabulary",
+      "text": "The towels were dirty.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Cleanliness",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "vocabulary",
+      "text": "The waiters were courteous.",
+      "status": "complete",
+      "expected": [
+        [
+          "Staff",
+          "Courtesy",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "vocabulary",
+      "text": "The air conditioner was broken.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "modifier",
+      "text": "The AC was working properly.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "modifier",
+      "text": "The AC was not working properly.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "modifier",
+      "text": "The WiFi doesn't work well.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "WiFi",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "modifier",
+      "text": "The refrigerator functions well.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Refrigerator",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "modifier",
+      "text": "The AC did not work at all.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "modifier",
+      "text": "The staff were not helpful at all.",
+      "status": "complete",
+      "expected": [
+        [
+          "Staff",
+          "Helpfulness",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "coordination",
+      "text": "The AC works and functions well.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ],
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "coordination",
+      "text": "The room was noisy but was spacious.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Noise",
+          "Negative"
+        ],
+        [
+          "Room",
+          "Space",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "coordination",
+      "text": "The WiFi works but does not function properly.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "WiFi",
+          "Positive"
+        ],
+        [
+          "Facilities",
+          "WiFi",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "coordination",
+      "text": "The staff were helpful but weren\u2019t polite.",
+      "status": "complete",
+      "expected": [
+        [
+          "Staff",
+          "Helpfulness",
+          "Positive"
+        ],
+        [
+          "Staff",
+          "Courtesy",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "recovery",
+      "text": "The AC failed yesterday but the staff were helpful.",
+      "status": "partial",
+      "expected": [
+        [
+          "Staff",
+          "Helpfulness",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "recovery",
+      "text": "The AC works but the weather was odd and working.",
+      "status": "partial",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "recovery",
+      "text": "The AC works and the staff were working.",
+      "status": "partial",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The staff were working.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The food was functioning.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The parking was working.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The staff were comfortable.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The AC was work.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The AC does working.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The AC does works.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The room was not never clean.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The AC does not never work.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The staff were not only helpful but also polite.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The room was very extremely comfortable.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The AC works at all.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The staff were helpful properly.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "The AC works. It does not work.",
+      "status": "partial",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "development",
+      "family": "rejection",
+      "text": "Clean and quiet room.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Cleanliness",
+          "Positive"
+        ],
+        [
+          "Room",
+          "Noise",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "functional",
+      "text": "Our television wasn\u2019t working.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Television",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "functional",
+      "text": "The heating is operational.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Heating",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "functional",
+      "text": "The lighting is not functioning.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Lighting",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "verb",
+      "text": "My air-conditioner doesn\u2019t work properly.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Air Conditioning",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "verb",
+      "text": "The lift did function.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Elevator",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "verb",
+      "text": "The fridge didn't work at all.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Refrigerator",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "verb",
+      "text": "The shower never works.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Shower",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "phrase",
+      "text": "An out of order elevator.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Elevator",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "phrase",
+      "text": "The television wasn't out of order.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Television",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "attributive",
+      "text": "Really delicious breakfast!",
+      "status": "complete",
+      "expected": [
+        [
+          "Food",
+          "Taste",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "attributive",
+      "text": "Our very rude receptionist.",
+      "status": "complete",
+      "expected": [
+        [
+          "Staff",
+          "Friendliness",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "attributive",
+      "text": "Uncomfortable mattresses.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Comfort",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "attributive",
+      "text": "A working shower.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Shower",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "vocabulary",
+      "text": "The rooms were not spacious.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Space",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "vocabulary",
+      "text": "The bathroom was very noisy.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Noise",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "vocabulary",
+      "text": "The beds weren\u2019t comfy.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Comfort",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "modifier",
+      "text": "This heater is not functioning well at all.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Heating",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "coordination",
+      "text": "Dirty towels and uncomfortable beds.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Cleanliness",
+          "Negative"
+        ],
+        [
+          "Room",
+          "Comfort",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "coordination",
+      "text": "The fridge works but doesn't work well.",
+      "status": "complete",
+      "expected": [
+        [
+          "Facilities",
+          "Refrigerator",
+          "Positive"
+        ],
+        [
+          "Facilities",
+          "Refrigerator",
+          "Negative"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "coordination",
+      "text": "The room was comfortable and quiet.",
+      "status": "complete",
+      "expected": [
+        [
+          "Room",
+          "Comfort",
+          "Positive"
+        ],
+        [
+          "Room",
+          "Noise",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "recovery",
+      "text": "The weather was rainy; the heater works.",
+      "status": "partial",
+      "expected": [
+        [
+          "Facilities",
+          "Heating",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "recovery",
+      "text": "The heater works but the food was functioning and broken.",
+      "status": "partial",
+      "expected": [
+        [
+          "Facilities",
+          "Heating",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "rejection",
+      "text": "The receptionist functions.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "reserved",
+      "family": "rejection",
+      "text": "The food was operational.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "reserved",
+      "family": "rejection",
+      "text": "The WiFi did functions.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "reserved",
+      "family": "rejection",
+      "text": "The fridge works not properly.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "reserved",
+      "family": "rejection",
+      "text": "The staff were very helpful at all.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "reserved",
+      "family": "rejection",
+      "text": "The TV cannot work.",
+      "status": "unsupported",
+      "expected": []
+    },
+    {
+      "split": "reserved",
+      "family": "rejection",
+      "text": "The staff were polite. They were not helpful.",
+      "status": "partial",
+      "expected": [
+        [
+          "Staff",
+          "Courtesy",
+          "Positive"
+        ]
+      ]
+    },
+    {
+      "split": "reserved",
+      "family": "rejection",
+      "text": "The TV works and the weather was odd and functioning.",
+      "status": "partial",
+      "expected": [
+        [
+          "Facilities",
+          "Television",
+          "Positive"
+        ]
+      ]
+    }
+  ]
+}

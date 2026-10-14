@@ -1,0 +1,13 @@
+﻿sr.no,review,status,recognized_results,diagnostics
+19,The hotel was affordable and the room was clean.,partial,Room / Cleanliness / clean / Positive (+0.1250),Expected a hotel aspect or an opinion expression.
+20,"The hotel was expensive, but the staff were friendly.",partial,Staff / Friendliness / friendly / Positive (+0.1250),Expected a hotel aspect or an opinion expression.
+21,The location was convenient.,unsupported,,Expected a hotel aspect or an opinion expression.
+22,The location was inconvenient and the room was small.,partial,Room / Space / small / Negative (-0.3750),Expected a hotel aspect or an opinion expression.
+50,The parking was expensive and the location was inconvenient.,unsupported,,"Expected OPINION, found WORD ('expensive').; Expected a hotel aspect or an opinion expression."
+85,The staff were helpful and the location was convenient.,partial,Staff / Helpfulness / helpful / Positive (+0.2500),Expected a hotel aspect or an opinion expression.
+86,"The location was good, but the hotel was expensive.",unsupported,,Expected a hotel aspect or an opinion expression.; Expected a hotel aspect or an opinion expression.
+87,The price was reasonable and the room was comfortable.,partial,Room / Comfort / comfortable / Positive (+0.5000),Expected a hotel aspect or an opinion expression.
+88,"The price was high, and the service was poor.",partial,Service / Quality / poor / Negative (-0.8750),Expected a hotel aspect or an opinion expression.
+93,The staff arranged a taxi for us before sunrise.,unsupported,,"Expected OPINION, found WORD ('arranged')."
+94,We waited forty minutes before someone came to reception.,unsupported,,Expected a hotel aspect or an opinion expression.
+95,There was water leaking from the bathroom ceiling.,unsupported,,"Expected RELATION_TARGET, found ASPECT ('bathroom ceiling')."

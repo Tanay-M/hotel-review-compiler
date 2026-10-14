@@ -1,0 +1,9 @@
+﻿scope,polarity,reviews,eligible_reviews_denominator,percent
+complete_reviews,Positive,38,88,43.18
+complete_reviews,Negative,29,88,32.95
+complete_reviews,Mixed,20,88,22.73
+complete_reviews,Neutral,1,88,1.14
+complete_and_partial,Positive,42,94,44.68
+complete_and_partial,Negative,31,94,32.98
+complete_and_partial,Mixed,20,94,21.28
+complete_and_partial,Neutral,1,94,1.06

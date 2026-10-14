@@ -1,0 +1,27 @@
+[
+  {"text": "The room was not clean, but the staff were very helpful.", "overall": "Mixed", "expected": [["Room", "Cleanliness", "Negative"], ["Staff", "Helpfulness", "Positive"]]},
+  {"text": "The room was dirty.", "overall": "Negative", "expected": [["Room", "Cleanliness", "Negative"]]},
+  {"text": "The staff were excellent.", "overall": "Positive", "expected": [["Staff", "Quality", "Positive"]]},
+  {"text": "Room service was slow.", "overall": "Negative", "expected": [["Service", "Response Time", "Negative"]]},
+  {"text": "The food was cold and the WiFi was slow.", "overall": "Negative", "expected": [["Food", "Temperature", "Negative"], ["Facilities", "WiFi", "Negative"]]},
+  {"text": "The food was delicious.", "overall": "Positive", "expected": [["Food", "Taste", "Positive"]]},
+  {"text": "Cleanliness was poor.", "overall": "Negative", "expected": [["Cleanliness", "Hygiene", "Negative"]]},
+  {"text": "The pool was broken.", "overall": "Negative", "expected": [["Facilities", "Pool", "Negative"]]},
+  {"text": "The receptionist was rude.", "overall": "Negative", "expected": [["Staff", "Friendliness", "Negative"]]},
+  {"text": "The service was average.", "overall": "Neutral", "expected": [["Service", "Quality", "Neutral"]]},
+  {"text": "The staff were not very helpful.", "overall": "Negative", "expected": [["Staff", "Helpfulness", "Negative"]]},
+  {"text": "The staff were extremely helpful.", "overall": "Positive", "expected": [["Staff", "Helpfulness", "Positive"]]},
+  {"text": "The room wasn't clean.", "overall": "Negative", "expected": [["Room", "Cleanliness", "Negative"]]},
+  {"text": "The room wasn’t clean.", "overall": "Negative", "expected": [["Room", "Cleanliness", "Negative"]]},
+  {"text": "The staff were never helpful.", "overall": "Negative", "expected": [["Staff", "Helpfulness", "Negative"]]},
+  {"text": "The room was clean and quiet.", "overall": "Positive", "expected": [["Room", "Cleanliness", "Positive"], ["Room", "Noise", "Positive"]]},
+  {"text": "Room clean but staff rude", "overall": "Mixed", "expected": [["Room", "Cleanliness", "Positive"], ["Staff", "Friendliness", "Negative"]]},
+  {"text": "The food was bland; the staff were courteous.", "overall": "Mixed", "expected": [["Food", "Taste", "Negative"], ["Staff", "Courtesy", "Positive"]]},
+  {"text": "The air conditioning was broken.", "overall": "Negative", "expected": [["Facilities", "Air Conditioning", "Negative"]]},
+  {"text": "The air-conditioning was reliable.", "overall": "Positive", "expected": [["Facilities", "Air Conditioning", "Positive"]]},
+  {"text": "THE ROOM WAS CLEAN, HOWEVER, THE STAFF WERE RUDE!", "overall": "Mixed", "expected": [["Room", "Cleanliness", "Positive"], ["Staff", "Friendliness", "Negative"]]},
+  {"text": "The staff were not bad.", "overall": "Positive", "expected": [["Staff", "Quality", "Positive"]]},
+  {"text": "The bathroom was filthy.", "overall": "Negative", "expected": [["Room", "Cleanliness", "Negative"]]},
+  {"text": "The hygiene was unhygienic.", "overall": "Negative", "expected": [["Cleanliness", "Hygiene", "Negative"]]}
+]
+

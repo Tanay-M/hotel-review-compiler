@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Team 17's local compiler-style hotel review analysis demo.">
+  <title>Hotel Review Compiler · Team 17</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+  <script src="/dashboard.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#review-text">Skip to review input</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Hotel Review Compiler home">
+      <img src="/favicon.svg" width="38" height="38" alt="">
+      <span>Hotel Review Compiler<small>TEAM 17 · COMPILER DESIGN</small></span>
+    </a>
+    <span class="local-badge"><span aria-hidden="true"></span> Local demo</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">ASPECT-BASED HOTEL REVIEW ANALYSIS</p>
+      <h1 id="page-title">Guest feedback, explained.</h1>
+      <p>Analyze a review or an entire CSV. See the bigger picture, then follow each opinion back to the compiler evidence.</p>
+      <ol class="pipeline" aria-label="Analysis pipeline">
+        <li>Lexical analysis</li><li>Syntax analysis</li><li>Semantic analysis</li><li>SentiWordNet</li><li>Structured IR</li>
+      </ol>
+    </section>
+    <nav class="mode-tabs" aria-label="Analysis mode"><button type="button" id="single-mode" aria-pressed="true">Single review</button><button type="button" id="batch-mode" aria-pressed="false">CSV &amp; dashboard</button></nav>
+    <div id="bulk-workspace" hidden>
+      <section class="card upload-card" aria-labelledby="upload-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / DATASET</p><h2 id="upload-title">Upload hotel reviews</h2></div><span class="subtle-tag">CSV UTF-8 · Up to 1,000 rows</span></div>
+        <form id="csv-form">
+          <div class="upload-grid"><label id="drop-zone" class="drop-zone" for="csv-file"><span class="upload-icon" aria-hidden="true">↑</span><strong id="file-label">Choose a CSV or drop it here</strong><span>Every input row keeps its own result. Maximum 10 MiB.</span><input id="csv-file" type="file" accept=".csv,text/csv" aria-describedby="csv-hint"></label>
+          <div class="column-fields"><label for="text-column">Review text column<input id="text-column" value="review" maxlength="128" required></label><label for="id-column">Serial number / review ID column<input id="id-column" value="sr.no" maxlength="128" required></label><p id="csv-hint">The sample input contains only <code>sr.no</code> and <code>review</code>. All analysis is computed by the code. For other files, enter their header names; use <code>review_id</code> when no ID column exists.</p></div></div>
+          <div class="form-actions"><button type="submit" id="upload-button" class="primary">Analyze CSV <span aria-hidden="true">→</span></button><span id="upload-status" class="muted" role="status" aria-live="polite">Results stay in memory until cleared, replaced, or the server stops.</span></div>
+        </form>
+        <p id="upload-error" class="request-error" role="alert" hidden></p>
+        <div class="demo-actions"><span class="small-label">TRY A SYNTHETIC DEMO</span><button type="button" data-demo="12" class="secondary small">12 reviews</button><button type="button" data-demo="100" class="secondary small">100 reviews</button><button type="button" data-demo="500" class="secondary small">500 reviews</button><a href="/reviews_100.csv" download="hotel_reviews_100.csv">Download 100-review input CSV</a></div>
+      </section>
+      <div id="batch-output" hidden>
+        <section class="dashboard" aria-labelledby="dashboard-title">
+          <div class="section-heading dashboard-heading"><div><p class="eyebrow">02 / CONSOLIDATED INFERENCE</p><h2 id="dashboard-title">Dataset overview</h2><p id="dataset-label" class="muted"></p></div><div class="dashboard-actions"><button type="button" id="download-reviews" class="secondary small">Review results CSV</button><button type="button" id="download-paper" class="primary small">Report tables ZIP ↓</button><button type="button" id="clear-batch" class="secondary small">Clear batch</button></div></div>
+          <div id="metric-cards" class="metric-cards"></div>
+          <div class="scope-selector"><label for="dashboard-scope">Dashboard scope<select id="dashboard-scope"><option value="complete_reviews">Complete reviews · primary</option><option value="complete_and_partial">Complete + partial · recognized opinions only</option></select></label><p id="scope-description"></p></div>
+          <div id="coverage-notes" class="coverage-notes"></div>
+          <div class="chart-grid"><article class="card"><p class="eyebrow">REVIEW OUTCOMES</p><h3>Overall sentiment</h3><p id="overall-caption" class="chart-caption"></p><div id="overall-chart" class="bar-chart"></div></article><article class="card"><p class="eyebrow">LANGUAGE COVERAGE</p><h3>Analysis status</h3><p class="chart-caption">All submitted rows. Click a bar to inspect those reviews.</p><div id="coverage-chart" class="bar-chart"></div></article></div>
+          <div class="chart-grid"><article class="card"><p class="eyebrow">SIX HOTEL CATEGORIES</p><h3>Feedback by category</h3><p class="chart-caption">Each bar is the sentiment distribution among reviews mentioning that category. Click to view its reviews.</p><div class="chart-legend"><span class="positive">Positive</span><span class="negative">Negative</span><span class="mixed">Mixed</span><span class="neutral">Neutral</span></div><div id="category-chart"></div></article><article class="card"><p class="eyebrow">COMPLAINT FREQUENCY</p><h3>Issues with negative mentions</h3><p class="chart-caption">Distinct reviews with a negative opinion, including Mixed once. Frequency does not measure severity.</p><div id="complaint-chart" class="bar-chart"></div></article></div>
+          <section class="card"><div class="section-heading"><div><p class="eyebrow">COUNTS &amp; SENTIMENT INDICES</p><h3>Category summary</h3></div></div><div id="category-table"></div><p class="table-footnote">Means weight each review equally. No mentions means unavailable. Scores are sentiment indices, not confidence or star ratings.</p></section>
+          <section class="card conclusion-card"><p class="eyebrow">EVIDENCE-BACKED FINDINGS</p><h3>What the dataset tells us</h3><div id="batch-conclusions"></div></section>
+        </section>
+        <section id="review-table-section" class="card" aria-labelledby="review-table-title"><div class="section-heading"><div><p class="eyebrow">03 / INDIVIDUAL RESULTS</p><h2 id="review-table-title">One review. One row.</h2></div><span id="review-table-count" class="subtle-tag"></span></div><p class="table-footnote">All submitted reviews are available here. Table filters do not change the dashboard's totals.</p>
+          <div class="table-controls"><label for="review-search">Search<input id="review-search" type="search" placeholder="Review, ID, issue or opinion…"></label><label for="status-filter">Analysis status<select id="status-filter"><option value="">All statuses</option><option>complete</option><option>partial</option><option>unsupported</option><option>invalid_input</option><option>processing_error</option></select></label><label for="polarity-filter">Overall sentiment<select id="polarity-filter"><option value="">All sentiments</option><option>Positive</option><option>Negative</option><option>Mixed</option><option>Neutral</option><option>Unanalyzed</option></select></label><label for="category-filter">Category<select id="category-filter"><option value="">All categories</option></select></label><button type="button" id="reset-filters" class="secondary small">Reset filters</button></div>
+          <p id="evidence-filter" class="evidence-filter" hidden></p><div id="review-table"></div>
+          <div class="pagination"><span id="page-description" role="status"></span><label for="page-size">Rows per page<select id="page-size"><option>25</option><option selected>50</option><option>100</option><option value="1000">All rows</option></select></label><button type="button" id="previous-page" class="secondary small">← Previous</button><button type="button" id="next-page" class="secondary small">Next →</button></div>
+          <p id="detail-status" class="muted" role="status" aria-live="polite"></p>
+        </section>
+        <details class="card paper-readiness"><summary>Results for your IEEE-format report</summary><p>Download report tables for per-review results, categories, issues, coverage, overall sentiment, and run metadata. Both aggregate scopes and every denominator are named.</p><p>Uploaded reviews have no independent gold labels, so accuracy, precision, recall and F1 are not measured here. The existing authored evaluation corpus tests declared language contracts. An independently annotated held-out dataset is needed for empirical accuracy claims.</p><div id="run-metadata"></div><p>The ZIP contains CSV and text files. The observed analysis time excludes upload, CSV decoding, reporting, and browser rendering; repeated timing experiments are needed for a performance study.</p></details>
+      </div>
+    </div>
+    <div id="single-workspace" class="workspace">
+      <section class="card input-card" aria-labelledby="input-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / INPUT</p><h2 id="input-title">Enter a hotel review</h2></div><span class="subtle-tag">English · controlled vocabulary</span></div>
+        <form id="review-form">
+          <label for="review-text" class="sr-only">Hotel review</label>
+          <textarea id="review-text" name="review" rows="5" maxlength="10000" spellcheck="false" aria-describedby="input-hint">The room was not clean, but the staff were very helpful.</textarea>
+          <div class="input-meta"><span id="input-hint">Explicit aspect + opinion works best.</span><span id="char-count">0 / 10,000</span></div>
+          <div class="form-actions"><button type="submit" id="analyze-button" class="primary">Analyze review <span aria-hidden="true">→</span></button><button type="button" id="clear-button" class="secondary">Clear</button><span class="shortcut">Ctrl / ⌘ + Enter</span></div>
+        </form>
+        <p id="request-error" class="request-error" role="alert" hidden></p>
+        <div class="examples"><p class="small-label">LOAD AN EXAMPLE</p><div id="example-buttons" class="example-buttons"></div></div>
+        <details class="vocabulary"><summary>What can the current compiler recognize?</summary><div id="vocabulary-content"><p>Loading vocabulary…</p></div></details>
+      </section>
+    </div>
+    <section id="results-section" class="card results-card" aria-labelledby="results-title" aria-busy="false">
+      <div class="section-heading"><div><p class="eyebrow">02 / ANALYSIS</p><h2 id="results-title">Aspect-level results</h2></div><div id="result-summary" class="result-summary" aria-live="polite"></div></div>
+      <div id="empty-state" class="empty-state"><span class="empty-symbol" aria-hidden="true">↳</span><p>Your review, broken down.</p><span>Analyze the review above to see its aspects, opinions, and sentiment.</span></div>
+      <div id="results-content" hidden><p id="analysis-scope" class="scope-note"></p><div class="table-wrap"><table><caption class="sr-only">Aspect-level sentiment results</caption><thead><tr><th scope="col">Category</th><th scope="col">Issue</th><th scope="col">Opinion expression</th><th scope="col">Polarity</th><th scope="col">Score</th></tr></thead><tbody id="results-body"></tbody></table></div><div id="diagnostics" hidden></div></div>
+    </section>
+    <section id="trace-section" class="card trace-card" aria-labelledby="trace-title" hidden>
+      <div class="section-heading"><div><p class="eyebrow">COMPILER TRACE</p><h2 id="trace-title">Follow the analysis</h2></div><button type="button" id="download-button" class="secondary small">Download review CSV</button></div>
+      <div class="trace-tabs" role="tablist" aria-label="Compiler stages">
+        <button type="button" id="tab-tokens" role="tab" aria-selected="true" aria-controls="trace-panel" data-stage="tokens">1 <span>Tokens</span></button>
+        <button type="button" id="tab-syntax" role="tab" aria-selected="false" aria-controls="trace-panel" data-stage="syntax" tabindex="-1">2 <span>Syntax</span></button>
+        <button type="button" id="tab-semantics" role="tab" aria-selected="false" aria-controls="trace-panel" data-stage="semantics" tabindex="-1">3 <span>Semantics</span></button>
+        <button type="button" id="tab-scoring" role="tab" aria-selected="false" aria-controls="trace-panel" data-stage="scoring" tabindex="-1">4 <span>Scoring</span></button>
+        <button type="button" id="tab-ir" role="tab" aria-selected="false" aria-controls="trace-panel" data-stage="ir" tabindex="-1">5 <span>IR</span></button>
+      </div>
+      <div id="trace-panel" class="trace-panel" role="tabpanel" aria-labelledby="tab-tokens" tabindex="0"></div>
+    </section>
+  </main>
+  <footer><span>TEAM 17 <span class="footer-dot">/</span> Compiler Design Project</span><span>Offline analysis · No automatic review storage</span></footer>
+  <noscript>This demo needs JavaScript enabled to send reviews to the local Python analyzer.</noscript>
+</body>
+</html>

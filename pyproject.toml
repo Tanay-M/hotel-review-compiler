@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "team17-hotel-compiler"
+version = "0.1.0"
+description = "A deterministic compiler-style hotel review analyzer"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+hotel-compiler = "hotel_compiler.cli:main"
+hotel-compiler-web = "hotel_compiler.web:main"
+hotel-compiler-batch = "hotel_compiler.batch_cli:main"
+hotel-compiler-evaluate = "hotel_compiler.evaluation:main"
+
+[tool.setuptools.packages.find]
+include = ["hotel_compiler*"]
+
+[tool.setuptools.package-data]
+hotel_compiler = ["resources/*", "web_assets/*"]
+

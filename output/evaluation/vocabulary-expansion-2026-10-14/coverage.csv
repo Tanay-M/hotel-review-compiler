@@ -1,0 +1,14 @@
+﻿metric,count,denominator,percent
+submitted,100,,
+analyzed,100,,
+invalid_input,0,,
+processing_error,0,,
+complete,88,,
+partial,6,,
+unsupported,6,,
+duplicate_text_rows,0,,
+duplicate_id_rows,0,,
+extracted_opinions,167,,
+complete_of_analyzed,88,100,88.0
+with_opinions_of_analyzed,94,100,94.0
+complete_of_submitted,88,100,88.0

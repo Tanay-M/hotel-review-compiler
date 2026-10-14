@@ -1,0 +1,13 @@
+﻿scope,category,mentioned_reviews,opinion_count,positive_reviews,negative_reviews,mixed_reviews,neutral_reviews,any_negative_reviews,any_negative_percent_of_mentions,equal_review_mean_score,evidence_status
+complete_reviews,Room,42,59,25,15,2,0,17,40.48,-0.008681,supported
+complete_reviews,Staff,22,24,13,9,0,0,9,40.91,0.035511,supported
+complete_reviews,Service,15,16,6,8,0,1,8,53.33,-0.179167,supported
+complete_reviews,Food,21,24,11,7,1,2,8,38.1,0.053571,supported
+complete_reviews,Cleanliness,2,2,1,1,0,0,1,50.0,0.0625,low_support
+complete_reviews,Facilities,34,36,15,19,0,0,19,55.88,-0.108456,supported
+complete_and_partial,Room,45,62,27,16,2,0,18,40.0,-0.002546,supported
+complete_and_partial,Staff,24,26,15,9,0,0,9,37.5,0.048177,supported
+complete_and_partial,Service,16,17,6,9,0,1,9,56.25,-0.222656,supported
+complete_and_partial,Food,21,24,11,7,1,2,8,38.1,0.053571,supported
+complete_and_partial,Cleanliness,2,2,1,1,0,0,1,50.0,0.0625,low_support
+complete_and_partial,Facilities,34,36,15,19,0,0,19,55.88,-0.108456,supported

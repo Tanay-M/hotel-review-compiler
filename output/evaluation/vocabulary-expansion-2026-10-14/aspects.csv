@@ -1,0 +1,168 @@
+﻿batch_id,row_id,row_number,review_id,analysis_status,category,issue,aspect_term,opinion_term,opinion_expression,polarity,score,start,end
+expanded-100-2026-10-14,expanded-100-2026-10-14:000001,1,1,complete,Room,Cleanliness,room,clean,clean,Positive,0.125,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000001,1,1,complete,Staff,Helpfulness,staff,helpful,very helpful,Positive,0.3125,24,51
+expanded-100-2026-10-14,expanded-100-2026-10-14:000002,2,2,complete,Room,Cleanliness,room,dirty,dirty,Negative,-0.75,0,34
+expanded-100-2026-10-14,expanded-100-2026-10-14:000003,3,3,complete,Staff,Friendliness,staff,friendly,friendly,Positive,0.125,0,23
+expanded-100-2026-10-14,expanded-100-2026-10-14:000003,3,3,complete,Staff,Courtesy,staff,polite,polite,Positive,0.5,28,34
+expanded-100-2026-10-14,expanded-100-2026-10-14:000004,4,4,complete,Staff,Friendliness,staff,rude,rude,Negative,-0.625,0,19
+expanded-100-2026-10-14,expanded-100-2026-10-14:000004,4,4,complete,Room,Comfort,room,comfortable,comfortable,Positive,0.5,25,49
+expanded-100-2026-10-14,expanded-100-2026-10-14:000005,5,5,complete,Facilities,Air Conditioning,air conditioning,working,not working,Negative,-0.25,0,36
+expanded-100-2026-10-14,expanded-100-2026-10-14:000006,6,6,complete,Facilities,Air Conditioning,air conditioning,working,working properly,Positive,0.25,0,41
+expanded-100-2026-10-14,expanded-100-2026-10-14:000007,7,7,complete,Room,Cleanliness,bathroom,clean,clean,Positive,0.125,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000007,7,7,complete,Room,Space,bathroom,spacious,spacious,Positive,0.25,27,35
+expanded-100-2026-10-14,expanded-100-2026-10-14:000008,8,8,complete,Room,Cleanliness,bathroom,dirty,dirty,Negative,-0.75,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000008,8,8,complete,Room,Cleanliness,towels,stained,stained,Negative,-0.375,28,51
+expanded-100-2026-10-14,expanded-100-2026-10-14:000009,9,9,complete,Room,Comfort,bed,comfortable,very comfortable,Positive,0.625,0,28
+expanded-100-2026-10-14,expanded-100-2026-10-14:000010,10,10,complete,Room,Comfort,bed,uncomfortable,uncomfortable,Negative,-0.625,0,25
+expanded-100-2026-10-14,expanded-100-2026-10-14:000010,10,10,complete,Room,Noise,room,noisy,noisy,Negative,-0.5,30,48
+expanded-100-2026-10-14,expanded-100-2026-10-14:000011,11,11,complete,Food,Taste,breakfast,delicious,delicious,Positive,0.5,0,27
+expanded-100-2026-10-14,expanded-100-2026-10-14:000012,12,12,complete,Food,Temperature,breakfast,cold,cold,Negative,-0.75,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000012,12,12,complete,Food,Taste,breakfast,tasteless,tasteless,Negative,-0.125,27,36
+expanded-100-2026-10-14,expanded-100-2026-10-14:000013,13,13,complete,Food,Taste,food,tasty,tasty,Positive,0.375,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000013,13,13,complete,Service,Response Time,service,slow,slow,Negative,-0.5,24,44
+expanded-100-2026-10-14,expanded-100-2026-10-14:000014,14,14,complete,Food,Freshness,food,fresh,fresh,Positive,0.25,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000014,14,14,complete,Staff,Helpfulness,staff,helpful,helpful,Positive,0.25,23,45
+expanded-100-2026-10-14,expanded-100-2026-10-14:000015,15,15,complete,Service,Response Time,room service,slow,extremely slow,Negative,-0.75,0,35
+expanded-100-2026-10-14,expanded-100-2026-10-14:000016,16,16,complete,Service,Response Time,room service,quick,quick,Positive,0.25,0,26
+expanded-100-2026-10-14,expanded-100-2026-10-14:000016,16,16,complete,Service,Professionalism,room service,efficient,efficient,Positive,0.25,31,40
+expanded-100-2026-10-14,expanded-100-2026-10-14:000017,17,17,complete,Facilities,WiFi,wi-fi,fast,fast,Positive,0.25,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000017,17,17,complete,Facilities,WiFi,wi-fi,reliable,reliable,Positive,0.375,23,31
+expanded-100-2026-10-14,expanded-100-2026-10-14:000018,18,18,complete,Facilities,WiFi,wi-fi,slow,slow,Negative,-0.5,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000018,18,18,complete,Facilities,WiFi,wi-fi,unreliable,unreliable,Negative,-0.75,23,33
+expanded-100-2026-10-14,expanded-100-2026-10-14:000019,19,19,partial,Room,Cleanliness,room,clean,clean,Positive,0.125,29,47
+expanded-100-2026-10-14,expanded-100-2026-10-14:000020,20,20,partial,Staff,Friendliness,staff,friendly,friendly,Positive,0.125,29,52
+expanded-100-2026-10-14,expanded-100-2026-10-14:000022,22,22,partial,Room,Space,room,small,small,Negative,-0.375,34,52
+expanded-100-2026-10-14,expanded-100-2026-10-14:000023,23,23,complete,Facilities,Pool,pool,clean,clean,Positive,0.125,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000023,23,23,complete,Room,Noise,room,quiet,quiet,Positive,0.25,23,41
+expanded-100-2026-10-14,expanded-100-2026-10-14:000024,24,24,complete,Facilities,Pool,pool,dirty,dirty,Negative,-0.75,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000024,24,24,complete,Food,Quality,breakfast,good,good,Positive,0.75,24,46
+expanded-100-2026-10-14,expanded-100-2026-10-14:000025,25,25,complete,Facilities,Elevator,elevator,broken,broken,Negative,-0.25,0,23
+expanded-100-2026-10-14,expanded-100-2026-10-14:000026,26,26,complete,Facilities,Elevator,elevator,working,working well,Positive,0.25,0,29
+expanded-100-2026-10-14,expanded-100-2026-10-14:000027,27,27,complete,Facilities,Television,television,functioning,not functioning,Negative,-0.25,0,34
+expanded-100-2026-10-14,expanded-100-2026-10-14:000028,28,28,complete,Facilities,Television,television,functioning,functioning properly,Positive,0.25,0,39
+expanded-100-2026-10-14,expanded-100-2026-10-14:000029,29,29,complete,Facilities,Shower,shower,broken,broken,Negative,-0.25,0,21
+expanded-100-2026-10-14,expanded-100-2026-10-14:000029,29,29,complete,Room,Cleanliness,bathroom,dirty,dirty,Negative,-0.75,27,49
+expanded-100-2026-10-14,expanded-100-2026-10-14:000030,30,30,complete,Facilities,Shower,shower,working,working,Positive,0.25,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000030,30,30,complete,Room,Cleanliness,bathroom,clean,clean,Positive,0.125,27,49
+expanded-100-2026-10-14,expanded-100-2026-10-14:000031,31,31,complete,Room,Cleanliness,room,clean,not clean,Negative,-0.125,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000031,31,31,complete,Staff,Courtesy,staff,polite,polite,Positive,0.5,28,49
+expanded-100-2026-10-14,expanded-100-2026-10-14:000032,32,32,complete,Room,Cleanliness,room,dirty,not dirty,Positive,0.75,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000032,32,32,complete,Room,Comfort,bed,comfortable,comfortable,Positive,0.5,27,50
+expanded-100-2026-10-14,expanded-100-2026-10-14:000033,33,33,complete,Staff,Helpfulness,staff,helpful,not helpful at all,Negative,-0.25,0,33
+expanded-100-2026-10-14,expanded-100-2026-10-14:000034,34,34,complete,Staff,Friendliness,staff,rude,not rude,Positive,0.625,0,23
+expanded-100-2026-10-14,expanded-100-2026-10-14:000035,35,35,complete,Service,Quality,service,average,average,Neutral,0.0,0,23
+expanded-100-2026-10-14,expanded-100-2026-10-14:000036,36,36,complete,Food,Quality,food,average,average,Neutral,0.0,0,20
+expanded-100-2026-10-14,expanded-100-2026-10-14:000036,36,36,complete,Room,Comfort,room,comfortable,comfortable,Positive,0.5,26,50
+expanded-100-2026-10-14,expanded-100-2026-10-14:000037,37,37,complete,Room,Space,room,spacious,very spacious,Positive,0.3125,0,26
+expanded-100-2026-10-14,expanded-100-2026-10-14:000037,37,37,complete,Room,Noise,room,quiet,quiet,Positive,0.25,31,36
+expanded-100-2026-10-14,expanded-100-2026-10-14:000038,38,38,complete,Room,Space,room,cramped,cramped,Negative,-0.25,0,20
+expanded-100-2026-10-14,expanded-100-2026-10-14:000038,38,38,complete,Room,Noise,room,noisy,noisy,Negative,-0.5,25,30
+expanded-100-2026-10-14,expanded-100-2026-10-14:000039,39,39,complete,Room,Cleanliness,sheets,clean,clean,Positive,0.125,0,21
+expanded-100-2026-10-14,expanded-100-2026-10-14:000039,39,39,complete,Room,Comfort,bed,comfortable,comfortable,Positive,0.5,26,49
+expanded-100-2026-10-14,expanded-100-2026-10-14:000040,40,40,complete,Room,Cleanliness,sheets,dirty,dirty,Negative,-0.75,0,21
+expanded-100-2026-10-14,expanded-100-2026-10-14:000040,40,40,complete,Staff,Helpfulness,staff,helpful,helpful,Positive,0.25,27,49
+expanded-100-2026-10-14,expanded-100-2026-10-14:000041,41,41,complete,Room,Cleanliness,towels,fresh,fresh,Positive,0.75,0,21
+expanded-100-2026-10-14,expanded-100-2026-10-14:000041,41,41,complete,Room,Cleanliness,towels,clean,clean,Positive,0.125,26,31
+expanded-100-2026-10-14,expanded-100-2026-10-14:000042,42,42,complete,Room,Cleanliness,towels,dirty,dirty,Negative,-0.75,0,21
+expanded-100-2026-10-14,expanded-100-2026-10-14:000042,42,42,complete,Room,Space,bathroom,small,small,Negative,-0.375,26,48
+expanded-100-2026-10-14,expanded-100-2026-10-14:000043,43,43,complete,Staff,Friendliness,reception staff,friendly,friendly,Positive,0.125,0,33
+expanded-100-2026-10-14,expanded-100-2026-10-14:000044,44,44,complete,Staff,Helpfulness,reception staff,unhelpful,unhelpful,Negative,-0.125,0,34
+expanded-100-2026-10-14,expanded-100-2026-10-14:000044,44,44,complete,Staff,Friendliness,reception staff,rude,rude,Negative,-0.625,39,43
+expanded-100-2026-10-14,expanded-100-2026-10-14:000045,45,45,complete,Service,Check-in,check-in,quick,quick,Positive,0.25,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000046,46,46,complete,Service,Check-in,check-in,slow,slow,Negative,-0.5,0,21
+expanded-100-2026-10-14,expanded-100-2026-10-14:000046,46,46,complete,Room,Cleanliness,room,clean,clean,Positive,0.125,27,45
+expanded-100-2026-10-14,expanded-100-2026-10-14:000047,47,47,complete,Service,Check-out,check-out,efficient,efficient,Positive,0.25,0,27
+expanded-100-2026-10-14,expanded-100-2026-10-14:000048,48,48,complete,Service,Check-out,check-out,slow,slow,Negative,-0.5,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000048,48,48,complete,Staff,Friendliness,staff,rude,rude,Negative,-0.625,27,46
+expanded-100-2026-10-14,expanded-100-2026-10-14:000049,49,49,complete,Facilities,Parking,parking,convenient,convenient,Positive,0.375,0,26
+expanded-100-2026-10-14,expanded-100-2026-10-14:000051,51,51,complete,Room,Cleanliness,room,clean,clean,Positive,0.125,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000051,51,51,complete,Food,Taste,food,delicious,delicious,Positive,0.5,20,42
+expanded-100-2026-10-14,expanded-100-2026-10-14:000051,51,51,complete,Staff,Friendliness,staff,friendly,friendly,Positive,0.125,48,71
+expanded-100-2026-10-14,expanded-100-2026-10-14:000052,52,52,complete,Room,Cleanliness,room,dirty,dirty,Negative,-0.75,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000052,52,52,complete,Food,Quality,food,bad,bad,Negative,-0.625,20,36
+expanded-100-2026-10-14,expanded-100-2026-10-14:000052,52,52,complete,Service,Response Time,service,slow,slow,Negative,-0.5,42,62
+expanded-100-2026-10-14,expanded-100-2026-10-14:000053,53,53,complete,Staff,Helpfulness,staff,helpful,extremely helpful,Positive,0.375,0,32
+expanded-100-2026-10-14,expanded-100-2026-10-14:000053,53,53,complete,Facilities,WiFi,wi-fi,unreliable,unreliable,Negative,-0.75,38,62
+expanded-100-2026-10-14,expanded-100-2026-10-14:000054,54,54,complete,Facilities,WiFi,wi-fi,reliable,reliable,Positive,0.375,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000054,54,54,complete,Room,Noise,room,noisy,noisy,Negative,-0.5,28,46
+expanded-100-2026-10-14,expanded-100-2026-10-14:000055,55,55,complete,Facilities,Air Conditioning,air conditioner,broken,out of order,Negative,-0.25,0,36
+expanded-100-2026-10-14,expanded-100-2026-10-14:000056,56,56,complete,Facilities,Air Conditioning,air conditioner,operational,operational,Positive,0.25,0,35
+expanded-100-2026-10-14,expanded-100-2026-10-14:000056,56,56,complete,Room,Comfort,room,comfortable,comfortable,Positive,0.5,40,64
+expanded-100-2026-10-14,expanded-100-2026-10-14:000057,57,57,complete,Facilities,Air Conditioning,ac,broken,broken,Negative,-0.25,0,17
+expanded-100-2026-10-14,expanded-100-2026-10-14:000057,57,57,complete,Staff,Courtesy,staff,polite,polite,Positive,0.5,23,44
+expanded-100-2026-10-14,expanded-100-2026-10-14:000058,58,58,complete,Facilities,Air Conditioning,ac,working,working,Positive,0.25,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000058,58,58,complete,Room,Comfort,bed,comfortable,comfy,Positive,0.5,23,40
+expanded-100-2026-10-14,expanded-100-2026-10-14:000059,59,59,complete,Facilities,Heating,heater,working,not working properly,Negative,-0.25,0,35
+expanded-100-2026-10-14,expanded-100-2026-10-14:000060,60,60,complete,Facilities,Heating,heater,functioning,functioning,Positive,0.25,0,26
+expanded-100-2026-10-14,expanded-100-2026-10-14:000060,60,60,complete,Room,Noise,room,quiet,quiet,Positive,0.25,31,49
+expanded-100-2026-10-14,expanded-100-2026-10-14:000061,61,61,complete,Facilities,Ventilation,fan,noisy,noisy,Negative,-0.5,0,17
+expanded-100-2026-10-14,expanded-100-2026-10-14:000061,61,61,complete,Room,Temperature,room,hot,hot,Negative,-0.25,22,38
+expanded-100-2026-10-14,expanded-100-2026-10-14:000062,62,62,complete,Facilities,Ventilation,fan,working,working well,Positive,0.25,0,24
+expanded-100-2026-10-14,expanded-100-2026-10-14:000062,62,62,complete,Room,Cleanliness,bathroom,dirty,dirty,Negative,-0.75,30,52
+expanded-100-2026-10-14,expanded-100-2026-10-14:000063,63,63,complete,Facilities,Elevator,lift,broken,broken,Negative,-0.25,0,19
+expanded-100-2026-10-14,expanded-100-2026-10-14:000063,63,63,complete,Service,Response Time,service,slow,slow,Negative,-0.5,24,44
+expanded-100-2026-10-14,expanded-100-2026-10-14:000064,64,64,complete,Facilities,Elevator,lift,operational,operational,Positive,0.25,0,24
+expanded-100-2026-10-14,expanded-100-2026-10-14:000064,64,64,complete,Staff,Friendliness,staff,friendly,friendly,Positive,0.125,30,53
+expanded-100-2026-10-14,expanded-100-2026-10-14:000065,65,65,complete,Facilities,Refrigerator,fridge,working,not working,Negative,-0.25,0,26
+expanded-100-2026-10-14,expanded-100-2026-10-14:000066,66,66,complete,Facilities,Refrigerator,fridge,functioning,functioning properly,Positive,0.25,0,35
+expanded-100-2026-10-14,expanded-100-2026-10-14:000066,66,66,complete,Food,Freshness,food,stale,stale,Negative,-0.25,41,59
+expanded-100-2026-10-14,expanded-100-2026-10-14:000067,67,67,complete,Room,Cleanliness,room,clean,extremely clean,Positive,0.1875,0,28
+expanded-100-2026-10-14,expanded-100-2026-10-14:000067,67,67,complete,Room,Cleanliness,towels,fresh,fresh,Positive,0.75,33,54
+expanded-100-2026-10-14,expanded-100-2026-10-14:000068,68,68,complete,Room,Cleanliness,bathroom,dirty,very dirty,Negative,-0.9375,0,27
+expanded-100-2026-10-14,expanded-100-2026-10-14:000068,68,68,complete,Room,Comfort,room,uncomfortable,uncomfortable,Negative,-0.625,33,59
+expanded-100-2026-10-14,expanded-100-2026-10-14:000069,69,69,complete,Staff,Friendliness,staff,rude,slightly rude,Negative,-0.46875,0,28
+expanded-100-2026-10-14,expanded-100-2026-10-14:000069,69,69,complete,Food,Taste,breakfast,tasty,tasty,Positive,0.375,34,57
+expanded-100-2026-10-14,expanded-100-2026-10-14:000070,70,70,complete,Service,Response Time,service,quick,very quick,Positive,0.3125,0,26
+expanded-100-2026-10-14,expanded-100-2026-10-14:000070,70,70,complete,Food,Taste,food,delicious,delicious,Positive,0.5,31,53
+expanded-100-2026-10-14,expanded-100-2026-10-14:000071,71,71,complete,Food,Cleanliness,restaurant,clean,clean,Positive,0.125,0,24
+expanded-100-2026-10-14,expanded-100-2026-10-14:000071,71,71,complete,Food,Freshness,food,fresh,fresh,Positive,0.25,29,47
+expanded-100-2026-10-14,expanded-100-2026-10-14:000072,72,72,complete,Food,Cleanliness,restaurant,dirty,dirty,Negative,-0.75,0,24
+expanded-100-2026-10-14,expanded-100-2026-10-14:000072,72,72,complete,Staff,Courtesy,staff,polite,polite,Positive,0.5,30,51
+expanded-100-2026-10-14,expanded-100-2026-10-14:000073,73,73,complete,Food,Quality,breakfast,good,good,Positive,0.75,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000073,73,73,complete,Food,Taste,coffee,cold,cold,Negative,-0.75,28,47
+expanded-100-2026-10-14,expanded-100-2026-10-14:000074,74,74,complete,Food,Taste,dinner,delicious,delicious,Positive,0.5,0,24
+expanded-100-2026-10-14,expanded-100-2026-10-14:000074,74,74,complete,Service,Professionalism,service,efficient,efficient,Positive,0.25,29,54
+expanded-100-2026-10-14,expanded-100-2026-10-14:000075,75,75,complete,Food,Taste,lunch,tasteless,tasteless,Negative,-0.125,0,23
+expanded-100-2026-10-14,expanded-100-2026-10-14:000075,75,75,complete,Staff,Helpfulness,staff,unhelpful,unhelpful,Negative,-0.125,29,53
+expanded-100-2026-10-14,expanded-100-2026-10-14:000076,76,76,complete,Food,Quality,food,good,not good,Negative,-0.75,0,21
+expanded-100-2026-10-14,expanded-100-2026-10-14:000076,76,76,complete,Room,Space,room,spacious,spacious,Positive,0.25,27,48
+expanded-100-2026-10-14,expanded-100-2026-10-14:000077,77,77,complete,Food,Quality,food,bad,not bad,Positive,0.625,0,20
+expanded-100-2026-10-14,expanded-100-2026-10-14:000077,77,77,complete,Service,Response Time,service,quick,quick,Positive,0.25,25,46
+expanded-100-2026-10-14,expanded-100-2026-10-14:000078,78,78,complete,Room,Comfort,room,comfortable,not comfortable,Negative,-0.5,0,28
+expanded-100-2026-10-14,expanded-100-2026-10-14:000078,78,78,complete,Room,Comfort,bed,hard,hard,Negative,-0.25,34,50
+expanded-100-2026-10-14,expanded-100-2026-10-14:000079,79,79,complete,Room,Comfort,room,comfortable,comfortable,Positive,0.5,0,24
+expanded-100-2026-10-14,expanded-100-2026-10-14:000079,79,79,complete,Room,Space,bathroom,cramped,cramped,Negative,-0.25,30,54
+expanded-100-2026-10-14,expanded-100-2026-10-14:000080,80,80,complete,Room,Noise,room,quiet,quiet,Positive,0.25,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000080,80,80,complete,Facilities,WiFi,wi-fi,slow,slow,Negative,-0.5,24,42
+expanded-100-2026-10-14,expanded-100-2026-10-14:000081,81,81,complete,Room,Cleanliness,room,clean,Clean,Positive,0.125,0,10
+expanded-100-2026-10-14,expanded-100-2026-10-14:000081,81,81,complete,Staff,Helpfulness,staff,helpful,helpful,Positive,0.25,15,28
+expanded-100-2026-10-14,expanded-100-2026-10-14:000082,82,82,complete,Room,Cleanliness,bathroom,dirty,Dirty,Negative,-0.75,0,14
+expanded-100-2026-10-14,expanded-100-2026-10-14:000082,82,82,complete,Staff,Friendliness,staff,rude,rude,Negative,-0.625,19,29
+expanded-100-2026-10-14,expanded-100-2026-10-14:000083,83,83,complete,Room,Comfort,bed,comfortable,Comfortable,Positive,0.5,0,15
+expanded-100-2026-10-14,expanded-100-2026-10-14:000083,83,83,complete,Room,Cleanliness,sheets,clean,clean,Positive,0.125,17,29
+expanded-100-2026-10-14,expanded-100-2026-10-14:000083,83,83,complete,Room,Noise,room,quiet,quiet,Positive,0.25,35,47
+expanded-100-2026-10-14,expanded-100-2026-10-14:000084,84,84,complete,Service,Response Time,service,slow,Slow,Negative,-0.5,0,12
+expanded-100-2026-10-14,expanded-100-2026-10-14:000084,84,84,complete,Food,Temperature,food,cold,cold,Negative,-0.75,14,23
+expanded-100-2026-10-14,expanded-100-2026-10-14:000084,84,84,complete,Facilities,WiFi,wi-fi,unreliable,unreliable,Negative,-0.75,29,45
+expanded-100-2026-10-14,expanded-100-2026-10-14:000085,85,85,partial,Staff,Helpfulness,staff,helpful,helpful,Positive,0.25,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000087,87,87,partial,Room,Comfort,room,comfortable,comfortable,Positive,0.5,29,53
+expanded-100-2026-10-14,expanded-100-2026-10-14:000088,88,88,partial,Service,Quality,service,poor,poor,Negative,-0.875,24,44
+expanded-100-2026-10-14,expanded-100-2026-10-14:000089,89,89,complete,Cleanliness,Hygiene,cleanliness,excellent,excellent,Positive,1.0,0,29
+expanded-100-2026-10-14,expanded-100-2026-10-14:000089,89,89,complete,Food,Quality,breakfast,average,average,Neutral,0.0,35,60
+expanded-100-2026-10-14,expanded-100-2026-10-14:000090,90,90,complete,Cleanliness,Hygiene,cleanliness,poor,poor,Negative,-0.875,0,24
+expanded-100-2026-10-14,expanded-100-2026-10-14:000090,90,90,complete,Staff,Helpfulness,staff,unhelpful,unhelpful,Negative,-0.125,29,53
+expanded-100-2026-10-14,expanded-100-2026-10-14:000091,91,91,complete,Room,Quality,room,beautiful,beautiful,Positive,0.75,0,22
+expanded-100-2026-10-14,expanded-100-2026-10-14:000091,91,91,complete,Room,View,view,amazing,amazing,Positive,0.25,27,47
+expanded-100-2026-10-14,expanded-100-2026-10-14:000092,92,92,complete,Room,View,view,disappointing,disappointing,Negative,-0.75,0,26
+expanded-100-2026-10-14,expanded-100-2026-10-14:000092,92,92,complete,Room,Comfort,bed,comfortable,comfortable,Positive,0.5,32,55
+expanded-100-2026-10-14,expanded-100-2026-10-14:000096,96,96,complete,Facilities,Air Conditioning,air conditioning,malfunctioning,stopped cooling,Negative,-0.75,0,53
+expanded-100-2026-10-14,expanded-100-2026-10-14:000097,97,97,complete,Room,Cleanliness,room,clean,clean,Positive,0.125,0,18
+expanded-100-2026-10-14,expanded-100-2026-10-14:000097,97,97,complete,Facilities,Television,television,working,not work,Negative,-0.25,24,51
+expanded-100-2026-10-14,expanded-100-2026-10-14:000098,98,98,complete,Facilities,WiFi,wi-fi,working,not work,Negative,-0.25,0,23
+expanded-100-2026-10-14,expanded-100-2026-10-14:000098,98,98,complete,Staff,Helpfulness,staff,helpful,not helpful,Negative,-0.25,29,55
+expanded-100-2026-10-14,expanded-100-2026-10-14:000099,99,99,complete,Facilities,Shower,shower,working,working well,Positive,0.25,0,27
+expanded-100-2026-10-14,expanded-100-2026-10-14:000099,99,99,complete,Room,Comfort,bed,comfortable,comfortable,Positive,0.5,29,52
+expanded-100-2026-10-14,expanded-100-2026-10-14:000099,99,99,complete,Food,Freshness,breakfast,fresh,fresh,Positive,0.25,58,81
+expanded-100-2026-10-14,expanded-100-2026-10-14:000100,100,100,complete,Room,Space,room,spacious,spacious,Positive,0.25,0,21
+expanded-100-2026-10-14,expanded-100-2026-10-14:000100,100,100,complete,Facilities,Air Conditioning,air conditioning,functioning,not functioning,Negative,-0.25,27,67
+expanded-100-2026-10-14,expanded-100-2026-10-14:000100,100,100,complete,Service,Response Time,service,slow,slow,Negative,-0.5,72,92

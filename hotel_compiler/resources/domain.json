@@ -1,0 +1,5246 @@
+{
+  "categories": [
+    "Room",
+    "Staff",
+    "Service",
+    "Food",
+    "Cleanliness",
+    "Facilities"
+  ],
+  "aspects": {
+    "room": {
+      "category": "Room"
+    },
+    "rooms": {
+      "category": "Room"
+    },
+    "bedroom": {
+      "category": "Room"
+    },
+    "bed": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "mattress": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "bathroom": {
+      "category": "Room"
+    },
+    "staff": {
+      "category": "Staff"
+    },
+    "receptionist": {
+      "category": "Staff"
+    },
+    "receptionists": {
+      "category": "Staff"
+    },
+    "employee": {
+      "category": "Staff"
+    },
+    "employees": {
+      "category": "Staff"
+    },
+    "waiter": {
+      "category": "Staff"
+    },
+    "personnel": {
+      "category": "Staff"
+    },
+    "service": {
+      "category": "Service"
+    },
+    "room service": {
+      "category": "Service"
+    },
+    "check-in": {
+      "category": "Service",
+      "issue": "Check-in"
+    },
+    "check in": {
+      "category": "Service",
+      "issue": "Check-in"
+    },
+    "food": {
+      "category": "Food"
+    },
+    "breakfast": {
+      "category": "Food"
+    },
+    "dinner": {
+      "category": "Food"
+    },
+    "meal": {
+      "category": "Food"
+    },
+    "meals": {
+      "category": "Food"
+    },
+    "restaurant": {
+      "category": "Food"
+    },
+    "cleanliness": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "hygiene": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "sanitation": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "wifi": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "wi-fi": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "wi fi": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "ac": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "air conditioning": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "air-conditioning": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "pool": {
+      "category": "Facilities",
+      "issue": "Pool"
+    },
+    "gym": {
+      "category": "Facilities",
+      "issue": "Gym"
+    },
+    "parking": {
+      "category": "Facilities",
+      "issue": "Parking"
+    },
+    "facilities": {
+      "category": "Facilities"
+    },
+    "air conditioner": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "air-conditioner": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "shower": {
+      "category": "Facilities",
+      "issue": "Shower"
+    },
+    "tv": {
+      "category": "Facilities",
+      "issue": "Television"
+    },
+    "television": {
+      "category": "Facilities",
+      "issue": "Television"
+    },
+    "heater": {
+      "category": "Facilities",
+      "issue": "Heating"
+    },
+    "heating": {
+      "category": "Facilities",
+      "issue": "Heating"
+    },
+    "elevator": {
+      "category": "Facilities",
+      "issue": "Elevator"
+    },
+    "lift": {
+      "category": "Facilities",
+      "issue": "Elevator"
+    },
+    "fridge": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "refrigerator": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "lights": {
+      "category": "Facilities",
+      "issue": "Lighting"
+    },
+    "lighting": {
+      "category": "Facilities",
+      "issue": "Lighting"
+    },
+    "beds": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "mattresses": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "towels": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "waiters": {
+      "category": "Staff"
+    },
+    "pillow": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "pillows": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "cushion": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "cushions": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "bedding": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "duvet": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "duvets": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "blanket": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "blankets": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "sofa": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "sofas": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "couch": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "couches": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "furniture": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "furnishings": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "chair": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "chairs": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "seating": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "sofa bed": {
+      "category": "Room",
+      "issue": "Comfort"
+    },
+    "sheet": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "sheets": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "bed sheet": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "bed sheets": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "bedsheet": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "bedsheets": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "linen": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "linens": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "bed linen": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "bed linens": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "towel": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "bath towel": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "bath towels": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "carpet": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "carpets": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "floor": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "floors": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "curtain": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "curtains": {
+      "category": "Room",
+      "issue": "Cleanliness"
+    },
+    "suite": {
+      "category": "Room"
+    },
+    "suites": {
+      "category": "Room"
+    },
+    "guest room": {
+      "category": "Room"
+    },
+    "guest rooms": {
+      "category": "Room"
+    },
+    "hotel room": {
+      "category": "Room"
+    },
+    "hotel rooms": {
+      "category": "Room"
+    },
+    "single room": {
+      "category": "Room"
+    },
+    "double room": {
+      "category": "Room"
+    },
+    "family room": {
+      "category": "Room"
+    },
+    "living room": {
+      "category": "Room"
+    },
+    "balcony": {
+      "category": "Room"
+    },
+    "balconies": {
+      "category": "Room"
+    },
+    "wall": {
+      "category": "Room",
+      "issue": "Condition"
+    },
+    "walls": {
+      "category": "Room",
+      "issue": "Condition"
+    },
+    "ceiling": {
+      "category": "Room",
+      "issue": "Condition"
+    },
+    "ceilings": {
+      "category": "Room",
+      "issue": "Condition"
+    },
+    "decor": {
+      "category": "Room",
+      "issue": "Condition"
+    },
+    "decoration": {
+      "category": "Room",
+      "issue": "Condition"
+    },
+    "interior": {
+      "category": "Room",
+      "issue": "Condition"
+    },
+    "interiors": {
+      "category": "Room",
+      "issue": "Condition"
+    },
+    "view": {
+      "category": "Room",
+      "issue": "View"
+    },
+    "views": {
+      "category": "Room",
+      "issue": "View"
+    },
+    "room view": {
+      "category": "Room",
+      "issue": "View"
+    },
+    "sea view": {
+      "category": "Room",
+      "issue": "View"
+    },
+    "ocean view": {
+      "category": "Room",
+      "issue": "View"
+    },
+    "window view": {
+      "category": "Room",
+      "issue": "View"
+    },
+    "accommodation": {
+      "category": "Room"
+    },
+    "accommodations": {
+      "category": "Room"
+    },
+    "lodging": {
+      "category": "Room"
+    },
+    "bedrooms": {
+      "category": "Room"
+    },
+    "reception staff": {
+      "category": "Staff"
+    },
+    "front desk staff": {
+      "category": "Staff"
+    },
+    "front-desk staff": {
+      "category": "Staff"
+    },
+    "front desk team": {
+      "category": "Staff"
+    },
+    "front desk": {
+      "category": "Staff"
+    },
+    "front-desk": {
+      "category": "Staff"
+    },
+    "reception team": {
+      "category": "Staff"
+    },
+    "hotel staff": {
+      "category": "Staff"
+    },
+    "hotel employees": {
+      "category": "Staff"
+    },
+    "reception": {
+      "category": "Staff"
+    },
+    "manager": {
+      "category": "Staff"
+    },
+    "managers": {
+      "category": "Staff"
+    },
+    "management": {
+      "category": "Staff"
+    },
+    "housekeeper": {
+      "category": "Staff"
+    },
+    "housekeepers": {
+      "category": "Staff"
+    },
+    "concierge": {
+      "category": "Staff"
+    },
+    "concierges": {
+      "category": "Staff"
+    },
+    "bellboy": {
+      "category": "Staff"
+    },
+    "bellboys": {
+      "category": "Staff"
+    },
+    "porter": {
+      "category": "Staff"
+    },
+    "porters": {
+      "category": "Staff"
+    },
+    "doorman": {
+      "category": "Staff"
+    },
+    "doormen": {
+      "category": "Staff"
+    },
+    "security staff": {
+      "category": "Staff"
+    },
+    "security guard": {
+      "category": "Staff"
+    },
+    "security guards": {
+      "category": "Staff"
+    },
+    "reception personnel": {
+      "category": "Staff"
+    },
+    "staff members": {
+      "category": "Staff"
+    },
+    "team": {
+      "category": "Staff"
+    },
+    "crew": {
+      "category": "Staff"
+    },
+    "check-out": {
+      "category": "Service",
+      "issue": "Check-out"
+    },
+    "check out": {
+      "category": "Service",
+      "issue": "Check-out"
+    },
+    "checkout": {
+      "category": "Service",
+      "issue": "Check-out"
+    },
+    "checkouts": {
+      "category": "Service",
+      "issue": "Check-out"
+    },
+    "check-outs": {
+      "category": "Service",
+      "issue": "Check-out"
+    },
+    "checkin": {
+      "category": "Service",
+      "issue": "Check-in"
+    },
+    "check-ins": {
+      "category": "Service",
+      "issue": "Check-in"
+    },
+    "check ins": {
+      "category": "Service",
+      "issue": "Check-in"
+    },
+    "housekeeping": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "housekeeping service": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "laundry service": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "customer service": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "guest service": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "guest services": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "reception service": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "restaurant service": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "breakfast service": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "delivery": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "deliveries": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "response": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "responses": {
+      "category": "Service",
+      "issue": "Response Time"
+    },
+    "reservation": {
+      "category": "Service",
+      "issue": "Reservation"
+    },
+    "reservations": {
+      "category": "Service",
+      "issue": "Reservation"
+    },
+    "booking": {
+      "category": "Service",
+      "issue": "Reservation"
+    },
+    "bookings": {
+      "category": "Service",
+      "issue": "Reservation"
+    },
+    "booking process": {
+      "category": "Service",
+      "issue": "Reservation"
+    },
+    "services": {
+      "category": "Service"
+    },
+    "hospitality": {
+      "category": "Service"
+    },
+    "assistance": {
+      "category": "Service"
+    },
+    "support": {
+      "category": "Service"
+    },
+    "coffee": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "tea": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "juice": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "juices": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "drink": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "drinks": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "beverage": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "beverages": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "cocktail": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "cocktails": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "soup": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "soups": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "dessert": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "desserts": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "cake": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "cakes": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "bread": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "toast": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "eggs": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "egg": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "meat": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "fish": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "chicken": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "steak": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "pasta": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "rice": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "salad": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "salads": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "fruit": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "fruits": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "vegetables": {
+      "category": "Food",
+      "issue": "Taste"
+    },
+    "lunch": {
+      "category": "Food"
+    },
+    "supper": {
+      "category": "Food"
+    },
+    "dining": {
+      "category": "Food"
+    },
+    "buffet": {
+      "category": "Food"
+    },
+    "breakfast buffet": {
+      "category": "Food"
+    },
+    "dinner buffet": {
+      "category": "Food"
+    },
+    "menu": {
+      "category": "Food"
+    },
+    "cuisine": {
+      "category": "Food"
+    },
+    "snack": {
+      "category": "Food"
+    },
+    "snacks": {
+      "category": "Food"
+    },
+    "dishes": {
+      "category": "Food"
+    },
+    "dish": {
+      "category": "Food"
+    },
+    "cafe": {
+      "category": "Food"
+    },
+    "cafeteria": {
+      "category": "Food"
+    },
+    "cleaning": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "room cleaning": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "bathroom cleaning": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "hotel cleanliness": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "room cleanliness": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "bathroom cleanliness": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "hygiene standards": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "cleaning standards": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "sanitary conditions": {
+      "category": "Cleanliness",
+      "issue": "Hygiene"
+    },
+    "fan": {
+      "category": "Facilities",
+      "issue": "Ventilation"
+    },
+    "fans": {
+      "category": "Facilities",
+      "issue": "Ventilation"
+    },
+    "ceiling fan": {
+      "category": "Facilities",
+      "issue": "Ventilation"
+    },
+    "exhaust fan": {
+      "category": "Facilities",
+      "issue": "Ventilation"
+    },
+    "ventilation": {
+      "category": "Facilities",
+      "issue": "Ventilation"
+    },
+    "aircon": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "air con": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "air conditioner unit": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "air conditioning unit": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "air-conditioner unit": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "a/c": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "ac unit": {
+      "category": "Facilities",
+      "issue": "Air Conditioning"
+    },
+    "showers": {
+      "category": "Facilities",
+      "issue": "Shower"
+    },
+    "shower head": {
+      "category": "Facilities",
+      "issue": "Shower"
+    },
+    "showerhead": {
+      "category": "Facilities",
+      "issue": "Shower"
+    },
+    "shower heads": {
+      "category": "Facilities",
+      "issue": "Shower"
+    },
+    "tap": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "taps": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "faucet": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "faucets": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "sink": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "sinks": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "drain": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "drains": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "toilet": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "toilets": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "plumbing": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "bathroom ceiling": {
+      "category": "Facilities",
+      "issue": "Plumbing"
+    },
+    "water": {
+      "category": "Facilities",
+      "issue": "Water"
+    },
+    "hot water": {
+      "category": "Facilities",
+      "issue": "Water"
+    },
+    "water supply": {
+      "category": "Facilities",
+      "issue": "Water"
+    },
+    "water pressure": {
+      "category": "Facilities",
+      "issue": "Water"
+    },
+    "drinking water": {
+      "category": "Facilities",
+      "issue": "Water"
+    },
+    "televisions": {
+      "category": "Facilities",
+      "issue": "Television"
+    },
+    "television set": {
+      "category": "Facilities",
+      "issue": "Television"
+    },
+    "television sets": {
+      "category": "Facilities",
+      "issue": "Television"
+    },
+    "remote control": {
+      "category": "Facilities",
+      "issue": "Television"
+    },
+    "tv remote": {
+      "category": "Facilities",
+      "issue": "Television"
+    },
+    "refrigerators": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "fridges": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "mini fridge": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "minifridge": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "mini-fridge": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "minibar": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "mini bar": {
+      "category": "Facilities",
+      "issue": "Refrigerator"
+    },
+    "internet": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "internet connection": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "wifi connection": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "wi-fi connection": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "wifi signal": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "wi-fi signal": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "internet access": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "wireless internet": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "wi-fi network": {
+      "category": "Facilities",
+      "issue": "WiFi"
+    },
+    "swimming pool": {
+      "category": "Facilities",
+      "issue": "Pool"
+    },
+    "pools": {
+      "category": "Facilities",
+      "issue": "Pool"
+    },
+    "swimming pools": {
+      "category": "Facilities",
+      "issue": "Pool"
+    },
+    "fitness center": {
+      "category": "Facilities",
+      "issue": "Gym"
+    },
+    "fitness centre": {
+      "category": "Facilities",
+      "issue": "Gym"
+    },
+    "fitness room": {
+      "category": "Facilities",
+      "issue": "Gym"
+    },
+    "gyms": {
+      "category": "Facilities",
+      "issue": "Gym"
+    },
+    "gym equipment": {
+      "category": "Facilities",
+      "issue": "Gym"
+    },
+    "elevators": {
+      "category": "Facilities",
+      "issue": "Elevator"
+    },
+    "lifts": {
+      "category": "Facilities",
+      "issue": "Elevator"
+    },
+    "heaters": {
+      "category": "Facilities",
+      "issue": "Heating"
+    },
+    "central heating": {
+      "category": "Facilities",
+      "issue": "Heating"
+    },
+    "light": {
+      "category": "Facilities",
+      "issue": "Lighting"
+    },
+    "lamp": {
+      "category": "Facilities",
+      "issue": "Lighting"
+    },
+    "lamps": {
+      "category": "Facilities",
+      "issue": "Lighting"
+    },
+    "bedside lamp": {
+      "category": "Facilities",
+      "issue": "Lighting"
+    },
+    "bedside lamps": {
+      "category": "Facilities",
+      "issue": "Lighting"
+    },
+    "car park": {
+      "category": "Facilities",
+      "issue": "Parking"
+    },
+    "car parking": {
+      "category": "Facilities",
+      "issue": "Parking"
+    },
+    "parking lot": {
+      "category": "Facilities",
+      "issue": "Parking"
+    },
+    "parking area": {
+      "category": "Facilities",
+      "issue": "Parking"
+    },
+    "lock": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "locks": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "door lock": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "door locks": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "safe": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "security": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "fire alarm": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "fire alarms": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "amenities": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "facility": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "hotel facilities": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "spa": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "sauna": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "lobby": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "lounge": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "garden": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "terrace": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "shuttle": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "shuttle service": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "power outlet": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "power outlets": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "socket": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "sockets": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "hairdryer": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "hair dryer": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "iron": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "kettle": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "electric kettle": {
+      "category": "Facilities",
+      "issue": "Amenities"
+    },
+    "safes": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "room safe": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "hotel safe": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "safety box": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "door": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "doors": {
+      "category": "Facilities",
+      "issue": "Safety"
+    },
+    "room door": {
+      "category": "Facilities",
+      "issue": "Safety"
+    }
+  },
+  "opinions": {
+    "clean": {
+      "synset": "a:00417413",
+      "issue": "Cleanliness"
+    },
+    "dirty": {
+      "synset": "a:00419289",
+      "issue": "Cleanliness"
+    },
+    "spotless": {
+      "synset": "a:00418364",
+      "issue": "Cleanliness"
+    },
+    "filthy": {
+      "synset": "a:00421590",
+      "issue": "Cleanliness"
+    },
+    "dusty": {
+      "synset": "a:01696346",
+      "issue": "Cleanliness"
+    },
+    "tidy": {
+      "synset": "a:02422685",
+      "issue": "Cleanliness"
+    },
+    "helpful": {
+      "synset": "a:01195536",
+      "issue": "Helpfulness"
+    },
+    "unhelpful": {
+      "synset": "a:01198019",
+      "issue": "Helpfulness"
+    },
+    "rude": {
+      "synset": "a:00641944",
+      "issue": "Friendliness"
+    },
+    "friendly": {
+      "synset": "a:01074650",
+      "issue": "Friendliness"
+    },
+    "unfriendly": {
+      "synset": "a:01076793",
+      "issue": "Friendliness"
+    },
+    "polite": {
+      "synset": "a:00641158",
+      "issue": "Courtesy"
+    },
+    "courteous": {
+      "synset": "a:00641460",
+      "issue": "Courtesy"
+    },
+    "attentive": {
+      "synset": "a:00163592",
+      "issue": "Helpfulness"
+    },
+    "inattentive": {
+      "synset": "a:00755876",
+      "issue": "Helpfulness"
+    },
+    "excellent": {
+      "synset": "a:02343110",
+      "issue": "Quality"
+    },
+    "fantastic": {
+      "synset": "a:01676517",
+      "issue": "Quality"
+    },
+    "wonderful": {
+      "synset": "a:01676517",
+      "issue": "Quality"
+    },
+    "good": {
+      "synset": "a:01123148",
+      "issue": "Quality"
+    },
+    "bad": {
+      "synset": "a:01125429",
+      "issue": "Quality"
+    },
+    "poor": {
+      "synset": "a:01128719",
+      "issue": "Quality"
+    },
+    "terrible": {
+      "synset": "a:01126291",
+      "issue": "Quality"
+    },
+    "awful": {
+      "synset": "a:01126291",
+      "issue": "Quality"
+    },
+    "delicious": {
+      "synset": "a:02396720",
+      "issue": "Taste"
+    },
+    "tasty": {
+      "synset": "a:02395115",
+      "issue": "Taste"
+    },
+    "bland": {
+      "synset": "a:02399595",
+      "issue": "Taste"
+    },
+    "cold": {
+      "synset": "a:01251128",
+      "issue": "Temperature"
+    },
+    "hot": {
+      "synset": "a:01247240",
+      "issue": "Temperature",
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "broken": {
+      "synset": "a:00680156",
+      "issue": "Functionality"
+    },
+    "reliable": {
+      "synset": "a:00724081",
+      "issue": "Reliability"
+    },
+    "unreliable": {
+      "synset": "a:00724861",
+      "issue": "Reliability"
+    },
+    "slow": {
+      "synset": "a:00980527",
+      "issue": "Response Time",
+      "calibration": {
+        "Service": -0.5,
+        "Facilities": -0.5
+      },
+      "calibration_reason": "The physical-speed sense has zero lexical sentiment. Slow service or facilities are an explicit hotel-domain complaint rule.",
+      "calibration_rule_id": "slow_service_facilities"
+    },
+    "fast": {
+      "synset": "a:00976508",
+      "issue": "Response Time",
+      "calibration": {
+        "Service": 0.25,
+        "Facilities": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "quiet": {
+      "synset": "a:01918984",
+      "issue": "Noise"
+    },
+    "average": {
+      "synset": "a:01594146",
+      "issue": "Quality"
+    },
+    "hygienic": {
+      "synset": "a:02113191",
+      "issue": "Hygiene"
+    },
+    "unhygienic": {
+      "synset": "a:02113672",
+      "issue": "Hygiene"
+    },
+    "working": {
+      "synset": "a:01091728",
+      "issue": "Functionality",
+      "allowed_aspects": [
+        "a/c",
+        "ac",
+        "ac unit",
+        "air con",
+        "air conditioner",
+        "air conditioner unit",
+        "air conditioning",
+        "air conditioning unit",
+        "air-conditioner",
+        "air-conditioner unit",
+        "air-conditioning",
+        "aircon",
+        "bathroom ceiling",
+        "bedside lamp",
+        "bedside lamps",
+        "ceiling fan",
+        "central heating",
+        "drain",
+        "drains",
+        "drinking water",
+        "elevator",
+        "elevators",
+        "exhaust fan",
+        "fan",
+        "fans",
+        "faucet",
+        "faucets",
+        "fridge",
+        "fridges",
+        "heater",
+        "heaters",
+        "heating",
+        "hot water",
+        "internet",
+        "internet access",
+        "internet connection",
+        "lamp",
+        "lamps",
+        "lift",
+        "lifts",
+        "light",
+        "lighting",
+        "lights",
+        "mini bar",
+        "mini fridge",
+        "mini-fridge",
+        "minibar",
+        "minifridge",
+        "plumbing",
+        "pool",
+        "refrigerator",
+        "refrigerators",
+        "remote control",
+        "shower",
+        "shower head",
+        "shower heads",
+        "showerhead",
+        "showers",
+        "sink",
+        "sinks",
+        "tap",
+        "taps",
+        "television",
+        "television set",
+        "television sets",
+        "televisions",
+        "toilet",
+        "toilets",
+        "tv",
+        "tv remote",
+        "ventilation",
+        "water",
+        "water pressure",
+        "water supply",
+        "wi fi",
+        "wi-fi",
+        "wi-fi connection",
+        "wi-fi network",
+        "wi-fi signal",
+        "wifi",
+        "wifi connection",
+        "wifi signal",
+        "wireless internet"
+      ],
+      "allowed_adverbs": [
+        "properly",
+        "well"
+      ]
+    },
+    "functioning": {
+      "synset": "a:01091556",
+      "issue": "Functionality",
+      "allowed_aspects": [
+        "a/c",
+        "ac",
+        "ac unit",
+        "air con",
+        "air conditioner",
+        "air conditioner unit",
+        "air conditioning",
+        "air conditioning unit",
+        "air-conditioner",
+        "air-conditioner unit",
+        "air-conditioning",
+        "aircon",
+        "bathroom ceiling",
+        "bedside lamp",
+        "bedside lamps",
+        "ceiling fan",
+        "central heating",
+        "drain",
+        "drains",
+        "drinking water",
+        "elevator",
+        "elevators",
+        "exhaust fan",
+        "fan",
+        "fans",
+        "faucet",
+        "faucets",
+        "fridge",
+        "fridges",
+        "heater",
+        "heaters",
+        "heating",
+        "hot water",
+        "internet",
+        "internet access",
+        "internet connection",
+        "lamp",
+        "lamps",
+        "lift",
+        "lifts",
+        "light",
+        "lighting",
+        "lights",
+        "mini bar",
+        "mini fridge",
+        "mini-fridge",
+        "minibar",
+        "minifridge",
+        "plumbing",
+        "pool",
+        "refrigerator",
+        "refrigerators",
+        "remote control",
+        "shower",
+        "shower head",
+        "shower heads",
+        "showerhead",
+        "showers",
+        "sink",
+        "sinks",
+        "tap",
+        "taps",
+        "television",
+        "television set",
+        "television sets",
+        "televisions",
+        "toilet",
+        "toilets",
+        "tv",
+        "tv remote",
+        "ventilation",
+        "water",
+        "water pressure",
+        "water supply",
+        "wi fi",
+        "wi-fi",
+        "wi-fi connection",
+        "wi-fi network",
+        "wi-fi signal",
+        "wifi",
+        "wifi connection",
+        "wifi signal",
+        "wireless internet"
+      ],
+      "allowed_adverbs": [
+        "properly",
+        "well"
+      ],
+      "calibration": {
+        "Facilities": 0.25
+      },
+      "calibration_rule_id": "functioning_equipment",
+      "calibration_reason": "The functional-equipment sense has zero lexical sentiment. Explicitly functioning hotel equipment is a positive functionality state; negate this state once for nonfunctioning equipment."
+    },
+    "operational": {
+      "synset": "a:02124253",
+      "issue": "Functionality",
+      "allowed_aspects": [
+        "a/c",
+        "ac",
+        "ac unit",
+        "air con",
+        "air conditioner",
+        "air conditioner unit",
+        "air conditioning",
+        "air conditioning unit",
+        "air-conditioner",
+        "air-conditioner unit",
+        "air-conditioning",
+        "aircon",
+        "bathroom ceiling",
+        "bedside lamp",
+        "bedside lamps",
+        "ceiling fan",
+        "central heating",
+        "drain",
+        "drains",
+        "drinking water",
+        "elevator",
+        "elevators",
+        "exhaust fan",
+        "fan",
+        "fans",
+        "faucet",
+        "faucets",
+        "fridge",
+        "fridges",
+        "heater",
+        "heaters",
+        "heating",
+        "hot water",
+        "internet",
+        "internet access",
+        "internet connection",
+        "lamp",
+        "lamps",
+        "lift",
+        "lifts",
+        "light",
+        "lighting",
+        "lights",
+        "mini bar",
+        "mini fridge",
+        "mini-fridge",
+        "minibar",
+        "minifridge",
+        "plumbing",
+        "pool",
+        "refrigerator",
+        "refrigerators",
+        "remote control",
+        "shower",
+        "shower head",
+        "shower heads",
+        "showerhead",
+        "showers",
+        "sink",
+        "sinks",
+        "tap",
+        "taps",
+        "television",
+        "television set",
+        "television sets",
+        "televisions",
+        "toilet",
+        "toilets",
+        "tv",
+        "tv remote",
+        "ventilation",
+        "water",
+        "water pressure",
+        "water supply",
+        "wi fi",
+        "wi-fi",
+        "wi-fi connection",
+        "wi-fi network",
+        "wi-fi signal",
+        "wifi",
+        "wifi connection",
+        "wifi signal",
+        "wireless internet"
+      ]
+    },
+    "comfortable": {
+      "synset": "a:00476819",
+      "issue": "Comfort",
+      "allowed_categories": [
+        "Room"
+      ],
+      "calibration": {
+        "Room": 0.5
+      },
+      "calibration_rule_id": "physical_room_comfort",
+      "calibration_reason": "The selected physical-comfort sense has a negative source score despite its physical-well-being gloss. The hotel-domain convention treats explicit room/bed comfort as positive; original P/N are retained."
+    },
+    "uncomfortable": {
+      "synset": "a:00478015",
+      "issue": "Comfort",
+      "allowed_categories": [
+        "Room"
+      ]
+    },
+    "noisy": {
+      "synset": "a:01919931",
+      "issue": "Noise",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.5,
+        "Facilities": -0.5
+      },
+      "calibration_rule_id": "hotel_noise_complaint",
+      "calibration_reason": "The loud-sound sense has equal P and N. Explicitly noisy rooms/facilities are treated as hotel-domain complaints."
+    },
+    "spacious": {
+      "synset": "a:00476249",
+      "issue": "Space",
+      "allowed_categories": [
+        "Room"
+      ],
+      "calibration": {
+        "Room": 0.25
+      },
+      "calibration_rule_id": "room_space_preference",
+      "calibration_reason": "The room/building-space sense has zero lexical sentiment. Explicit room spaciousness is a positive hotel-domain preference."
+    },
+    "amazing": {
+      "synset": "a:02359789",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "awesome": {
+      "synset": "a:01282510",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "superb": {
+      "synset": "a:02342608",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "splendid": {
+      "synset": "a:00219389",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "marvelous": {
+      "synset": "a:01676517",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "marvellous": {
+      "synset": "a:01676517",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "exceptional": {
+      "synset": "a:00488187",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "outstanding": {
+      "synset": "a:02343762",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "brilliant": {
+      "synset": "a:02342608",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "impressive": {
+      "synset": "a:01282014",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "remarkable": {
+      "synset": "a:01678417",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "lovely": {
+      "synset": "a:00219809",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "pleasant": {
+      "synset": "a:01800349",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "unpleasant": {
+      "synset": "a:01801600",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "nice": {
+      "synset": "a:01586342",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "delightful": {
+      "synset": "a:01807964",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "enjoyable": {
+      "synset": "a:01801029",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "satisfying": {
+      "synset": "a:02081563",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "satisfactory": {
+      "synset": "a:02080577",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "unsatisfactory": {
+      "synset": "a:02082218",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "disappointing": {
+      "synset": "a:02082611",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "dreadful": {
+      "synset": "a:00193799",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "horrible": {
+      "synset": "a:00193480",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "horrendous": {
+      "synset": "a:00193799",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "atrocious": {
+      "synset": "a:01126291",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "appalling": {
+      "synset": "a:00193367",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "disgusting": {
+      "synset": "a:01625893",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "mediocre": {
+      "synset": "a:02347564",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "ordinary": {
+      "synset": "a:01672607",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "decent": {
+      "synset": "a:02336109",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "acceptable": {
+      "synset": "a:00017782",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "unacceptable": {
+      "synset": "a:02083053",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "perfect": {
+      "synset": "a:01749320",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "imperfect": {
+      "synset": "a:01752167",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "premium": {
+      "synset": "a:02343931",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "luxurious": {
+      "synset": "a:01298239",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "elegant": {
+      "synset": "a:00849357",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "stylish": {
+      "synset": "a:00975171",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "attractive": {
+      "synset": "a:00166146",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "beautiful": {
+      "synset": "a:00217728",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "ugly": {
+      "synset": "a:00220956",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "shabby": {
+      "synset": "a:02583043",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "calibration": {
+        "Room": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "outdated": {
+      "synset": "a:00669138",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "modern": {
+      "synset": "a:00972902",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "basic": {
+      "synset": "a:01855764",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "adequate": {
+      "synset": "a:02336109",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "inadequate": {
+      "synset": "a:00051696",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "superior": {
+      "synset": "a:02341266",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "inferior": {
+      "synset": "a:02345272",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "reasonable": {
+      "synset": "a:01943406",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "fine": {
+      "synset": "a:02081114",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "fabulous": {
+      "synset": "a:01808227",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "magnificent": {
+      "synset": "a:01285376",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "terrific": {
+      "synset": "a:01676517",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "miserable": {
+      "synset": "a:01150205",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "great": {
+      "synset": "a:01123879",
+      "issue": "Quality",
+      "sense_selection": "Explicit hotel-context gloss selection."
+    },
+    "astonishing": {
+      "synset": "a:02359789",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "stunning": {
+      "synset": "a:01282921",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "passable": {
+      "synset": "a:01724551",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "substandard": {
+      "synset": "a:02297409",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "gorgeous": {
+      "synset": "a:00219705",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "abysmal": {
+      "synset": "a:01499155",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "lousy": {
+      "synset": "a:01127782",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "fresh": {
+      "synset": "a:01067694",
+      "issue": "Freshness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food",
+        "Room",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.25,
+        "Food": 0.25,
+        "Cleanliness": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence.",
+      "category_senses": {
+        "Room": {
+          "synset": "a:00418198",
+          "issue": "Cleanliness",
+          "calibration": 0.75,
+          "rule_id": "fresh_linen_preference",
+          "reason": "Unused/unsoiled linen is a positive hotel preference; the selected source score is negative. P/N are retained."
+        },
+        "Cleanliness": {
+          "synset": "a:01906320",
+          "issue": "Hygiene"
+        },
+        "Facilities": {
+          "synset": "a:01906320",
+          "issue": "Ventilation"
+        }
+      }
+    },
+    "stale": {
+      "synset": "a:01068726",
+      "issue": "Freshness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food",
+        "Room"
+      ],
+      "calibration": {
+        "Room": -0.25,
+        "Food": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "stained": {
+      "synset": "a:00402004",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "smelly": {
+      "synset": "a:01053634",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "stinky": {
+      "synset": "a:01053144",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "musty": {
+      "synset": "a:01070088",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "mouldy": {
+      "synset": "a:01070088",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "moldy": {
+      "synset": "a:01070088",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "messy": {
+      "synset": "a:02426042",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "immaculate": {
+      "synset": "a:00418364",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "unclean": {
+      "synset": "a:00419289",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "unkempt": {
+      "synset": "a:02426890",
+      "issue": "Cleanliness",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "unwashed": {
+      "synset": "a:00423874",
+      "issue": "Cleanliness",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "greasy": {
+      "synset": "a:00992432",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "sticky": {
+      "synset": "a:00053691",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "damp": {
+      "synset": "a:02548820",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "wet": {
+      "synset": "a:02547317",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "dry": {
+      "synset": "a:02551380",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "grimy": {
+      "synset": "a:00420650",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "grubby": {
+      "synset": "a:00420650",
+      "issue": "Cleanliness",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "unsanitary": {
+      "synset": "a:02113449",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "calibration": {
+        "Cleanliness": -0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "sanitized": {
+      "synset": "a:03153554",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "sanitary": {
+      "synset": "a:02112976",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "neat": {
+      "synset": "a:02423284",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "cluttered": {
+      "synset": "a:02424949",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "pristine": {
+      "synset": "a:01907293",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "foul": {
+      "synset": "a:01625893",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "fetid": {
+      "synset": "a:01053634",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "littered": {
+      "synset": "a:02424949",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "soiled": {
+      "synset": "a:00419289",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "tainted": {
+      "synset": "a:01070716",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "contaminated": {
+      "synset": "a:01908889",
+      "issue": "Cleanliness",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "dingy": {
+      "synset": "a:00420650",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "polluted": {
+      "synset": "a:01908889",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "odorous": {
+      "synset": "a:01055073",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "odourless": {
+      "synset": "a:01057775",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "odorless": {
+      "synset": "a:01057775",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "disheveled": {
+      "synset": "a:02425220",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "dishevelled": {
+      "synset": "a:02425220",
+      "issue": "Cleanliness",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "cozy": {
+      "synset": "a:00477284",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "cosy": {
+      "synset": "a:00477284",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "relaxing": {
+      "synset": "a:01922227",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "restful": {
+      "synset": "a:01922227",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "hard": {
+      "synset": "a:01150915",
+      "issue": "Comfort",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "soft": {
+      "synset": "a:01152746",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "firm": {
+      "synset": "a:01151740",
+      "issue": "Comfort",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.0
+      },
+      "calibration_rule_id": "firmness_description",
+      "calibration_reason": "Firmness alone is a bedding property, not a universal positive/negative preference. Source P/N are retained."
+    },
+    "lumpy": {
+      "synset": "a:00912490",
+      "issue": "Comfort",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "sagging": {
+      "synset": "a:02403944",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "supportive": {
+      "synset": "a:02354537",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "painful": {
+      "synset": "a:01711071",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "stiff": {
+      "synset": "a:01023706",
+      "issue": "Comfort",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "warm": {
+      "synset": "a:02529264",
+      "issue": "Temperature",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "chilly": {
+      "synset": "a:01252566",
+      "issue": "Temperature",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "airy": {
+      "synset": "a:02508917",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "stuffy": {
+      "synset": "a:02509484",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "drafty": {
+      "synset": "a:01397674",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "draughty": {
+      "synset": "a:01397674",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "cushioned": {
+      "synset": "a:01153703",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "plush": {
+      "synset": "a:02025274",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "cramped": {
+      "synset": "a:00476663",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "tiny": {
+      "synset": "a:01392249",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "small": {
+      "synset": "a:01391351",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "large": {
+      "synset": "a:01382086",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "roomy": {
+      "synset": "a:00476249",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "huge": {
+      "synset": "a:01387319",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "narrow": {
+      "synset": "a:02561888",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "big": {
+      "synset": "a:01382086",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "crowded": {
+      "synset": "a:00559690",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.125,
+        "Facilities": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "uncrowded": {
+      "synset": "a:00560453",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "congested": {
+      "synset": "a:01084486",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "sleepless": {
+      "synset": "a:00187176",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "inviting": {
+      "synset": "a:01358363",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "uninviting": {
+      "synset": "a:01359035",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "bright": {
+      "synset": "a:00278551",
+      "issue": "Lighting",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "dark": {
+      "synset": "a:00273082",
+      "issue": "Lighting",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "dim": {
+      "synset": "a:00275290",
+      "issue": "Lighting",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "compact": {
+      "synset": "a:00502180",
+      "issue": "Space",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "well-lighted": {
+      "synset": "a:00271580",
+      "issue": "Lighting",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "ventilated": {
+      "synset": "a:02508766",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "unventilated": {
+      "synset": "a:02509292",
+      "issue": "Comfort",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "overheated": {
+      "synset": "a:01249621",
+      "issue": "Temperature",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "peaceful": {
+      "synset": "a:01740892",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "tranquil": {
+      "synset": "a:00529657",
+      "issue": "Noise",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "serene": {
+      "synset": "a:00529657",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "silent": {
+      "synset": "a:01919428",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "loud": {
+      "synset": "a:01452593",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "deafening": {
+      "synset": "a:01453467",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "rowdy": {
+      "synset": "a:01667110",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "boisterous": {
+      "synset": "a:01666489",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "disruptive": {
+      "synset": "a:01923720",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "disturbing": {
+      "synset": "a:01189386",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "soundproof": {
+      "synset": "a:01775420",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.75,
+        "Facilities": 0.75
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "calm": {
+      "synset": "a:00529657",
+      "issue": "Noise",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "quick": {
+      "synset": "a:00979366",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": 0.25,
+        "Staff": 0.25,
+        "Facilities": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "efficient": {
+      "synset": "a:00839619",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": 0.25,
+        "Staff": 0.25,
+        "Facilities": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "inefficient": {
+      "synset": "a:00840902",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "prompt": {
+      "synset": "a:01900630",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": 0.25,
+        "Staff": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "responsive": {
+      "synset": "a:01999306",
+      "issue": "Professionalism",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "unresponsive": {
+      "synset": "a:01999766",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "professional": {
+      "synset": "a:01870100",
+      "issue": "Professionalism",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": 0.25,
+        "Staff": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "unprofessional": {
+      "synset": "a:01870321",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "welcoming": {
+      "synset": "a:01244106",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": 0.125,
+        "Staff": 0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "hospitable": {
+      "synset": "a:01243825",
+      "issue": "Professionalism",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "discourteous": {
+      "synset": "a:00640283",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.375,
+        "Staff": -0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "respectful": {
+      "synset": "a:01993940",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "disrespectful": {
+      "synset": "a:01994602",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.125,
+        "Staff": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "caring": {
+      "synset": "a:00506601",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "considerate": {
+      "synset": "a:00638981",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "inconsiderate": {
+      "synset": "a:00639356",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "kind": {
+      "synset": "a:01372049",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "unkind": {
+      "synset": "a:01373728",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.125,
+        "Staff": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "patient": {
+      "synset": "a:01735736",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "impatient": {
+      "synset": "a:01737241",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "accommodating": {
+      "synset": "a:00020787",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "cooperative": {
+      "synset": "a:00513388",
+      "issue": "Professionalism",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": 0.25,
+        "Staff": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "uncooperative": {
+      "synset": "a:00620585",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "knowledgeable": {
+      "synset": "a:00830051",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "incompetent": {
+      "synset": "a:02229324",
+      "issue": "Professionalism",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "competent": {
+      "synset": "a:00510050",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "lazy": {
+      "synset": "a:00294579",
+      "issue": "Professionalism",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.25,
+        "Staff": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "negligent": {
+      "synset": "a:00754873",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "abrupt": {
+      "synset": "a:00640520",
+      "issue": "Professionalism",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.25,
+        "Staff": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "arrogant": {
+      "synset": "a:01889819",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.125,
+        "Staff": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "cheerful": {
+      "synset": "a:00362467",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "indifferent": {
+      "synset": "a:01342949",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.25,
+        "Staff": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "personable": {
+      "synset": "a:00168694",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "sociable": {
+      "synset": "a:02257141",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "generous": {
+      "synset": "a:01111016",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "honest": {
+      "synset": "a:01222360",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "dishonest": {
+      "synset": "a:01222884",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "trustworthy": {
+      "synset": "a:02464693",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "impolite": {
+      "synset": "a:00641640",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.375,
+        "Staff": -0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "rapid": {
+      "synset": "a:00979697",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "speedy": {
+      "synset": "a:00979862",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "sluggish": {
+      "synset": "a:00981703",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "rushed": {
+      "synset": "a:01271604",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "delayed": {
+      "synset": "a:01841295",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "punctual": {
+      "synset": "a:01900349",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": 0.25,
+        "Staff": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "timely": {
+      "synset": "a:01900771",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "calibration": {
+        "Service": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "effective": {
+      "synset": "a:00834198",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "ineffective": {
+      "synset": "a:00835609",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "obliging": {
+      "synset": "a:00021110",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "dismissive": {
+      "synset": "a:01343411",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "hostile": {
+      "synset": "a:01244410",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "abusive": {
+      "synset": "a:01628531",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "sympathetic": {
+      "synset": "a:03008013",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "unsympathetic": {
+      "synset": "a:02375828",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "late": {
+      "synset": "a:01901186",
+      "issue": "Response Time",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "tardy": {
+      "synset": "a:01901186",
+      "issue": "Response Time",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "flavorful": {
+      "synset": "a:02396911",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": 0.5
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "flavourful": {
+      "synset": "a:02396911",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": 0.5
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "flavorsome": {
+      "synset": "a:02396911",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": 0.5
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "savoury": {
+      "synset": "a:00133669",
+      "issue": "Taste",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "savory": {
+      "synset": "a:00133669",
+      "issue": "Taste",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "appetizing": {
+      "synset": "a:00133417",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "unappetizing": {
+      "synset": "a:00133851",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "yummy": {
+      "synset": "a:02396720",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "tasteless": {
+      "synset": "a:02399399",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "salty": {
+      "synset": "a:02398773",
+      "issue": "Taste",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "sweet": {
+      "synset": "a:02368336",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "bitter": {
+      "synset": "a:02396098",
+      "issue": "Taste",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "sour": {
+      "synset": "a:01054922",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "spicy": {
+      "synset": "a:02398378",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "burnt": {
+      "synset": "a:00617137",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "burned": {
+      "synset": "a:00617137",
+      "issue": "Taste",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "raw": {
+      "synset": "a:00619433",
+      "issue": "Taste",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "cooked": {
+      "synset": "a:00615757",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "succulent": {
+      "synset": "a:01369078",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": 0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "juicy": {
+      "synset": "a:01368793",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": 0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "chewy": {
+      "synset": "a:02445978",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "tender": {
+      "synset": "a:02446651",
+      "issue": "Taste",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "crispy": {
+      "synset": "a:02446931",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "soggy": {
+      "synset": "a:01185417",
+      "issue": "Taste",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "nutritious": {
+      "synset": "a:02557719",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "inedible": {
+      "synset": "a:00829496",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "edible": {
+      "synset": "a:00828779",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "palatable": {
+      "synset": "a:01716227",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "unpalatable": {
+      "synset": "a:01716491",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "rancid": {
+      "synset": "a:01070321",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "rotten": {
+      "synset": "a:01127782",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "lukewarm": {
+      "synset": "a:02529581",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "oily": {
+      "synset": "a:00992432",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "diluted": {
+      "synset": "a:00756091",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "underdone": {
+      "synset": "a:00619601",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "overdone": {
+      "synset": "a:01533806",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ],
+      "calibration": {
+        "Food": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "crisp": {
+      "synset": "a:00780352",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "mouth-watering": {
+      "synset": "a:00133669",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "scrumptious": {
+      "synset": "a:02396720",
+      "issue": "Taste",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Food"
+      ]
+    },
+    "functional": {
+      "synset": "a:01091728",
+      "issue": "Condition",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "allowed_aspects": [
+        "a/c",
+        "ac",
+        "ac unit",
+        "air con",
+        "air conditioner",
+        "air conditioner unit",
+        "air conditioning",
+        "air conditioning unit",
+        "air-conditioner",
+        "air-conditioner unit",
+        "air-conditioning",
+        "aircon",
+        "bathroom ceiling",
+        "bedside lamp",
+        "bedside lamps",
+        "ceiling fan",
+        "central heating",
+        "drain",
+        "drains",
+        "drinking water",
+        "elevator",
+        "elevators",
+        "exhaust fan",
+        "fan",
+        "fans",
+        "faucet",
+        "faucets",
+        "fridge",
+        "fridges",
+        "heater",
+        "heaters",
+        "heating",
+        "hot water",
+        "internet",
+        "internet access",
+        "internet connection",
+        "lamp",
+        "lamps",
+        "lift",
+        "lifts",
+        "light",
+        "lighting",
+        "lights",
+        "mini bar",
+        "mini fridge",
+        "mini-fridge",
+        "minibar",
+        "minifridge",
+        "plumbing",
+        "refrigerator",
+        "refrigerators",
+        "remote control",
+        "shower",
+        "shower head",
+        "shower heads",
+        "showerhead",
+        "showers",
+        "sink",
+        "sinks",
+        "tap",
+        "taps",
+        "television",
+        "television set",
+        "television sets",
+        "televisions",
+        "toilet",
+        "toilets",
+        "tv",
+        "tv remote",
+        "ventilation",
+        "water",
+        "water pressure",
+        "water supply",
+        "wi fi",
+        "wi-fi",
+        "wi-fi connection",
+        "wi-fi network",
+        "wi-fi signal",
+        "wifi",
+        "wifi connection",
+        "wifi signal",
+        "wireless internet"
+      ]
+    },
+    "defective": {
+      "synset": "a:01752953",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.5
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "faulty": {
+      "synset": "a:01752953",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.5
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "damaged": {
+      "synset": "a:00679147",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "malfunctioning": {
+      "synset": "a:01092142",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "leaky": {
+      "synset": "a:01397385",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": -0.25,
+        "Facilities": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "clogged": {
+      "synset": "a:01621268",
+      "issue": "Condition",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "blocked": {
+      "synset": "a:01621080",
+      "issue": "Condition",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.125
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "flickering": {
+      "synset": "a:02304119",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "unstable": {
+      "synset": "a:02291843",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "stable": {
+      "synset": "a:02290998",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "intermittent": {
+      "synset": "a:00593836",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "weak": {
+      "synset": "a:02324397",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "strong": {
+      "synset": "a:02321009",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "secure": {
+      "synset": "a:02093888",
+      "issue": "Safety",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "unsafe": {
+      "synset": "a:02094755",
+      "issue": "Safety",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "safe": {
+      "synset": "a:02057829",
+      "issue": "Safety",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Room": 0.25,
+        "Facilities": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "dangerous": {
+      "synset": "a:02058794",
+      "issue": "Safety",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "slippery": {
+      "synset": "a:02234781",
+      "issue": "Safety",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "accessible": {
+      "synset": "a:00019131",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "inaccessible": {
+      "synset": "a:00019874",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "available": {
+      "synset": "a:00183053",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "unavailable": {
+      "synset": "a:00185921",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "usable": {
+      "synset": "a:02496674",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "unusable": {
+      "synset": "a:02497830",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "convenient": {
+      "synset": "a:00604617",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "inconvenient": {
+      "synset": "a:00605128",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "durable": {
+      "synset": "a:01439496",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "worn": {
+      "synset": "a:02580449",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "worn-out": {
+      "synset": "a:02582873",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "dilapidated": {
+      "synset": "a:00679717",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "maintained": {
+      "synset": "a:00737515",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "disconnected": {
+      "synset": "a:01651609",
+      "issue": "Condition",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "connected": {
+      "synset": "a:01651346",
+      "issue": "Condition",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": 0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "malodorous": {
+      "synset": "a:01053144",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "obstructed": {
+      "synset": "a:01620509",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.25
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "inoperative": {
+      "synset": "a:00833575",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "unserviceable": {
+      "synset": "a:02124654",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "serviceable": {
+      "synset": "a:02123812",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "insecure": {
+      "synset": "a:02095786",
+      "issue": "Safety",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "unsound": {
+      "synset": "a:02275629",
+      "issue": "Safety",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "sturdy": {
+      "synset": "a:02038994",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "hazardous": {
+      "synset": "a:02059811",
+      "issue": "Safety",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    },
+    "happy": {
+      "synset": "a:01148283",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "unhappy": {
+      "synset": "a:01149494",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "satisfied": {
+      "synset": "a:00589344",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "dissatisfied": {
+      "synset": "a:00590163",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "disappointed": {
+      "synset": "a:02333976",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "pleased": {
+      "synset": "a:01805157",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "displeased": {
+      "synset": "a:01805889",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "impressed": {
+      "synset": "a:00071142",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "unimpressive": {
+      "synset": "a:01286539",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "delighted": {
+      "synset": "a:01805730",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "disgusted": {
+      "synset": "a:01806677",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "unbearable": {
+      "synset": "a:02435671",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "obnoxious": {
+      "synset": "a:01626874",
+      "issue": "Quality",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained."
+    },
+    "sterile": {
+      "synset": "a:02115759",
+      "issue": "Cleanliness",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ]
+    },
+    "thoughtful": {
+      "synset": "a:00639230",
+      "issue": "Professionalism",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "thoughtless": {
+      "synset": "a:02420530",
+      "issue": "Professionalism",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ]
+    },
+    "spotty": {
+      "synset": "a:00578662",
+      "issue": "Reliability",
+      "sense_selection": "Explicit hotel-context gloss selection.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ],
+      "calibration": {
+        "Facilities": -0.375
+      },
+      "calibration_rule_id": "hotel_attribute_preference",
+      "calibration_reason": "Explicit hotel attribute preference: orient the magnitude of the original P-N score to the documented domain preference; use 0.25 only when P-N is zero. Original P/N, selected sense and lexical score remain visible. This is a domain rule, not a changed SentiWordNet score or learned confidence."
+    },
+    "new": {
+      "synset": "a:01640850",
+      "issue": "Condition",
+      "sense_selection": "First-ranked WordNet adjective sense; original SentiWordNet score retained.",
+      "allowed_categories": [
+        "Room",
+        "Facilities"
+      ]
+    }
+  },
+  "opinion_aliases": {
+    "work": {
+      "canonical": "working",
+      "kind": "FUNCTION_VERB",
+      "verb_form": "base"
+    },
+    "works": {
+      "canonical": "working",
+      "kind": "FUNCTION_VERB",
+      "verb_form": "finite"
+    },
+    "function": {
+      "canonical": "functioning",
+      "kind": "FUNCTION_VERB",
+      "verb_form": "base"
+    },
+    "functions": {
+      "canonical": "functioning",
+      "kind": "FUNCTION_VERB",
+      "verb_form": "finite"
+    },
+    "comfy": {
+      "canonical": "comfortable",
+      "kind": "OPINION"
+    },
+    "busted": {
+      "canonical": "broken",
+      "kind": "OPINION"
+    },
+    "out of order": {
+      "canonical": "broken",
+      "kind": "OPINION",
+      "allowed_categories": [
+        "Facilities"
+      ]
+    },
+    "leaking": {
+      "canonical": "leaky",
+      "kind": "OPINION",
+      "allowed_aspects": [
+        "bathroom ceiling",
+        "drain",
+        "drains",
+        "drinking water",
+        "faucet",
+        "faucets",
+        "fridge",
+        "fridges",
+        "hot water",
+        "mini bar",
+        "mini fridge",
+        "mini-fridge",
+        "minibar",
+        "minifridge",
+        "plumbing",
+        "refrigerator",
+        "refrigerators",
+        "shower",
+        "shower head",
+        "shower heads",
+        "showerhead",
+        "showers",
+        "sink",
+        "sinks",
+        "tap",
+        "taps",
+        "toilet",
+        "toilets",
+        "water",
+        "water pressure",
+        "water supply"
+      ]
+    },
+    "stopped working": {
+      "canonical": "malfunctioning",
+      "kind": "OPINION"
+    },
+    "stops working": {
+      "canonical": "malfunctioning",
+      "kind": "OPINION"
+    },
+    "stopped cooling": {
+      "canonical": "malfunctioning",
+      "kind": "OPINION",
+      "allowed_aspects": [
+        "a/c",
+        "ac",
+        "ac unit",
+        "air con",
+        "air conditioner",
+        "air conditioner unit",
+        "air conditioning",
+        "air conditioning unit",
+        "air-conditioner",
+        "air-conditioner unit",
+        "air-conditioning",
+        "aircon"
+      ]
+    },
+    "stops cooling": {
+      "canonical": "malfunctioning",
+      "kind": "OPINION",
+      "allowed_aspects": [
+        "a/c",
+        "ac",
+        "ac unit",
+        "air con",
+        "air conditioner",
+        "air conditioner unit",
+        "air conditioning",
+        "air conditioning unit",
+        "air-conditioner",
+        "air-conditioner unit",
+        "air-conditioning",
+        "aircon"
+      ]
+    },
+    "undercooked": {
+      "canonical": "underdone",
+      "kind": "OPINION"
+    },
+    "overcooked": {
+      "canonical": "overdone",
+      "kind": "OPINION"
+    },
+    "mouthwatering": {
+      "canonical": "mouth-watering",
+      "kind": "OPINION"
+    },
+    "saggy": {
+      "canonical": "sagging",
+      "kind": "OPINION"
+    },
+    "freezing": {
+      "canonical": "chilly",
+      "kind": "OPINION"
+    },
+    "well maintained": {
+      "canonical": "maintained",
+      "kind": "OPINION"
+    },
+    "well-maintained": {
+      "canonical": "maintained",
+      "kind": "OPINION"
+    },
+    "well kept": {
+      "canonical": "maintained",
+      "kind": "OPINION"
+    },
+    "well-kept": {
+      "canonical": "maintained",
+      "kind": "OPINION"
+    },
+    "poorly maintained": {
+      "canonical": "dilapidated",
+      "kind": "OPINION"
+    },
+    "poorly-maintained": {
+      "canonical": "dilapidated",
+      "kind": "OPINION"
+    },
+    "well lit": {
+      "canonical": "well-lighted",
+      "kind": "OPINION"
+    },
+    "well-lit": {
+      "canonical": "well-lighted",
+      "kind": "OPINION"
+    },
+    "spotlessly clean": {
+      "canonical": "spotless",
+      "kind": "OPINION"
+    },
+    "squeaky clean": {
+      "canonical": "spotless",
+      "kind": "OPINION"
+    },
+    "brand new": {
+      "canonical": "new",
+      "kind": "OPINION"
+    },
+    "overcrowded": {
+      "canonical": "crowded",
+      "kind": "OPINION"
+    },
+    "crunchy": {
+      "canonical": "crisp",
+      "kind": "OPINION"
+    },
+    "watered-down": {
+      "canonical": "diluted",
+      "kind": "OPINION"
+    },
+    "watered down": {
+      "canonical": "diluted",
+      "kind": "OPINION"
+    }
+  },
+  "predicate_adverbs": [
+    "properly",
+    "well"
+  ],
+  "emphasis_phrases": [
+    "at all"
+  ],
+  "auxiliaries": [
+    "do",
+    "does",
+    "did"
+  ],
+  "determiners": [
+    "the",
+    "a",
+    "an",
+    "my",
+    "our",
+    "their",
+    "this",
+    "that"
+  ],
+  "copulas": [
+    "is",
+    "are",
+    "was",
+    "were",
+    "seems",
+    "seemed",
+    "looks",
+    "looked",
+    "feels",
+    "felt",
+    "tastes",
+    "tasted",
+    "seem",
+    "look",
+    "feel",
+    "taste",
+    "smell",
+    "smells",
+    "smelled",
+    "appear",
+    "appears",
+    "appeared",
+    "became",
+    "become",
+    "remained",
+    "remains"
+  ],
+  "negations": [
+    "not",
+    "never"
+  ],
+  "intensifiers": {
+    "very": 1.25,
+    "extremely": 1.5,
+    "highly": 1.25,
+    "really": 1.25,
+    "slightly": 0.75,
+    "somewhat": 0.75,
+    "fairly": 0.9,
+    "rather": 1.1,
+    "quite": 1.1,
+    "exceptionally": 1.5,
+    "incredibly": 1.5,
+    "absolutely": 1.5,
+    "particularly": 1.25,
+    "very much": 1.25,
+    "a bit": 0.75,
+    "a little": 0.75,
+    "a little bit": 0.75,
+    "a lot": 1.25,
+    "so": 1.25,
+    "too": 1.25
+  },
+  "connectors": [
+    "and",
+    "but",
+    "however"
+  ],
+  "neutral_threshold": 0.05,
+  "introductions": [
+    "i found",
+    "we found",
+    "i thought",
+    "we thought",
+    "i felt",
+    "we felt",
+    "i think",
+    "we think",
+    "i must say",
+    "we must say",
+    "overall",
+    "honestly",
+    "unfortunately",
+    "fortunately",
+    "there was",
+    "there were",
+    "there is",
+    "there are",
+    "i was",
+    "we were",
+    "i am",
+    "we are"
+  ],
+  "context_phrases": [
+    "when we arrived",
+    "when i arrived",
+    "on arrival",
+    "upon arrival",
+    "during our stay",
+    "during my stay",
+    "throughout our stay",
+    "throughout my stay",
+    "during the night",
+    "at night",
+    "in the morning",
+    "in the evening",
+    "at breakfast",
+    "at dinner",
+    "for us",
+    "to us",
+    "to me",
+    "to everyone",
+    "for my family",
+    "for our family",
+    "at the hotel",
+    "in our room",
+    "in my room",
+    "in the room",
+    "for the price",
+    "for the money",
+    "for a hotel",
+    "for a short stay",
+    "for our stay",
+    "for my stay",
+    "on our first night",
+    "on the first night",
+    "throughout the night"
+  ],
+  "possessives": [
+    "has",
+    "have",
+    "had",
+    "with"
+  ],
+  "post_modifiers": [
+    "enough",
+    "indeed"
+  ],
+  "context_relations": [
+    "to",
+    "for",
+    "with",
+    "from",
+    "near",
+    "by"
+  ],
+  "relation_targets": [
+    "airport",
+    "the airport",
+    "station",
+    "train station",
+    "railway station",
+    "bus station",
+    "beach",
+    "the beach",
+    "city center",
+    "city centre",
+    "town center",
+    "town centre",
+    "shops",
+    "shopping",
+    "restaurants",
+    "town",
+    "downtown",
+    "everything",
+    "the city",
+    "the station"
+  ],
+  "experience_opinions": [
+    "happy",
+    "unhappy",
+    "satisfied",
+    "dissatisfied",
+    "pleased",
+    "displeased",
+    "disappointed",
+    "impressed",
+    "disgusted",
+    "delighted"
+  ]
+}

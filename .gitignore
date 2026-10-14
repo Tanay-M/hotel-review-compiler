@@ -1,0 +1,57 @@
+# Python environments, bytecode and packaging
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+credentials.json
+
+# Downloaded upstream archive; the verified runtime subset is committed
+data/vendor/
+
+# Scratch files, local databases, logs and editor/OS caches
+tmp/
+*.sqlite3
+*.sqlite3-*
+*.db
+*.log
+*.tmp
+*.bak
+*.swp
+~$*
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Generated output is ignored except the curated diagrams and report evidence
+output/*
+!output/architecture/
+output/architecture/*
+!output/architecture/Team_17_Detailed_Block_Diagram.docx
+!output/architecture/Team_17_Detailed_Block_Diagram_Updated.docx
+!output/evaluation/
+output/evaluation/*
+!output/evaluation/vocabulary-expansion-2026-10-14/
+output/evaluation/vocabulary-expansion-2026-10-14/*
+!output/evaluation/vocabulary-expansion-2026-10-14/*.csv
+!output/evaluation/vocabulary-expansion-2026-10-14/*.txt
+

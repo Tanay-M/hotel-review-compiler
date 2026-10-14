@@ -1,0 +1,11 @@
+﻿field,value
+dataset_type,Authored synthetic development sample; unchanged reviews; no independent gold sentiment labels
+input_sha256,3172b6c07e8265c993fb743fd8b577df4d9f4899906ff9671224ab1e7c9a8e14
+before_created_utc,2026-10-14T02:53:12.174242+00:00
+after_created_utc,2026-10-14T03:31:41.519963+00:00
+before_analysis_fingerprint,0378d89a9719520d8acf253ae2bf417a5130fa0ab0263d8469d9b76d48cdc1a4
+after_analysis_fingerprint,f23e50da4ef05db0186ed08d7dff934d70fb878a1f6518641ab6e6c7131ce60e
+before_complete_percent,54
+after_complete_percent,88
+improvement_percentage_points,34
+accuracy_precision_recall_f1,Not measured; coverage is not sentiment accuracy

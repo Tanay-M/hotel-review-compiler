@@ -1,0 +1,23 @@
+# Keep source files consistent across Windows and other platforms
+* text=auto
+*.py text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.svg text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.ps1 text eol=crlf
+
+# Preserve exact CSV input hashes and upstream lexical resource bytes
+*.csv -text whitespace=cr-at-eol
+*.tsv -text whitespace=cr-at-eol
+
+# Native documents and images are binary
+*.docx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary

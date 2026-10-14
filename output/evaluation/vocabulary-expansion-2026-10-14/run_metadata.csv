@@ -1,0 +1,17 @@
+﻿field,value
+batch_id,expanded-100-2026-10-14
+created_at_utc,2026-10-14T03:31:41.519963+00:00
+source_name,hotel_reviews_100.csv
+source_sha256,3172b6c07e8265c993fb743fd8b577df4d9f4899906ff9671224ab1e7c9a8e14
+analysis_fingerprint,f23e50da4ef05db0186ed08d7dff934d70fb878a1f6518641ab6e6c7131ce60e
+reporting_fingerprint,1a8b73b7eb6521bb54fc02a435da363031db376ddeaa382a39a0cff4fa3e9a77
+python_version,3.12.14
+platform,Windows-11-10.0.26300-SP0
+analysis_seconds,0.036605
+timing_scope,"Single observed core batch run, including resource preflight; excludes CSV decoding, reporting, HTTP transfer and browser rendering. Not a repeated performance benchmark."
+primary_scope,complete_reviews
+secondary_scope,complete_and_partial: recognized opinions only
+minimum_support_reviews,5
+dataset_type,User-supplied CSV; sampling and real/synthetic provenance must be documented by the author.
+accuracy_precision_recall_f1,Not measured for this upload: no independent gold labels were provided.
+null_values,"Empty numeric cells mean unavailable, not zero."

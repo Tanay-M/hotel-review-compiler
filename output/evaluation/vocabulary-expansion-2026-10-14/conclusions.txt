@@ -1,0 +1,78 @@
+TEAM 17 | BATCH REPORT expanded-100-2026-10-14
+Primary conclusions use 88 completely analyzed reviews out of 100 submitted rows. Partial (6), unsupported (6), invalid (0), and processing-error (0) rows are excluded from primary sentiment summaries.
+Sentiment indices and coverage are not hotel ratings, confidence, or measured real-world accuracy. Conclusions are generated from counts, without an LLM.
+
+Primary: complete reviews
+Among 88 completely analyzed reviews, overall labels are 38 Positive, 29 Negative, 20 Mixed, and 1 Neutral.
+Among 88 completely analyzed reviews, 42 mention Room: 25 Positive, 15 Negative, 2 Mixed, and 0 Neutral.
+Among 88 completely analyzed reviews, 22 mention Staff: 13 Positive, 9 Negative, 0 Mixed, and 0 Neutral.
+Among 88 completely analyzed reviews, 15 mention Service: 6 Positive, 8 Negative, 0 Mixed, and 1 Neutral.
+Among 88 completely analyzed reviews, 21 mention Food: 11 Positive, 7 Negative, 1 Mixed, and 2 Neutral.
+Among 88 completely analyzed reviews, 2 mention Cleanliness: 1 Positive, 1 Negative, 0 Mixed, and 0 Neutral. Support is low (fewer than 5 reviews); avoid generalizing.
+Among 88 completely analyzed reviews, 34 mention Facilities: 15 Positive, 19 Negative, 0 Mixed, and 0 Neutral.
+Among 88 completely analyzed reviews, Cleanliness / Hygiene has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Facilities / Air Conditioning has negative mentions in 5 of 8 reviews mentioning that issue (62.50%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Facilities / Elevator has negative mentions in 2 of 4 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Facilities / Heating has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Facilities / Pool has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Facilities / Refrigerator has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Facilities / Shower has negative mentions in 1 of 3 reviews mentioning that issue (33.33%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Facilities / Television has negative mentions in 2 of 3 reviews mentioning that issue (66.67%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Facilities / Ventilation has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Facilities / WiFi has negative mentions in 5 of 7 reviews mentioning that issue (71.43%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Food / Cleanliness has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Food / Freshness has negative mentions in 1 of 4 reviews mentioning that issue (25.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Food / Quality has negative mentions in 2 of 7 reviews mentioning that issue (28.57%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Food / Taste has negative mentions in 3 of 9 reviews mentioning that issue (33.33%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Food / Temperature has negative mentions in 2 of 2 reviews mentioning that issue (100.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Room / Cleanliness has negative mentions in 10 of 22 reviews mentioning that issue (45.45%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Room / Comfort has negative mentions in 3 of 14 reviews mentioning that issue (21.43%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Room / Noise has negative mentions in 3 of 8 reviews mentioning that issue (37.50%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Room / Space has negative mentions in 3 of 7 reviews mentioning that issue (42.86%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Room / Temperature has negative mentions in 1 of 1 reviews mentioning that issue (100.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Room / View has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Service / Check-in has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Service / Check-out has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 88 completely analyzed reviews, Service / Response Time has negative mentions in 6 of 9 reviews mentioning that issue (66.67%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Staff / Friendliness has negative mentions in 5 of 10 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Staff / Helpfulness has negative mentions in 5 of 10 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention.
+Among 88 completely analyzed reviews, Room / Cleanliness has the highest complaint count (10 distinct reviews each). This ranks frequency, not severity; inspect support and denominators before interpreting it.
+Evidence: see summary.json conclusion row_ids and category/issue record_indices; use batch.json for original text and full compiler traces.
+
+Secondary: complete and partial reviews; recognized opinions only
+Among 94 complete/partial reviews using recognized opinions only, overall labels are 42 Positive, 31 Negative, 20 Mixed, and 1 Neutral.
+Among 94 complete/partial reviews using recognized opinions only, 45 mention Room: 27 Positive, 16 Negative, 2 Mixed, and 0 Neutral.
+Among 94 complete/partial reviews using recognized opinions only, 24 mention Staff: 15 Positive, 9 Negative, 0 Mixed, and 0 Neutral.
+Among 94 complete/partial reviews using recognized opinions only, 16 mention Service: 6 Positive, 9 Negative, 0 Mixed, and 1 Neutral.
+Among 94 complete/partial reviews using recognized opinions only, 21 mention Food: 11 Positive, 7 Negative, 1 Mixed, and 2 Neutral.
+Among 94 complete/partial reviews using recognized opinions only, 2 mention Cleanliness: 1 Positive, 1 Negative, 0 Mixed, and 0 Neutral. Support is low (fewer than 5 reviews); avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, 34 mention Facilities: 15 Positive, 19 Negative, 0 Mixed, and 0 Neutral.
+Among 94 complete/partial reviews using recognized opinions only, Cleanliness / Hygiene has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / Air Conditioning has negative mentions in 5 of 8 reviews mentioning that issue (62.50%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / Elevator has negative mentions in 2 of 4 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / Heating has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / Pool has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / Refrigerator has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / Shower has negative mentions in 1 of 3 reviews mentioning that issue (33.33%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / Television has negative mentions in 2 of 3 reviews mentioning that issue (66.67%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / Ventilation has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Facilities / WiFi has negative mentions in 5 of 7 reviews mentioning that issue (71.43%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Food / Cleanliness has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Food / Freshness has negative mentions in 1 of 4 reviews mentioning that issue (25.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Food / Quality has negative mentions in 2 of 7 reviews mentioning that issue (28.57%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Food / Taste has negative mentions in 3 of 9 reviews mentioning that issue (33.33%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Food / Temperature has negative mentions in 2 of 2 reviews mentioning that issue (100.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Room / Cleanliness has negative mentions in 10 of 23 reviews mentioning that issue (43.48%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Room / Comfort has negative mentions in 3 of 15 reviews mentioning that issue (20.00%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Room / Noise has negative mentions in 3 of 8 reviews mentioning that issue (37.50%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Room / Space has negative mentions in 4 of 8 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Room / Temperature has negative mentions in 1 of 1 reviews mentioning that issue (100.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Room / View has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Service / Check-in has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Service / Check-out has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Service / Quality has negative mentions in 1 of 2 reviews mentioning that issue (50.00%). Mixed reviews count once as having a negative mention. Support is low; avoid generalizing.
+Among 94 complete/partial reviews using recognized opinions only, Service / Response Time has negative mentions in 6 of 9 reviews mentioning that issue (66.67%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Staff / Friendliness has negative mentions in 5 of 11 reviews mentioning that issue (45.45%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Staff / Helpfulness has negative mentions in 5 of 11 reviews mentioning that issue (45.45%). Mixed reviews count once as having a negative mention.
+Among 94 complete/partial reviews using recognized opinions only, Room / Cleanliness has the highest complaint count (10 distinct reviews each). This ranks frequency, not severity; inspect support and denominators before interpreting it.
+Evidence: see summary.json conclusion row_ids and category/issue record_indices; use batch.json for original text and full compiler traces.

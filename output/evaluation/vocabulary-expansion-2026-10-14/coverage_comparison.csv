@@ -1,0 +1,11 @@
+﻿metric,before,after,difference
+submitted,100,100,0
+analyzed,100,100,0
+invalid_input,0,0,0
+processing_error,0,0,0
+complete,54,88,34
+partial,28,6,-22
+unsupported,18,6,-12
+duplicate_text_rows,0,0,0
+duplicate_id_rows,0,0,0
+extracted_opinions,127,167,40
