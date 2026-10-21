@@ -1,0 +1,64 @@
+{
+  "id": "S14-2004",
+  "url": "https://aclanthology.org/S14-2004/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "SemEval-2014 Task 4: Aspect Based Sentiment Analysis"
+    ],
+    "citation_author": [
+      "Maria Pontiki",
+      "Dimitrios Galanis",
+      "John Pavlopoulos",
+      "Harris Papageorgiou",
+      "Ion Androutsopoulos",
+      "Suresh Manandhar"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval 2014)"
+    ],
+    "citation_publication_date": [
+      "2014/8"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/S14-2004.pdf"
+    ],
+    "citation_firstpage": [
+      "27"
+    ],
+    "citation_lastpage": [
+      "35"
+    ],
+    "citation_doi": [
+      "10.3115/v1/S14-2004"
+    ],
+    "og:title": [
+      "SemEval-2014 Task 4: Aspect Based Sentiment Analysis"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/S14-2004.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/S14-2004/"
+    ],
+    "og:description": [
+      "Maria Pontiki, Dimitris Galanis, John Pavlopoulos, Harris Papageorgiou, Ion Androutsopoulos, Suresh Manandhar. Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval 2014). 2014."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{pontiki-etal-2014-semeval,\n    title = \"{S}em{E}val-2014 Task 4: Aspect Based Sentiment Analysis\",\n    author = \"Pontiki, Maria  and\n      Galanis, Dimitris  and\n      Pavlopoulos, John  and\n      Papageorgiou, Harris  and\n      Androutsopoulos, Ion  and\n      Manandhar, Suresh\",\n    editor = \"Nakov, Preslav  and\n      Zesch, Torsten\",\n    booktitle = \"Proceedings of the 8th {I}nternational {W}orkshop on {S}emantic {E}valuation ({S}em{E}val 2014)\",\n    month = aug,\n    year = \"2014\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S14-2004/\",\n    doi = \"10.3115/v1/S14-2004\",\n    pages = \"27--35\"\n}"
+}

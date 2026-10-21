@@ -1,0 +1,149 @@
+{
+  "published": "2026-10-21",
+  "booking_italy_source": {
+    "provider": "Crawl Feeds",
+    "publisher_url": "https://huggingface.co/datasets/crawlfeeds/Booking-Hotel-Reviews-Dataset",
+    "publisher_revision": "f39ceeede7b9d8a824909ebe88a7723ad31fa6c5",
+    "publisher_bytes_match_supplied_source": true,
+    "source_sha256": "137cec35ddbd678b2bdb1bc93eccb2e844926c8503d3d7f898e274e387933dbd",
+    "license": "CC-BY-NC-4.0",
+    "source_rows": 4367,
+    "nonblank_bodies": 3102,
+    "empty_bodies_retained": 1265,
+    "input_transformation": "Retain original positive then negative body fields; omit blank/literal missing markers; join with newline. No titles or reviewer metadata.",
+    "evaluation_role": "Inspected hybrid vocabulary development; no independent aspect gold; not yet a two-system comparison."
+  },
+  "excluded": [
+    "raw source archives and reviewer metadata",
+    "SemEval raw XML and sentence CSV: redistribution permission not established"
+  ],
+  "files": [
+    {
+      "path": "output/datasets/real_hotel_demo_100.csv",
+      "rows": 100,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "bytes": 2801,
+      "sha256": "b93a4f58d3fcc2fb1ae7221287eb68714d36dc84a918e082ca0dbb2357d30f00",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "output/datasets/real_hotel_random_200.csv",
+      "rows": 200,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "bytes": 40364,
+      "sha256": "9ac73713d6e9ed3e65706127f4951ae9c9f7b77515b1c3bf1fd3c36bf7778d1a",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "output/datasets/tripadvisor_original_20491.csv",
+      "rows": 20491,
+      "columns": [
+        "Review",
+        "Rating"
+      ],
+      "bytes": 14966021,
+      "sha256": "b1e86762f5b2e82b3d75316e6973f6deb47430873535bde76aaf3112b919524c",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "path": "output/datasets/booking_italy/booking_italy_all.csv",
+      "rows": 4367,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "bytes": 937248,
+      "sha256": "653cd6f2c231568448acb72c44a45b5faff6d0b9a30bef634956c5a813f09aa1",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "path": "output/datasets/booking_italy/booking_italy_part_01.csv",
+      "rows": 1000,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "bytes": 213927,
+      "sha256": "40d801f236d0464482c68be70d6e558053d5301a8dae950054daf36e87ed28e7",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "path": "output/datasets/booking_italy/booking_italy_part_02.csv",
+      "rows": 1000,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "bytes": 209821,
+      "sha256": "e0bb8e316b4d1bba46843fa4090a2c1b6f0b428b9b316a0a364f03569ecbf85a",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "path": "output/datasets/booking_italy/booking_italy_part_03.csv",
+      "rows": 1000,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "bytes": 209042,
+      "sha256": "5c0163504be45c52dceb5ac6bd5e88c02894c7ff6da821d965826c8edeaea734",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "path": "output/datasets/booking_italy/booking_italy_part_04.csv",
+      "rows": 1000,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "bytes": 219236,
+      "sha256": "2e1faf1f19d3103e8feb243e7ba5a2894d5787d8e84257be966745c192543ed0",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "path": "output/datasets/booking_italy/booking_italy_part_05.csv",
+      "rows": 367,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "bytes": 85290,
+      "sha256": "0e3b17a3e8ce1214631cf89bfa41dab2f11fe8031596e456117613a805292c92",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "path": "output/datasets/public_provenance/real_hotel_demo_100_sources.csv",
+      "rows": 100,
+      "columns": [
+        "sr.no",
+        "source_dataset",
+        "source_data_row",
+        "review_sha256",
+        "fields_used"
+      ],
+      "bytes": 10429,
+      "sha256": "fd31a0088e42dffe906597da81a8f346776fe11b709d988b2864b2a286cdaa57",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "output/datasets/public_provenance/real_hotel_random_200_sources.csv",
+      "rows": 200,
+      "columns": [
+        "sr.no",
+        "source_dataset",
+        "source_data_row",
+        "review_sha256",
+        "fields_used"
+      ],
+      "bytes": 23084,
+      "sha256": "6638a7963f073a454a13e2726982ee2b54b9bbce3c2b3d50695cb83ff4024f58",
+      "license": "CC0-1.0"
+    }
+  ]
+}

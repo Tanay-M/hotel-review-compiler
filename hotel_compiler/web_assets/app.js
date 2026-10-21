@@ -19,7 +19,16 @@ function badge(value) {
   return node("span", "pill " + (known.has(value) ? value.toLowerCase() : "neutral"), value);
 }
 function number(value, signed = false) {
+  if (value == null || !Number.isFinite(Number(value))) return "Unavailable";
   return (signed && value > 0 ? "+" : "") + Number(value).toFixed(4);
+}
+function reviewScoreDisplay(result) {
+  const display = node("div", "review-score-display");
+  const score = result?.review_score;
+  display.append(node("span", "score-number review-score-value", score == null ? "—" : number(score, true)));
+  display.append(node("small", "review-score-scope", score == null ? "Unavailable" : result.review_score_scope));
+  if (score != null && result.net_score_band) display.append(node("small", "review-score-scope", result.net_score_band));
+  return display;
 }
 function sourceSpan(start, end) {
   // Python offsets count Unicode code points, while JS slice counts UTF-16 units.
@@ -73,6 +82,9 @@ function resetResults() {
   $("results-body").replaceChildren();
   $("diagnostics").replaceChildren();
   $("analysis-scope").textContent = "";
+  $("whole-text-summary").hidden = true;
+  $("method-comparison").hidden = true;
+  $("method-comparison").replaceChildren();
 }
 function updateInput() {
   $("char-count").textContent = `${Array.from(review.value).length.toLocaleString()} / 10,000`;
@@ -83,6 +95,8 @@ function loading(value) {
   $("clear-button").disabled = value;
   $("single-mode").disabled = value;
   $("batch-mode").disabled = value;
+  $("analysis-method").disabled = value;
+  $("compare-button").disabled = value;
   review.disabled = value;
   document.querySelectorAll("#example-buttons button").forEach((button) => { button.disabled = value; });
   $("results-section").setAttribute("aria-busy", String(value));
@@ -96,16 +110,19 @@ function renderResults() {
   $("results-content").hidden = false;
   $("trace-section").hidden = false;
   const summary = $("result-summary");
-  summary.replaceChildren(badge(analysis.status), badge(analysis.overall));
+  const reviewScore = node("div", "review-score-summary");
+  reviewScore.append(node("span", "", "Review score"), reviewScoreDisplay(analysis));
+  summary.replaceChildren(node("span", "method-label", analysis.method_label || "SentiWordNet compiler"), badge(analysis.status), badge(analysis.overall), reviewScore);
+  renderWholeText();
   $("analysis-scope").textContent = `“${analysis.review_text}”` +
-    (analysis.status === "partial" ? "\nPartial analysis: the overall sentiment covers supported clauses only." :
+    (analysis.status === "partial" ? "\nPartial analysis: sentiment and review score use recognized opinions only." :
       analysis.status === "unsupported" ? "\nNo supported aspect-opinion records were found. Inspect the diagnostics and tokens below." :
         `\n${analysis.records.length} aspect-opinion record${analysis.records.length === 1 ? "" : "s"} · scores range from −1 to +1.`);
   const body = $("results-body");
   body.replaceChildren();
   for (const record of analysis.records) {
     const row = node("tr");
-    for (const value of [record.category, record.issue, record.opinion_expression, badge(record.polarity), node("span", "score-number", number(record.score, true))]) {
+    for (const value of [record.category, record.issue, record.opinion_expression, badge(record.polarity), record.strength || "Unavailable", node("span", "score-number", number(record.score, true))]) {
       const cell = node("td");
       cell.append(value instanceof Node ? value : document.createTextNode(value));
       row.append(cell);
@@ -115,7 +132,7 @@ function renderResults() {
   if (!analysis.records.length) {
     const row = node("tr");
     const cell = node("td", "", "No aspect-level results for this review.");
-    cell.colSpan = 5;
+    cell.colSpan = 6;
     row.append(cell);
     body.append(row);
   }
@@ -147,6 +164,7 @@ function renderTrace() {
     button.tabIndex = selected ? 0 : -1;
   });
   const trace = analysis.trace;
+  if (analysis.method === "hybrid") { renderHybridTrace(panel, trace); return; }
   if (selectedStage === "tokens") {
     panel.append(node("p", "trace-intro", `${trace.lexical_analysis.length} tokens. Each token retains its original text and zero-based source positions.`));
     panel.append(table(["#", "Source text", "Normalized value", "Token class", "Normalization / verb form", "Span"], trace.lexical_analysis.map((token, index) => [
@@ -191,6 +209,8 @@ function renderTrace() {
     if (!grid.childElementCount) panel.append(node("p", "no-records", "No aspect-opinion pairs reached semantic evaluation."));
   } else if (selectedStage === "scoring") {
     panel.append(node("p", "trace-intro", "P and N are original SentiWordNet values for the selected sense. Domain rules and modifier adjustments are shown separately. Scores are not confidence percentages."));
+    panel.append(node("p", "trace-intro", analysis.review_score == null ? "Review score is unavailable because no opinion scores were produced." :
+      `Review score = sum of ${analysis.records.length} final opinion scores ÷ ${analysis.records.length} = ${number(analysis.review_score, true)} (${analysis.review_score_scope}). Mixed labels are preserved even when scores cancel.`));
     trace.sentiment_evaluation.forEach((score, index) => {
       const record = analysis.records[index];
       const card = node("article", "trace-record score-card");
@@ -232,11 +252,12 @@ async function analyze() {
   try {
     const response = await fetch("/api/analyze", {
       method: "POST", headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({text: review.value}), signal: controller.signal,
+      body: JSON.stringify({text: review.value, method: $("analysis-method").value}), signal: controller.signal,
     });
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || "The local analyzer could not complete this request.");
     analysis = data;
+    $("method-comparison").hidden = true;
     renderResults();
   } catch (failure) {
     error(failure.name === "AbortError" ? "The request timed out. Check that the local server is still running." :
@@ -268,11 +289,13 @@ tabs.forEach((button, index) => {
 });
 $("download-button").addEventListener("click", () => {
   if (!analysis) return;
-  const values = ["review_id", "review_text", "status", "overall", "opinion_count", "aspect_results", "diagnostics"];
-  const record = [analysis.review_id, analysis.review_text, analysis.status, analysis.overall, analysis.records.length,
+  const values = ["method", "review_id", "review_text", "status", "overall", "review_score", "review_score_scope", "net_score_band", "whole_text_score", "opinion_count", "aspect_results", "diagnostics"];
+  const record = [analysis.method || "sentiwordnet", analysis.review_id, analysis.review_text, analysis.status, analysis.overall, analysis.review_score, analysis.review_score_scope, analysis.net_score_band, analysis.whole_text?.score ?? null, analysis.records.length,
     analysis.records.map((r) => `${r.category} / ${r.issue}: ${r.opinion_expression} -> ${r.polarity} (${number(r.score, true)})`).join("; "),
     analysis.diagnostics.map((d) => `${d.code}: ${d.message}`).join("; ")];
   const cell = (value) => {
+    if (value == null) return '""';
+    if (typeof value === "number") return String(value);
     let text = String(value);
     if (/^[\t\r\n]/.test(text) || /^[=+\-@]/.test(text.trimStart())) text = "'" + text;
     return '"' + text.replaceAll('"', '""') + '"';
@@ -300,7 +323,8 @@ async function initialize() {
       $("example-buttons").append(button);
     }
     const content = $("vocabulary-content");
-    content.replaceChildren(node("p", "", `${config.categories.length} categories · ${Object.keys(config.aspects).length} aspect phrases · ${Object.keys(config.opinions).length} opinion terms`));
+    content.replaceChildren(node("p", "", "The lists below describe the SentiWordNet baseline. The hybrid uses an independent hotel-aspect dictionary and grammatical opinion discovery; it is not restricted to this opinion list."), node("p", "", `${config.categories.length} categories · ${Object.keys(config.aspects).length} baseline aspect phrases · ${Object.keys(config.opinions).length} baseline opinion terms`));
+    if (config.hybrid_vocabulary) content.append(node("p", "", `Hybrid: ${config.hybrid_vocabulary.aspect_phrases} aspect phrases and ${config.hybrid_vocabulary.reviewed_lexical_forms} reviewed opinion forms. Unknown forms are normalized only in a separate, category-guarded scoring copy; original evidence remains in the Scoring trace. Version: ${config.hybrid_vocabulary.version}.`));
     for (const [title, values] of [["Categories", config.categories], ["Aspect phrases", Object.keys(config.aspects)], ["Opinion terms", Object.keys(config.opinions)]]) {
       content.append(node("h3", "", title));
       const words = node("div", "word-list");
@@ -324,11 +348,13 @@ function showBatchReview(row) {
   } else {
     $("empty-state").hidden = true;
     $("results-content").hidden = false;
-    $("result-summary").replaceChildren(badge(row.execution_status));
+    const reviewScore = node("div", "review-score-summary");
+    reviewScore.append(node("span", "", "Review score"), reviewScoreDisplay(null));
+    $("result-summary").replaceChildren(badge(row.execution_status), reviewScore);
     $("analysis-scope").textContent = row.review_text || "Blank or missing review text.";
     const tr = node("tr");
     const td = node("td", "", "No compiler result: this row was not analyzed.");
-    td.colSpan = 5;
+    td.colSpan = 6;
     tr.append(td);
     $("results-body").replaceChildren(tr);
     $("diagnostics").hidden = false;

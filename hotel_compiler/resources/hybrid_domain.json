@@ -1,0 +1,30 @@
+{
+  "version": "hybrid-grammar-v2",
+  "categories": ["Room", "Staff", "Service", "Food", "Cleanliness", "Facilities"],
+  "aspects": {
+    "Room": ["room", "rooms", "bedroom", "bedrooms", "suite", "suites", "bed", "beds", "bedding", "mattress", "mattresses", "pillow", "pillows", "bathroom", "bathrooms", "balcony", "balconies", "accommodation", "accommodations", "apartment", "apartments", "shower", "showers", "toilet", "toilets", "towels", "linen", "carpet", "curtains", "furniture", "walls", "windows", "soundproofing"],
+    "Staff": ["staff", "staff members", "employees", "employee", "personnel", "receptionist", "receptionists", "front desk staff", "reception staff", "waiter", "waiters", "waitress", "waitresses", "concierge", "manager", "management", "host", "hosts", "porter", "porters", "bellboy", "bellboys", "bartender", "bartenders", "team"],
+    "Service": ["service", "services", "customer service", "room service", "check-in", "check in", "checkin", "check-out", "check out", "checkout", "reception", "front desk", "booking", "reservation", "reservations", "housekeeping", "delivery", "response", "assistance", "hospitality", "welcome", "airport transfer", "shuttle service"],
+    "Food": ["food", "breakfast", "breakfasts", "buffet", "buffets", "dinner", "dinners", "lunch", "meal", "meals", "restaurant", "restaurants", "coffee", "tea", "bread", "eggs", "fruit", "juice", "drinks", "drink", "menu", "cuisine", "dishes", "dish", "snacks", "bar", "pizza", "pastries", "dessert"],
+    "Cleanliness": ["cleanliness", "hygiene", "sanitation", "cleaning", "cleaning standards"],
+    "Facilities": ["facilities", "facility", "amenities", "amenity", "air conditioning", "air conditioner", "air conditioners", "aircon", "a/c", "ac", "wi-fi", "wifi", "wi fi", "internet", "connection", "pool", "swimming pool", "gym", "fitness center", "fitness centre", "spa", "sauna", "elevator", "elevators", "lift", "lifts", "parking", "car park", "television", "tv", "heater", "heating", "hot water", "water pressure", "water", "minibar", "fridge", "refrigerator", "safe", "lobby", "garden", "terrace", "shuttle", "laundry", "equipment", "business center", "business centre", "playground", "beach access"]
+  },
+  "out_of_scope": ["location", "price", "prices", "value", "cost", "costs", "rate", "rates", "neighborhood", "neighbourhood", "distance"],
+  "price_opinions": ["expensive", "cheap", "overpriced", "affordable", "pricey", "pricy", "costly", "inexpensive"],
+  "rules": [
+    {"id": "room_comfort", "categories": ["Room"], "pattern": "\\b(?:comfy|cosy|cozy)\\b", "score": 0.5},
+    {"id": "hygiene_clean", "categories": ["Room", "Cleanliness", "Facilities"], "pattern": "\\b(?:spotless|immaculate|pristine|squeaky clean)\\b", "score": 0.65},
+    {"id": "equipment_not_functioning", "categories": ["Facilities", "Room"], "pattern": "\\b(?:not|never|no longer)\\s+(?:\\w+\\s+){0,2}(?:work(?:ing)?|function(?:ing)?|operat(?:e|ing))\\b", "score": -0.7, "literal_negation": true},
+    {"id": "missing_hot_water", "categories": ["Facilities", "Room"], "pattern": "\\b(?:no|without)\\s+(?:hot\\s+)?water\\b", "score": -0.7, "literal_negation": true},
+    {"id": "functional_failure", "categories": ["Facilities", "Room"], "pattern": "\\b(?:broken|malfunction(?:ing|ed)?|disconnect(?:ing|ed|s)?|leak(?:ing|ed|s)?|clogged|blocked|unusable|out of order)\\b", "score": -0.65},
+    {"id": "functional_success", "categories": ["Facilities"], "pattern": "\\b(?:work(?:s|ed|ing)?|function(?:s|ed|ing)?)\\s+(?:perfectly|properly|well|flawlessly)\\b", "score": 0.55},
+    {"id": "room_quiet", "categories": ["Room"], "pattern": "\\b(?:quiet|peaceful|soundproof)\\b", "score": 0.45},
+    {"id": "room_noise", "categories": ["Room"], "pattern": "\\b(?:noisy|noise|loud|thin walls)\\b", "score": -0.6},
+    {"id": "room_cramped", "categories": ["Room"], "pattern": "\\b(?:cramped|tiny|small)\\b", "score": -0.4},
+    {"id": "room_space", "categories": ["Room"], "pattern": "\\b(?:spacious|roomy)\\b", "score": 0.5},
+    {"id": "hygiene_problem", "categories": ["Room", "Cleanliness", "Facilities", "Food"], "pattern": "\\b(?:mould|mold|mouldy|moldy|cockroaches|cockroach|bedbugs|bed bugs|filthy|stained|stains|unclean|unsanitary)\\b", "score": -0.7},
+    {"id": "food_bland", "categories": ["Food"], "pattern": "\\b(?:bland|stale|undercooked|overcooked|tasteless)\\b", "score": -0.55},
+    {"id": "slow_service", "categories": ["Service"], "pattern": "\\b(?:slow|delayed|delay|delays|unresponsive)\\b", "score": -0.55},
+    {"id": "prompt_service", "categories": ["Service"], "pattern": "\\b(?:prompt|efficient|responsive)\\b", "score": 0.5}
+  ]
+}

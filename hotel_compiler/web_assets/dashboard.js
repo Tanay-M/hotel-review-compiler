@@ -42,7 +42,7 @@ $("drop-zone").addEventListener("drop", (event) => { event.preventDefault(); $("
 
 function setBatchBusy(value) {
   batchBusy = value;
-  document.querySelectorAll("#csv-form input, #csv-form button, [data-demo], .mode-tabs button, #clear-batch").forEach((control) => { control.disabled = value; });
+  document.querySelectorAll("#csv-form input, #csv-form button, [data-demo], .mode-tabs button, #clear-batch, #analysis-method").forEach((control) => { control.disabled = value; });
   $("csv-form").setAttribute("aria-busy", String(value));
   $("upload-button").textContent = value ? "Analyzing CSV…" : "Analyze CSV →";
   $("upload-status").textContent = value ? "Uploading and analyzing every row. Results will appear when complete." : "One batch retained in memory. New successful uploads replace it; restarting the server clears it.";
@@ -56,7 +56,7 @@ async function uploadCSV() {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 120000);
   try {
-    const query = new URLSearchParams({text_column: $("text-column").value, id_column: $("id-column").value});
+    const query = new URLSearchParams({text_column: $("text-column").value, id_column: $("id-column").value, method: $("analysis-method").value});
     const response = await fetch(`/api/batches?${query}`, {method: "POST", body: csvFile,
       headers: {"Content-Type": "text/csv", "X-File-Name": encodeURIComponent(csvFile.name)}, signal: controller.signal});
     const data = await response.json();
@@ -125,7 +125,7 @@ function renderDashboard() {
   const counts = aggregation.coverage.counts;
   const view = currentView();
   const scopeLabel = view.scope === "complete_reviews" ? "Complete reviews" : "Complete + partial; recognized opinions only";
-  $("dataset-label").textContent = `${batch.input.source_name} · ${counts.submitted.toLocaleString()} submitted rows · analyzed in ${batch.elapsed_seconds.toFixed(3)} s`;
+  $("dataset-label").textContent = `${batch.method_label} · ${batch.input.source_name} · ${counts.submitted.toLocaleString()} submitted rows · analyzed in ${batch.elapsed_seconds.toFixed(3)} s`;
   $("scope-description").textContent = `${view.eligible_reviews} eligible reviews. ${scopeLabel}. Unsupported, invalid, and failed rows stay outside sentiment counts.`;
   const cards = $("metric-cards");
   cards.replaceChildren();
@@ -196,7 +196,7 @@ function renderDashboard() {
     findings.append(line);
   }
   $("run-metadata").replaceChildren(table(["Run evidence", "Value"], [
-    ["Source file", batch.input.source_name], ["Source SHA-256", report.source_sha256], ["Compiler rules fingerprint", report.analysis_fingerprint],
+    ["Analysis method", batch.method_label], ["Source file", batch.input.source_name], ["Source SHA-256", report.source_sha256], ["Analysis rules fingerprint", report.analysis_fingerprint],
     ["Reporting fingerprint", report.reporting_fingerprint], ["Created (UTC)", batch.created_at], ["Observed core analysis time", `${batch.elapsed_seconds.toFixed(6)} s`],
     ["Uploaded-data accuracy / precision / recall / F1", "Not measured: independent gold labels not supplied"],
   ]));
@@ -238,7 +238,7 @@ function renderReviewTable() {
     const opinions = node("div", "row-opinions");
     for (const record of row.analysis?.records || []) {
       const line = node("p");
-      line.append(node("strong", "", `${record.category} / ${record.issue}`), node("span", "", `“${record.opinion_expression}” `), badge(record.polarity), node("span", "score-number", ` ${number(record.score, true)}`));
+      line.append(node("strong", "", `${record.category} / ${record.issue}`), node("span", "", `“${record.opinion_expression}” `), badge(record.polarity), node("span", "", ` · ${record.strength || "Unavailable"}`), node("span", "score-number", ` ${number(record.score, true)}`));
       opinions.append(line);
     }
     if (!opinions.childElementCount) opinions.append(node("span", "muted", "No extracted opinions"));
@@ -247,9 +247,9 @@ function renderReviewTable() {
     details.setAttribute("aria-label", `View result and trace for review ${row.row_number}`);
     details.addEventListener("click", () => loadDetail(row));
     return [row.row_number, id, node("span", "review-text-cell", row.review_text || "Blank / missing"), opinions,
-      badge(row.analysis?.overall || "Unanalyzed"), badge(row.analysis?.status || row.execution_status), details];
+      badge(row.analysis?.overall || "Unanalyzed"), reviewScoreDisplay(row.analysis), badge(row.analysis?.status || row.execution_status), details];
   });
-  $("review-table").replaceChildren(table(["Row", "Review ID", "Original review", "Aspect-level results", "Overall", "Status", "Details"], values));
+  $("review-table").replaceChildren(table(["Row", "Review ID", "Original review", "Aspect-level results", "Overall", "Review score", "Status", "Details"], values));
   if (!rows.length) $("review-table").append(node("p", "no-records", "No reviews match these filters. Reset filters to show all submitted rows."));
   $("review-table-count").textContent = `${rows.length.toLocaleString()} of ${batch.rows.length.toLocaleString()} rows`;
   $("page-description").textContent = `${rows.length ? start + 1 : 0}–${Math.min(start + size, rows.length)} of ${rows.length.toLocaleString()} · Page ${page} / ${pages}`;

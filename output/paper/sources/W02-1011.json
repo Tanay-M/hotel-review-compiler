@@ -1,0 +1,61 @@
+{
+  "id": "W02-1011",
+  "url": "https://aclanthology.org/W02-1011/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Thumbs up? Sentiment Classification using Machine Learning Techniques"
+    ],
+    "citation_author": [
+      "Bo Pang",
+      "Lillian Lee",
+      "Shivakumar Vaithyanathan"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 2002 Conference on Empirical Methods in Natural Language Processing (EMNLP 2002)"
+    ],
+    "citation_publication_date": [
+      "2002/7"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/W02-1011.pdf"
+    ],
+    "citation_firstpage": [
+      "79"
+    ],
+    "citation_lastpage": [
+      "86"
+    ],
+    "citation_doi": [
+      "10.3115/1118693.1118704"
+    ],
+    "og:title": [
+      "Thumbs up? Sentiment Classification using Machine Learning Techniques"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/W02-1011.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/W02-1011/"
+    ],
+    "og:description": [
+      "Bo Pang, Lillian Lee, Shivakumar Vaithyanathan. Proceedings of the 2002 Conference on Empirical Methods in Natural Language Processing (EMNLP 2002). 2002."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{pang-etal-2002-thumbs,\n    title = \"Thumbs up? Sentiment Classification using Machine Learning Techniques\",\n    author = \"Pang, Bo  and\n      Lee, Lillian  and\n      Vaithyanathan, Shivakumar\",\n    booktitle = \"Proceedings of the 2002 Conference on Empirical Methods in Natural Language Processing ({EMNLP} 2002)\",\n    month = jul,\n    year = \"2002\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/W02-1011/\",\n    doi = \"10.3115/1118693.1118704\",\n    pages = \"79--86\"\n}"
+}

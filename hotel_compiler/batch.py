@@ -19,8 +19,8 @@ def analysis_fingerprint() -> str:
     digest = sha256()
     root = files("hotel_compiler")
     for name in (
-        "pipeline.py", "models.py", "lexer.py", "parser.py", "semantics.py",
-        "sentiwordnet.py", "vocabulary.py", "resources/domain.json",
+        "pipeline.py", "front_end.py", "models.py", "lexer.py", "parser.py", "semantics.py",
+        "sentiwordnet.py", "sentiment_policy.py", "vocabulary.py", "resources/domain.json",
         "resources/sentiwordnet.tsv", "resources/provenance.json",
     ):
         digest.update(name.encode("utf-8") + b"\0")

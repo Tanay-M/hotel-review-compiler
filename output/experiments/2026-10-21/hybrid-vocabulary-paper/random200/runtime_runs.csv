@@ -1,0 +1,25 @@
+﻿system,reviews,repeat,seconds,timing_scope
+SentiWordNet compiler,20,1,0.03921969997463748,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,20,1,0.3738907999941148,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,20,2,0.2890553000033833,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,20,2,0.025309099990408868,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,20,3,0.02757119998568669,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,20,3,0.3284167999518104,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,50,1,0.05358039995189756,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,50,1,0.7884793999837711,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,50,2,0.8030646999832243,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,50,2,0.04419190000044182,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,50,3,0.03723570000147447,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,50,3,0.47042280004825443,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,100,1,0.09067110001342371,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,100,1,0.9180331000243314,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,100,2,0.6778959999792278,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,100,2,0.051569300005212426,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,100,3,0.046283199975732714,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,100,3,0.6464558999869041,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,200,1,0.12706100003561005,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,200,1,1.4906416000449099,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,200,2,1.350605700048618,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,200,2,0.10171410004841164,warm independent pipelines; no I/O or plots
+SentiWordNet compiler,200,3,0.10080150002613664,warm independent pipelines; no I/O or plots
+VADER-TextBlob hybrid,200,3,1.3438810999505222,warm independent pipelines; no I/O or plots

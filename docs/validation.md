@@ -121,3 +121,7 @@ The visible UI output is tabular/cards/charts with CSV downloads; raw AST/IR JSO
 ## Vocabulary expansion validation — 14 October 2026
 
 The full suite passes 136 tests (21 new expansion tests); Python compilation and both JavaScript syntax checks pass. Tests cover all 356 canonical opinions and their negated forms with unchanged SentiWordNet P/N, source-row integrity, coordinated subjects/opinions, retained context, possession, category senses, compatibility/recovery, and existing 500-row HTTP equivalence. The existing 100-review input retains its SHA-256 and exactly one output per row: complete/partial/unsupported changed from 54/28/18 to 88/6/6, with 167 opinions and no processing errors. This is development-sample coverage, not independent accuracy. See [the detailed guide](vocabulary-expansion.md) and `output/evaluation/vocabulary-expansion-2026-10-14/`.
+
+## Individual review score validation 14 October 2026
+
+All 145 tests pass, including nine review-score tests. Review score is the six-decimal mean of final opinion scores, with complete or recognized-only scope. Tests cover unequal category/opinion counts, Mixed cancellation versus Neutral zero versus unavailable, source-score preservation, clipped extremes, partial/empty results, runtime-error and invalid rows, CSV/report consistency, HTTP upload/detail/download results and unchanged category-specific dashboard means. Both JavaScript syntax checks and Python compilation pass. Single-review summary, batch table, trace, CLI and CSV/report outputs expose the field.

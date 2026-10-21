@@ -23,6 +23,31 @@ def paper_tables(batch: BatchResult, report: dict) -> dict[str, bytes]:
     aggregation = report["aggregation"]
     counts = aggregation["coverage"]["counts"]
     tables = {"reviews.csv": batch_csv_bytes(batch), "aspects.csv": batch_csv_bytes(batch, "aspects")}
+    if batch.method == "hybrid":
+        evidence_rows = []
+        for row in batch.rows:
+            if not row.analysis:
+                continue
+            for record in row.analysis.records:
+                e = record.evidence
+                evidence_rows.append([row.row_id, row.source.ordinal, record.category, record.aspect_term,
+                    record.opinion_expression, record.grammar_pattern, record.start, record.end,
+                    e.vader_compound, e.vader_positive, e.vader_neutral, e.vader_negative,
+                    e.textblob_polarity, e.textblob_subjectivity, e.vader_has_evidence,
+                    e.textblob_has_evidence, e.lexical_fusion_score, e.fusion_rule,
+                    e.domain_rule_id, e.domain_matched_text, e.score, e.polarity, e.strength,
+                    e.status, e.component_disagreement, " | ".join(e.errors),
+                    (e.vocabulary_normalization or {}).get('scoring_text', ''),
+                    '; '.join(f"{m['original']} -> {m['canonical']}" for m in (e.vocabulary_normalization or {}).get('matches', [])),
+                    (e.vocabulary_normalization or {}).get('original_evidence', {}).get('vader_compound', e.vader_compound),
+                    (e.vocabulary_normalization or {}).get('original_evidence', {}).get('textblob_polarity', e.textblob_polarity)])
+        tables["hybrid_evidence.csv"] = _csv([
+            "row_id", "row_number", "category", "aspect", "context", "grammar_pattern", "start", "end",
+            "vader_compound", "vader_positive", "vader_neutral", "vader_negative",
+            "textblob_polarity", "textblob_subjectivity", "vader_has_evidence", "textblob_has_evidence",
+            "lexical_fusion_score", "fusion_rule", "domain_rule_id", "domain_matched_text",
+            "final_score", "polarity", "strength", "status", "component_disagreement", "errors",
+            "vocabulary_scoring_text", "vocabulary_aliases", "original_vader_compound", "original_textblob_polarity"], evidence_rows)
     category_rows, issue_rows, polarity_rows = [], [], []
     for scope, view in aggregation["views"].items():
         for polarity, count in view["overall_counts"].items():
@@ -46,7 +71,7 @@ def paper_tables(batch: BatchResult, report: dict) -> dict[str, bytes]:
          ["with_opinions_of_analyzed", counts["complete"] + counts["partial"], counts["analyzed"], aggregation["coverage"]["coverage"]["with_opinions_percent"]],
          ["complete_of_submitted", counts["complete"], counts["submitted"], aggregation["primary_complete_share_submitted_percent"]]])
     tables["run_metadata.csv"] = _csv(["field", "value"], [
-        ["batch_id", batch.batch_id], ["created_at_utc", batch.created_at], ["source_name", batch.source.source_name],
+        ["analysis_method", batch.method], ["batch_id", batch.batch_id], ["created_at_utc", batch.created_at], ["source_name", batch.source.source_name],
         ["source_sha256", batch.source.source_sha256], ["analysis_fingerprint", batch.analysis_fingerprint],
         ["reporting_fingerprint", report["reporting_fingerprint"]], ["python_version", platform.python_version()],
         ["platform", platform.platform()], ["analysis_seconds", batch.elapsed_seconds],
@@ -56,11 +81,18 @@ def paper_tables(batch: BatchResult, report: dict) -> dict[str, bytes]:
         ["dataset_type", "User-supplied CSV; sampling and real/synthetic provenance must be documented by the author."],
         ["accuracy_precision_recall_f1", "Not measured for this upload: no independent gold labels were provided."],
         ["null_values", "Empty numeric cells mean unavailable, not zero."],
+        ["review_score_method", "Arithmetic mean of final opinion scores within one review, rounded to six decimals in [-1,+1]; opposite opinions still retain the Mixed label."],
+        ["review_score_scope", "Hybrid: recognized aspect contexts only; mean unavailable if any context is unscored. Baseline: recognized opinions with its existing scope policy. Blank score means unavailable."],
+        ["strength_policy", "Final score <= -0.5 Strong Negative; (-0.5,-0.05) Weak Negative; [-0.05,+0.05] Neutral; (+0.05,+0.5) Weak Positive; >= +0.5 Strong Positive. Descriptive thresholds, not confidence."],
     ])
     tables["conclusions.txt"] = render_report(report, include_partial=True).encode("utf-8")
     tables["README.txt"] = (
         "Results tables for an IEEE-format course report\n\n"
         "reviews.csv has exactly one row per submitted CSV record, including invalid and unsupported inputs.\n"
+        "review_score is the mean of that review's final opinion scores, not a confidence or rating.\n"
+        "review_score_scope distinguishes complete review, recognized opinions only, and unavailable.\n"
+        "No opinion evidence produces a blank score; a numeric zero can be Neutral or cancelling Mixed opinions.\n"
+        "strength describes each final opinion score; net_score_band describes the review mean and does not replace Mixed.\n"
         "aspects.csv holds separate extracted opinions; join on row_id, never a duplicated supplied ID.\n"
         "Category/issue polarity counts are distinct reviews, not opinions; Mixed is preserved.\n"
         "Any-negative counts include Mixed once. Scores average within each review before averaging reviews.\n"

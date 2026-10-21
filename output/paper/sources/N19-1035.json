@@ -1,0 +1,61 @@
+{
+  "id": "N19-1035",
+  "url": "https://aclanthology.org/N19-1035/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Utilizing BERT for Aspect-Based Sentiment Analysis via Constructing Auxiliary Sentence"
+    ],
+    "citation_author": [
+      "Chi Sun",
+      "Luyao Huang",
+      "Xipeng Qiu (邱锡鹏)"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)"
+    ],
+    "citation_publication_date": [
+      "2019/6"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/N19-1035.pdf"
+    ],
+    "citation_firstpage": [
+      "380"
+    ],
+    "citation_lastpage": [
+      "385"
+    ],
+    "citation_doi": [
+      "10.18653/v1/N19-1035"
+    ],
+    "og:title": [
+      "Utilizing BERT for Aspect-Based Sentiment Analysis via Constructing Auxiliary Sentence"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/N19-1035.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/N19-1035/"
+    ],
+    "og:description": [
+      "Chi Sun, Luyao Huang, Xipeng Qiu. Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers). 2019."
+    ]
+  },
+  "abstract": "Abstract Aspect-based sentiment analysis (ABSA), which aims to identify fine-grained opinion polarity towards a specific aspect, is a challenging subtask of sentiment analysis (SA). In this paper, we construct an auxiliary sentence from the aspect and convert ABSA to a sentence-pair classification task, such as question answering (QA) and natural language inference (NLI). We fine-tune the pre-trained model from BERT and achieve new state-of-the-art results on SentiHood and SemEval-2014 Task 4 datasets. The source codes are available at https://github.com/HSLCY/ABSA-BERT-pair .",
+  "bibtex": "@inproceedings{sun-etal-2019-utilizing,\n    title = \"Utilizing {BERT} for Aspect-Based Sentiment Analysis via Constructing Auxiliary Sentence\",\n    author = \"Sun, Chi  and\n      Huang, Luyao  and\n      Qiu, Xipeng\",\n    editor = \"Burstein, Jill  and\n      Doran, Christy  and\n      Solorio, Thamar\",\n    booktitle = \"Proceedings of the 2019 Conference of the {N}orth {A}merican Chapter of the {A}ssociation for {C}omputational {L}inguistics: Human Language Technologies, Volume 1 (Long and Short Papers)\",\n    month = jun,\n    year = \"2019\",\n    address = \"Minneapolis, Minnesota\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/N19-1035/\",\n    doi = \"10.18653/v1/N19-1035\",\n    pages = \"380--385\",\n    abstract = \"Aspect-based sentiment analysis (ABSA), which aims to identify fine-grained opinion polarity towards a specific aspect, is a challenging subtask of sentiment analysis (SA). In this paper, we construct an auxiliary sentence from the aspect and convert ABSA to a sentence-pair classification task, such as question answering (QA) and natural language inference (NLI). We fine-tune the pre-trained model from BERT and achieve new state-of-the-art results on SentiHood and SemEval-2014 Task 4 datasets. The source codes are available at \\url{https://github.com/HSLCY/ABSA-BERT-pair}.\"\n}"
+}

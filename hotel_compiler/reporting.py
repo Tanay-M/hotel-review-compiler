@@ -70,6 +70,8 @@ def build_report(batch: BatchResult) -> dict:
     if counts["duplicate_text_rows"] or counts["duplicate_id_rows"]:
         notes.append(f"Duplicates retained: {counts['duplicate_text_rows']} rows have repeated text and {counts['duplicate_id_rows']} have repeated supplied IDs. These rows count separately and can influence observed frequencies.")
     notes.append("Sentiment indices and coverage are not hotel ratings, confidence, or measured real-world accuracy. Conclusions are generated from counts, without an LLM.")
+    if batch.method == "hybrid":
+        notes.append("VADER + TextBlob hybrid: extracted contexts include unscored candidates. Category sentiment charts and means use scored contexts only; unavailable scores never become Neutral. The review aspect mean is unavailable if any extracted context is unscored. Completeness is a heuristic, not correctness.")
     return {
         "schema_version": 1, "batch_id": batch.batch_id,
         "analysis_fingerprint": batch.analysis_fingerprint, "reporting_fingerprint": reporting_fingerprint(),

@@ -1,7 +1,9 @@
 """Records exchanged between the compiler's stages."""
 
 from dataclasses import asdict, dataclass, field
+from math import fsum
 from typing import Any
+from .sentiment_policy import DEFAULT_POLICY
 
 
 @dataclass(frozen=True)
@@ -103,9 +105,14 @@ class AspectResult:
     end: int
     evidence: ScoreEvidence
 
+    @property
+    def strength(self) -> str:
+        return DEFAULT_POLICY.strength(self.score)
+
     def to_ir(self) -> dict[str, Any]:
         record = asdict(self)
         record.pop("evidence")
+        record["strength"] = self.strength
         return record
 
 
@@ -121,12 +128,32 @@ class AnalysisResult:
     ast: ReviewAST = field(repr=False)
     semantics: tuple[SemanticRecord, ...] = field(repr=False)
 
+    @property
+    def review_score(self) -> float | None:
+        """Mean of final opinion scores; absent evidence never becomes zero."""
+        if not self.records:
+            return None
+        return round(fsum(record.score for record in self.records) / len(self.records), 6)
+
+    @property
+    def review_score_scope(self) -> str:
+        if not self.records:
+            return "unavailable"
+        return "recognized opinions only" if self.status == "partial" else "complete review"
+
+    @property
+    def net_score_band(self) -> str:
+        return DEFAULT_POLICY.strength(self.review_score)
+
     def to_dict(self, include_trace: bool = False) -> dict[str, Any]:
         output = {
             "review_id": self.review_id,
             "review_text": self.review_text,
             "status": self.status,
             "overall": self.overall,
+            "review_score": self.review_score,
+            "review_score_scope": self.review_score_scope,
+            "net_score_band": self.net_score_band,
             "records": [r.to_ir() for r in self.records],
             "diagnostics": [asdict(d) for d in self.diagnostics],
         }

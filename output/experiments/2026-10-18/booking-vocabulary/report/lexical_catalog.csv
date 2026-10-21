@@ -1,0 +1,498 @@
+﻿form,canonical,categories,reason,native_lookup_exists,corpus_adjective_occurrences,example_source_row
+abundant,generous,Food; Facilities,Reviewed hotel opinion synonym,True,3,1318
+abundantly,generous,Food; Facilities,Reviewed hotel opinion synonym,True,0,
+accommodating,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+accommodative,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+accomodating,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+accomodative,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+aesthetic,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,2,466
+aesthetically,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+aesthetically pleasing,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+aesthetically-pleasing,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+affable,friendly,Staff; Service,Reviewed hotel opinion synonym,True,0,
+affably,friendly,Staff; Service,Reviewed hotel opinion synonym,True,0,
+airless,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+airy,large,Room; Facilities,Reviewed hotel opinion synonym,False,4,575
+amazin,amazing,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+amiable,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+amiably,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+ample,generous,Food; Facilities,Reviewed hotel opinion synonym,False,6,271
+appetising,delicious,Food,Reviewed hotel opinion synonym,False,0,
+appetizing,delicious,Food,Reviewed hotel opinion synonym,True,0,
+approachability,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+approachable,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+arrogant,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+arrogantly,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+attentively,attentive,Staff; Service,Reviewed hotel opinion synonym,True,0,
+attentiveness,attentive,Staff; Service,Reviewed hotel opinion synonym,False,0,
+beautifully,beautiful,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+bed bugs,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+bed-bugs,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+bedbug,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+bedbugs,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+blocked,broken,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+boisterous,noisy,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+bountiful,generous,Food; Facilities,Reviewed hotel opinion synonym,False,0,
+bug-infested,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+burned,bad,Food,Reviewed hotel opinion synonym,False,0,
+burnt,bad,Food,Reviewed hotel opinion synonym,False,0,
+capable,competent,Staff; Service,Reviewed hotel opinion synonym,True,0,
+capably,competent,Staff; Service,Reviewed hotel opinion synonym,True,0,
+capacious,large,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+character filled,charming,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+character-filled,charming,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+characterful,charming,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+charmingness,charming,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+chic,charming,Room; Facilities,Reviewed hotel opinion synonym,True,6,1878
+civil,courteous,Staff; Service,Reviewed hotel opinion synonym,False,0,
+claustrophobic,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,True,1,3346
+cleaner,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,True,10,241
+cleanest,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,3,1422
+cleanliness,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+cleanly,clean,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+cleanness,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+clogged,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+co-operative,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+cockroach,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+cockroaches,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+comfier,comfortable,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+comfiest,comfortable,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+comfortableness,comfortable,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+comfortably,comfortable,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+comfortible,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+comfotable,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+comfy,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,56,93
+communicative,friendly,Staff; Service,Reviewed hotel opinion synonym,False,3,176
+communicatively,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+confortable,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,8,811
+confortably,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+congested,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,2,1029
+considerate,attentive,Staff; Service,Reviewed hotel opinion synonym,True,1,571
+considerately,attentive,Staff; Service,Reviewed hotel opinion synonym,False,0,
+constricted,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+convenience,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+convenient,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,134,65
+conveniently,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+cooperative,helpful,Staff; Service,Reviewed hotel opinion synonym,False,4,464
+cooperatively,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+copious,generous,Food; Facilities,Reviewed hotel opinion synonym,False,1,4097
+copiously,generous,Food; Facilities,Reviewed hotel opinion synonym,False,0,
+cordial,friendly,Staff; Service,Reviewed hotel opinion synonym,False,2,463
+cordially,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+cosier,comfortable,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+cosiest,comfortable,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+cosily,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+cosy,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,8,175
+courteously,courteous,Staff; Service,Reviewed hotel opinion synonym,True,0,
+cozier,comfortable,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+coziest,comfortable,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+cozily,comfortable,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+cramped,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,11,101
+crampedness,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+crampy,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+damaged,broken,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+deafening,noisy,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+defect,broken,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+defective,broken,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+defects,broken,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+delectable,delicious,Food,Reviewed hotel opinion synonym,True,0,
+delicous,delicious,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+dependability,trustworthy,Staff; Service; Facilities,Reviewed hotel opinion synonym,False,0,
+dependable,trustworthy,Staff; Service; Facilities,Reviewed hotel opinion synonym,False,1,1542
+dependably,trustworthy,Staff; Service; Facilities,Reviewed hotel opinion synonym,False,0,
+dilapidated,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+dirtier,dirty,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+dirtiest,dirty,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+disconnected,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+disconnecting,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+discourteous,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+discourteously,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+dismissive,rude,Staff; Service,Reviewed hotel opinion synonym,False,2,1357
+dismissively,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+disorganisation,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+disorganised,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+disorganization,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+disorganized,incompetent,Staff; Service,Reviewed hotel opinion synonym,True,0,
+disrespectful,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+disrespectfully,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+drafty,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+draughty,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+easier,easy,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,12,113
+easiest,easy,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,5,530
+efficiency,efficient,Staff; Service,Reviewed hotel opinion synonym,True,0,
+efficiently,efficient,Staff; Service,Reviewed hotel opinion synonym,True,0,
+excelent,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+exellent,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+exemplary,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+expansive,large,Room; Facilities,Reviewed hotel opinion synonym,False,1,1349
+expeditious,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+expeditiously,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+faultiness,broken,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+faultless,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,True,0,
+faultlessly,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,True,0,
+faulty,broken,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+filth,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+first class,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+first-class,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,1,1091
+flavorful,delicious,Food,Reviewed hotel opinion synonym,False,0,
+flavorless,bad,Food,Reviewed hotel opinion synonym,False,0,
+flavors,delicious,Food,Reviewed hotel opinion synonym,False,0,
+flavorsome,delicious,Food,Reviewed hotel opinion synonym,False,0,
+flavourful,delicious,Food,Reviewed hotel opinion synonym,False,0,
+flavourless,bad,Food,Reviewed hotel opinion synonym,False,0,
+flavours,delicious,Food,Reviewed hotel opinion synonym,False,0,
+flavoursome,delicious,Food,Reviewed hotel opinion synonym,False,0,
+foul smelling,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+foul-smelling,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+freindly,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+freshly baked,fresh,Food,Reviewed hotel opinion synonym,False,0,
+freshly cooked,fresh,Food,Reviewed hotel opinion synonym,False,0,
+freshly-baked,fresh,Food,Reviewed hotel opinion synonym,False,0,
+freshly-cooked,fresh,Food,Reviewed hotel opinion synonym,False,0,
+freshness,fresh,Food,Reviewed hotel opinion synonym,False,0,
+friendlier,friendly,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+friendliest,friendly,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+friendy,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+fully equipped,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+fully-equipped,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+functional,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,19,388
+functionality,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+generously sized,large,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+generously-sized,large,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+greasy,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+grimy,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,True,0,
+grubbiness,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+grubby,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+hazard,dangerous,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+hazardous,dangerous,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+hazards,dangerous,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+helpfully,helpful,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+helpfulness,helpful,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+high end,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+high quality,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+high-end,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,2,463
+high-quality,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,4,697
+homelike,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+homely,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,1,1583
+homey,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,6,573
+hospitable,helpful,Staff; Service,Reviewed hotel opinion synonym,False,8,324
+hospitably,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+hostile,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+hostility,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+hygienic,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+hygienically,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+immaculate,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,6,370
+immaculately,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+impeccably,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,True,0,
+impolite,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+impolitely,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+inattentive,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+inattentively,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+inedible,bad,Food,Reviewed hotel opinion synonym,False,3,2676
+inefficiency,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+inefficient,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+inefficiently,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+inept,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+ineptly,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+infestation,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+infested,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+informative,competent,Staff; Service,Reviewed hotel opinion synonym,False,10,495
+informatively,competent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+inoperable,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+insecure,dangerous,Room; Facilities,Reviewed hotel opinion synonym,True,1,1880
+intermittent,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,2,1324
+intermittently,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,0,
+intuitive,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+intuitively,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+inviting,welcoming,Staff; Service,Reviewed hotel opinion synonym,True,0,
+invitingly,welcoming,Staff; Service,Reviewed hotel opinion synonym,False,0,
+kinder,kind,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+kindest,kind,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,4,252
+kindly,kind,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+knowledgeable,competent,Staff; Service,Reviewed hotel opinion synonym,False,13,398
+knowledgeably,competent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+lavish,generous,Food; Facilities,Reviewed hotel opinion synonym,False,1,3684
+lavishly,generous,Food; Facilities,Reviewed hotel opinion synonym,False,0,
+leakage,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+leaking,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+leaky,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+loudness,noisy,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+lovelier,lovely,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+loveliest,lovely,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,2,594
+luxurious,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,12,142
+luxuriously,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+luxury,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+malfunction,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+malfunctioned,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+malfunctioning,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+malodorous,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+mildew,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+mildewed,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+mindful,attentive,Staff; Service,Reviewed hotel opinion synonym,False,5,354
+mindfully,attentive,Staff; Service,Reviewed hotel opinion synonym,False,0,
+mold,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+moldy,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,6,2208
+mould,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+mouldy,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+mouth-watering,delicious,Food,Reviewed hotel opinion synonym,True,0,
+mouthwatering,delicious,Food,Reviewed hotel opinion synonym,False,0,
+neatness,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,True,0,
+neglected,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,True,0,
+noise,noisy,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+noisier,noisy,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+noisiest,noisy,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+noisiness,noisy,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+non existent,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,0,
+non-existent,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,3,113
+non-functional,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+nonexistent,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,0,
+nonfunctional,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+obliging,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+obligingly,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+odorous,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+organised,efficient,Staff; Service,Reviewed hotel opinion synonym,False,0,
+organized,efficient,Staff; Service,Reviewed hotel opinion synonym,False,0,
+out of order,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+out-of-order,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+overcooked,bad,Food,Reviewed hotel opinion synonym,False,0,
+overcrowded,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,2,2586
+patchy,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,0,
+personable,friendly,Staff; Service,Reviewed hotel opinion synonym,False,2,461
+picture perfect,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+picture-perfect,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+picturesque,beautiful,Room; Facilities,Reviewed hotel opinion synonym,True,7,461
+pleasanter,pleasant,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+pleasantest,pleasant,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+pleasantly,pleasant,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+plentiful,generous,Food; Facilities,Reviewed hotel opinion synonym,False,9,79
+plentifully,generous,Food; Facilities,Reviewed hotel opinion synonym,False,0,
+pokey,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+poky,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+polite,courteous,Staff; Service,Reviewed hotel opinion synonym,False,18,44
+politely,courteous,Staff; Service,Reviewed hotel opinion synonym,False,0,
+politeness,courteous,Staff; Service,Reviewed hotel opinion synonym,False,0,
+poorly maintained,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+poorly ventilated,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+poorly-maintained,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+poorly-ventilated,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+practical,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,3,1281
+practically,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+pristine,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,6,594
+proactive,attentive,Staff; Service,Reviewed hotel opinion synonym,True,2,3660
+proactively,attentive,Staff; Service,Reviewed hotel opinion synonym,False,0,
+proficient,competent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+proficiently,competent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+prompt,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+promptly,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+punctual,quick,Staff; Service,Reviewed hotel opinion synonym,False,2,2251
+punctually,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+quaint,charming,Room; Facilities,Reviewed hotel opinion synonym,False,12,68
+quaintly,charming,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+quieter,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,5,712
+quietest,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+rancid,bad,Food,Reviewed hotel opinion synonym,True,0,
+rapid,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+rapidly,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+raucous,noisy,Room; Facilities,Reviewed hotel opinion synonym,True,1,360
+receptive,attentive,Staff; Service,Reviewed hotel opinion synonym,False,3,417
+reeking,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,True,0,
+reliability,trustworthy,Staff; Service; Facilities,Reviewed hotel opinion synonym,False,0,
+reliable,trustworthy,Staff; Service; Facilities,Reviewed hotel opinion synonym,False,2,55
+reliably,trustworthy,Staff; Service; Facilities,Reviewed hotel opinion synonym,False,0,
+resourceful,helpful,Staff; Service,Reviewed hotel opinion synonym,True,1,2877
+resourcefully,helpful,Staff; Service,Reviewed hotel opinion synonym,True,0,
+restful,comfortable,Room; Facilities,Reviewed hotel opinion synonym,True,4,1510
+roomy,large,Room; Facilities,Reviewed hotel opinion synonym,False,8,106
+rudely,rude,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+rudeness,rude,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+ruder,rude,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+rudest,rude,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+run down,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+run-down,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+sanitary,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,1,2132
+sanitised,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+sanitized,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+scrumptious,delicious,Food,Reviewed hotel opinion synonym,True,0,
+seamless,efficient,Staff; Service,Reviewed hotel opinion synonym,True,7,697
+seamlessly,efficient,Staff; Service,Reviewed hotel opinion synonym,True,0,
+serene,peaceful,Room; Facilities,Reviewed hotel opinion synonym,True,5,271
+serenity,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+service minded,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+service-minded,helpful,Staff; Service,Reviewed hotel opinion synonym,False,0,
+shabby,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+slippery,dangerous,Room; Facilities,Reviewed hotel opinion synonym,False,3,27
+slower,slow,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+slowest,slow,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+sluggish,slow,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+sluggishly,slow,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,False,0,
+smells,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+smelly,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,1,2053
+smoothly,efficient,Staff; Service,Reviewed hotel opinion synonym,True,0,
+soggy,bad,Food,Reviewed hotel opinion synonym,False,1,1052
+soiled,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+soiling,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+sound proof,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+sound proofed,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+sound-proof,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+sound-proofed,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+soundproof,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,5,670
+soundproofed,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+spacious,large,Room; Facilities,Reviewed hotel opinion synonym,False,242,44
+spaciousness,large,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+speedily,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+speedy,quick,Staff; Service,Reviewed hotel opinion synonym,False,0,
+spoiled,bad,Food,Reviewed hotel opinion synonym,False,0,
+spoiling,bad,Food,Reviewed hotel opinion synonym,False,0,
+spoilt,bad,Food,Reviewed hotel opinion synonym,False,0,
+spotless,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,44,160
+spotlessly,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+spotty,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,3,1136
+squalid,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+squalor,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+squashed,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+squeaky clean,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+squeaky-clean,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+squeezy,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+stain,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+stained,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+stains,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+staleness,bad,Food,Reviewed hotel opinion synonym,False,0,
+sticky,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,1,819
+stinking,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,True,0,
+stinky,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,True,0,
+streamlined,efficient,Staff; Service,Reviewed hotel opinion synonym,False,0,
+stuffy,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,5,632
+stylish,beautiful,Room; Facilities,Reviewed hotel opinion synonym,True,10,17
+stylishly,beautiful,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+sub-par,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,1,794
+sub-standard,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+subpar,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+substandard,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,2,530
+suffocating,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+sumptuous,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+sumptuously,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+supportively,helpful,Staff; Service,Reviewed hotel opinion synonym,True,0,
+swift,quick,Staff; Service,Reviewed hotel opinion synonym,True,0,
+swiftly,quick,Staff; Service,Reviewed hotel opinion synonym,True,0,
+tasteful,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,1,3029
+tastefully,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+tastefully decorated,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+tastefully-decorated,beautiful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+tasteless,bad,Food,Reviewed hotel opinion synonym,True,0,
+tastier,delicious,Food,Reviewed hotel opinion synonym,False,0,
+tastiest,delicious,Food,Reviewed hotel opinion synonym,False,0,
+tasty,delicious,Food,Reviewed hotel opinion synonym,False,16,186
+tattered,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+temperamental,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,2,647
+thoughtful,attentive,Staff; Service,Reviewed hotel opinion synonym,True,21,27
+thoughtfully,attentive,Staff; Service,Reviewed hotel opinion synonym,True,0,
+threadbare,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+tidiness,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+timely,quick,Staff; Service,Reviewed hotel opinion synonym,False,7,608
+top notch,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+top quality,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+top-notch,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,True,4,1322
+top-quality,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+tranquil,peaceful,Room; Facilities,Reviewed hotel opinion synonym,True,8,17
+tranquility,peaceful,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+tranquillity,peaceful,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+treacherous,dangerous,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+trickier,difficult,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+trickiest,difficult,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,0,
+tricky,difficult,Room; Staff; Service; Food; Cleanliness; Facilities,Explicit reviewed inflection or spelling variant,True,17,12
+trustworthiness,trustworthy,Staff; Service; Facilities,Reviewed hotel opinion synonym,True,0,
+unaccommodating,rude,Staff; Service,Reviewed hotel opinion synonym,False,1,3523
+unaccomodating,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+unappetising,bad,Food,Reviewed hotel opinion synonym,False,0,
+unappetizing,bad,Food,Reviewed hotel opinion synonym,True,0,
+unattentive,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+unavailable,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,2,1961
+unbeatable,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,7,1552
+unbreathable,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+unclean,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,1,269
+uncleanliness,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+uncomfy,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+uncommunicative,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+uncooperative,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+undependable,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,0,
+undercooked,bad,Food,Reviewed hotel opinion synonym,False,0,
+unfailingly friendly,friendly,Staff; Service,Reviewed hotel opinion synonym,False,0,
+unfriendly,rude,Staff; Service,Reviewed hotel opinion synonym,True,0,
+unhelpful,rude,Staff; Service,Reviewed hotel opinion synonym,False,2,3067
+unhygienic,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+unhygienically,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+unmaintained,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+unpalatable,bad,Food,Reviewed hotel opinion synonym,False,0,
+unparalleled,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+unprepared,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+unprofessional,rude,Staff; Service,Reviewed hotel opinion synonym,True,3,100
+unprofessionally,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+unqualified,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+unquiet,noisy,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+unreliable,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,1,4238
+unresponsive,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,False,2,3067
+unsafe,dangerous,Room; Facilities,Reviewed hotel opinion synonym,False,8,27
+unsanitary,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+unsanitised,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+unsanitized,dirty,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+unsecured,dangerous,Room; Facilities,Reviewed hotel opinion synonym,True,0,
+unserviceable,broken,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+unstable,bad,Facilities; Staff; Service,Reviewed hotel opinion synonym,True,1,3418
+unsurpassed,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+untrained,incompetent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+unusable,broken,Room; Facilities,Reviewed hotel opinion synonym,False,3,769
+unventilated,uncomfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+unwelcoming,rude,Staff; Service,Reviewed hotel opinion synonym,False,0,
+upscale,excellent,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+usability,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+usable,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,2,722
+user friendly,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+user-friendly,useful,Room; Facilities; Service,Reviewed hotel opinion synonym,False,0,
+vermin,disgusting,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+warm hearted,welcoming,Staff; Service,Reviewed hotel opinion synonym,False,0,
+warm-hearted,welcoming,Staff; Service,Reviewed hotel opinion synonym,False,1,4107
+warmhearted,welcoming,Staff; Service,Reviewed hotel opinion synonym,True,0,
+welcomed,welcoming,Staff; Service,Reviewed hotel opinion synonym,True,0,
+well appointed,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well cleaned,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+well cushioned,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+well designed,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well equipped,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well furnished,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well informed,competent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well insulated,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+well kept,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well maintained,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well mannered,courteous,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well organised,efficient,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well organized,efficient,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well proportioned,large,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+well run,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well serviced,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well stocked,generous,Food; Facilities,Reviewed hotel opinion synonym,False,0,
+well supplied,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well trained,competent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well-appointed,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well-cleaned,clean,Room; Facilities; Food; Cleanliness,Reviewed hotel opinion synonym,False,0,
+well-cushioned,comfortable,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+well-designed,good,Cleanliness; Facilities; Food; Room; Service; Staff,Reviewed hotel opinion synonym,False,0,
+well-equipped,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,9,697
+well-furnished,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well-informed,competent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well-insulated,peaceful,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+well-kept,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,2,2895
+well-maintained,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well-mannered,courteous,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well-organised,efficient,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well-organized,efficient,Staff; Service,Reviewed hotel opinion synonym,False,0,
+well-proportioned,large,Room; Facilities,Reviewed hotel opinion synonym,False,0,
+well-run,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well-serviced,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well-stocked,generous,Food; Facilities,Reviewed hotel opinion synonym,False,4,548
+well-supplied,good,Room; Staff; Service; Food; Cleanliness; Facilities,Reviewed hotel opinion synonym,False,0,
+well-trained,competent,Staff; Service,Reviewed hotel opinion synonym,False,0,
+wholehearted,welcoming,Staff; Service,Reviewed hotel opinion synonym,False,0,
+worn out,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+worn-out,bad,Room; Facilities; Cleanliness,Reviewed hotel opinion synonym,False,0,
+yummiest,delicious,Food,Reviewed hotel opinion synonym,False,0,
+yummy,delicious,Food,Reviewed hotel opinion synonym,True,4,679

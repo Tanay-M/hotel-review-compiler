@@ -1,0 +1,61 @@
+{
+  "id": "S16-1004",
+  "url": "https://aclanthology.org/S16-1004/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "SemEval-2016 Task 7: Determining Sentiment Intensity of English and Arabic Phrases"
+    ],
+    "citation_author": [
+      "Svetlana Kiritchenko",
+      "Saif Mohammad",
+      "Mohammad Salameh"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016)"
+    ],
+    "citation_publication_date": [
+      "2016/6"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/S16-1004.pdf"
+    ],
+    "citation_firstpage": [
+      "42"
+    ],
+    "citation_lastpage": [
+      "51"
+    ],
+    "citation_doi": [
+      "10.18653/v1/S16-1004"
+    ],
+    "og:title": [
+      "SemEval-2016 Task 7: Determining Sentiment Intensity of English and Arabic Phrases"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/S16-1004.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/S16-1004/"
+    ],
+    "og:description": [
+      "Svetlana Kiritchenko, Saif Mohammad, Mohammad Salameh. Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016). 2016."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{kiritchenko-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 7: Determining Sentiment Intensity of {E}nglish and {A}rabic Phrases\",\n    author = \"Kiritchenko, Svetlana  and\n      Mohammad, Saif  and\n      Salameh, Mohammad\",\n    editor = \"Bethard, Steven  and\n      Carpuat, Marine  and\n      Cer, Daniel  and\n      Jurgens, David  and\n      Nakov, Preslav  and\n      Zesch, Torsten\",\n    booktitle = \"Proceedings of the 10th {I}nternational {W}orkshop on {S}emantic {E}valuation ({S}em{E}val-2016)\",\n    month = jun,\n    year = \"2016\",\n    address = \"San Diego, California\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1004/\",\n    doi = \"10.18653/v1/S16-1004\",\n    pages = \"42--51\"\n}"
+}

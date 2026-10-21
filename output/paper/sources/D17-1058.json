@@ -1,0 +1,62 @@
+{
+  "id": "D17-1058",
+  "url": "https://aclanthology.org/D17-1058/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Sentiment Intensity Ranking among Adjectives Using Sentiment Bearing Word Embeddings"
+    ],
+    "citation_author": [
+      "Raksha Sharma",
+      "Arpan Somani",
+      "Lakshya Kumar",
+      "Pushpak Bhattacharyya"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing"
+    ],
+    "citation_publication_date": [
+      "2017/9"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/D17-1058.pdf"
+    ],
+    "citation_firstpage": [
+      "547"
+    ],
+    "citation_lastpage": [
+      "552"
+    ],
+    "citation_doi": [
+      "10.18653/v1/D17-1058"
+    ],
+    "og:title": [
+      "Sentiment Intensity Ranking among Adjectives Using Sentiment Bearing Word Embeddings"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/D17-1058.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/D17-1058/"
+    ],
+    "og:description": [
+      "Raksha Sharma, Arpan Somani, Lakshya Kumar, Pushpak Bhattacharyya. Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing. 2017."
+    ]
+  },
+  "abstract": "Abstract Identification of intensity ordering among polar (positive or negative) words which have the same semantics can lead to a fine-grained sentiment analysis. For example, ‘master’, ‘seasoned’ and ‘familiar’ point to different intensity levels, though they all convey the same meaning (semantics), i.e., expertise: having a good knowledge of. In this paper, we propose a semi-supervised technique that uses sentiment bearing word embeddings to produce a continuous ranking among adjectives that share common semantics. Our system demonstrates a strong Spearman’s rank correlation of 0.83 with the gold standard ranking. We show that sentiment bearing word embeddings facilitate a more accurate intensity ranking system than other standard word embeddings (word2vec and GloVe). Word2vec is the state-of-the-art for intensity ordering task.",
+  "bibtex": "@inproceedings{sharma-etal-2017-sentiment,\n    title = \"Sentiment Intensity Ranking among Adjectives Using Sentiment Bearing Word Embeddings\",\n    author = \"Sharma, Raksha  and\n      Somani, Arpan  and\n      Kumar, Lakshya  and\n      Bhattacharyya, Pushpak\",\n    editor = \"Palmer, Martha  and\n      Hwa, Rebecca  and\n      Riedel, Sebastian\",\n    booktitle = \"Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing\",\n    month = sep,\n    year = \"2017\",\n    address = \"Copenhagen, Denmark\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D17-1058/\",\n    doi = \"10.18653/v1/D17-1058\",\n    pages = \"547--552\",\n    abstract = \"Identification of intensity ordering among polar (positive or negative) words which have the same semantics can lead to a fine-grained sentiment analysis. For example, `master', `seasoned' and `familiar' point to different intensity levels, though they all convey the same meaning (semantics), i.e., expertise: having a good knowledge of. In this paper, we propose a semi-supervised technique that uses sentiment bearing word embeddings to produce a continuous ranking among adjectives that share common semantics. Our system demonstrates a strong Spearman{'}s rank correlation of 0.83 with the gold standard ranking. We show that sentiment bearing word embeddings facilitate a more accurate intensity ranking system than other standard word embeddings (word2vec and GloVe). Word2vec is the state-of-the-art for intensity ordering task.\"\n}"
+}

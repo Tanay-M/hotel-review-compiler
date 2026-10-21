@@ -1,0 +1,15 @@
+﻿measure,before,after,change
+Source rows retained,4367,4367,0
+Nonblank review bodies,3102,3102,0
+Missing review bodies,1265,1265,0
+Aspect phrases,164,671,507
+Reviewed lexical forms,0,497,497
+Reviews with at least one scored aspect,2613,2701,88
+Complete processing,210,244,34
+Partial processing,2403,2457,54
+Unsupported processing,489,401,-88
+Extracted contexts,12437,13953,1516
+Scored contexts,11041,12584,1543
+Unscored contexts,1396,1369,-27
+Adjective occurrences without lexical lookup support,2025,1217,-808
+Adjective types without lexical lookup support,609,531,-78

@@ -1,0 +1,57 @@
+{
+  "id": "W03-1014",
+  "url": "https://aclanthology.org/W03-1014/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Learning Extraction Patterns for Subjective Expressions"
+    ],
+    "citation_author": [
+      "Ellen Riloff",
+      "Janyce Wiebe"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 2003 Conference on Empirical Methods in Natural Language Processing"
+    ],
+    "citation_publication_date": [
+      "2003"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/W03-1014.pdf"
+    ],
+    "citation_firstpage": [
+      "105"
+    ],
+    "citation_lastpage": [
+      "112"
+    ],
+    "og:title": [
+      "Learning Extraction Patterns for Subjective Expressions"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/W03-1014.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/W03-1014/"
+    ],
+    "og:description": [
+      "Ellen Riloff, Janyce Wiebe. Proceedings of the 2003 Conference on Empirical Methods in Natural Language Processing. 2003."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{riloff-wiebe-2003-learning,\n    title = \"Learning Extraction Patterns for Subjective Expressions\",\n    author = \"Riloff, Ellen  and\n      Wiebe, Janyce\",\n    booktitle = \"Proceedings of the 2003 Conference on Empirical Methods in Natural Language Processing\",\n    year = \"2003\",\n    url = \"https://aclanthology.org/W03-1014/\",\n    pages = \"105--112\"\n}"
+}

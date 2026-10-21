@@ -64,6 +64,8 @@ def _view(rows: list[RowOutcome], scope: str) -> dict:
     for row in rows:
         overall[row.analysis.overall].append(row.row_id)
         for index, record in enumerate(row.analysis.records):
+            if record.score is None:
+                continue  # Absent hybrid evidence is neither zero nor Neutral.
             categories[record.category].setdefault(row.row_id, []).append((index, record))
             issues[record.category, record.issue].setdefault(row.row_id, []).append((index, record))
     category_metrics = [_group(categories[category], scope, category) for category in load_vocabulary()["categories"]]

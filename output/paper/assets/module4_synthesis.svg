@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252pt" height="301pt" viewBox="0 0 252 301"><rect x="12" y="6" width="8" height="6" fill="rgb(214,214,214)" stroke="black" stroke-width="0.7" />
+<text x="24" y="11" font-family="Times New Roman,serif" font-size="6.7" text-anchor="start" >Established methods</text>
+<rect x="135" y="6" width="8" height="6" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="147" y="11" font-family="Times New Roman,serif" font-size="6.7" text-anchor="start" >Project implementation</text>
+<text x="126" y="25" font-family="Times New Roman,serif" font-size="7.3" text-anchor="middle" font-style="italic">Separate evidence from Module 3</text>
+<rect x="3" y="34" width="246" height="64" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="126" y="45" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Baseline Adjustments</text>
+<rect x="14" y="56" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="69.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Domain</text>
+<text x="46.0" y="77.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Preference</text>
+<rect x="94" y="56" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="69.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Degree</text>
+<text x="126.0" y="77.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Weighting</text>
+<rect x="174" y="56" width="64" height="30" fill="rgb(214,214,214)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="69.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Negation</text>
+<text x="206.0" y="77.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Adjustment</text>
+<polyline points="78,71 94,71" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="94,71 90.63682672620293,69.45757803101193 90.63682672620293,72.54242196898807" fill="black"/>
+<polyline points="158,71 174,71" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="174,71 170.6368267262029,69.45757803101193 170.6368267262029,72.54242196898807" fill="black"/>
+<polyline points="46,29 46,56" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="46,56 47.54242196898808,52.63682672620291 44.45757803101192,52.63682672620291" fill="black"/>
+<rect x="3" y="109" width="246" height="64" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="126" y="120" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Independent Hybrid Integration</text>
+<rect x="14" y="131" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="144.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Evidence</text>
+<text x="46.0" y="152.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Fusion</text>
+<rect x="94" y="131" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="144.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Context</text>
+<text x="126.0" y="152.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Rules</text>
+<rect x="174" y="131" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="144.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Trace</text>
+<text x="206.0" y="152.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Retention</text>
+<polyline points="78,146 94,146" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="94,146 90.63682672620293,144.45757803101193 90.63682672620293,147.54242196898807" fill="black"/>
+<polyline points="158,146 174,146" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="174,146 170.6368267262029,144.45757803101193 170.6368267262029,147.54242196898807" fill="black"/>
+<polyline points="46,104 46,131" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="46,131 47.54242196898808,127.63682672620291 44.45757803101192,127.63682672620291" fill="black"/>
+<polyline points="238,71 248,71 248,191 206,191 206,215" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="206,215 207.5424219689881,211.6368267262029 204.45757803101193,211.6368267262029" fill="black"/>
+<polyline points="206,161 206,215" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="206,215 207.5424219689881,211.6368267262029 204.45757803101193,211.6368267262029" fill="black"/>
+<text x="115" y="186" font-family="Times New Roman,serif" font-size="7.1" text-anchor="middle" font-style="italic">Per-method results</text>
+<rect x="3" y="196" width="246" height="103" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="126" y="207" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Final Records and Evaluation</text>
+<rect x="174" y="215" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="228.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Five</text>
+<text x="206.0" y="236.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Bands</text>
+<rect x="94" y="215" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="228.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Review</text>
+<text x="126.0" y="236.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Synthesis</text>
+<rect x="14" y="215" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="228.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Result</text>
+<text x="46.0" y="236.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Records</text>
+<rect x="14" y="257" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="270.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Coverage</text>
+<text x="46.0" y="278.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Status</text>
+<rect x="94" y="257" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="270.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Benchmark</text>
+<text x="126.0" y="278.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Metrics</text>
+<rect x="174" y="257" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="270.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Paper</text>
+<text x="206.0" y="278.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Exports</text>
+<polyline points="174,230 158,230" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="158,230 161.3631732737971,231.5424219689881 161.3631732737971,228.4575780310119" fill="black"/>
+<polyline points="94,230 78,230" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="78,230 81.36317327379707,231.5424219689881 81.36317327379707,228.4575780310119" fill="black"/>
+<polyline points="46,245 46,257" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="46,257 47.54242196898808,253.6368267262029 44.45757803101192,253.6368267262029" fill="black"/>
+<polyline points="78,272 94,272" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="94,272 90.63682672620293,270.4575780310119 90.63682672620293,273.5424219689881" fill="black"/>
+<polyline points="158,272 174,272" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="174,272 170.6368267262029,270.4575780310119 170.6368267262029,273.5424219689881" fill="black"/></svg>

@@ -1,0 +1,508 @@
+﻿category,phrase
+Room,accommmodation
+Room,accomodation
+Room,accomodations
+Room,appartment
+Room,appartments
+Room,armchair
+Room,armchairs
+Room,basin
+Room,basins
+Room,bath
+Room,bath mat
+Room,bath mats
+Room,bath tub
+Room,bath tubs
+Room,bathmat
+Room,bathrobe
+Room,bathrobes
+Room,bathroom ceiling
+Room,bathroom door
+Room,bathroom floor
+Room,bathtub
+Room,bathtubs
+Room,bed cover
+Room,bed linen
+Room,bed sheet
+Room,bed sheets
+Room,bedlinen
+Room,bedsheets
+Room,bedside lamp
+Room,bedside table
+Room,bedside tables
+Room,bedspread
+Room,bedspreads
+Room,bidet
+Room,bidets
+Room,blanket
+Room,blankets
+Room,bunk bed
+Room,bunk beds
+Room,ceiling
+Room,ceilings
+Room,chair
+Room,chairs
+Room,closet
+Room,closets
+Room,cot
+Room,cots
+Room,couch
+Room,couches
+Room,crib
+Room,cribs
+Room,cupboard
+Room,cupboards
+Room,curtain
+Room,decor
+Room,decoration
+Room,decorations
+Room,desk
+Room,desks
+Room,door
+Room,doors
+Room,double bed
+Room,double room
+Room,double rooms
+Room,duvet
+Room,duvets
+Room,décor
+Room,en suite
+Room,en-suite bathroom
+Room,ensuite
+Room,ensuite bathroom
+Room,family room
+Room,family rooms
+Room,floor
+Room,flooring
+Room,floors
+Room,furnishing
+Room,furnishings
+Room,guest room
+Room,guest rooms
+Room,guestroom
+Room,guestrooms
+Room,hair dryer
+Room,hair dryers
+Room,hairdryer
+Room,hairdryers
+Room,king bed
+Room,king size bed
+Room,mattress topper
+Room,night stand
+Room,night stands
+Room,nightstand
+Room,nightstands
+Room,noise insulation
+Room,pillow case
+Room,pillow cases
+Room,pillowcase
+Room,pillowcases
+Room,private bathroom
+Room,queen bed
+Room,queen size bed
+Room,quilt
+Room,quilts
+Room,room comfort
+Room,room decor
+Room,room insulation
+Room,room layout
+Room,room size
+Room,shared bathroom
+Room,sheet
+Room,sheets
+Room,shower cabin
+Room,shower cubicle
+Room,shower curtain
+Room,shower drain
+Room,shower head
+Room,shower heads
+Room,shower screen
+Room,showerhead
+Room,showerheads
+Room,single bed
+Room,single room
+Room,single rooms
+Room,sink
+Room,sinks
+Room,sleeping area
+Room,sleeping space
+Room,sofa
+Room,sofa bed
+Room,sofabed
+Room,sofas
+Room,sound insulation
+Room,sound proofing
+Room,studio
+Room,studio apartment
+Room,studio apartments
+Room,studios
+Room,tile
+Room,tiles
+Room,toilet paper
+Room,toilet seat
+Room,toiletries
+Room,toiletry
+Room,triple room
+Room,twin beds
+Room,twin room
+Room,twin rooms
+Room,wall
+Room,wardrobe
+Room,wardrobes
+Room,washbasin
+Room,washbasins
+Room,window
+Staff,bar staff
+Staff,bellhop
+Staff,bellhops
+Staff,breakfast staff
+Staff,caretaker
+Staff,caretakers
+Staff,cleaner
+Staff,cleaners
+Staff,cleaning staff
+Staff,doorkeeper
+Staff,doorman
+Staff,doormen
+Staff,frontdesk staff
+Staff,general manager
+Staff,gentleman at reception
+Staff,host family
+Staff,hostess
+Staff,hostesses
+Staff,hotel owner
+Staff,hotel personnel
+Staff,hotel team
+Staff,housekeeper
+Staff,housekeepers
+Staff,kitchen staff
+Staff,lady at reception
+Staff,landlady
+Staff,landlord
+Staff,night porter
+Staff,night receptionist
+Staff,night staff
+Staff,owner
+Staff,owners
+Staff,property owner
+Staff,property owners
+Staff,reception desk staff
+Staff,reception lady
+Staff,reception manager
+Staff,reception personnel
+Staff,reception team
+Staff,receptionists team
+Staff,restaurant staff
+Staff,service staff
+Staff,wait staff
+Staff,waitstaff
+Service,airport pick up
+Service,airport pick-up
+Service,airport pickup
+Service,airport shuttle
+Service,arrival instructions
+Service,arrival process
+Service,baggage assistance
+Service,baggage service
+Service,baggage storage
+Service,booking assistance
+Service,booking process
+Service,breakfast delivery
+Service,check in instructions
+Service,check in process
+Service,check out process
+Service,check-in instructions
+Service,check-in process
+Service,check-out process
+Service,cleaning service
+Service,communication
+Service,communications
+Service,customer care
+Service,customer support
+Service,early check in
+Service,early check-in
+Service,frontdesk
+Service,guest assistance
+Service,guest service
+Service,guest services
+Service,housekeeping service
+Service,key collection
+Service,key handover
+Service,key pick-up
+Service,key pickup
+Service,late check-out
+Service,late checkout
+Service,luggage assistance
+Service,luggage delivery
+Service,luggage handling
+Service,luggage service
+Service,luggage storage
+Service,porter service
+Service,reception assistance
+Service,reception desk
+Service,reception service
+Service,reservation process
+Service,restaurant reservation
+Service,restaurant reservations
+Service,room allocation
+Service,room cleaning
+Service,room delivery
+Service,self check in
+Service,self check-in
+Service,self checkin
+Service,self-check-in
+Service,taxi booking
+Service,taxi service
+Service,tour booking
+Service,transfer service
+Food,beer
+Food,beers
+Food,biscuit
+Food,biscuits
+Food,bottled water
+Food,breakfast buffet
+Food,breakfast options
+Food,breakfast selection
+Food,breakfast spread
+Food,breakfast variety
+Food,breakfest
+Food,buffet breakfast
+Food,buffet selection
+Food,butter
+Food,cake
+Food,cakes
+Food,cappuccino
+Food,cappuccinos
+Food,cereal
+Food,cereals
+Food,cheese
+Food,cheeses
+Food,coffe
+Food,coffee machine
+Food,coffee machines
+Food,coffee maker
+Food,coffee makers
+Food,continental breakfast
+Food,cooked breakfast
+Food,cookie
+Food,cookies
+Food,cooking facilities
+Food,cooking utensils
+Food,cookware
+Food,crockery
+Food,croissant
+Food,croissants
+Food,cutlery
+Food,dining area
+Food,dining experience
+Food,dining room
+Food,drinking water
+Food,espresso
+Food,espresso machine
+Food,evening meal
+Food,fish
+Food,fresh fruit
+Food,fruit juice
+Food,fruits
+Food,gluten free options
+Food,gluten-free options
+Food,ham
+Food,honey
+Food,jam
+Food,jams
+Food,kettle
+Food,kettles
+Food,kitchen
+Food,kitchenette
+Food,kitchenettes
+Food,kitchens
+Food,meat
+Food,milk
+Food,muesli
+Food,nespresso machine
+Food,omelet
+Food,omelette
+Food,orange juice
+Food,packed lunch
+Food,pasta
+Food,pastry
+Food,plates
+Food,restuarant
+Food,resturant
+Food,salad
+Food,salads
+Food,scrambled eggs
+Food,seafood
+Food,snack
+Food,tea bags
+Food,teabags
+Food,toast
+Food,utensils
+Food,vegan options
+Food,vegetables
+Food,vegetarian options
+Food,wine
+Food,wines
+Food,yoghurt
+Food,yogurt
+Cleanliness,bathroom cleanliness
+Cleanliness,cleaning quality
+Cleanliness,cleaning standard
+Cleanliness,cleanliness standards
+Cleanliness,general cleanliness
+Cleanliness,hotel cleanliness
+Cleanliness,hygiene standard
+Cleanliness,hygiene standards
+Cleanliness,room cleanliness
+Cleanliness,sanitary condition
+Cleanliness,sanitary conditions
+Facilities,a c
+Facilities,access code
+Facilities,air co
+Facilities,air con
+Facilities,air condition
+Facilities,air conditioning unit
+Facilities,air conditioning units
+Facilities,air-con
+Facilities,air-condition
+Facilities,air-conditioner
+Facilities,air-conditioning system
+Facilities,airco
+Facilities,airconditioner
+Facilities,airconditioners
+Facilities,airconditioning
+Facilities,car charging
+Facilities,carpark
+Facilities,carparks
+Facilities,cctv
+Facilities,ceiling fan
+Facilities,charger
+Facilities,charging points
+Facilities,charging station
+Facilities,common area
+Facilities,communal area
+Facilities,cooktop
+Facilities,courtyard
+Facilities,covered parking
+Facilities,disabled access
+Facilities,dishwasher
+Facilities,door code
+Facilities,door lock
+Facilities,door locks
+Facilities,dryer
+Facilities,electric sockets
+Facilities,electrical outlets
+Facilities,entrance
+Facilities,entryway
+Facilities,escalator
+Facilities,ev charger
+Facilities,exercise room
+Facilities,extractor
+Facilities,extractor fan
+Facilities,fan
+Facilities,fans
+Facilities,fitness room
+Facilities,free parking
+Facilities,garage
+Facilities,garages
+Facilities,garden area
+Facilities,gate
+Facilities,gates
+Facilities,hob
+Facilities,hot tub
+Facilities,indoor pool
+Facilities,internet access
+Facilities,internet connection
+Facilities,internet speed
+Facilities,iron
+Facilities,ironing board
+Facilities,ironing facilities
+Facilities,jacuzzi
+Facilities,key card
+Facilities,key cards
+Facilities,keycard
+Facilities,keycards
+Facilities,keycode
+Facilities,keypad
+Facilities,kitchen appliances
+Facilities,lamp
+Facilities,lamps
+Facilities,light
+Facilities,lighting
+Facilities,lights
+Facilities,lock
+Facilities,locks
+Facilities,lounge
+Facilities,loungers
+Facilities,luggage lift
+Facilities,microwave
+Facilities,mini fridge
+Facilities,mini refrigerator
+Facilities,minifridge
+Facilities,outdoor area
+Facilities,outdoor pool
+Facilities,oven
+Facilities,parasols
+Facilities,parking area
+Facilities,parking lot
+Facilities,parking space
+Facilities,parking spaces
+Facilities,patio
+Facilities,plug
+Facilities,plugs
+Facilities,pool area
+Facilities,pool towels
+Facilities,power outlets
+Facilities,power socket
+Facilities,power sockets
+Facilities,private parking
+Facilities,private pool
+Facilities,ramp
+Facilities,roof garden
+Facilities,roof terrace
+Facilities,rooftop pool
+Facilities,rooftop terrace
+Facilities,room key
+Facilities,room keys
+Facilities,room safe
+Facilities,router
+Facilities,seating area
+Facilities,secure parking
+Facilities,security
+Facilities,security safe
+Facilities,security system
+Facilities,shared lounge
+Facilities,socket
+Facilities,sockets
+Facilities,stair
+Facilities,staircase
+Facilities,staircases
+Facilities,stairs
+Facilities,stairway
+Facilities,stairwell
+Facilities,steam room
+Facilities,steps
+Facilities,stove
+Facilities,sun lounger
+Facilities,sun loungers
+Facilities,sunbed
+Facilities,sunbeds
+Facilities,swimming pools
+Facilities,toaster
+Facilities,tumble dryer
+Facilities,ventilation
+Facilities,washing machine
+Facilities,washing machines
+Facilities,wellness center
+Facilities,wellness centre
+Facilities,wheelchair access
+Facilities,wheelchair ramp
+Facilities,wi fi connection
+Facilities,wi-fi connection
+Facilities,wi-fi signal
+Facilities,wifi connection
+Facilities,wifi router
+Facilities,wifi signal
+Facilities,wireless connection
+Facilities,wireless internet
+Facilities,wireless network

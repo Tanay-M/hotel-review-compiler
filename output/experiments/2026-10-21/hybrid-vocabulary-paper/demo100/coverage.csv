@@ -1,0 +1,11 @@
+﻿system,status,reviews,submitted,percent,scope
+SentiWordNet compiler,complete,97,100,97.0,curated_demo
+SentiWordNet compiler,partial,0,100,0.0,curated_demo
+SentiWordNet compiler,unsupported,3,100,3.0,curated_demo
+SentiWordNet compiler,invalid_input,0,100,0.0,curated_demo
+SentiWordNet compiler,processing_error,0,100,0.0,curated_demo
+VADER-TextBlob hybrid,complete,100,100,100.0,curated_demo
+VADER-TextBlob hybrid,partial,0,100,0.0,curated_demo
+VADER-TextBlob hybrid,unsupported,0,100,0.0,curated_demo
+VADER-TextBlob hybrid,invalid_input,0,100,0.0,curated_demo
+VADER-TextBlob hybrid,processing_error,0,100,0.0,curated_demo

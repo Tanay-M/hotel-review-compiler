@@ -1,0 +1,13 @@
+﻿system,scope,band,reviews,submitted
+SentiWordNet compiler,recognized-aspect review mean,Strong Negative,0,200
+SentiWordNet compiler,recognized-aspect review mean,Weak Negative,1,200
+SentiWordNet compiler,recognized-aspect review mean,Neutral,0,200
+SentiWordNet compiler,recognized-aspect review mean,Weak Positive,6,200
+SentiWordNet compiler,recognized-aspect review mean,Strong Positive,5,200
+SentiWordNet compiler,recognized-aspect review mean,Unavailable,188,200
+VADER-TextBlob hybrid,recognized-aspect review mean,Strong Negative,3,200
+VADER-TextBlob hybrid,recognized-aspect review mean,Weak Negative,28,200
+VADER-TextBlob hybrid,recognized-aspect review mean,Neutral,13,200
+VADER-TextBlob hybrid,recognized-aspect review mean,Weak Positive,73,200
+VADER-TextBlob hybrid,recognized-aspect review mean,Strong Positive,40,200
+VADER-TextBlob hybrid,recognized-aspect review mean,Unavailable,43,200

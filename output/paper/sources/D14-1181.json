@@ -1,0 +1,59 @@
+{
+  "id": "D14-1181",
+  "url": "https://aclanthology.org/D14-1181/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Convolutional Neural Networks for Sentence Classification"
+    ],
+    "citation_author": [
+      "Yoon Kim"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)"
+    ],
+    "citation_publication_date": [
+      "2014/10"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/D14-1181.pdf"
+    ],
+    "citation_firstpage": [
+      "1746"
+    ],
+    "citation_lastpage": [
+      "1751"
+    ],
+    "citation_doi": [
+      "10.3115/v1/D14-1181"
+    ],
+    "og:title": [
+      "Convolutional Neural Networks for Sentence Classification"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/D14-1181.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/D14-1181/"
+    ],
+    "og:description": [
+      "Yoon Kim. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP). 2014."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{kim-2014-convolutional,\n    title = \"Convolutional Neural Networks for Sentence Classification\",\n    author = \"Kim, Yoon\",\n    editor = \"Moschitti, Alessandro  and\n      Pang, Bo  and\n      Daelemans, Walter\",\n    booktitle = \"Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing ({EMNLP})\",\n    month = oct,\n    year = \"2014\",\n    address = \"Doha, Qatar\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D14-1181/\",\n    doi = \"10.3115/v1/D14-1181\",\n    pages = \"1746--1751\"\n}"
+}

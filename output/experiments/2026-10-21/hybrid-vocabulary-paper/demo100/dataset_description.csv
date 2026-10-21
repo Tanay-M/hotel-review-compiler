@@ -1,0 +1,2 @@
+﻿dataset_role,submitted,valid,unique_supplied_texts,mean_characters,gold_sentiment_labels,compiler_extracted_opinions,hybrid_extracted_opinions
+curated_demo,100,100,100,22.92,not provided; no accuracy or F1 inferred,97,100

@@ -8,6 +8,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <script src="/app.js" defer></script>
+  <script src="/hybrid.js" defer></script>
   <script src="/dashboard.js" defer></script>
 </head>
 <body>
@@ -25,9 +26,10 @@
       <h1 id="page-title">Guest feedback, explained.</h1>
       <p>Analyze a review or an entire CSV. See the bigger picture, then follow each opinion back to the compiler evidence.</p>
       <ol class="pipeline" aria-label="Analysis pipeline">
-        <li>Lexical analysis</li><li>Syntax analysis</li><li>Semantic analysis</li><li>SentiWordNet</li><li>Structured IR</li>
+        <li>Preprocessing</li><li>Language analysis</li><li>Aspect attachment</li><li>Sentiment scoring</li><li>Structured IR</li>
       </ol>
     </section>
+    <section class="card method-picker" aria-labelledby="method-title"><div><p class="eyebrow">ANALYSIS METHOD</p><h2 id="method-title">Choose your analyzer</h2><p id="method-description">Independent grammatical extraction with VADER and TextBlob sentiment evidence.</p></div><label for="analysis-method">Use for the next analysis<select id="analysis-method"><option value="hybrid" selected>VADER + TextBlob hybrid</option><option value="sentiwordnet">SentiWordNet compiler baseline</option></select></label></section>
     <nav class="mode-tabs" aria-label="Analysis mode"><button type="button" id="single-mode" aria-pressed="true">Single review</button><button type="button" id="batch-mode" aria-pressed="false">CSV &amp; dashboard</button></nav>
     <div id="bulk-workspace" hidden>
       <section class="card upload-card" aria-labelledby="upload-title">
@@ -51,7 +53,7 @@
           <section class="card"><div class="section-heading"><div><p class="eyebrow">COUNTS &amp; SENTIMENT INDICES</p><h3>Category summary</h3></div></div><div id="category-table"></div><p class="table-footnote">Means weight each review equally. No mentions means unavailable. Scores are sentiment indices, not confidence or star ratings.</p></section>
           <section class="card conclusion-card"><p class="eyebrow">EVIDENCE-BACKED FINDINGS</p><h3>What the dataset tells us</h3><div id="batch-conclusions"></div></section>
         </section>
-        <section id="review-table-section" class="card" aria-labelledby="review-table-title"><div class="section-heading"><div><p class="eyebrow">03 / INDIVIDUAL RESULTS</p><h2 id="review-table-title">One review. One row.</h2></div><span id="review-table-count" class="subtle-tag"></span></div><p class="table-footnote">All submitted reviews are available here. Table filters do not change the dashboard's totals.</p>
+        <section id="review-table-section" class="card" aria-labelledby="review-table-title"><div class="section-heading"><div><p class="eyebrow">03 / INDIVIDUAL RESULTS</p><h2 id="review-table-title">One review. One row.</h2></div><span id="review-table-count" class="subtle-tag"></span></div><p class="table-footnote">Review score averages that review's final opinion scores. Partial scores cover recognized opinions only; a dash means unavailable. Mixed labels remain even when scores cancel. Table filters do not change dashboard totals.</p>
           <div class="table-controls"><label for="review-search">Search<input id="review-search" type="search" placeholder="Review, ID, issue or opinion…"></label><label for="status-filter">Analysis status<select id="status-filter"><option value="">All statuses</option><option>complete</option><option>partial</option><option>unsupported</option><option>invalid_input</option><option>processing_error</option></select></label><label for="polarity-filter">Overall sentiment<select id="polarity-filter"><option value="">All sentiments</option><option>Positive</option><option>Negative</option><option>Mixed</option><option>Neutral</option><option>Unanalyzed</option></select></label><label for="category-filter">Category<select id="category-filter"><option value="">All categories</option></select></label><button type="button" id="reset-filters" class="secondary small">Reset filters</button></div>
           <p id="evidence-filter" class="evidence-filter" hidden></p><div id="review-table"></div>
           <div class="pagination"><span id="page-description" role="status"></span><label for="page-size">Rows per page<select id="page-size"><option>25</option><option selected>50</option><option>100</option><option value="1000">All rows</option></select></label><button type="button" id="previous-page" class="secondary small">← Previous</button><button type="button" id="next-page" class="secondary small">Next →</button></div>
@@ -62,22 +64,22 @@
     </div>
     <div id="single-workspace" class="workspace">
       <section class="card input-card" aria-labelledby="input-title">
-        <div class="section-heading"><div><p class="eyebrow">01 / INPUT</p><h2 id="input-title">Enter a hotel review</h2></div><span class="subtle-tag">English · controlled vocabulary</span></div>
+        <div class="section-heading"><div><p class="eyebrow">01 / INPUT</p><h2 id="input-title">Enter a hotel review</h2></div><span class="subtle-tag">English · six hotel categories</span></div>
         <form id="review-form">
           <label for="review-text" class="sr-only">Hotel review</label>
           <textarea id="review-text" name="review" rows="5" maxlength="10000" spellcheck="false" aria-describedby="input-hint">The room was not clean, but the staff were very helpful.</textarea>
           <div class="input-meta"><span id="input-hint">Explicit aspect + opinion works best.</span><span id="char-count">0 / 10,000</span></div>
-          <div class="form-actions"><button type="submit" id="analyze-button" class="primary">Analyze review <span aria-hidden="true">→</span></button><button type="button" id="clear-button" class="secondary">Clear</button><span class="shortcut">Ctrl / ⌘ + Enter</span></div>
+          <div class="form-actions"><button type="submit" id="analyze-button" class="primary">Analyze review <span aria-hidden="true">→</span></button><button type="button" id="compare-button" class="secondary">Compare both methods</button><button type="button" id="clear-button" class="secondary">Clear</button><span class="shortcut">Ctrl / ⌘ + Enter</span></div>
         </form>
         <p id="request-error" class="request-error" role="alert" hidden></p>
         <div class="examples"><p class="small-label">LOAD AN EXAMPLE</p><div id="example-buttons" class="example-buttons"></div></div>
-        <details class="vocabulary"><summary>What can the current compiler recognize?</summary><div id="vocabulary-content"><p>Loading vocabulary…</p></div></details>
+        <details class="vocabulary"><summary>Baseline vocabulary and hybrid scope</summary><div id="vocabulary-content"><p>Loading vocabulary…</p></div></details>
       </section>
     </div>
     <section id="results-section" class="card results-card" aria-labelledby="results-title" aria-busy="false">
       <div class="section-heading"><div><p class="eyebrow">02 / ANALYSIS</p><h2 id="results-title">Aspect-level results</h2></div><div id="result-summary" class="result-summary" aria-live="polite"></div></div>
       <div id="empty-state" class="empty-state"><span class="empty-symbol" aria-hidden="true">↳</span><p>Your review, broken down.</p><span>Analyze the review above to see its aspects, opinions, and sentiment.</span></div>
-      <div id="results-content" hidden><p id="analysis-scope" class="scope-note"></p><div class="table-wrap"><table><caption class="sr-only">Aspect-level sentiment results</caption><thead><tr><th scope="col">Category</th><th scope="col">Issue</th><th scope="col">Opinion expression</th><th scope="col">Polarity</th><th scope="col">Score</th></tr></thead><tbody id="results-body"></tbody></table></div><div id="diagnostics" hidden></div></div>
+      <div id="results-content" hidden><div id="method-comparison" hidden></div><p id="analysis-scope" class="scope-note"></p><div id="whole-text-summary" hidden></div><div class="table-wrap"><table><caption class="sr-only">Aspect-level sentiment results</caption><thead><tr><th scope="col">Category</th><th scope="col">Issue / rule</th><th scope="col">Opinion context</th><th scope="col">Polarity</th><th scope="col">Strength</th><th scope="col">Score</th></tr></thead><tbody id="results-body"></tbody></table></div><div id="diagnostics" hidden></div></div>
     </section>
     <section id="trace-section" class="card trace-card" aria-labelledby="trace-title" hidden>
       <div class="section-heading"><div><p class="eyebrow">COMPILER TRACE</p><h2 id="trace-title">Follow the analysis</h2></div><button type="button" id="download-button" class="secondary small">Download review CSV</button></div>

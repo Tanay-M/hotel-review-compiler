@@ -1,5 +1,7 @@
 # CSV dashboard and review table - 13 October 2026
 
+**18 October update:** The [hybrid demo](web-hybrid-demo.md) adds the independent VADER–TextBlob method to single reviews and CSV uploads, component/grammar traces, five strength bands, same-review comparison and method-labeled downloads. The existing baseline remains selectable. Hybrid dependencies use the research extras; the older baseline milestone below remains recorded as originally implemented.
+
 **14 October update:** See [the current vocabulary and scoring expansion](vocabulary-expansion.md): 345 aspect phrases, 356 opinion terms, 32 aliases, 315 source synsets, and 136 passing tests. Complete coverage on the unchanged authored 100-review development sample improved from 54% to 88%; this is not sentiment accuracy. The six categories remain unchanged. Older dated measurements below describe their original milestones.
 
 The existing local Python server now provides single-review analysis, CSV upload, a consolidated dashboard, and a tabular result for every submitted row. There are no new runtime dependencies, SQL tables, external model calls, or hosted services. The API is the small connection required between browser controls and the Python compiler, with no background job queue.
@@ -68,3 +70,7 @@ Loopback binding, host/origin checks, fixed static routes, bounded input bodies,
 All 115 tests pass, including 12 new bulk HTTP tests. Tests fetch and compare all 500 individual outputs/traces to standalone analysis, verify 100-row CSV and ZIP contents, mapping/Unicode/BOM/multiline handling, exclusions, limits, replacement/clear, busy behavior, and endpoint checks. Browser testing also verified real file selection, a bad-column error preserving the old batch, 500-row pagination/all-row view, review 500, search, negative-chart drill-down, scopes, invalid input detail, and a successful ZIP download. Responsive preview was inspected at narrow and desktop widths, with no browser error/warning logs. Python compilation and both JavaScript syntax checks pass.
 
 Dashboard design draws on the table tasks of finding, comparing, inspecting, and acting on records described in [NN/g's data-table guidance](https://www.nngroup.com/articles/data-tables/). The implementation uses an overview-to-evidence flow, explicit filters, and accessible labeled values rather than relying on color alone.
+
+## Review score
+
+Single-review summaries and the batch table show Review score, the mean of that review's final opinion scores. The scoring trace shows the method and count. Mixed labels remain even when the mean is zero. Partial scores are marked recognized opinions only; unsupported, invalid and failed rows show a dash and a blank numeric CSV cell. Single-review CSV and batch/report reviews.csv include review_score and review_score_scope. Category Mean index continues to average category-specific review means in the selected scope.

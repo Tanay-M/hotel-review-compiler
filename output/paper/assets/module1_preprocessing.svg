@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252pt" height="142pt" viewBox="0 0 252 142"><text x="14" y="10" font-family="Times New Roman,serif" font-size="7.7" text-anchor="start" font-style="italic">Review records</text>
+<rect x="3" y="22" width="246" height="103" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="126" y="33" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Preprocessing and Validation</text>
+<rect x="14" y="41" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="54.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >UTF-8</text>
+<text x="46.0" y="62.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Decoding</text>
+<rect x="94" y="41" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="54.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Field</text>
+<text x="126.0" y="62.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Mapping</text>
+<rect x="174" y="41" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="54.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Input</text>
+<text x="206.0" y="62.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Validation</text>
+<rect x="174" y="83" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="96.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Duplicate</text>
+<text x="206.0" y="104.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Flagging</text>
+<rect x="94" y="83" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="96.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Original</text>
+<text x="126.0" y="104.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Retention</text>
+<rect x="14" y="83" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="96.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Source</text>
+<text x="46.0" y="104.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Identity</text>
+<polyline points="78,56 94,56" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="94,56 90.63682672620293,54.45757803101192 90.63682672620293,57.54242196898808" fill="black"/>
+<polyline points="158,56 174,56" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="174,56 170.6368267262029,54.45757803101192 170.6368267262029,57.54242196898808" fill="black"/>
+<polyline points="206,71 206,83" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="206,83 207.5424219689881,79.63682672620293 204.45757803101193,79.63682672620293" fill="black"/>
+<polyline points="174,98 158,98" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="158,98 161.3631732737971,99.54242196898808 161.3631732737971,96.45757803101192" fill="black"/>
+<polyline points="94,98 78,98" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="78,98 81.36317327379707,99.54242196898808 81.36317327379707,96.45757803101192" fill="black"/>
+<polyline points="46,14 46,41" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="46,41 47.54242196898808,37.636826726202926 44.45757803101192,37.636826726202926" fill="black"/>
+<polyline points="46,113 46,137" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="46,137 47.54242196898808,133.6368267262029 44.45757803101192,133.6368267262029" fill="black"/>
+<text x="53" y="135" font-family="Times New Roman,serif" font-size="7.4" text-anchor="start" font-style="italic">To Module 2</text></svg>

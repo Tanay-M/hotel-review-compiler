@@ -1,0 +1,52 @@
+{
+  "id": "L10-1531",
+  "url": "https://aclanthology.org/L10-1531/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "SentiWordNet 3.0: An Enhanced Lexical Resource for Sentiment Analysis and Opinion Mining"
+    ],
+    "citation_author": [
+      "Stefano Baccianella",
+      "Andrea Esuli",
+      "Fabrizio Sebastiani"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the Seventh International Conference on Language Resources and Evaluation (LREC'10)"
+    ],
+    "citation_publication_date": [
+      "2010/5"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/L10-1531.pdf"
+    ],
+    "og:title": [
+      "SentiWordNet 3.0: An Enhanced Lexical Resource for Sentiment Analysis and Opinion Mining"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/L10-1531.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/L10-1531/"
+    ],
+    "og:description": [
+      "Stefano Baccianella, Andrea Esuli, Fabrizio Sebastiani. Proceedings of the Seventh International Conference on Language Resources and Evaluation (LREC'10). 2010."
+    ]
+  },
+  "abstract": "Abstract In this work we present SENTIWORDNET 3.0, a lexical resource explicitly devised for supporting sentiment classification and opinion mining applications. SENTIWORDNET 3.0 is an improved version of SENTIWORDNET 1.0, a lexical resource publicly available for research purposes, now currently licensed to more than 300 research groups and used in a variety of research projects worldwide. Both SENTIWORDNET 1.0 and 3.0 are the result of automatically annotating all WORDNET synsets according to their degrees of positivity, negativity, and neutrality. SENTIWORDNET 1.0 and 3.0 differ (a) in the versions of WORDNET which they annotate (WORDNET 2.0 and 3.0, respectively), (b) in the algorithm used for automatically annotating WORDNET, which now includes (additionally to the previous semi-supervised learning step) a random-walk step for refining the scores. We here discuss SENTIWORDNET 3.0, especially focussing on the improvements concerning aspect (b) that it embodies with respect to version 1.0. We also report the results of evaluating SENTIWORDNET 3.0 against a fragment of WORDNET 3.0 manually annotated for positivity, negativity, and neutrality; these results indicate accuracy improvements of about 20% with respect to SENTIWORDNET 1.0.",
+  "bibtex": "@inproceedings{baccianella-etal-2010-sentiwordnet,\n    title = \"{S}enti{W}ord{N}et 3.0: An Enhanced Lexical Resource for Sentiment Analysis and Opinion Mining\",\n    author = \"Baccianella, Stefano  and\n      Esuli, Andrea  and\n      Sebastiani, Fabrizio\",\n    editor = \"Calzolari, Nicoletta  and\n      Choukri, Khalid  and\n      Maegaard, Bente  and\n      Mariani, Joseph  and\n      Odijk, Jan  and\n      Piperidis, Stelios  and\n      Rosner, Mike  and\n      Tapias, Daniel\",\n    booktitle = \"Proceedings of the Seventh International Conference on Language Resources and Evaluation ({LREC}'10)\",\n    month = may,\n    year = \"2010\",\n    address = \"Valletta, Malta\",\n    publisher = \"European Language Resources Association (ELRA)\",\n    url = \"https://aclanthology.org/L10-1531/\",\n    abstract = \"In this work we present SENTIWORDNET 3.0, a lexical resource explicitly devised for supporting sentiment classification and opinion mining applications. SENTIWORDNET 3.0 is an improved version of SENTIWORDNET 1.0, a lexical resource publicly available for research purposes, now currently licensed to more than 300 research groups and used in a variety of research projects worldwide. Both SENTIWORDNET 1.0 and 3.0 are the result of automatically annotating all WORDNET synsets according to their degrees of positivity, negativity, and neutrality. SENTIWORDNET 1.0 and 3.0 differ (a) in the versions of WORDNET which they annotate (WORDNET 2.0 and 3.0, respectively), (b) in the algorithm used for automatically annotating WORDNET, which now includes (additionally to the previous semi-supervised learning step) a random-walk step for refining the scores. We here discuss SENTIWORDNET 3.0, especially focussing on the improvements concerning aspect (b) that it embodies with respect to version 1.0. We also report the results of evaluating SENTIWORDNET 3.0 against a fragment of WORDNET 3.0 manually annotated for positivity, negativity, and neutrality; these results indicate accuracy improvements of about 20{\\%} with respect to SENTIWORDNET 1.0.\"\n}"
+}

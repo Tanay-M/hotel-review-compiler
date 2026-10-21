@@ -16,9 +16,9 @@ def _report(result: AnalysisResult) -> str:
         f"Analysis: {result.status}", "",
     ]
     if result.records:
-        rows = [("Category", "Issue", "Opinion", "Polarity", "Score")]
-        rows.extend((r.category, r.issue, r.opinion_expression, r.polarity, f"{r.score:+.4f}") for r in result.records)
-        widths = [max(len(row[i]) for row in rows) for i in range(5)]
+        rows = [("Category", "Issue", "Opinion", "Polarity", "Score", "Strength")]
+        rows.extend((r.category, r.issue, r.opinion_expression, r.polarity, f"{r.score:+.4f}", r.strength) for r in result.records)
+        widths = [max(len(row[i]) for row in rows) for i in range(6)]
         for i, row in enumerate(rows):
             lines.append(" | ".join(cell.ljust(width) for cell, width in zip(row, widths)))
             if i == 0:
@@ -27,6 +27,9 @@ def _report(result: AnalysisResult) -> str:
         lines.append("No supported aspect-opinion records were found.")
     qualifier = " (analyzed clauses only)" if result.status == "partial" else ""
     lines.extend(["", f"Overall: {result.overall}{qualifier}"])
+    score = f"{result.review_score:+.6f}" if result.review_score is not None else "Unavailable"
+    lines.append(f"Review score: {score} ({result.review_score_scope})")
+    lines.append(f"Net score band: {result.net_score_band}")
     if result.diagnostics:
         lines.extend(["", "Diagnostics:"])
         for diagnostic in result.diagnostics:

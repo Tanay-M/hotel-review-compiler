@@ -18,8 +18,16 @@ elseif ($taskArguments.Count -gt 0 -and $taskArguments[0] -eq '--evaluate') {
     $taskModule = 'hotel_compiler.evaluation'
     $taskArguments = @($taskArguments | Select-Object -Skip 1)
 }
+elseif ($taskArguments.Count -gt 0 -and $taskArguments[0] -eq '--research') {
+    $taskModule = 'hotel_compiler.research_cli'
+    $taskArguments = @($taskArguments | Select-Object -Skip 1)
+}
+$taskProjectPython = Join-Path $taskRoot '.venv\Scripts\python.exe'
+if (Test-Path -LiteralPath $taskProjectPython) {
+    $taskPython = $taskProjectPython
+}
 $taskInstalledPython = Get-Command python -ErrorAction SilentlyContinue
-if ($taskInstalledPython -and $taskInstalledPython.Source -notlike '*\WindowsApps\*') {
+if (-not $taskPython -and $taskInstalledPython -and $taskInstalledPython.Source -notlike '*\WindowsApps\*') {
     $taskPython = $taskInstalledPython.Source
 }
 if (-not $taskPython) {

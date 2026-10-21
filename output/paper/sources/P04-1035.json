@@ -1,0 +1,60 @@
+{
+  "id": "P04-1035",
+  "url": "https://aclanthology.org/P04-1035/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "A Sentimental Education: Sentiment Analysis Using Subjectivity Summarization Based on Minimum Cuts"
+    ],
+    "citation_author": [
+      "Bo Pang",
+      "Lillian Lee"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 42nd Annual Meeting of the Association for Computational Linguistics (ACL-04)"
+    ],
+    "citation_publication_date": [
+      "2004/7"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/P04-1035.pdf"
+    ],
+    "citation_firstpage": [
+      "271"
+    ],
+    "citation_lastpage": [
+      "278"
+    ],
+    "citation_doi": [
+      "10.3115/1218955.1218990"
+    ],
+    "og:title": [
+      "A Sentimental Education: Sentiment Analysis Using Subjectivity Summarization Based on Minimum Cuts"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/P04-1035.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/P04-1035/"
+    ],
+    "og:description": [
+      "Bo Pang, Lillian Lee. Proceedings of the 42nd Annual Meeting of the Association for Computational Linguistics (ACL-04). 2004."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{pang-lee-2004-sentimental,\n    title = \"A Sentimental Education: Sentiment Analysis Using Subjectivity Summarization Based on Minimum Cuts\",\n    author = \"Pang, Bo  and\n      Lee, Lillian\",\n    booktitle = \"Proceedings of the 42nd Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics ({ACL}-04)\",\n    month = jul,\n    year = \"2004\",\n    address = \"Barcelona, Spain\",\n    url = \"https://aclanthology.org/P04-1035/\",\n    doi = \"10.3115/1218955.1218990\",\n    pages = \"271--278\"\n}"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "H05-1044",
+  "url": "https://aclanthology.org/H05-1044/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Recognizing Contextual Polarity in Phrase-Level Sentiment Analysis"
+    ],
+    "citation_author": [
+      "Theresa Wilson",
+      "Janyce Wiebe",
+      "Paul Hoffmann"
+    ],
+    "citation_conference_title": [
+      "Proceedings of Human Language Technology Conference and Conference on Empirical Methods in Natural Language Processing"
+    ],
+    "citation_publication_date": [
+      "2005/10"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/H05-1044.pdf"
+    ],
+    "citation_firstpage": [
+      "347"
+    ],
+    "citation_lastpage": [
+      "354"
+    ],
+    "og:title": [
+      "Recognizing Contextual Polarity in Phrase-Level Sentiment Analysis"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/H05-1044.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/H05-1044/"
+    ],
+    "og:description": [
+      "Theresa Wilson, Janyce Wiebe, Paul Hoffmann. Proceedings of Human Language Technology Conference and Conference on Empirical Methods in Natural Language Processing. 2005."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{wilson-etal-2005-recognizing,\n    title = \"Recognizing Contextual Polarity in Phrase-Level Sentiment Analysis\",\n    author = \"Wilson, Theresa  and\n      Wiebe, Janyce  and\n      Hoffmann, Paul\",\n    editor = \"Mooney, Raymond  and\n      Brew, Chris  and\n      Chien, Lee-Feng  and\n      Kirchhoff, Katrin\",\n    booktitle = \"Proceedings of Human Language Technology Conference and Conference on Empirical Methods in Natural Language Processing\",\n    month = oct,\n    year = \"2005\",\n    address = \"Vancouver, British Columbia, Canada\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/H05-1044/\",\n    pages = \"347--354\"\n}"
+}

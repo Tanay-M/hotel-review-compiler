@@ -39,6 +39,7 @@ class BatchResult:
     source: CSVInput
     rows: tuple[RowOutcome, ...]
     elapsed_seconds: float
+    method: str = "sentiwordnet"
 
     def get_row(self, row_id: str) -> RowOutcome:
         for row in self.rows:
@@ -68,13 +69,14 @@ class BatchResult:
                 "denominator_count": denominator,
                 "complete_percent": round(100 * counts["complete"] / denominator, 2) if denominator else None,
                 "with_opinions_percent": round(100 * (counts["complete"] + counts["partial"]) / denominator, 2) if denominator else None,
-                "scope": "Coverage of the controlled grammar, not measured sentiment accuracy.",
+                "scope": "Heuristic processing coverage, not measured sentiment accuracy.",
             },
         }
 
     def to_dict(self, include_trace: bool = False) -> dict[str, Any]:
         return {
             "schema_version": 1,
+            "method": self.method,
             "batch_id": self.batch_id,
             "status": "completed",
             "created_at": self.created_at,

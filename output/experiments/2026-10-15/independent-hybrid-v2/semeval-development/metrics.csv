@@ -1,0 +1,3 @@
+﻿system,task,cases,correct,scored,accuracy,coverage,conditional_accuracy,macro_f1,accuracy_ci95_low,accuracy_ci95_high,gold_coarse_pairs,predicted_coarse_pairs,matched_coarse_pairs,tuple_precision,tuple_recall,tuple_f1
+SentiWordNet compiler,end-to-end coarse category sentiment; eligible mapped sentences,148,42,44,0.28378378378378377,0.2972972972972973,0.9545454545454546,0.226010101010101,0.1910828025477707,0.38596491228070173,162,50,46,0.92,0.2839506172839506,0.4339622641509434
+VADER-TextBlob hybrid,end-to-end coarse category sentiment; eligible mapped sentences,148,83,92,0.5608108108108109,0.6216216216216216,0.9021739130434783,0.3956043956043956,0.4765625,0.6442953020134228,162,139,100,0.7194244604316546,0.6172839506172839,0.6644518272425249

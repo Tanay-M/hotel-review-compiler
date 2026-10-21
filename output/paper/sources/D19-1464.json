@@ -1,0 +1,61 @@
+{
+  "id": "D19-1464",
+  "url": "https://aclanthology.org/D19-1464/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks"
+    ],
+    "citation_author": [
+      "Chen Zhang",
+      "Qiuchi Li",
+      "Dawei Song"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)"
+    ],
+    "citation_publication_date": [
+      "2019/11"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/D19-1464.pdf"
+    ],
+    "citation_firstpage": [
+      "4568"
+    ],
+    "citation_lastpage": [
+      "4578"
+    ],
+    "citation_doi": [
+      "10.18653/v1/D19-1464"
+    ],
+    "og:title": [
+      "Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/D19-1464.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/D19-1464/"
+    ],
+    "og:description": [
+      "Chen Zhang, Qiuchi Li, Dawei Song. Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019."
+    ]
+  },
+  "abstract": "Abstract Due to their inherent capability in semantic alignment of aspects and their context words, attention mechanism and Convolutional Neural Networks (CNNs) are widely applied for aspect-based sentiment classification. However, these models lack a mechanism to account for relevant syntactical constraints and long-range word dependencies, and hence may mistakenly recognize syntactically irrelevant contextual words as clues for judging aspect sentiment. To tackle this problem, we propose to build a Graph Convolutional Network (GCN) over the dependency tree of a sentence to exploit syntactical information and word dependencies. Based on it, a novel aspect-specific sentiment classification framework is raised. Experiments on three benchmarking collections illustrate that our proposed model has comparable effectiveness to a range of state-of-the-art models, and further demonstrate that both syntactical information and long-range word dependencies are properly captured by the graph convolution structure.",
+  "bibtex": "@inproceedings{zhang-etal-2019-aspect,\n    title = \"Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks\",\n    author = \"Zhang, Chen  and\n      Li, Qiuchi  and\n      Song, Dawei\",\n    editor = \"Inui, Kentaro  and\n      Jiang, Jing  and\n      Ng, Vincent  and\n      Wan, Xiaojun\",\n    booktitle = \"Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing ({EMNLP}-{IJCNLP})\",\n    month = nov,\n    year = \"2019\",\n    address = \"Hong Kong, China\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D19-1464/\",\n    doi = \"10.18653/v1/D19-1464\",\n    pages = \"4568--4578\",\n    abstract = \"Due to their inherent capability in semantic alignment of aspects and their context words, attention mechanism and Convolutional Neural Networks (CNNs) are widely applied for aspect-based sentiment classification. However, these models lack a mechanism to account for relevant syntactical constraints and long-range word dependencies, and hence may mistakenly recognize syntactically irrelevant contextual words as clues for judging aspect sentiment. To tackle this problem, we propose to build a Graph Convolutional Network (GCN) over the dependency tree of a sentence to exploit syntactical information and word dependencies. Based on it, a novel aspect-specific sentiment classification framework is raised. Experiments on three benchmarking collections illustrate that our proposed model has comparable effectiveness to a range of state-of-the-art models, and further demonstrate that both syntactical information and long-range word dependencies are properly captured by the graph convolution structure.\"\n}"
+}

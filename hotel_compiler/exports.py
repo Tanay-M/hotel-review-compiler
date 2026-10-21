@@ -29,20 +29,23 @@ def _writer(handle: TextIO, fields: list[str]) -> csv.DictWriter:
 
 def _write_reviews(handle: TextIO, batch: BatchResult) -> None:
     writer = _writer(handle, [
-        "batch_id", "row_id", "row_number", "line_start", "line_end", "supplied_review_id",
+        "method", "batch_id", "row_id", "row_number", "line_start", "line_end", "supplied_review_id",
         "review_text", "duplicate_text", "duplicate_id", "execution_status", "analysis_status",
-        "overall", "overall_scope", "opinion_count", "categories", "issues", "opinion_expressions", "aspect_results",
-        "diagnostics", "validation_errors", "processing_error",
+        "overall", "overall_scope", "review_score", "review_score_scope", "net_score_band", "opinion_count", "categories", "issues", "opinion_expressions", "aspect_results",
+        "diagnostics", "validation_errors", "processing_error", "whole_text_score", "whole_text_polarity", "whole_text_strength",
     ])
     for row in batch.rows:
         result = row.analysis
         data = {
-            "batch_id": batch.batch_id, "row_id": row.row_id, "row_number": row.source.ordinal,
+            "method": batch.method, "batch_id": batch.batch_id, "row_id": row.row_id, "row_number": row.source.ordinal,
             "line_start": row.source.line_start, "line_end": row.source.line_end,
             "supplied_review_id": row.source.supplied_review_id, "review_text": row.source.review_text,
             "duplicate_text": row.source.duplicate_text, "duplicate_id": row.source.duplicate_id,
             "execution_status": row.execution_status, "analysis_status": result.status if result else "",
             "overall": result.overall if result else "",
+            "review_score": result.review_score if result else None,
+            "review_score_scope": result.review_score_scope if result else "unavailable",
+            "net_score_band": result.net_score_band if result else "Unavailable",
             "overall_scope": "recognized clauses only" if result and result.status == "partial" else
                              "no supported opinions" if result and result.status == "unsupported" else
                              "complete review" if result else "not analyzed",
@@ -50,25 +53,28 @@ def _write_reviews(handle: TextIO, batch: BatchResult) -> None:
             "categories": "; ".join(dict.fromkeys(r.category for r in result.records)) if result else "",
             "issues": "; ".join(dict.fromkeys(f"{r.category} / {r.issue}" for r in result.records)) if result else "",
             "opinion_expressions": "; ".join(r.opinion_expression for r in result.records) if result else "",
-            "aspect_results": "; ".join(f"{r.category} / {r.issue}: {r.opinion_expression} -> {r.polarity} ({r.score:+.6f})" for r in result.records) if result else "",
+            "aspect_results": "; ".join(f"{r.category} / {r.issue}: {r.opinion_expression} -> {r.polarity} ({format(r.score, '+.6f') if r.score is not None else 'Unavailable'})" for r in result.records) if result else "",
             "diagnostics": " | ".join(f"{d.stage}/{d.code} [{d.start}:{d.end}]: {d.message}" for d in result.diagnostics) if result else "",
             "validation_errors": " | ".join(f"{issue.code}: {issue.message}" for issue in row.source.issues),
             "processing_error": row.processing_error,
+            "whole_text_score": result.source.whole_text.score if batch.method == "hybrid" and result else None,
+            "whole_text_polarity": result.source.whole_text.polarity if batch.method == "hybrid" and result else "",
+            "whole_text_strength": result.source.whole_text.strength if batch.method == "hybrid" and result else "",
         }
         writer.writerow({key: _spreadsheet_cell(value) for key, value in data.items()})
 
 
 def _write_aspects(handle: TextIO, batch: BatchResult) -> None:
     writer = _writer(handle, [
-        "batch_id", "row_id", "row_number", "review_id", "analysis_status", "category", "issue",
-        "aspect_term", "opinion_term", "opinion_expression", "polarity", "score", "start", "end",
+        "method", "batch_id", "row_id", "row_number", "review_id", "analysis_status", "category", "issue",
+        "aspect_term", "opinion_term", "opinion_expression", "polarity", "score", "strength", "start", "end",
     ])
     for row in batch.rows:
         if row.analysis is None:
             continue
         for record in row.analysis.records:
             data = {
-                "batch_id": batch.batch_id, "row_id": row.row_id, "row_number": row.source.ordinal,
+                "method": batch.method, "batch_id": batch.batch_id, "row_id": row.row_id, "row_number": row.source.ordinal,
                 "analysis_status": row.analysis.status, **record.to_ir(),
             }
             writer.writerow({key: _spreadsheet_cell(value) for key, value in data.items()})

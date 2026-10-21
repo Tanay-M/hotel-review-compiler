@@ -9,11 +9,15 @@ description = "A deterministic compiler-style hotel review analyzer"
 requires-python = ">=3.10"
 dependencies = []
 
+[project.optional-dependencies]
+research = ["vaderSentiment==3.3.2", "textblob==0.19.0", "nltk==3.10.3", "matplotlib>=3.9,<4"]
+
 [project.scripts]
 hotel-compiler = "hotel_compiler.cli:main"
 hotel-compiler-web = "hotel_compiler.web:main"
 hotel-compiler-batch = "hotel_compiler.batch_cli:main"
 hotel-compiler-evaluate = "hotel_compiler.evaluation:main"
+hotel-compiler-research = "hotel_compiler.research_cli:main"
 
 [tool.setuptools.packages.find]
 include = ["hotel_compiler*"]

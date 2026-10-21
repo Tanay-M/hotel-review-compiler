@@ -1,0 +1,51 @@
+{
+  "id": "L06-1225",
+  "url": "https://aclanthology.org/L06-1225/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "SENTIWORDNET: A Publicly Available Lexical Resource for Opinion Mining"
+    ],
+    "citation_author": [
+      "Andrea Esuli",
+      "Fabrizio Sebastiani"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the Fifth International Conference on Language Resources and Evaluation (LREC’06)"
+    ],
+    "citation_publication_date": [
+      "2006/5"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/L06-1225.pdf"
+    ],
+    "og:title": [
+      "SENTIWORDNET: A Publicly Available Lexical Resource for Opinion Mining"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/L06-1225.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/L06-1225/"
+    ],
+    "og:description": [
+      "Andrea Esuli, Fabrizio Sebastiani. Proceedings of the Fifth International Conference on Language Resources and Evaluation (LREC’06). 2006."
+    ]
+  },
+  "abstract": "Abstract Opinion mining (OM) is a recent subdiscipline at the crossroads of information retrieval and computational linguistics which is concerned not with the topic a document is about, but with the opinion it expresses. OM has a rich set of applications, ranging from tracking users’ opinions about products or about political candidates as expressed in online forums, to customer relationship management. In order to aid the extraction of opinions from text, recent research has tried to automatically determine the “PNpolarity” of subjective terms, i.e. identify whether a term that is a marker of opinionated content has a positive or a negative connotation. Research on determining whether a term is indeed a marker of opinionated content (a subjective term) or not (an objective term) has been instead much scarcer. In this work we describe SENTIWORDNET, a lexical resource in which each WORDNET synset sis associated to three numerical scores Obj(s), Pos(s) and Neg(s), describing how objective, positive, and negative the terms contained in the synset are. The method used to develop SENTIWORDNET is based on the quantitative analysis of the glosses associated to synsets, and on the use of the resulting vectorial term representations for semi-supervised synset classi.cation. The three scores are derived by combining the results produced by a committee of eight ternary classi.ers, all characterized by similar accuracy levels but different classification behaviour. SENTIWORDNET is freely available for research purposes, and is endowed with a Web-based graphical user interface.",
+  "bibtex": "@inproceedings{esuli-sebastiani-2006-sentiwordnet,\n    title = \"{SENTIWORDNET}: A Publicly Available Lexical Resource for Opinion Mining\",\n    author = \"Esuli, Andrea  and\n      Sebastiani, Fabrizio\",\n    editor = \"Calzolari, Nicoletta  and\n      Choukri, Khalid  and\n      Gangemi, Aldo  and\n      Maegaard, Bente  and\n      Mariani, Joseph  and\n      Odijk, Jan  and\n      Tapias, Daniel\",\n    booktitle = \"Proceedings of the Fifth International Conference on Language Resources and Evaluation ({LREC}{'}06)\",\n    month = may,\n    year = \"2006\",\n    address = \"Genoa, Italy\",\n    publisher = \"European Language Resources Association (ELRA)\",\n    url = \"https://aclanthology.org/L06-1225/\",\n    abstract = \"Opinion mining (OM) is a recent subdiscipline at the crossroads of information retrieval and computational linguistics which is concerned not with the topic a document is about, but with the opinion it expresses. OM has a rich set of applications, ranging from tracking users' opinions about products or about political candidates as expressed in online forums, to customer relationship management. In order to aid the extraction of opinions from text, recent research has tried to automatically determine the ``PNpolarity'' of subjective terms, i.e. identify whether a term that is a marker of opinionated content has a positive or a negative connotation. Research on determining whether a term is indeed a marker of opinionated content (a subjective term) or not (an objective term) has been instead much scarcer. In this work we describe SENTIWORDNET, a lexical resource in which each WORDNET synset sis associated to three numerical scores Obj(s), Pos(s) and Neg(s), describing how objective, positive, and negative the terms contained in the synset are. The method used to develop SENTIWORDNET is based on the quantitative analysis of the glosses associated to synsets, and on the use of the resulting vectorial term representations for semi-supervised synset classi.cation. The three scores are derived by combining the results produced by a committee of eight ternary classi.ers, all characterized by similar accuracy levels but different classification behaviour. SENTIWORDNET is freely available for research purposes, and is endowed with a Web-based graphical user interface.\"\n}"
+}

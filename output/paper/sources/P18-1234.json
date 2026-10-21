@@ -1,0 +1,60 @@
+{
+  "id": "P18-1234",
+  "url": "https://aclanthology.org/P18-1234/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Aspect Based Sentiment Analysis with Gated Convolutional Networks"
+    ],
+    "citation_author": [
+      "Wei Xue",
+      "Tao Li"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+    ],
+    "citation_publication_date": [
+      "2018/7"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/P18-1234.pdf"
+    ],
+    "citation_firstpage": [
+      "2514"
+    ],
+    "citation_lastpage": [
+      "2523"
+    ],
+    "citation_doi": [
+      "10.18653/v1/P18-1234"
+    ],
+    "og:title": [
+      "Aspect Based Sentiment Analysis with Gated Convolutional Networks"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/P18-1234.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/P18-1234/"
+    ],
+    "og:description": [
+      "Wei Xue, Tao Li. Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2018."
+    ]
+  },
+  "abstract": "Abstract Aspect based sentiment analysis (ABSA) can provide more detailed information than general sentiment analysis, because it aims to predict the sentiment polarities of the given aspects or entities in text. We summarize previous approaches into two subtasks: aspect-category sentiment analysis (ACSA) and aspect-term sentiment analysis (ATSA). Most previous approaches employ long short-term memory and attention mechanisms to predict the sentiment polarity of the concerned targets, which are often complicated and need more training time. We propose a model based on convolutional neural networks and gating mechanisms, which is more accurate and efficient. First, the novel Gated Tanh-ReLU Units can selectively output the sentiment features according to the given aspect or entity. The architecture is much simpler than attention layer used in the existing models. Second, the computations of our model could be easily parallelized during training, because convolutional layers do not have time dependency as in LSTM layers, and gating units also work independently. The experiments on SemEval datasets demonstrate the efficiency and effectiveness of our models.",
+  "bibtex": "@inproceedings{xue-li-2018-aspect,\n    title = \"Aspect Based Sentiment Analysis with Gated Convolutional Networks\",\n    author = \"Xue, Wei  and\n      Li, Tao\",\n    editor = \"Gurevych, Iryna  and\n      Miyao, Yusuke\",\n    booktitle = \"Proceedings of the 56th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)\",\n    month = jul,\n    year = \"2018\",\n    address = \"Melbourne, Australia\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P18-1234/\",\n    doi = \"10.18653/v1/P18-1234\",\n    pages = \"2514--2523\",\n    abstract = \"Aspect based sentiment analysis (ABSA) can provide more detailed information than general sentiment analysis, because it aims to predict the sentiment polarities of the given aspects or entities in text. We summarize previous approaches into two subtasks: aspect-category sentiment analysis (ACSA) and aspect-term sentiment analysis (ATSA). Most previous approaches employ long short-term memory and attention mechanisms to predict the sentiment polarity of the concerned targets, which are often complicated and need more training time. We propose a model based on convolutional neural networks and gating mechanisms, which is more accurate and efficient. First, the novel Gated Tanh-ReLU Units can selectively output the sentiment features according to the given aspect or entity. The architecture is much simpler than attention layer used in the existing models. Second, the computations of our model could be easily parallelized during training, because convolutional layers do not have time dependency as in LSTM layers, and gating units also work independently. The experiments on SemEval datasets demonstrate the efficiency and effectiveness of our models.\"\n}"
+}

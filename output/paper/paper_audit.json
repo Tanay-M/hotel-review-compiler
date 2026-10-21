@@ -1,0 +1,50 @@
+{
+  "updated": "2026-10-21",
+  "pages": 9,
+  "research_works": 30,
+  "total_references": 33,
+  "pseudocode_algorithms": 4,
+  "architecture_diagrams": 4,
+  "measured_charts": 4,
+  "tables": 4,
+  "native_math_equations": 4,
+  "reference_order": "all 33 cited in first-appearance order",
+  "metric_table": "matches saved development metric CSV",
+  "author_details": "two supplied names; affiliations/emails intentionally omitted until supplied",
+  "evaluation_scope": "development/exploratory; not untouched holdout",
+  "rendering": "Microsoft Word 16 native export plus canonical DOCX skill rasterizer",
+  "visual_review": "all 9 final rendered pages inspected; final reference page balanced",
+  "experiment_root": "output\\experiments\\2026-10-21\\hybrid-vocabulary-paper",
+  "booking_vocabulary_evidence": "output\\experiments\\2026-10-18\\booking-vocabulary\\report",
+  "results": {
+    "SentiWordNet compiler": {
+      "cases": "148",
+      "correct": "42",
+      "accuracy": "0.28378378378378377",
+      "macro_f1": "0.226010101010101",
+      "tuple_f1": "0.4339622641509434"
+    },
+    "VADER-TextBlob hybrid": {
+      "cases": "148",
+      "correct": "85",
+      "accuracy": "0.5743243243243243",
+      "macro_f1": "0.39994425863991084",
+      "tuple_f1": "0.6449511400651465"
+    }
+  },
+  "prior_version": "archive/pre-vocabulary-update-2026-10-21.zip",
+  "fonts": [
+    "BCDEEE+TimesNewRomanPSMT",
+    "BCDFEE+TimesNewRomanPSMT",
+    "BCDGEE+TimesNewRomanPS-BoldMT",
+    "BCDHEE+TimesNewRomanPS-BoldMT",
+    "BCDIEE+TimesNewRomanPS-BoldItalicMT",
+    "BCDJEE+TimesNewRomanPS-BoldItalicMT",
+    "BCDKEE+TimesNewRomanPS-ItalicMT",
+    "BCDLEE+CambriaMath"
+  ],
+  "sha256": {
+    "Team_17_IEEE_Conference_Paper.docx": "881cf1919b95f338b5723df4480447731fff1bc49f8ee2d846b22ece73a907be",
+    "Team_17_IEEE_Conference_Paper.pdf": "f2227a4fb46031fe9e9d8de905defe06f84402cbfdad0f81b9535ee53b3643f9"
+  }
+}

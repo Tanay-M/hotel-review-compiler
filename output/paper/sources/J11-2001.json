@@ -1,0 +1,69 @@
+{
+  "id": "J11-2001",
+  "url": "https://aclanthology.org/J11-2001/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Lexicon-Based Methods for Sentiment Analysis"
+    ],
+    "citation_author": [
+      "Maite Taboada",
+      "Julian Brooke",
+      "Milan Tofiloski",
+      "Kimberly Voll",
+      "Manfred Stede"
+    ],
+    "citation_journal_title": [
+      "Computational Linguistics"
+    ],
+    "citation_volume": [
+      "37"
+    ],
+    "citation_issue": [
+      "2"
+    ],
+    "citation_publication_date": [
+      "2011/6"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/J11-2001.pdf"
+    ],
+    "citation_firstpage": [
+      "267"
+    ],
+    "citation_lastpage": [
+      "307"
+    ],
+    "citation_doi": [
+      "10.1162/COLI_a_00049"
+    ],
+    "og:title": [
+      "Lexicon-Based Methods for Sentiment Analysis"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/J11-2001.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/J11-2001/"
+    ],
+    "og:description": [
+      "Maite Taboada, Julian Brooke, Milan Tofiloski, Kimberly Voll, Manfred Stede. Computational Linguistics, Volume 37, Issue 2 - June 2011. 2011."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@article{taboada-etal-2011-lexicon,\n    title = \"Lexicon-Based Methods for Sentiment Analysis\",\n    author = \"Taboada, Maite  and\n      Brooke, Julian  and\n      Tofiloski, Milan  and\n      Voll, Kimberly  and\n      Stede, Manfred\",\n    journal = \"Computational Linguistics\",\n    volume = \"37\",\n    number = \"2\",\n    month = jun,\n    year = \"2011\",\n    address = \"Cambridge, MA\",\n    publisher = \"MIT Press\",\n    url = \"https://aclanthology.org/J11-2001/\",\n    doi = \"10.1162/COLI_a_00049\",\n    pages = \"267--307\"\n}"
+}

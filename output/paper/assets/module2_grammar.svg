@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252pt" height="282pt" viewBox="0 0 252 282"><rect x="12" y="6" width="8" height="6" fill="rgb(214,214,214)" stroke="black" stroke-width="0.7" />
+<text x="24" y="11" font-family="Times New Roman,serif" font-size="6.7" text-anchor="start" >Established methods</text>
+<rect x="135" y="6" width="8" height="6" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="147" y="11" font-family="Times New Roman,serif" font-size="6.7" text-anchor="start" >Project implementation</text>
+<text x="14" y="27" font-family="Times New Roman,serif" font-size="7.3" text-anchor="start" font-style="italic">Original text to both paths</text>
+<rect x="3" y="38" width="246" height="103" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="126" y="49" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Baseline Lexical and Syntax</text>
+<rect x="14" y="57" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="70.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Regex</text>
+<text x="46.0" y="78.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Scanning</text>
+<rect x="94" y="57" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="70.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Phrase</text>
+<text x="126.0" y="78.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Matching</text>
+<rect x="174" y="57" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="70.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Token</text>
+<text x="206.0" y="78.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Classification</text>
+<rect x="174" y="99" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="112.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Predictive</text>
+<text x="206.0" y="120.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Parsing</text>
+<rect x="94" y="99" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="112.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Clause</text>
+<text x="126.0" y="120.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Recovery</text>
+<rect x="14" y="99" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="112.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >AST</text>
+<text x="46.0" y="120.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Generation</text>
+<polyline points="78,72 94,72" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="94,72 90.63682672620293,70.45757803101193 90.63682672620293,73.54242196898807" fill="black"/>
+<polyline points="158,72 174,72" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="174,72 170.6368267262029,70.45757803101193 170.6368267262029,73.54242196898807" fill="black"/>
+<polyline points="206,87 206,99" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="206,99 207.5424219689881,95.63682672620291 204.45757803101193,95.63682672620291" fill="black"/>
+<polyline points="174,114 158,114" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="158,114 161.3631732737971,115.5424219689881 161.3631732737971,112.4575780310119" fill="black"/>
+<polyline points="94,114 78,114" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="78,114 81.36317327379707,115.5424219689881 81.36317327379707,112.4575780310119" fill="black"/>
+<polyline points="46,29 46,57" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="46,57 47.54242196898808,53.63682672620291 44.45757803101192,53.63682672620291" fill="black"/>
+<polyline points="46,129 46,148" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="46,148 47.54242196898808,144.6368267262029 44.45757803101192,144.6368267262029" fill="black"/>
+<text x="52" y="150" font-family="Times New Roman,serif" font-size="6.9" text-anchor="start" font-style="italic">Baseline AST to Module 3</text>
+<rect x="3" y="163" width="246" height="103" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="126" y="174" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Independent Hybrid Grammar</text>
+<rect x="14" y="182" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="195.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Contraction</text>
+<text x="46.0" y="203.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Expansion</text>
+<rect x="94" y="182" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="195.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Source</text>
+<text x="126.0" y="203.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Mapping</text>
+<rect x="174" y="182" width="64" height="30" fill="rgb(214,214,214)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="195.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >POS</text>
+<text x="206.0" y="203.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Tagging</text>
+<rect x="174" y="224" width="64" height="30" fill="rgb(214,214,214)" stroke="black" stroke-width="0.7" />
+<text x="206.0" y="237.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Phrase</text>
+<text x="206.0" y="245.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Chunking</text>
+<rect x="94" y="224" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="126.0" y="237.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Noun</text>
+<text x="126.0" y="245.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Phrases</text>
+<rect x="14" y="224" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="46.0" y="237.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Clause</text>
+<text x="46.0" y="245.8" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Segmentation</text>
+<polyline points="78,197 94,197" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="94,197 90.63682672620293,195.4575780310119 90.63682672620293,198.5424219689881" fill="black"/>
+<polyline points="158,197 174,197" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="174,197 170.6368267262029,195.4575780310119 170.6368267262029,198.5424219689881" fill="black"/>
+<polyline points="206,212 206,224" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="206,224 207.5424219689881,220.6368267262029 204.45757803101193,220.6368267262029" fill="black"/>
+<polyline points="174,239 158,239" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="158,239 161.3631732737971,240.5424219689881 161.3631732737971,237.4575780310119" fill="black"/>
+<polyline points="94,239 78,239" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="78,239 81.36317327379707,240.5424219689881 81.36317327379707,237.4575780310119" fill="black"/>
+<polyline points="7,197 14,197" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="14,197 10.636826726202925,195.4575780310119 10.636826726202925,198.5424219689881" fill="black"/>
+<text x="14" y="180" font-family="Times New Roman,serif" font-size="6.2" text-anchor="start" font-style="italic">Module 1</text>
+<polyline points="46,254 46,280" fill="none" stroke="black" stroke-width="0.65"/>
+<polygon points="46,280 47.54242196898808,276.6368267262029 44.45757803101192,276.6368267262029" fill="black"/>
+<text x="52" y="278" font-family="Times New Roman,serif" font-size="6.9" text-anchor="start" font-style="italic">Hybrid contexts to Module 3</text></svg>

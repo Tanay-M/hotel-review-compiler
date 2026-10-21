@@ -1,0 +1,68 @@
+{
+  "id": "J11-1002",
+  "url": "https://aclanthology.org/J11-1002/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Opinion Word Expansion and Target Extraction through Double Propagation"
+    ],
+    "citation_author": [
+      "Guang Qiu",
+      "Bing Liu",
+      "Jiajun Bu",
+      "Chun Chen"
+    ],
+    "citation_journal_title": [
+      "Computational Linguistics"
+    ],
+    "citation_volume": [
+      "37"
+    ],
+    "citation_issue": [
+      "1"
+    ],
+    "citation_publication_date": [
+      "2011/3"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/J11-1002.pdf"
+    ],
+    "citation_firstpage": [
+      "9"
+    ],
+    "citation_lastpage": [
+      "27"
+    ],
+    "citation_doi": [
+      "10.1162/coli_a_00034"
+    ],
+    "og:title": [
+      "Opinion Word Expansion and Target Extraction through Double Propagation"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/J11-1002.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/J11-1002/"
+    ],
+    "og:description": [
+      "Guang Qiu, Bing Liu, Jiajun Bu, Chun Chen. Computational Linguistics, Volume 37, Issue 1 - March 2011. 2011."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@article{qiu-etal-2011-opinion,\n    title = \"Opinion Word Expansion and Target Extraction through Double Propagation\",\n    author = \"Qiu, Guang  and\n      Liu, Bing  and\n      Bu, Jiajun  and\n      Chen, Chun\",\n    journal = \"Computational Linguistics\",\n    volume = \"37\",\n    number = \"1\",\n    month = mar,\n    year = \"2011\",\n    address = \"Cambridge, MA\",\n    publisher = \"MIT Press\",\n    url = \"https://aclanthology.org/J11-1002/\",\n    doi = \"10.1162/coli_a_00034\",\n    pages = \"9--27\"\n}"
+}

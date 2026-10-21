@@ -1,0 +1,5972 @@
+{
+  "version": "hotel-vocabulary-2026-10-18",
+  "scope": "Independent hybrid only. Six categories, fusion weights, bands and existing context-rule values unchanged.",
+  "provenance": "Project-reviewed lexical synonyms, explicit forms and hotel aspect phrases, guided by the supplied 4367-row Crawlfeeds Booking Italy vocabulary audit. No ratings, positive/negative field headings or gold sentiment labels used.",
+  "normalization_policy": "Only native-unknown expressions are canonicalized in a separate scoring copy. Category guards apply. Native and effective scoring evidence are retained. Generic hotel/location/price terms are not forced into the six categories.",
+  "aspect_additions": {
+    "Room": [
+      "accommmodation",
+      "accomodation",
+      "accomodations",
+      "appartment",
+      "appartments",
+      "armchair",
+      "armchairs",
+      "basin",
+      "basins",
+      "bath",
+      "bath mat",
+      "bath mats",
+      "bath tub",
+      "bath tubs",
+      "bathmat",
+      "bathrobe",
+      "bathrobes",
+      "bathroom ceiling",
+      "bathroom door",
+      "bathroom floor",
+      "bathtub",
+      "bathtubs",
+      "bed cover",
+      "bed linen",
+      "bed sheet",
+      "bed sheets",
+      "bedlinen",
+      "bedsheets",
+      "bedside lamp",
+      "bedside table",
+      "bedside tables",
+      "bedspread",
+      "bedspreads",
+      "bidet",
+      "bidets",
+      "blanket",
+      "blankets",
+      "bunk bed",
+      "bunk beds",
+      "carpet",
+      "ceiling",
+      "ceilings",
+      "chair",
+      "chairs",
+      "closet",
+      "closets",
+      "cot",
+      "cots",
+      "couch",
+      "couches",
+      "crib",
+      "cribs",
+      "cupboard",
+      "cupboards",
+      "curtain",
+      "decor",
+      "decoration",
+      "decorations",
+      "desk",
+      "desks",
+      "door",
+      "doors",
+      "double bed",
+      "double room",
+      "double rooms",
+      "duvet",
+      "duvets",
+      "décor",
+      "en suite",
+      "en-suite bathroom",
+      "ensuite",
+      "ensuite bathroom",
+      "family room",
+      "family rooms",
+      "floor",
+      "flooring",
+      "floors",
+      "furnishing",
+      "furnishings",
+      "guest room",
+      "guest rooms",
+      "guestroom",
+      "guestrooms",
+      "hair dryer",
+      "hair dryers",
+      "hairdryer",
+      "hairdryers",
+      "king bed",
+      "king size bed",
+      "mattress topper",
+      "night stand",
+      "night stands",
+      "nightstand",
+      "nightstands",
+      "noise insulation",
+      "pillow case",
+      "pillow cases",
+      "pillowcase",
+      "pillowcases",
+      "private bathroom",
+      "queen bed",
+      "queen size bed",
+      "quilt",
+      "quilts",
+      "room comfort",
+      "room decor",
+      "room insulation",
+      "room layout",
+      "room size",
+      "shared bathroom",
+      "sheet",
+      "sheets",
+      "shower cabin",
+      "shower cubicle",
+      "shower curtain",
+      "shower drain",
+      "shower head",
+      "shower heads",
+      "shower screen",
+      "showerhead",
+      "showerheads",
+      "single bed",
+      "single room",
+      "single rooms",
+      "sink",
+      "sinks",
+      "sleeping area",
+      "sleeping space",
+      "sofa",
+      "sofa bed",
+      "sofabed",
+      "sofas",
+      "sound insulation",
+      "sound proofing",
+      "studio",
+      "studio apartment",
+      "studio apartments",
+      "studios",
+      "tile",
+      "tiles",
+      "toilet paper",
+      "toilet seat",
+      "toiletries",
+      "toiletry",
+      "triple room",
+      "twin beds",
+      "twin room",
+      "twin rooms",
+      "wall",
+      "wardrobe",
+      "wardrobes",
+      "washbasin",
+      "washbasins",
+      "window"
+    ],
+    "Staff": [
+      "bar staff",
+      "bellhop",
+      "bellhops",
+      "breakfast staff",
+      "caretaker",
+      "caretakers",
+      "cleaner",
+      "cleaners",
+      "cleaning staff",
+      "doorkeeper",
+      "doorman",
+      "doormen",
+      "frontdesk staff",
+      "general manager",
+      "gentleman at reception",
+      "host family",
+      "hostess",
+      "hostesses",
+      "hotel owner",
+      "hotel personnel",
+      "hotel team",
+      "housekeeper",
+      "housekeepers",
+      "kitchen staff",
+      "lady at reception",
+      "landlady",
+      "landlord",
+      "night porter",
+      "night receptionist",
+      "night staff",
+      "owner",
+      "owners",
+      "property owner",
+      "property owners",
+      "reception desk staff",
+      "reception lady",
+      "reception manager",
+      "reception personnel",
+      "reception team",
+      "receptionists team",
+      "restaurant staff",
+      "service staff",
+      "wait staff",
+      "waitstaff"
+    ],
+    "Service": [
+      "airport pick up",
+      "airport pick-up",
+      "airport pickup",
+      "airport shuttle",
+      "arrival instructions",
+      "arrival process",
+      "baggage assistance",
+      "baggage service",
+      "baggage storage",
+      "booking assistance",
+      "booking process",
+      "breakfast delivery",
+      "check in instructions",
+      "check in process",
+      "check out process",
+      "check-in instructions",
+      "check-in process",
+      "check-out process",
+      "cleaning service",
+      "communication",
+      "communications",
+      "customer care",
+      "customer support",
+      "early check in",
+      "early check-in",
+      "frontdesk",
+      "guest assistance",
+      "guest service",
+      "guest services",
+      "housekeeping service",
+      "key collection",
+      "key handover",
+      "key pick-up",
+      "key pickup",
+      "late check-out",
+      "late checkout",
+      "luggage assistance",
+      "luggage delivery",
+      "luggage handling",
+      "luggage service",
+      "luggage storage",
+      "porter service",
+      "reception assistance",
+      "reception desk",
+      "reception service",
+      "reservation process",
+      "restaurant reservation",
+      "restaurant reservations",
+      "room allocation",
+      "room cleaning",
+      "room delivery",
+      "self check in",
+      "self check-in",
+      "self checkin",
+      "self-check-in",
+      "taxi booking",
+      "taxi service",
+      "tour booking",
+      "transfer service"
+    ],
+    "Food": [
+      "beer",
+      "beers",
+      "biscuit",
+      "biscuits",
+      "bottled water",
+      "breakfast buffet",
+      "breakfast options",
+      "breakfast selection",
+      "breakfast spread",
+      "breakfast variety",
+      "breakfest",
+      "buffet breakfast",
+      "buffet selection",
+      "butter",
+      "cake",
+      "cakes",
+      "cappuccino",
+      "cappuccinos",
+      "cereal",
+      "cereals",
+      "cheese",
+      "cheeses",
+      "coffe",
+      "coffee machine",
+      "coffee machines",
+      "coffee maker",
+      "coffee makers",
+      "continental breakfast",
+      "cooked breakfast",
+      "cookie",
+      "cookies",
+      "cooking facilities",
+      "cooking utensils",
+      "cookware",
+      "crockery",
+      "croissant",
+      "croissants",
+      "cutlery",
+      "dining area",
+      "dining experience",
+      "dining room",
+      "drinking water",
+      "espresso",
+      "espresso machine",
+      "evening meal",
+      "fish",
+      "fresh fruit",
+      "fruit juice",
+      "fruits",
+      "gluten free options",
+      "gluten-free options",
+      "ham",
+      "honey",
+      "jam",
+      "jams",
+      "kettle",
+      "kettles",
+      "kitchen",
+      "kitchenette",
+      "kitchenettes",
+      "kitchens",
+      "meat",
+      "milk",
+      "muesli",
+      "nespresso machine",
+      "omelet",
+      "omelette",
+      "orange juice",
+      "packed lunch",
+      "pasta",
+      "pastry",
+      "plates",
+      "restuarant",
+      "resturant",
+      "salad",
+      "salads",
+      "scrambled eggs",
+      "seafood",
+      "snack",
+      "tea bags",
+      "teabags",
+      "toast",
+      "utensils",
+      "vegan options",
+      "vegetables",
+      "vegetarian options",
+      "wine",
+      "wines",
+      "yoghurt",
+      "yogurt"
+    ],
+    "Cleanliness": [
+      "bathroom cleanliness",
+      "cleaning quality",
+      "cleaning standard",
+      "cleanliness standards",
+      "general cleanliness",
+      "hotel cleanliness",
+      "hygiene standard",
+      "hygiene standards",
+      "room cleanliness",
+      "sanitary condition",
+      "sanitary conditions"
+    ],
+    "Facilities": [
+      "a c",
+      "access code",
+      "air co",
+      "air con",
+      "air condition",
+      "air conditioning unit",
+      "air conditioning units",
+      "air-con",
+      "air-condition",
+      "air-conditioner",
+      "air-conditioning system",
+      "airco",
+      "airconditioner",
+      "airconditioners",
+      "airconditioning",
+      "car charging",
+      "carpark",
+      "carparks",
+      "cctv",
+      "ceiling fan",
+      "charger",
+      "charging points",
+      "charging station",
+      "common area",
+      "communal area",
+      "cooktop",
+      "courtyard",
+      "covered parking",
+      "disabled access",
+      "dishwasher",
+      "door code",
+      "door lock",
+      "door locks",
+      "dryer",
+      "electric sockets",
+      "electrical outlets",
+      "entrance",
+      "entryway",
+      "escalator",
+      "ev charger",
+      "exercise room",
+      "extractor",
+      "extractor fan",
+      "fan",
+      "fans",
+      "fitness room",
+      "free parking",
+      "garage",
+      "garages",
+      "garden area",
+      "gate",
+      "gates",
+      "hob",
+      "hot tub",
+      "indoor pool",
+      "internet access",
+      "internet connection",
+      "internet speed",
+      "iron",
+      "ironing board",
+      "ironing facilities",
+      "jacuzzi",
+      "key card",
+      "key cards",
+      "keycard",
+      "keycards",
+      "keycode",
+      "keypad",
+      "kitchen appliances",
+      "lamp",
+      "lamps",
+      "light",
+      "lighting",
+      "lights",
+      "lock",
+      "locks",
+      "lounge",
+      "loungers",
+      "luggage lift",
+      "microwave",
+      "mini fridge",
+      "mini refrigerator",
+      "minifridge",
+      "outdoor area",
+      "outdoor pool",
+      "oven",
+      "parasols",
+      "parking area",
+      "parking lot",
+      "parking space",
+      "parking spaces",
+      "patio",
+      "plug",
+      "plugs",
+      "pool area",
+      "pool towels",
+      "power outlets",
+      "power socket",
+      "power sockets",
+      "private parking",
+      "private pool",
+      "ramp",
+      "roof garden",
+      "roof terrace",
+      "rooftop pool",
+      "rooftop terrace",
+      "room key",
+      "room keys",
+      "room safe",
+      "router",
+      "seating area",
+      "secure parking",
+      "security",
+      "security safe",
+      "security system",
+      "shared lounge",
+      "socket",
+      "sockets",
+      "stair",
+      "staircase",
+      "staircases",
+      "stairs",
+      "stairway",
+      "stairwell",
+      "steam room",
+      "steps",
+      "stove",
+      "sun lounger",
+      "sun loungers",
+      "sunbed",
+      "sunbeds",
+      "swimming pools",
+      "toaster",
+      "tumble dryer",
+      "ventilation",
+      "washing machine",
+      "washing machines",
+      "wellness center",
+      "wellness centre",
+      "wheelchair access",
+      "wheelchair ramp",
+      "wi fi connection",
+      "wi-fi connection",
+      "wi-fi signal",
+      "wifi connection",
+      "wifi router",
+      "wifi signal",
+      "wireless connection",
+      "wireless internet",
+      "wireless network"
+    ]
+  },
+  "excluded_aspect_phrases": [
+    "water taxi",
+    "water taxis"
+  ],
+  "lexical_aliases": {
+    "abundant": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 1318
+    },
+    "abundantly": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "accommodating": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "accommodative": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "accomodating": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "accomodative": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "aesthetic": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 466
+    },
+    "aesthetically": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "aesthetically pleasing": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "aesthetically-pleasing": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "affable": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "affably": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "airless": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "airy": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 4,
+      "example_source_row": 575
+    },
+    "amazin": {
+      "canonical": "amazing",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "amiable": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "amiably": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "ample": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 6,
+      "example_source_row": 271
+    },
+    "appetising": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "appetizing": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "approachability": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "approachable": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "arrogant": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "arrogantly": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "attentively": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "attentiveness": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "beautifully": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "bed bugs": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "bed-bugs": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "bedbug": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "bedbugs": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "blocked": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "boisterous": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "bountiful": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "bug-infested": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "burned": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "burnt": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "capable": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "capably": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "capacious": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "character filled": {
+      "canonical": "charming",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "character-filled": {
+      "canonical": "charming",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "characterful": {
+      "canonical": "charming",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "charmingness": {
+      "canonical": "charming",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "chic": {
+      "canonical": "charming",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 6,
+      "example_source_row": 1878
+    },
+    "civil": {
+      "canonical": "courteous",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "claustrophobic": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 3346
+    },
+    "cleaner": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 10,
+      "example_source_row": 241
+    },
+    "cleanest": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 1422
+    },
+    "cleanliness": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cleanly": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cleanness": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "clogged": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "co-operative": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cockroach": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cockroaches": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "comfier": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "comfiest": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "comfortableness": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "comfortably": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "comfortible": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "comfotable": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "comfy": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 56,
+      "example_source_row": 93
+    },
+    "communicative": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 176
+    },
+    "communicatively": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "confortable": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 8,
+      "example_source_row": 811
+    },
+    "confortably": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "congested": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 1029
+    },
+    "considerate": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 571
+    },
+    "considerately": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "constricted": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "convenience": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "convenient": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 134,
+      "example_source_row": 65
+    },
+    "conveniently": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cooperative": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 4,
+      "example_source_row": 464
+    },
+    "cooperatively": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "copious": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 4097
+    },
+    "copiously": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cordial": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 463
+    },
+    "cordially": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cosier": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cosiest": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cosily": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cosy": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 8,
+      "example_source_row": 175
+    },
+    "courteously": {
+      "canonical": "courteous",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cozier": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "coziest": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cozily": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "cramped": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 11,
+      "example_source_row": 101
+    },
+    "crampedness": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "crampy": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "damaged": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "deafening": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "defect": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "defective": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "defects": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "delectable": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "delicous": {
+      "canonical": "delicious",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "dependability": {
+      "canonical": "trustworthy",
+      "categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "dependable": {
+      "canonical": "trustworthy",
+      "categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 1542
+    },
+    "dependably": {
+      "canonical": "trustworthy",
+      "categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "dilapidated": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "dirtier": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "dirtiest": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "disconnected": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "disconnecting": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "discourteous": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "discourteously": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "dismissive": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 1357
+    },
+    "dismissively": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "disorganisation": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "disorganised": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "disorganization": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "disorganized": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "disrespectful": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "disrespectfully": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "drafty": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "draughty": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "easier": {
+      "canonical": "easy",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 12,
+      "example_source_row": 113
+    },
+    "easiest": {
+      "canonical": "easy",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 5,
+      "example_source_row": 530
+    },
+    "efficiency": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "efficiently": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "excelent": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "exellent": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "exemplary": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "expansive": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 1349
+    },
+    "expeditious": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "expeditiously": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "faultiness": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "faultless": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "faultlessly": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "faulty": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "filth": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "first class": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "first-class": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 1091
+    },
+    "flavorful": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "flavorless": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "flavors": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "flavorsome": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "flavourful": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "flavourless": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "flavours": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "flavoursome": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "foul smelling": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "foul-smelling": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "freindly": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "freshly baked": {
+      "canonical": "fresh",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "freshly cooked": {
+      "canonical": "fresh",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "freshly-baked": {
+      "canonical": "fresh",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "freshly-cooked": {
+      "canonical": "fresh",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "freshness": {
+      "canonical": "fresh",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "friendlier": {
+      "canonical": "friendly",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "friendliest": {
+      "canonical": "friendly",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "friendy": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "fully equipped": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "fully-equipped": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "functional": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 19,
+      "example_source_row": 388
+    },
+    "functionality": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "generously sized": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "generously-sized": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "greasy": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "grimy": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "grubbiness": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "grubby": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "hazard": {
+      "canonical": "dangerous",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "hazardous": {
+      "canonical": "dangerous",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "hazards": {
+      "canonical": "dangerous",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "helpfully": {
+      "canonical": "helpful",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "helpfulness": {
+      "canonical": "helpful",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "high end": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "high quality": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "high-end": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 463
+    },
+    "high-quality": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 4,
+      "example_source_row": 697
+    },
+    "homelike": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "homely": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 1583
+    },
+    "homey": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 6,
+      "example_source_row": 573
+    },
+    "hospitable": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 8,
+      "example_source_row": 324
+    },
+    "hospitably": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "hostile": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "hostility": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "hygienic": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "hygienically": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "immaculate": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 6,
+      "example_source_row": 370
+    },
+    "immaculately": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "impeccably": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "impolite": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "impolitely": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "inattentive": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "inattentively": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "inedible": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 2676
+    },
+    "inefficiency": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "inefficient": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "inefficiently": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "inept": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "ineptly": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "infestation": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "infested": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "informative": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 10,
+      "example_source_row": 495
+    },
+    "informatively": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "inoperable": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "insecure": {
+      "canonical": "dangerous",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 1880
+    },
+    "intermittent": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 1324
+    },
+    "intermittently": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "intuitive": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "intuitively": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "inviting": {
+      "canonical": "welcoming",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "invitingly": {
+      "canonical": "welcoming",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "kinder": {
+      "canonical": "kind",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "kindest": {
+      "canonical": "kind",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 4,
+      "example_source_row": 252
+    },
+    "kindly": {
+      "canonical": "kind",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "knowledgeable": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 13,
+      "example_source_row": 398
+    },
+    "knowledgeably": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "lavish": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 3684
+    },
+    "lavishly": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "leakage": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "leaking": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "leaky": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "loudness": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "lovelier": {
+      "canonical": "lovely",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "loveliest": {
+      "canonical": "lovely",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 594
+    },
+    "luxurious": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 12,
+      "example_source_row": 142
+    },
+    "luxuriously": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "luxury": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "malfunction": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "malfunctioned": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "malfunctioning": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "malodorous": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "mildew": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "mildewed": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "mindful": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 5,
+      "example_source_row": 354
+    },
+    "mindfully": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "mold": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "moldy": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 6,
+      "example_source_row": 2208
+    },
+    "mould": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "mouldy": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "mouth-watering": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "mouthwatering": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "neatness": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "neglected": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "noise": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "noisier": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "noisiest": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "noisiness": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "non existent": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "non-existent": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 113
+    },
+    "non-functional": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "nonexistent": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "nonfunctional": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "obliging": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "obligingly": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "odorous": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "organised": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "organized": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "out of order": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "out-of-order": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "overcooked": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "overcrowded": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 2586
+    },
+    "patchy": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "personable": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 461
+    },
+    "picture perfect": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "picture-perfect": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "picturesque": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 7,
+      "example_source_row": 461
+    },
+    "pleasanter": {
+      "canonical": "pleasant",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "pleasantest": {
+      "canonical": "pleasant",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "pleasantly": {
+      "canonical": "pleasant",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "plentiful": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 9,
+      "example_source_row": 79
+    },
+    "plentifully": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "pokey": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "poky": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "polite": {
+      "canonical": "courteous",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 18,
+      "example_source_row": 44
+    },
+    "politely": {
+      "canonical": "courteous",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "politeness": {
+      "canonical": "courteous",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "poorly maintained": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "poorly ventilated": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "poorly-maintained": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "poorly-ventilated": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "practical": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 1281
+    },
+    "practically": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "pristine": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 6,
+      "example_source_row": 594
+    },
+    "proactive": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 3660
+    },
+    "proactively": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "proficient": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "proficiently": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "prompt": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "promptly": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "punctual": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 2251
+    },
+    "punctually": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "quaint": {
+      "canonical": "charming",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 12,
+      "example_source_row": 68
+    },
+    "quaintly": {
+      "canonical": "charming",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "quieter": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 5,
+      "example_source_row": 712
+    },
+    "quietest": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "rancid": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "rapid": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "rapidly": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "raucous": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 360
+    },
+    "receptive": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 417
+    },
+    "reeking": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "reliability": {
+      "canonical": "trustworthy",
+      "categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "reliable": {
+      "canonical": "trustworthy",
+      "categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 55
+    },
+    "reliably": {
+      "canonical": "trustworthy",
+      "categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "resourceful": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 2877
+    },
+    "resourcefully": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "restful": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 4,
+      "example_source_row": 1510
+    },
+    "roomy": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 8,
+      "example_source_row": 106
+    },
+    "rudely": {
+      "canonical": "rude",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "rudeness": {
+      "canonical": "rude",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "ruder": {
+      "canonical": "rude",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "rudest": {
+      "canonical": "rude",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "run down": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "run-down": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sanitary": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 2132
+    },
+    "sanitised": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sanitized": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "scrumptious": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "seamless": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 7,
+      "example_source_row": 697
+    },
+    "seamlessly": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "serene": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 5,
+      "example_source_row": 271
+    },
+    "serenity": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "service minded": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "service-minded": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "shabby": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "slippery": {
+      "canonical": "dangerous",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 27
+    },
+    "slower": {
+      "canonical": "slow",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "slowest": {
+      "canonical": "slow",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sluggish": {
+      "canonical": "slow",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sluggishly": {
+      "canonical": "slow",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "smells": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "smelly": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 2053
+    },
+    "smoothly": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "soggy": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 1052
+    },
+    "soiled": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "soiling": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sound proof": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sound proofed": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sound-proof": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sound-proofed": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "soundproof": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 5,
+      "example_source_row": 670
+    },
+    "soundproofed": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "spacious": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 242,
+      "example_source_row": 44
+    },
+    "spaciousness": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "speedily": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "speedy": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "spoiled": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "spoiling": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "spoilt": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "spotless": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 44,
+      "example_source_row": 160
+    },
+    "spotlessly": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "spotty": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 1136
+    },
+    "squalid": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "squalor": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "squashed": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "squeaky clean": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "squeaky-clean": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "squeezy": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "stain": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "stained": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "stains": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "staleness": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sticky": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 819
+    },
+    "stinking": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "stinky": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "streamlined": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "stuffy": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 5,
+      "example_source_row": 632
+    },
+    "stylish": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 10,
+      "example_source_row": 17
+    },
+    "stylishly": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sub-par": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 794
+    },
+    "sub-standard": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "subpar": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "substandard": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 530
+    },
+    "suffocating": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sumptuous": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "sumptuously": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "supportively": {
+      "canonical": "helpful",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "swift": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "swiftly": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tasteful": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 3029
+    },
+    "tastefully": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tastefully decorated": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tastefully-decorated": {
+      "canonical": "beautiful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tasteless": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tastier": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tastiest": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tasty": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 16,
+      "example_source_row": 186
+    },
+    "tattered": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "temperamental": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 647
+    },
+    "thoughtful": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 21,
+      "example_source_row": 27
+    },
+    "thoughtfully": {
+      "canonical": "attentive",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "threadbare": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tidiness": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "timely": {
+      "canonical": "quick",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 7,
+      "example_source_row": 608
+    },
+    "top notch": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "top quality": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "top-notch": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 4,
+      "example_source_row": 1322
+    },
+    "top-quality": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tranquil": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 8,
+      "example_source_row": 17
+    },
+    "tranquility": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tranquillity": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "treacherous": {
+      "canonical": "dangerous",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "trickier": {
+      "canonical": "difficult",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "trickiest": {
+      "canonical": "difficult",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "tricky": {
+      "canonical": "difficult",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Explicit reviewed inflection or spelling variant",
+      "observed_adjective_occurrences": 17,
+      "example_source_row": 12
+    },
+    "trustworthiness": {
+      "canonical": "trustworthy",
+      "categories": [
+        "Staff",
+        "Service",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unaccommodating": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 3523
+    },
+    "unaccomodating": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unappetising": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unappetizing": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unattentive": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unavailable": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 1961
+    },
+    "unbeatable": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 7,
+      "example_source_row": 1552
+    },
+    "unbreathable": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unclean": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 269
+    },
+    "uncleanliness": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "uncomfy": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "uncommunicative": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "uncooperative": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "undependable": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "undercooked": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unfailingly friendly": {
+      "canonical": "friendly",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unfriendly": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unhelpful": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 3067
+    },
+    "unhygienic": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unhygienically": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unmaintained": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unpalatable": {
+      "canonical": "bad",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unparalleled": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unprepared": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unprofessional": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 100
+    },
+    "unprofessionally": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unqualified": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unquiet": {
+      "canonical": "noisy",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unreliable": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 4238
+    },
+    "unresponsive": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 3067
+    },
+    "unsafe": {
+      "canonical": "dangerous",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 8,
+      "example_source_row": 27
+    },
+    "unsanitary": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unsanitised": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unsanitized": {
+      "canonical": "dirty",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unsecured": {
+      "canonical": "dangerous",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unserviceable": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unstable": {
+      "canonical": "bad",
+      "categories": [
+        "Facilities",
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 3418
+    },
+    "unsurpassed": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "untrained": {
+      "canonical": "incompetent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unusable": {
+      "canonical": "broken",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 3,
+      "example_source_row": 769
+    },
+    "unventilated": {
+      "canonical": "uncomfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "unwelcoming": {
+      "canonical": "rude",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "upscale": {
+      "canonical": "excellent",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "usability": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "usable": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 722
+    },
+    "user friendly": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "user-friendly": {
+      "canonical": "useful",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "vermin": {
+      "canonical": "disgusting",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "warm hearted": {
+      "canonical": "welcoming",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "warm-hearted": {
+      "canonical": "welcoming",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 1,
+      "example_source_row": 4107
+    },
+    "warmhearted": {
+      "canonical": "welcoming",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "welcomed": {
+      "canonical": "welcoming",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well appointed": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well cleaned": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well cushioned": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well designed": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well equipped": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well furnished": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well informed": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well insulated": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well kept": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well maintained": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well mannered": {
+      "canonical": "courteous",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well organised": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well organized": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well proportioned": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well run": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well serviced": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well stocked": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well supplied": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well trained": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-appointed": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-cleaned": {
+      "canonical": "clean",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Food",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-cushioned": {
+      "canonical": "comfortable",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-designed": {
+      "canonical": "good",
+      "categories": [
+        "Cleanliness",
+        "Facilities",
+        "Food",
+        "Room",
+        "Service",
+        "Staff"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-equipped": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 9,
+      "example_source_row": 697
+    },
+    "well-furnished": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-informed": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-insulated": {
+      "canonical": "peaceful",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-kept": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 2,
+      "example_source_row": 2895
+    },
+    "well-maintained": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-mannered": {
+      "canonical": "courteous",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-organised": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-organized": {
+      "canonical": "efficient",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-proportioned": {
+      "canonical": "large",
+      "categories": [
+        "Room",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-run": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-serviced": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-stocked": {
+      "canonical": "generous",
+      "categories": [
+        "Food",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 4,
+      "example_source_row": 548
+    },
+    "well-supplied": {
+      "canonical": "good",
+      "categories": [
+        "Room",
+        "Staff",
+        "Service",
+        "Food",
+        "Cleanliness",
+        "Facilities"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "well-trained": {
+      "canonical": "competent",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "wholehearted": {
+      "canonical": "welcoming",
+      "categories": [
+        "Staff",
+        "Service"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "worn out": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "worn-out": {
+      "canonical": "bad",
+      "categories": [
+        "Room",
+        "Facilities",
+        "Cleanliness"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "yummiest": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 0,
+      "example_source_row": null
+    },
+    "yummy": {
+      "canonical": "delicious",
+      "categories": [
+        "Food"
+      ],
+      "reason": "Reviewed hotel opinion synonym",
+      "observed_adjective_occurrences": 4,
+      "example_source_row": 679
+    }
+  }
+}

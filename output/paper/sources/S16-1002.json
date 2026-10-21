@@ -1,0 +1,76 @@
+{
+  "id": "S16-1002",
+  "url": "https://aclanthology.org/S16-1002/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "SemEval-2016 Task 5: Aspect Based Sentiment Analysis"
+    ],
+    "citation_author": [
+      "Maria Pontiki",
+      "Dimitrios Galanis",
+      "Harris Papageorgiou",
+      "Ion Androutsopoulos",
+      "Suresh Manandhar",
+      "Mohammad AL-Smadi",
+      "Mahmoud Al-Ayyoub",
+      "Yanyan Zhao",
+      "Bing Qin (秦兵)",
+      "Orphee De Clercq",
+      "Veronique Hoste",
+      "Marianna Apidianaki",
+      "Xavier Tannier",
+      "Natalia Loukachevitch",
+      "Evgeny Kotelnikov",
+      "Núria Bel",
+      "Salud María Jiménez-Zafra",
+      "Gülşen Eryiğit"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016)"
+    ],
+    "citation_publication_date": [
+      "2016/6"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/S16-1002.pdf"
+    ],
+    "citation_firstpage": [
+      "19"
+    ],
+    "citation_lastpage": [
+      "30"
+    ],
+    "citation_doi": [
+      "10.18653/v1/S16-1002"
+    ],
+    "og:title": [
+      "SemEval-2016 Task 5: Aspect Based Sentiment Analysis"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/S16-1002.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/S16-1002/"
+    ],
+    "og:description": [
+      "Maria Pontiki, Dimitris Galanis, Haris Papageorgiou, Ion Androutsopoulos, Suresh Manandhar, Mohammad AL-Smadi, Mahmoud Al-Ayyoub, Yanyan Zhao, Bing Qin, Orphée De Clercq, Véronique Hoste, Marianna Apidianaki, Xavier Tannier, Natalia Loukachevitch, Evgeniy Kotelnikov, Nuria Bel, Salud María Jiménez-Zafra, Gülşen Eryiğit. Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016). 2016."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{pontiki-etal-2016-semeval,\n    title = \"{S}em{E}val-2016 Task 5: Aspect Based Sentiment Analysis\",\n    author = {Pontiki, Maria  and\n      Galanis, Dimitris  and\n      Papageorgiou, Haris  and\n      Androutsopoulos, Ion  and\n      Manandhar, Suresh  and\n      AL-Smadi, Mohammad  and\n      Al-Ayyoub, Mahmoud  and\n      Zhao, Yanyan  and\n      Qin, Bing  and\n      De Clercq, Orph{\\'e}e  and\n      Hoste, V{\\'e}ronique  and\n      Apidianaki, Marianna  and\n      Tannier, Xavier  and\n      Loukachevitch, Natalia  and\n      Kotelnikov, Evgeniy  and\n      Bel, Nuria  and\n      Jim{\\'e}nez-Zafra, Salud Mar{\\'i}a  and\n      Eryi{\\u{g}}it, G{\\\"u}l{\\c{s}}en},\n    editor = \"Bethard, Steven  and\n      Carpuat, Marine  and\n      Cer, Daniel  and\n      Jurgens, David  and\n      Nakov, Preslav  and\n      Zesch, Torsten\",\n    booktitle = \"Proceedings of the 10th {I}nternational {W}orkshop on {S}emantic {E}valuation ({S}em{E}val-2016)\",\n    month = jun,\n    year = \"2016\",\n    address = \"San Diego, California\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S16-1002/\",\n    doi = \"10.18653/v1/S16-1002\",\n    pages = \"19--30\"\n}"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "P02-1053",
+  "url": "https://aclanthology.org/P02-1053/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Thumbs Up or Thumbs Down? Semantic Orientation Applied to Unsupervised Classification of Reviews"
+    ],
+    "citation_author": [
+      "Peter Turney"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics"
+    ],
+    "citation_publication_date": [
+      "2002/7"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/P02-1053.pdf"
+    ],
+    "citation_firstpage": [
+      "417"
+    ],
+    "citation_lastpage": [
+      "424"
+    ],
+    "citation_doi": [
+      "10.3115/1073083.1073153"
+    ],
+    "og:title": [
+      "Thumbs Up or Thumbs Down? Semantic Orientation Applied to Unsupervised Classification of Reviews"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/P02-1053.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/P02-1053/"
+    ],
+    "og:description": [
+      "Peter Turney. Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics. 2002."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{turney-2002-thumbs,\n    title = \"Thumbs Up or Thumbs Down? Semantic Orientation Applied to Unsupervised Classification of Reviews\",\n    author = \"Turney, Peter\",\n    editor = \"Isabelle, Pierre  and\n      Charniak, Eugene  and\n      Lin, Dekang\",\n    booktitle = \"Proceedings of the 40th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics\",\n    month = jul,\n    year = \"2002\",\n    address = \"Philadelphia, Pennsylvania, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P02-1053/\",\n    doi = \"10.3115/1073083.1073153\",\n    pages = \"417--424\"\n}"
+}

@@ -22,6 +22,10 @@ from .csv_input import CSVLimits
 from .exports import batch_csv_bytes
 from .paper_tables import paper_archive
 from .web_batch import BatchBusyError, BatchStore
+from .web_analysis import analyze_hybrid_demo, validate_method, METHODS
+from .hybrid import HybridDependencyError
+from .hybrid_nlp import domain as hybrid_domain
+from .hybrid_vocabulary import vocabulary as hybrid_vocabulary
 
 
 MAX_BODY_BYTES = 65_536
@@ -29,12 +33,14 @@ _ASSETS = {
     "/": ("index.html", "text/html; charset=utf-8"),
     "/app.js": ("app.js", "text/javascript; charset=utf-8"),
     "/dashboard.js": ("dashboard.js", "text/javascript; charset=utf-8"),
+    "/hybrid.js": ("hybrid.js", "text/javascript; charset=utf-8"),
     "/demo.csv": ("demo.csv", "text/csv; charset=utf-8"),
     "/reviews_100.csv": ("reviews_100.csv", "text/csv; charset=utf-8"),
     "/styles.css": ("styles.css", "text/css; charset=utf-8"),
     "/favicon.svg": ("favicon.svg", "image/svg+xml"),
 }
 _EXAMPLES = [
+    {"label": "Equipment failure", "text": "The air conditioning wasn't working, but the staff were helpful."},
     {"label": "Mixed feedback", "text": "The room was not clean, but the staff were very helpful."},
     {"label": "Negation", "text": "The room wasn’t clean."},
     {"label": "Intensifier", "text": "The staff were extremely helpful."},
@@ -99,6 +105,12 @@ class DemoHandler(BaseHTTPRequestHandler):
                 "connectors": vocabulary["connectors"],
                 "max_review_length": MAX_REVIEW_LENGTH,
                 "examples": _EXAMPLES,
+                "methods": METHODS,
+                "hybrid_vocabulary": {
+                    "version": hybrid_vocabulary()['version'],
+                    "aspect_phrases": sum(len(v) for v in hybrid_domain()['aspects'].values()),
+                    "reviewed_lexical_forms": len(hybrid_vocabulary()['lexical_aliases']),
+                },
             })
         elif path == "/api/health":
             self._json(HTTPStatus.OK, {"status": "ok"})
@@ -186,24 +198,27 @@ class DemoHandler(BaseHTTPRequestHandler):
                 raise ValueError("Incomplete request body.")
             if is_batch:
                 query = parse_qs(parsed.query, keep_blank_values=True)
-                if any(len(values) != 1 for values in query.values()) or set(query) - {"text_column", "id_column"}:
+                if any(len(values) != 1 for values in query.values()) or set(query) - {"text_column", "id_column", "method"}:
                     raise ValueError("Select one review-text and one ID column.")
                 filename = unquote(self.headers.get("X-File-Name", "upload.csv")).replace("\\", "/").split("/")[-1][:128] or "upload.csv"
                 session = self.server.batch_store.submit(payload, source_name=filename,
+                    method=query.get("method", ["sentiwordnet"])[0],
                     text_column=query.get("text_column", ["review_text"])[0], id_column=query.get("id_column", ["review_id"])[0])
                 self._json(HTTPStatus.OK, session.overview())
                 return
             body = json.loads(payload.decode("utf-8"))
             if not isinstance(body, dict):
                 raise ValueError("Send a JSON object containing review text.")
-            result = analyze_review(body.get("text"), body.get("review_id"))
+            method = validate_method(body.get("method", "sentiwordnet"))
+            analyzer = analyze_hybrid_demo if method == "hybrid" else analyze_review
+            result = analyzer(body.get("text"), body.get("review_id"))
         except (UnicodeError, ValueError, TypeError) as error:
             self._json(HTTPStatus.BAD_REQUEST, {"error": str(error)})
             return
         except (TimeoutError, socket.timeout):
             self._json(HTTPStatus.REQUEST_TIMEOUT, {"error": "The request took too long to arrive."})
             return
-        except ResourceError as error:
+        except (ResourceError, HybridDependencyError) as error:
             self._json(HTTPStatus.SERVICE_UNAVAILABLE, {"error": str(error)})
             return
         except BatchBusyError as error:

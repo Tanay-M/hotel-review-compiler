@@ -1,0 +1,62 @@
+{
+  "id": "D16-1059",
+  "url": "https://aclanthology.org/D16-1059/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Recursive Neural Conditional Random Fields for Aspect-based Sentiment Analysis"
+    ],
+    "citation_author": [
+      "Wenya Wang",
+      "Sinno Jialin Pan",
+      "Daniel Dahlmeier",
+      "Xiaokui Xiao"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing"
+    ],
+    "citation_publication_date": [
+      "2016/11"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/D16-1059.pdf"
+    ],
+    "citation_firstpage": [
+      "616"
+    ],
+    "citation_lastpage": [
+      "626"
+    ],
+    "citation_doi": [
+      "10.18653/v1/D16-1059"
+    ],
+    "og:title": [
+      "Recursive Neural Conditional Random Fields for Aspect-based Sentiment Analysis"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/D16-1059.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/D16-1059/"
+    ],
+    "og:description": [
+      "Wenya Wang, Sinno Jialin Pan, Daniel Dahlmeier, Xiaokui Xiao. Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing. 2016."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{wang-etal-2016-recursive,\n    title = \"Recursive Neural Conditional Random Fields for Aspect-based Sentiment Analysis\",\n    author = \"Wang, Wenya  and\n      Pan, Sinno Jialin  and\n      Dahlmeier, Daniel  and\n      Xiao, Xiaokui\",\n    editor = \"Su, Jian  and\n      Duh, Kevin  and\n      Carreras, Xavier\",\n    booktitle = \"Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing\",\n    month = nov,\n    year = \"2016\",\n    address = \"Austin, Texas\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/D16-1059/\",\n    doi = \"10.18653/v1/D16-1059\",\n    pages = \"616--626\"\n}"
+}

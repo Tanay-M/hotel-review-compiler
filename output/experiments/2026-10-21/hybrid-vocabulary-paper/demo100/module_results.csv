@@ -1,0 +1,8 @@
+﻿module,measure,count
+1 Preprocessing and lexical analysis,tokens,398
+2 Syntax and semantic analysis,clauses,97
+2 Syntax and semantic analysis,baseline recognized opinions,97
+2 Syntax and semantic analysis,hybrid attached contexts,100
+2 Syntax and semantic analysis,TextBlob POS/chunk tokens,406
+3 Sentiment and strength,hybrid scored whole texts,99
+4 Synthesis and reporting,preserved review rows,100

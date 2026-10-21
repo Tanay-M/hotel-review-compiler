@@ -1,0 +1,35 @@
+flowchart TB
+  A[Preprocessing and validation<br/>Decode CSV; preserve text and every row; check limits]
+  A --> B1
+  A --> H1
+  subgraph BASE[SentiWordNet compiler: unchanged independent baseline]
+    B1[Lexical analysis<br/>Controlled vocabulary; longest phrases; source spans]
+    B2[Syntax and semantic analysis<br/>Predictive grammar; six-category binding and guards]
+    B3[SentiWordNet lookup<br/>Configured senses; original positive and negative evidence]
+    B4[Existing domain, intensity and negation adjustments<br/>Retain source evidence; clip final score]
+    B1 --> B2 --> B3 --> B4
+  end
+  subgraph HYBRID[Independent grammar-assisted VADER and TextBlob hybrid]
+    H1[TextBlob linguistic analysis<br/>Contraction working copy and source mapping<br/>POS tags; NP/VP/adjective chunks; noun phrases]
+    H2[Independent aspect and opinion attachment<br/>Own six-category phrases; open adjective candidates<br/>Attributive and predicate patterns; verb objects<br/>Coordination, contrasts and limited pronoun targets]
+    V[VADER aspect context<br/>Compound and proportions<br/>Original casing, punctuation and informal cues]
+    T[TextBlob PatternAnalyzer aspect context<br/>Polarity; subjectivity; assessed expressions]
+    H3[Evidence-aware fusion<br/>Both have evidence: weighted mean<br/>One has evidence: retain its score<br/>Failure or no evidence stays explicit]
+    H4[Independent contextual rules<br/>Functional failures, room preferences, hygiene, service<br/>Preserve raw components, lexical fusion and rule IDs]
+    W[Separate whole-review lexical scoring<br/>VADER and TextBlob on complete original text<br/>Different scope from aspect mean]
+    H1 --> H2
+    H2 --> V --> H3
+    H2 --> T --> H3
+    H3 --> H4
+    H1 -.-> W
+  end
+  S[Result synthesis per method<br/>Own opinions and statuses; review mean and Mixed<br/>Five descriptive strength labels; unavailable retained]
+  B4 --> S
+  H4 --> S
+  W --> S
+  S --> E[Reproducible comparison<br/>Same inputs; same gold crosswalk<br/>Abstention-aware accuracy, macro-F1 and tuple metrics<br/>Development status disclosed; no unlabeled accuracy]
+  E --> P[Paper evidence<br/>One row per review; separate method opinion rows<br/>Grammar traces; CSV and LaTeX tables<br/>PDF/SVG/PNG figures; code snapshots and hashes]
+  classDef inherited fill:#fce8ef,stroke:#596675,color:#111;
+  classDef team fill:#dceeff,stroke:#315675,color:#111;
+  class B3 inherited;
+  class A,B1,B2,B4,H1,H2,V,T,H3,H4,W,S,E,P team;

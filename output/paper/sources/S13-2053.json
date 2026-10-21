@@ -1,0 +1,58 @@
+{
+  "id": "S13-2053",
+  "url": "https://aclanthology.org/S13-2053/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "NRC-Canada: Building the State-of-the-Art in Sentiment Analysis of Tweets"
+    ],
+    "citation_author": [
+      "Saif Mohammad",
+      "Svetlana Kiritchenko",
+      "Xiaodan Zhu"
+    ],
+    "citation_conference_title": [
+      "Second Joint Conference on Lexical and Computational Semantics (*SEM), Volume 2: Proceedings of the Seventh International Workshop on Semantic Evaluation (SemEval 2013)"
+    ],
+    "citation_publication_date": [
+      "2013/6"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/S13-2053.pdf"
+    ],
+    "citation_firstpage": [
+      "321"
+    ],
+    "citation_lastpage": [
+      "327"
+    ],
+    "og:title": [
+      "NRC-Canada: Building the State-of-the-Art in Sentiment Analysis of Tweets"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/S13-2053.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/S13-2053/"
+    ],
+    "og:description": [
+      "Saif Mohammad, Svetlana Kiritchenko, Xiaodan Zhu. Second Joint Conference on Lexical and Computational Semantics (*SEM), Volume 2: Proceedings of the Seventh International Workshop on Semantic Evaluation (SemEval 2013). 2013."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{mohammad-etal-2013-nrc,\n    title = \"{NRC}-{C}anada: Building the State-of-the-Art in Sentiment Analysis of Tweets\",\n    author = \"Mohammad, Saif  and\n      Kiritchenko, Svetlana  and\n      Zhu, Xiaodan\",\n    editor = \"Manandhar, Suresh  and\n      Yuret, Deniz\",\n    booktitle = \"Second Joint Conference on Lexical and Computational Semantics (*{SEM}), Volume 2: Proceedings of the Seventh {I}nternational {W}orkshop on {S}emantic {E}valuation ({S}em{E}val 2013)\",\n    month = jun,\n    year = \"2013\",\n    address = \"Atlanta, Georgia, USA\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S13-2053/\",\n    pages = \"321--327\"\n}"
+}

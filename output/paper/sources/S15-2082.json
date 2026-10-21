@@ -1,0 +1,63 @@
+{
+  "id": "S15-2082",
+  "url": "https://aclanthology.org/S15-2082/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "SemEval-2015 Task 12: Aspect Based Sentiment Analysis"
+    ],
+    "citation_author": [
+      "Maria Pontiki",
+      "Dimitrios Galanis",
+      "Harris Papageorgiou",
+      "Suresh Manandhar",
+      "Ion Androutsopoulos"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 9th International Workshop on Semantic Evaluation (SemEval 2015)"
+    ],
+    "citation_publication_date": [
+      "2015/6"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/S15-2082.pdf"
+    ],
+    "citation_firstpage": [
+      "486"
+    ],
+    "citation_lastpage": [
+      "495"
+    ],
+    "citation_doi": [
+      "10.18653/v1/S15-2082"
+    ],
+    "og:title": [
+      "SemEval-2015 Task 12: Aspect Based Sentiment Analysis"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/S15-2082.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/S15-2082/"
+    ],
+    "og:description": [
+      "Maria Pontiki, Dimitris Galanis, Haris Papageorgiou, Suresh Manandhar, Ion Androutsopoulos. Proceedings of the 9th International Workshop on Semantic Evaluation (SemEval 2015). 2015."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{pontiki-etal-2015-semeval,\n    title = \"{S}em{E}val-2015 Task 12: Aspect Based Sentiment Analysis\",\n    author = \"Pontiki, Maria  and\n      Galanis, Dimitris  and\n      Papageorgiou, Haris  and\n      Manandhar, Suresh  and\n      Androutsopoulos, Ion\",\n    editor = \"Nakov, Preslav  and\n      Zesch, Torsten  and\n      Cer, Daniel  and\n      Jurgens, David\",\n    booktitle = \"Proceedings of the 9th {I}nternational {W}orkshop on {S}emantic {E}valuation ({S}em{E}val 2015)\",\n    month = jun,\n    year = \"2015\",\n    address = \"Denver, Colorado\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/S15-2082/\",\n    doi = \"10.18653/v1/S15-2082\",\n    pages = \"486--495\"\n}"
+}

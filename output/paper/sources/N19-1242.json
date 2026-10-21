@@ -1,0 +1,62 @@
+{
+  "id": "N19-1242",
+  "url": "https://aclanthology.org/N19-1242/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "BERT Post-Training for Review Reading Comprehension and Aspect-based Sentiment Analysis"
+    ],
+    "citation_author": [
+      "Hu Xu",
+      "Bing Liu",
+      "Lei Shu",
+      "Philip S. Yu"
+    ],
+    "citation_conference_title": [
+      "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)"
+    ],
+    "citation_publication_date": [
+      "2019/6"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/N19-1242.pdf"
+    ],
+    "citation_firstpage": [
+      "2324"
+    ],
+    "citation_lastpage": [
+      "2335"
+    ],
+    "citation_doi": [
+      "10.18653/v1/N19-1242"
+    ],
+    "og:title": [
+      "BERT Post-Training for Review Reading Comprehension and Aspect-based Sentiment Analysis"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/N19-1242.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/N19-1242/"
+    ],
+    "og:description": [
+      "Hu Xu, Bing Liu, Lei Shu, Philip Yu. Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers). 2019."
+    ]
+  },
+  "abstract": "Abstract Question-answering plays an important role in e-commerce as it allows potential customers to actively seek crucial information about products or services to help their purchase decision making. Inspired by the recent success of machine reading comprehension (MRC) on formal documents, this paper explores the potential of turning customer reviews into a large source of knowledge that can be exploited to answer user questions. We call this problem Review Reading Comprehension (RRC). To the best of our knowledge, no existing work has been done on RRC. In this work, we first build an RRC dataset called ReviewRC based on a popular benchmark for aspect-based sentiment analysis. Since ReviewRC has limited training examples for RRC (and also for aspect-based sentiment analysis), we then explore a novel post-training approach on the popular language model BERT to enhance the performance of fine-tuning of BERT for RRC. To show the generality of the approach, the proposed post-training is also applied to some other review-based tasks such as aspect extraction and aspect sentiment classification in aspect-based sentiment analysis. Experimental results demonstrate that the proposed post-training is highly effective.",
+  "bibtex": "@inproceedings{xu-etal-2019-bert,\n    title = \"{BERT} Post-Training for Review Reading Comprehension and Aspect-based Sentiment Analysis\",\n    author = \"Xu, Hu  and\n      Liu, Bing  and\n      Shu, Lei  and\n      Yu, Philip\",\n    editor = \"Burstein, Jill  and\n      Doran, Christy  and\n      Solorio, Thamar\",\n    booktitle = \"Proceedings of the 2019 Conference of the {N}orth {A}merican Chapter of the {A}ssociation for {C}omputational {L}inguistics: Human Language Technologies, Volume 1 (Long and Short Papers)\",\n    month = jun,\n    year = \"2019\",\n    address = \"Minneapolis, Minnesota\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/N19-1242/\",\n    doi = \"10.18653/v1/N19-1242\",\n    pages = \"2324--2335\",\n    abstract = \"Question-answering plays an important role in e-commerce as it allows potential customers to actively seek crucial information about products or services to help their purchase decision making. Inspired by the recent success of machine reading comprehension (MRC) on formal documents, this paper explores the potential of turning customer reviews into a large source of knowledge that can be exploited to answer user questions. We call this problem Review Reading Comprehension (RRC). To the best of our knowledge, no existing work has been done on RRC. In this work, we first build an RRC dataset called ReviewRC based on a popular benchmark for aspect-based sentiment analysis. Since ReviewRC has limited training examples for RRC (and also for aspect-based sentiment analysis), we then explore a novel post-training approach on the popular language model BERT to enhance the performance of fine-tuning of BERT for RRC. To show the generality of the approach, the proposed post-training is also applied to some other review-based tasks such as aspect extraction and aspect sentiment classification in aspect-based sentiment analysis. Experimental results demonstrate that the proposed post-training is highly effective.\"\n}"
+}

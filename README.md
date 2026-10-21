@@ -2,7 +2,13 @@
 
 A deterministic, compiler-style aspect-based hotel review analyzer for a Compiler Design course project.
 
-**The compiler core, CSV upload/dashboard, language expansion, and aggregate reporting are implemented:** lexical/syntax/semantic analysis, SentiWordNet scoring, aspect-level IR, browser/CLI traces, one-row-per-review results, equipment verbs/phrases, adjective-before-aspect forms, category/issue metrics, evidence-backed conclusions, and report-table downloads. The 14 October expansion adds 356 opinion terms and reaches 88% complete coverage on the unchanged 100-review development sample (coverage, not accuracy). SQL, ML, and additional NLP models remain deferred.
+**Research and demo update:** The SentiWordNet compiler and independent TextBlob grammar / VADER–TextBlob hybrid are available in the UI and research runner, with five-band labels, source verification, tables and figures. See [the run guide](docs/research-run-guide.md), [module pseudocode](docs/implemented-modules-and-pseudocode.md), and [Booking vocabulary expansion](docs/hybrid-vocabulary-expansion.md). Whole-text scoring stays separate from aspect sentiment. The hybrid has 671 aspect phrases and 497 reviewed lexical forms; the original baseline remains frozen.
+
+**Paper and datasets (21 October):** [IEEE paper, Word](output/paper/Team_17_IEEE_Conference_Paper.docx), [PDF](output/paper/Team_17_IEEE_Conference_Paper.pdf), [figure/table bundle](output/paper/Team_17_Paper_Figures_and_Tables.zip), and [real CSV datasets](output/datasets/README.md) are included. The expanded hybrid obtains 85/148 correct (57.43%, macro-F1 0.3999) versus baseline 42/148 (28.38%, 0.2260) on the inspected SemEval adaptation. Tuple-F1 falls versus the earlier hybrid; all results are development measurements. The newer Booking Italy cohort was audited for hybrid vocabulary coverage only, not a two-system accuracy comparison. See [dataset provenance and licenses](data/README.md). Non-commercial dataset licenses remain separate from project code.
+
+For the faculty review, open [the complete project reference](docs/complete-project-reference.md): all recognized vocabulary, grammar and phase rules, original SentiWordNet scores and domain adjustments, status labels, dashboard mean calculations, diagnostics, examples, and code locations in one file.
+
+**The compiler core, CSV upload/dashboard, and independent hybrid are implemented.** The browser now offers the original SentiWordNet compiler and the independent TextBlob grammar / VADER–TextBlob hybrid. Both support single reviews, per-row CSV results, dashboard summaries, traces and downloads. A single-review comparison runs both methods on the same original text. SQL, LLM calls and new trained-model development remain deferred.
 
 ## Browser demo
 
@@ -14,15 +20,17 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\serve.ps1
 
 Then open **http://127.0.0.1:8000** in your browser. Keep the terminal open while using the demo; press **Ctrl+C** there to stop it. With an installed Python 3.10+ runtime, `python -m hotel_compiler.web` is equivalent. Use `--port 8001` if port 8000 is occupied.
 
-The **Single review** screen includes input, examples, aspect results, diagnostics, and five trace tabs: **Tokens, Syntax, Semantics, Scoring, IR**. Scoring shows genuine SentiWordNet P/N, selected senses/glosses, aliases, domain rules, and modifier calculations. A vocabulary disclosure shows recognized phrases/opinions. Results and IR are presented as tables; single-review downloads use CSV.
+Choose **VADER + TextBlob hybrid** (default) or **SentiWordNet compiler baseline** before analyzing text or uploading a CSV. **Compare both methods** shows a same-review comparison with separate result/trace buttons. The five trace tabs are **Tokens, Syntax, Semantics, Scoring, IR**. Hybrid traces show POS/phrase chunks, independent attachment, original component scores, evidence-normalized fusion, domain rules, subjectivity and five strength bands. Its whole-text lexical result stays separate from the recognized-aspect mean. Baseline traces retain original SentiWordNet P/N and its predictive parser. See [hybrid demo instructions](docs/web-hybrid-demo.md).
+
+Each review also has a **Review score**: the mean of its final opinion scores, rounded to six decimals in [-1,+1] and displayed to four decimals. The Mixed label is preserved even when opposite scores cancel. Partial scores are marked **recognized opinions only**; reviews without opinion results show an unavailable score, with an empty numeric CSV cell. This field appears in single/batch results and CSV/report downloads. The dashboard category Mean index still averages category-specific review means across eligible reviews.
 
 Select **CSV & dashboard** to upload a UTF-8 CSV or try 12/100/500-row synthetic demos. Use `examples/hotel_reviews_100.csv` for a simple input: exactly `sr.no` and `review`, with 100 distinct review rows. The form defaults to these header names; no results or annotations are required in the input. Every submitted row has its own table result, filters, pagination/all-row display, and stored result/trace drill-down. The dashboard visualizes coverage, overall sentiment, category distributions, and complaint frequency, with evidence-backed findings and category tables. Clicking a chart filters the supporting reviews. Download the whole review table as CSV or report tables as a CSV/text ZIP for your later IEEE-format report. No raw JSON is displayed or downloaded by the UI. See `docs/web-dashboard.md` and `docs/paper-results-plan.md`.
 
-The local-only server uses the same compiler and retains one batch in memory until clear, replacement, or restart. Refresh clears the displayed view. No database or automatic review files are written. Uploads run synchronously with a busy indicator; concurrent CSV uploads receive a readable busy response while other requests remain available. There is no job queue or new dependency. This is a course demonstration server.
+The local-only server uses the selected analyzer and retains one batch in memory until clear, replacement, or restart. Refresh clears the displayed view. No database or automatic review files are written. Uploads run synchronously with a busy indicator; concurrent CSV uploads receive a readable busy response while other requests remain available. There is no job queue. This is a course demonstration server.
 
 ## Run it
 
-Python 3.10 or newer is sufficient. There are **no third-party runtime dependencies**, model downloads, API keys, or network calls during analysis. The required genuine SentiWordNet data is packaged with the project.
+Python 3.10 or newer is required. The baseline has no third-party runtime dependencies. The hybrid needs the research extras (already installed in this computer's `.venv`): `python -m pip install -e ".[research]"`. Neither analyzer requires API keys or network calls during analysis. The required genuine SentiWordNet data is packaged with the project.
 
 From the project directory:
 
@@ -119,6 +127,8 @@ Unknown words are retained in the token stream. Unsupported clauses produce diag
 
 ## Python API
 
+The independent VADER–TextBlob research system now has its own TextBlob grammatical extraction and evidence-aware sentiment fusion. It does not use this compiler's vocabulary/parser. See [the hybrid implementation and pseudocode](docs/independent-hybrid.md) and [research commands](docs/research-run-guide.md). The WebUI below still uses SentiWordNet. New comparison evidence is under `output/experiments/2026-10-15/independent-hybrid-v2/`.
+
 ```python
 from hotel_compiler import analyze_review
 
@@ -138,7 +148,7 @@ python -m unittest discover -s tests -v
 python -m compileall -q hotel_compiler scripts tests
 ```
 
-`examples/reviews.json` contains 24 original cases. `examples/robustness_cases.json` adds 100 authored language contracts, including rejections and reserved recombinations. The suite has 136 tests: 21 expanded-vocabulary/grammar/scoring tests plus 24 original compiler/CLI, 14 single-review web, 27 CSV/batch/export, 20 robustness/evaluation, 18 aggregation/reporting, and 12 bulk web tests. Checks include all 500 individual HTTP results/traces, one-row-per-review CSVs, paper ZIP tables, mappings/Unicode, limits, memory lifecycle, and concurrent requests. These demonstrate contracts, not real-world accuracy. Web tests need localhost permission inside a network-restricted sandbox.
+`examples/reviews.json` contains 24 original cases. `examples/robustness_cases.json` adds 100 authored language contracts, including rejections and reserved recombinations. The suite has 145 tests: nine review-score tests, 21 expanded-vocabulary/grammar/scoring tests plus 24 original compiler/CLI, 14 single-review web, 27 CSV/batch/export, 20 robustness/evaluation, 18 aggregation/reporting, and 12 bulk web tests. Checks include all 500 individual HTTP results/traces, one-row-per-review CSVs, paper ZIP tables, mappings/Unicode, limits, memory lifecycle, and concurrent requests. These demonstrate contracts, not real-world accuracy. Web tests need localhost permission inside a network-restricted sandbox.
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\evaluate.ps1 .\examples\robustness_cases.json

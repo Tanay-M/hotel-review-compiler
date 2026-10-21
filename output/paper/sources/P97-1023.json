@@ -1,0 +1,60 @@
+{
+  "id": "P97-1023",
+  "url": "https://aclanthology.org/P97-1023/",
+  "metadata": {
+    "viewport": [
+      "width=device-width,initial-scale=1,shrink-to-fit=no"
+    ],
+    "generator": [
+      "Hugo 0.160.0"
+    ],
+    "citation_title": [
+      "Predicting the Semantic Orientation of Adjectives"
+    ],
+    "citation_author": [
+      "Vasileios Hatzivassiloglou",
+      "Kathleen McKeown"
+    ],
+    "citation_conference_title": [
+      "35th Annual Meeting of the Association for Computational Linguistics and 8th Conference of the European Chapter of the Association for Computational Linguistics"
+    ],
+    "citation_publication_date": [
+      "1997/7"
+    ],
+    "citation_pdf_url": [
+      "https://aclanthology.org/P97-1023.pdf"
+    ],
+    "citation_firstpage": [
+      "174"
+    ],
+    "citation_lastpage": [
+      "181"
+    ],
+    "citation_doi": [
+      "10.3115/976909.979640"
+    ],
+    "og:title": [
+      "Predicting the Semantic Orientation of Adjectives"
+    ],
+    "og:image": [
+      "https://aclanthology.org/thumb/P97-1023.jpg"
+    ],
+    "og:image:alt": [
+      "First page of paper PDF."
+    ],
+    "og:type": [
+      "article"
+    ],
+    "og:site_name": [
+      "ACL Anthology"
+    ],
+    "og:url": [
+      "https://aclanthology.org/P97-1023/"
+    ],
+    "og:description": [
+      "Vasileios Hatzivassiloglou, Kathleen R. McKeown. 35th Annual Meeting of the Association for Computational Linguistics and 8th Conference of the European Chapter of the Association for Computational Linguistics. 1997."
+    ]
+  },
+  "abstract": "",
+  "bibtex": "@inproceedings{hatzivassiloglou-mckeown-1997-predicting,\n    title = \"Predicting the Semantic Orientation of Adjectives\",\n    author = \"Hatzivassiloglou, Vasileios  and\n      McKeown, Kathleen R.\",\n    booktitle = \"35th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics and 8th Conference of the {E}uropean Chapter of the {A}ssociation for {C}omputational {L}inguistics\",\n    month = jul,\n    year = \"1997\",\n    address = \"Madrid, Spain\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P97-1023/\",\n    doi = \"10.3115/976909.979640\",\n    pages = \"174--181\"\n}"
+}
