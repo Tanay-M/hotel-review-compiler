@@ -8,6 +8,7 @@ from .hybrid import HybridEngine, HybridPolicy, HybridDependencyError
 from .research_data import verify_real_samples
 from .research_runner import compare_csv, evaluate_semeval, export_metadata, write_table
 from .sentiwordnet import ResourceError
+from .compiler_profiles import compiler_profile
 
 
 def main(argv=None):
@@ -27,6 +28,7 @@ def main(argv=None):
         command.add_argument('--output-dir',type=Path,required=True,help='Must not already exist; protects prior evidence.')
     for command in (compare,evaluate):
         command.add_argument('--vader-weight',type=float,default=.5)
+        command.add_argument('--compiler-profile',choices=['original','expanded'],default='original')
     args=parser.parse_args(argv)
     if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
     if args.command=='compare' and not 0<=args.repeats<=100:
@@ -38,7 +40,7 @@ def main(argv=None):
         parser.error('Output directory already exists. Choose a new run name; prior evidence is protected.')
     try:
         destination.parent.mkdir(parents=True,exist_ok=True)
-        with TemporaryDirectory(prefix='.research-build-',dir=destination.parent) as scratch:
+        with compiler_profile(getattr(args,'compiler_profile','original')), TemporaryDirectory(prefix='.research-build-',dir=destination.parent) as scratch:
             output=Path(scratch)/'results';output.mkdir()
             if args.command=='verify-data':
                 rows,info=verify_real_samples(args.dataset_dir,args.raw_dir)

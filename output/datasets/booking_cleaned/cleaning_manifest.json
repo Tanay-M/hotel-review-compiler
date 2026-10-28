@@ -1,0 +1,19 @@
+{
+  "source": "Crawl Feeds Booking Hotel Reviews Dataset",
+  "source_url": "https://huggingface.co/datasets/crawlfeeds/Booking-Hotel-Reviews-Dataset",
+  "license": "CC BY-NC 4.0",
+  "input_file": "output/datasets/booking_italy/booking_italy_all.csv",
+  "input_sha256": "653cd6f2c231568448acb72c44a45b5faff6d0b9a30bef634956c5a813f09aa1",
+  "source_rows": 4367,
+  "cleaning_counts": {
+    "retained": 3089,
+    "blank_removed": 1266,
+    "duplicate_removed": 12
+  },
+  "demo_rows": 500,
+  "seed": 172026,
+  "selection": "Uniform random sample of unique nonblank cleaned reviews; no model outputs, aspect vocabulary or grammar filters.",
+  "cleaning": "Remove exact standalone N/A/NA/N.A. marker lines and nonprinting C0 controls; collapse whitespace; strip; remove blank bodies and exact cleaned-text duplicates. Retain ordinary words such as nothing.",
+  "wording": "No spell correction, paraphrasing, sentiment edits, punctuation repair or sentence extraction.",
+  "evaluation_role": "Real-data demonstration and coverage comparison; inspected development corpus without independent aspect gold."
+}

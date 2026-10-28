@@ -2,8 +2,12 @@
 __pycache__/
 *.py[cod]
 .venv/
+.venv-neural/
+models/neural/
+data/neural/
 venv/
 env/
+node_modules/
 *.egg-info/
 build/
 dist/
@@ -19,6 +23,9 @@ credentials.json
 
 # Downloaded upstream archive; the verified runtime subset is committed
 data/vendor/
+
+# Local-only benchmark text copy in the faculty upload folder
+dataset/semeval_hotel_benchmark_266.csv
 
 # Scratch files, local databases, logs and editor/OS caches
 tmp/
@@ -66,6 +73,7 @@ output/datasets/*
 !output/datasets/tripadvisor_original_20491.csv
 !output/datasets/public_provenance/
 !output/datasets/booking_italy/
+!output/datasets/booking_cleaned/
 
 # Current paper, editable figure sources and verified citation metadata
 !output/paper/
@@ -77,6 +85,7 @@ output/paper/*
 !output/paper/manuscript_source.md
 !output/paper/references.json
 !output/paper/paper_audit.json
+!output/paper/graph_provenance.json
 !output/paper/assets/
 !output/paper/sources/
 output/paper/sources/*
@@ -103,6 +112,23 @@ output/experiments/2026-10-21/hybrid-vocabulary-paper/*/*
 !output/experiments/2026-10-21/hybrid-vocabulary-paper/*/strength_distribution.csv
 !output/experiments/2026-10-21/hybrid-vocabulary-paper/*/environment_lock.txt
 
+# Expanded compiler comparison: publish aggregate evidence and licensed Booking rows
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/
+output/experiments/2026-10-21/expanded-sentiwordnet-release/*
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/
+output/experiments/2026-10-21/expanded-sentiwordnet-release/*/*
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/metrics.csv
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/per_class_metrics.csv
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/coverage.csv
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/dataset_description.csv
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/module_results.csv
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/fig_*.pdf
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/fig_*.svg
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/*/fig_*.png
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/booking-all/README.md
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/booking-all/all_reviews.csv
+!output/experiments/2026-10-21/expanded-sentiwordnet-release/booking-cleaned500/review_results.csv
+
 # Earlier aggregate benchmark values retained for the paper's version comparison
 !output/experiments/2026-10-15/
 output/experiments/2026-10-15/*
@@ -125,4 +151,29 @@ output/experiments/2026-10-18/booking-vocabulary/report/*
 !output/experiments/2026-10-18/booking-vocabulary/report/fig_*.pdf
 !output/experiments/2026-10-18/booking-vocabulary/report/fig_*.svg
 !output/experiments/2026-10-18/booking-vocabulary/report/fig_*.png
+
+# Local source-row maps; publish review-only inputs and cleaning policy instead
+output/datasets/booking_cleaned/*source_map.csv
+output/datasets/booking_cleaned/cleaning_audit.csv
+
+# Curated DL measurements only; benchmark text, predictions and weights stay local
+!output/neural/
+output/neural/*
+!output/neural/2026-10-23-dl-pair-evaluation/
+output/neural/2026-10-23-dl-pair-evaluation/*
+!output/neural/2026-10-23-dl-pair-evaluation/metrics.csv
+!output/neural/2026-10-23-dl-pair-evaluation/per_category_comparison.csv
+!output/neural/2026-10-23-dl-pair-evaluation/taxonomy_sensitivity.csv
+!output/neural/2026-10-23-dl-pair-evaluation/change_summary.json
+!output/neural/2026-10-23-dl-pair-evaluation/evaluation_manifest.json
+!output/neural/2026-10-23-dl-pair-human-v1/
+output/neural/2026-10-23-dl-pair-human-v1/*
+!output/neural/2026-10-23-dl-pair-human-v1/epoch_metrics.csv
+!output/neural/2026-10-23-dl-pair-human-v1/frozen_settings.json
+!output/neural/2026-10-23-dl-pair-booking500/
+output/neural/2026-10-23-dl-pair-booking500/*
+!output/neural/2026-10-23-dl-pair-booking500/summary.json
+
+# Superseded local Word study notebook; Markdown is the maintained version
+/Research_Paper_Viva_QA.docx
 

@@ -1,5 +1,7 @@
 # Team 17 complete project review reference
 
+**October 21 update:** The exhaustive lists below document the preserved original SentiWordNet profile. The separate [expanded compiler reference](expanded-sentiwordnet-and-demo.md) explains the 21,181-entry source lexicon, additional grammar, code locations, cleaned real Booking inputs and final two-system results. The UI supports the original compiler, expanded compiler and independent hybrid; the current full regression suite passes 210 tests. Historical implementation-status statements below refer to their original dates.
+
 **15 October extension:** The vocabulary and grammar below remain the SentiWordNet baseline reference. The new two-system comparison, five-band policy, offline metrics/figures and all implemented pseudocode are documented in [the research guide](research-run-guide.md) and [module algorithms](implemented-modules-and-pseudocode.md). Broad POS-based extraction is not implemented. Current research execution passes 162 automated tests with research dependencies installed.
 
 Checked against the current implementation on **14 October 2026**. This is the single file to open during the faculty review: it contains the complete configured vocabulary, supported grammar and guards, phase responsibilities, original lexical scores and separate scoring rules, result labels, dashboard calculations, diagnostics, and code locations.

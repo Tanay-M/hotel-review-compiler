@@ -1,5 +1,26 @@
 # Independent hybrid in the demo UI
 
+## Fine-tuned DL reanalysis — latest architecture
+
+Choose **Hybrid → fine-tuned DL reanalysis** to route Partial/Unsupported reviews to the new model. It reads every original sentence and returns its own category/polarity results; it does not append to hybrid opinions. Complete reviews retain the hybrid. The new dashboard shows selected independent results and keeps original hybrid evidence separately. See [implementation, results and limitations](dl-reanalysis-implementation.md). The earlier sentiment-only recovery option below remains a separate prototype.
+
+## Neural recovery update — 23 October 2026
+
+`Start_Demo.bat` now prefers the installed `.venv-neural` runtime when the trained checkpoint exists. The original demo remains usable without neural dependencies; the neural option is disabled when the model/runtime is missing. Restart an older server, then refresh the browser.
+
+1. Select **Hybrid + neural recovery (MiniLM)**.
+2. Select **CSV & dashboard**, then **Use real Booking 500**, or upload a CSV from `dataset/`.
+3. The blue **What the neural stage added** panel reports added opinions, assisted reviews, eligible contexts and abstentions. Use **Show reviews with additions** to inspect the 20 assisted reviews in this saved model's Booking run (21 additional predictions).
+4. Each row shows the original hybrid output, neural recovery outcome, accepted additions and overall label with additions. Original aspect details expand within the row; **View result & trace** opens the full retained evidence without rerunning inference.
+5. The review's **Neural recovery** panel includes accepted predictions and a disclosure containing all routing decisions, class probabilities, reasons and source spans. This also works for a single review. An authored demonstration is `The bed was squeaky but the staff were helpful.`: the missing bed sentiment is predicted Negative, while the original Staff opinion remains Positive.
+6. Review CSV downloads include neural columns. Report ZIP downloads add `neural_decisions.csv` and `neural_summary.csv` alongside the original hybrid evidence.
+
+Original statuses remain unchanged: neural-assisted does not mean Complete or verified correct. The original category charts, Mean index and lexical review scores retain their original definitions; model probabilities are never averaged into them. The neural panel covers all submitted rows independently of the lexical Complete/Partial scope selector. Counts are not accuracy. The trained model's measured results and limitations are in [the first-run report](neural-first-run.md).
+
+The earlier sentiment-recovery prototype loads locally on CPU; the latest independent DL stage uses CUDA when available and CPU otherwise; no GPU training or downloads occur when a review is analyzed. Inference is serialized around the shared model. Cold loading can take longer than a lexical request, so neural requests allow up to two minutes. The server retains one batch in memory; restarting clears it.
+
+Implementation: `hotel_compiler/web_neural.py` handles lazy checkpoint loading and non-destructive supplementation; `web_assets/neural.js` renders the new panels. The five added HTTP tests use a fake model to verify contracts, not sentiment accuracy. The live saved checkpoint was separately tested on all 500 Booking rows and matched the offline 21-prediction/20-review result.
+
 Implemented 18 October 2026. This exposes the existing research hybrid; it does
 not change either sentiment algorithm or regenerate the saved paper results.
 
@@ -47,8 +68,9 @@ the existing 1,000-row limit. Upload `booking_italy_part_01.csv` through
 
 ## CSV and dashboard
 
-Select the method, then **CSV & dashboard**. Upload a UTF-8 file with `sr.no` and
-`review`; edit column names if the file uses other headers. Every submitted row
+Select the method, then **CSV & dashboard**. Upload a UTF-8 file from the root
+`dataset/` folder. The page automatically recognizes `sr.no,review` and the
+earlier demo headers `review_id,review_text`; manual column fields are removed. Every submitted row
 has a table entry, including invalid, unsupported and failed rows. **View result
 & trace** opens the stored evidence for that row without rerunning the model.
 

@@ -1,35 +1,30 @@
-# Team 17 conference manuscript — October 21, 2026 update
+# Team 17 eight page IEEE conference paper
 
-Authors: Tanay Mohta and Aditya Rawat. Affiliations and emails remain omitted until supplied.
+Revised 27 October 2026. The matching Word and PDF are exactly eight pages including references, as rendered by Microsoft Word. Authors are Tanay Mohta and Aditya Rawat; affiliations/email details are omitted until supplied.
 
-The editable Word manuscript and native Word-exported PDF preserve the IEEE-style A4 conference layout: full-width title, two-column body, Times New Roman 10-point text and numbered IEEE references. The previous paper, assets, source and scripts are preserved in `archive/pre-vocabulary-update-2026-10-21.zip`.
+## Structure and compression
 
-## Updated content
+The paper retains Abstract, I Introduction, II Literature Survey (three subsections), III Proposed Systems, IV Results and Implementation, V Performance and Metrics, VI Conclusion, and IEEE numbered references. All five processing stages have descriptive headings and compact pseudocode. The user-approved architecture is Figure 1 on page 2 and spans both columns, occupying most of that page for readable labels. Dataset names and sizes appear inside connected data blocks, with distinct offline training and evaluation flows. The detailed status-decision, Retain Hybrid and Failure Record section is omitted as requested; the DL connector remains labelled Partial / Unsupported only. Preprocessing is the first processing stage. Core processing labels are approximately 7.7 points at the placed figure width.
 
-- Expanded hybrid aspect matching (164 to 671 phrases) and 497 reviewed lexical forms; guarded scoring copies retain original review text and native/effective tool evidence.
-- Four modules, four architecture diagrams, four pseudocode algorithms, four native Word equations, four tables and four measured graphs.
-- Thirty research works and 33 references, including software documentation and two separately identified dataset sources.
-- Rerun annotated benchmark, curated 100, random 200 and runtime measurements. Booking Italy coverage uses the saved before/after audit on identical source rows.
-- Fusion weights and contextual-rule values remain fixed; fusion/override ablations remain deferred.
+The revision reduces repeated explanations and redundant figures. It preserves the original A4 two-column layout, 10-point Times New Roman body, title sizing and page margins; these are checked against the archived 12-page document. It retains 35 references including 32 research works, five algorithms, six native editable equations, five tables and three figures. The figures comprise one explanatory architecture and two measured comparison charts. Coverage, class-level behavior, training and category error analysis remain in tables/prose. No experiment result was changed to obtain eight pages.
 
-## Evidence and interpretation
+## Results and figure provenance
 
-Fresh experiments: `output/experiments/2026-10-21/hybrid-vocabulary-paper/`.
+SemEval and Trip-MA are separate experiments: SentiWordNet versus Hybrid on 148 mapped polarity cases, and Hybrid versus selective DL on 1,474 mapped test segments (including 1,113 unresolved segments). No cross-dataset DL-versus-SentiWordNet ranking is implied. Booking's 383 accepted DL category outputs out of 456 routed reviews measure coverage, not accuracy. Facilities regression, merged Neutral/Mixed labels, pooled Staff, development reuse and one-seed limitations remain explicit.
 
-On the declared SemEval mapping, SentiWordNet obtains 42/148 correct (28.38%, macro-F1 0.2260); the expanded hybrid obtains 85/148 (57.43%, macro-F1 0.3999). Its earlier version obtained 83/148 (56.08%, macro-F1 0.3956). Updated hybrid tuple-F1 is 0.6450, lower than the earlier 0.6645; this adverse result is retained. Neither system correctly predicts the four neutral cases. These are development measurements on an inspected, adapted benchmark, not official task rankings or untouched holdout accuracy. Five strength bands lack independent intensity labels.
+The graphs are Python visualizations of saved model-evaluation CSVs. scripts/paper_figures.py draws the lexical comparison; scripts/build_dl_paper_assets.py draws DL pair-F1. The evaluation programs are hotel_compiler/research_runner.py and hotel_compiler/routed_cli.py. scripts/verify_paper_graph_provenance.py independently checks saved predictions/counts, metric values and plotted SVG labels. graph_provenance.json records values and input/output hashes; docs/paper-graph-provenance.md provides the code/data index. The architecture is explanatory and is not a measured result chart.
 
-The random cohort has 70 complete, 101 partial and 29 unsupported expanded-hybrid outcomes. Some aspect score is available for 171/200 (85.5%), whereas heuristic completeness is 70/200 (35%); neither is accuracy. The curated 100 is intentionally model-informed. All 300 rerun baseline review scores, statuses and extraction counts match the earlier run.
+## Reproduction and preserved version
 
-Booking Italy evidence: `output/experiments/2026-10-18/booking-vocabulary/report/`.
+- Prose: docs/conference_manuscript.md (matching compact copy: docs/conference_manuscript_8page.md).
+- Word builder: scripts/build_conference_paper.py.
+- Approved dataset-block architecture: scripts/build_approved_paper_architecture.py, using scripts/build_architecture_approval.py.
+- PDF export: scripts/render_conference_paper.ps1.
+- Canonical PNG rendering: scripts/render_conference_pages.py.
+- Structural, numerical, format and eight-page checks: scripts/audit_conference_paper.py.
+- Supplement: Team_17_Paper_Figures_and_Tables.zip includes all three figures as SVG/PDF/PNG, aggregate results, DL training metadata, references, cleaning metadata, graph provenance and audit evidence. Raw Trip-MA review data and model weights are not redistributed.
+- Preserved 12-page paper and authoring sources: archive/pre-eight-page-revision-2026-10-26.zip.
+- Preserved compact eight-page revision before restoring the full architecture: archive/pre-full-architecture-restoration-2026-10-26.zip.
+- Preserved eight-page paper before inserting the approved dataset-block diagram: archive/pre-approved-dataset-diagram-2026-10-27.zip.
 
-Of 4,367 source rows, 3,102 have body text and 1,265 have no body. Coverage denominators use nonblank bodies. Some scored aspect is available for 2,613 bodies before expansion and 2,701 after (84.24% to 87.07%). Complete outcomes rise from 210 to 244 (7.87% after). Scored contexts increase by 1,543. No independent aspect-polarity annotations exist, so no accuracy or F1 is inferred for this inspected vocabulary-development corpus. Duplicates and empty rows remain. Original positive/negative body fields are joined with a newline; ratings, titles and metadata do not enter scoring. Source SHA-256: `137cec35ddbd678b2bdb1bc93eccb2e844926c8503d3d7f898e274e387933dbd`.
-
-Lexical normalization affects only an internal scoring copy. It is a project synonym policy, not a modification of native VADER/TextBlob dictionaries or of submitted wording. Aliases may alter intensity and introduce errors. The SentiWordNet baseline remains frozen. Runtime values are descriptive within-run desktop measurements under uncontrolled background load.
-
-## Reproduction and materials
-
-Prose: `docs/conference_manuscript.md`. Figures: `scripts/paper_figures.py`. Builder: `scripts/build_conference_paper.py`. Native PDF export: `scripts/render_conference_paper.ps1`. Page renderer: `scripts/render_conference_pages.py`. Audit and evidence ZIP: `scripts/audit_conference_paper.py`. Document tasks use the bundled document Python runtime; experiments use `.venv/Scripts/python.exe`.
-
-The Word body, tables and equations are editable. Embedded figures are high-resolution images; the ZIP includes editable SVGs, vector PDFs, PNGs, numeric CSVs, references and audit metadata. Source reviews and raw archives are excluded from the ZIP. Diagram style preserves serif text, dashed groups, short block labels and grayscale method/integration shading. White indicates project integration, not that every block is a novel algorithm.
-
-All final pages are rendered and visually checked. `paper_audit.json` records structure, citations, metric checks, fonts, evidence paths and document hashes. Internal QA images are not deliverables. No institutional or conference acceptance details are invented.
+All final pages are visually checked after rendering. The numerical audit preserves measured scores and verifies the unchanged typography and margins. The prior 243-test implementation run remains separate evidence of software contracts; compression changes neither analysis nor training behavior.

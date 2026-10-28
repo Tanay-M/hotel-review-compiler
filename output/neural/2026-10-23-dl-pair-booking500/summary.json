@@ -1,0 +1,15 @@
+{
+  "reviews": 500,
+  "selected_methods": {
+    "independent_neural": 456,
+    "hybrid": 44
+  },
+  "neural_outcomes": {
+    "abstained": 73,
+    "reanalyzed": 383,
+    "not_routed": 44
+  },
+  "model_id": "minilm-dl-pair-ed2d9d623f83",
+  "source_sha256": "89e5e99ca49684067c86a4fbeae1250e66887af7e1f7744166311db5c5442898",
+  "accuracy": "Not measured; Booking has no human category labels."
+}

@@ -28,12 +28,19 @@ def _writer(handle: TextIO, fields: list[str]) -> csv.DictWriter:
 
 
 def _write_reviews(handle: TextIO, batch: BatchResult) -> None:
-    writer = _writer(handle, [
+    fields = [
         "method", "batch_id", "row_id", "row_number", "line_start", "line_end", "supplied_review_id",
         "review_text", "duplicate_text", "duplicate_id", "execution_status", "analysis_status",
         "overall", "overall_scope", "review_score", "review_score_scope", "net_score_band", "opinion_count", "categories", "issues", "opinion_expressions", "aspect_results",
         "diagnostics", "validation_errors", "processing_error", "whole_text_score", "whole_text_polarity", "whole_text_strength",
-    ])
+    ]
+    if batch.method == 'hybrid_neural':
+        fields += ['neural_recovery_status', 'neural_added_opinions', 'augmented_overall',
+                   'neural_results', 'neural_model_id']
+    if batch.method == 'hybrid_routed':
+        fields += ['selected_method', 'routed_status', 'neural_overall', 'model_direction_index',
+                   'independent_category_results', 'routed_model_id', 'selected_overall', 'selected_index', 'selected_index_type']
+    writer = _writer(handle, fields)
     for row in batch.rows:
         result = row.analysis
         data = {
@@ -57,10 +64,28 @@ def _write_reviews(handle: TextIO, batch: BatchResult) -> None:
             "diagnostics": " | ".join(f"{d.stage}/{d.code} [{d.start}:{d.end}]: {d.message}" for d in result.diagnostics) if result else "",
             "validation_errors": " | ".join(f"{issue.code}: {issue.message}" for issue in row.source.issues),
             "processing_error": row.processing_error,
-            "whole_text_score": result.source.whole_text.score if batch.method == "hybrid" and result else None,
-            "whole_text_polarity": result.source.whole_text.polarity if batch.method == "hybrid" and result else "",
-            "whole_text_strength": result.source.whole_text.strength if batch.method == "hybrid" and result else "",
+            "whole_text_score": result.source.whole_text.score if batch.method in {"hybrid", "hybrid_neural", "hybrid_routed"} and result else None,
+            "whole_text_polarity": result.source.whole_text.polarity if batch.method in {"hybrid", "hybrid_neural", "hybrid_routed"} and result else "",
+            "whole_text_strength": result.source.whole_text.strength if batch.method in {"hybrid", "hybrid_neural", "hybrid_routed"} and result else "",
         }
+        if batch.method == 'hybrid_neural':
+            recovery = result.recovery if result else None
+            data.update(neural_recovery_status=recovery.recovery_status if recovery else 'not_analyzed',
+                        neural_added_opinions=len(recovery.recovered) if recovery else 0,
+                        augmented_overall=recovery.combined_overall if recovery else '',
+                        neural_results='; '.join(f'{a.category} / {a.aspect}: {a.context} -> {a.model_label}'
+                                                 for a in recovery.recovered) if recovery else '',
+                        neural_model_id=recovery.model_id if recovery else '')
+        if batch.method == 'hybrid_routed':
+            r = result.routed if result else None
+            data.update(selected_method=r.selected_method if r else 'invalid_input',
+                routed_status=r.route_status if r else 'not_analyzed', neural_overall=r.overall if r else '',
+                model_direction_index=r.review_index if r else None,
+                independent_category_results='; '.join(f"{c['category']}: {c['label']} ({c['model_direction_index']})"
+                    for c in r.categories) if r else '', routed_model_id=r.model_id if r else '',
+                selected_overall=(r.overall if r.selected_method == 'independent_neural' else result.overall) if r else '',
+                selected_index=(r.review_index if r.selected_method == 'independent_neural' else result.review_score) if r else None,
+                selected_index_type=('model_direction_index' if r.selected_method == 'independent_neural' else 'lexical_mean') if r else 'unavailable')
         writer.writerow({key: _spreadsheet_cell(value) for key, value in data.items()})
 
 

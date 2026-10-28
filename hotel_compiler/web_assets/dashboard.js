@@ -42,21 +42,27 @@ $("drop-zone").addEventListener("drop", (event) => { event.preventDefault(); $("
 
 function setBatchBusy(value) {
   batchBusy = value;
-  document.querySelectorAll("#csv-form input, #csv-form button, [data-demo], .mode-tabs button, #clear-batch, #analysis-method").forEach((control) => { control.disabled = value; });
+  document.querySelectorAll("#csv-form input, #csv-form button, [data-demo], #real-booking-demo, .mode-tabs button, #clear-batch, #analysis-method").forEach((control) => { control.disabled = value; });
   $("csv-form").setAttribute("aria-busy", String(value));
   $("upload-button").textContent = value ? "Analyzing CSV…" : "Analyze CSV →";
   $("upload-status").textContent = value ? "Uploading and analyzing every row. Results will appear when complete." : "One batch retained in memory. New successful uploads replace it; restarting the server clears it.";
 }
 
-async function uploadCSV() {
+async function uploadCSV(columns = null) {
   if (batchBusy) return;
-  if (!csvFile) { uploadError("Choose a CSV or try one of the synthetic demos."); return; }
+  if (!csvFile) { uploadError("Choose a CSV or use the real Booking demo."); return; }
   uploadError("");
   setBatchBusy(true);
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 120000);
   try {
-    const query = new URLSearchParams({text_column: $("text-column").value, id_column: $("id-column").value, method: $("analysis-method").value});
+    if (!columns) {
+      const header = (await csvFile.text()).replace(/^\uFEFF/, "").split(/\r\n|\n|\r/, 1)[0];
+      const names = header.split(",").map((name) => name.trim().replace(/^"|"$/g, ""));
+      columns = {textColumn: names.includes("review") ? "review" : "review_text",
+        idColumn: names.includes("sr.no") ? "sr.no" : "review_id"};
+    }
+    const query = new URLSearchParams({text_column: columns.textColumn, id_column: columns.idColumn, method: $("analysis-method").value});
     const response = await fetch(`/api/batches?${query}`, {method: "POST", body: csvFile,
       headers: {"Content-Type": "text/csv", "X-File-Name": encodeURIComponent(csvFile.name)}, signal: controller.signal});
     const data = await response.json();
@@ -83,12 +89,22 @@ document.querySelectorAll("[data-demo]").forEach((button) => button.addEventList
     const response = await fetch(isReviewSample ? "/reviews_100.csv" : `/api/demo.csv?rows=${button.dataset.demo}`);
     if (!response.ok) throw new Error("Could not load the demo CSV.");
     selectFile(new File([await response.blob()], isReviewSample ? "hotel_reviews_100.csv" : `synthetic-${button.dataset.demo}.csv`, {type: "text/csv"}));
-    $("text-column").value = isReviewSample ? "review" : "review_text";
-    $("id-column").value = isReviewSample ? "sr.no" : "review_id";
     setBatchBusy(false);
     await uploadCSV();
   } catch (failure) { setBatchBusy(false); uploadError(failure.message); }
 }));
+
+$("real-booking-demo").addEventListener("click", async () => {
+  if (batchBusy) return;
+  setBatchBusy(true);
+  try {
+    const response = await fetch("/api/real-demo.csv");
+    if (!response.ok) throw new Error("The cleaned Booking dataset is unavailable. Upload its local CSV instead.");
+    selectFile(new File([await response.blob()], "booking_italy_cleaned_demo_500.csv", {type:"text/csv"}));
+    setBatchBusy(false);
+    await uploadCSV();
+  } catch (failure) { setBatchBusy(false); uploadError(failure.message); }
+});
 
 function svgNode(tag, attributes) {
   const element = document.createElementNS("http://www.w3.org/2000/svg", tag);
@@ -126,19 +142,21 @@ function renderDashboard() {
   const view = currentView();
   const scopeLabel = view.scope === "complete_reviews" ? "Complete reviews" : "Complete + partial; recognized opinions only";
   $("dataset-label").textContent = `${batch.method_label} · ${batch.input.source_name} · ${counts.submitted.toLocaleString()} submitted rows · analyzed in ${batch.elapsed_seconds.toFixed(3)} s`;
+  renderNeuralDashboard();
+  renderRoutedDashboard();
   $("scope-description").textContent = `${view.eligible_reviews} eligible reviews. ${scopeLabel}. Unsupported, invalid, and failed rows stay outside sentiment counts.`;
   const cards = $("metric-cards");
   cards.replaceChildren();
   for (const [label, value, note] of [["Submitted reviews", counts.submitted, "Every CSV record has its own table row"],
-    ["Completely analyzed", counts.complete, `${aggregation.primary_complete_share_submitted_percent ?? "—"}% of submitted · ${aggregation.coverage.coverage.complete_percent ?? "—"}% of analyzed`],
-    ["Need inspection", counts.submitted - counts.complete, "Partial, unsupported, invalid or failed"],
+    [batch.routed_summary ? "Original hybrid Complete" : "Completely analyzed", counts.complete, `${aggregation.primary_complete_share_submitted_percent ?? "—"}% of submitted · ${aggregation.coverage.coverage.complete_percent ?? "—"}% of analyzed`],
+    [batch.routed_summary ? "Original hybrid needs inspection" : "Need inspection", counts.submitted - counts.complete, "Partial, unsupported, invalid or failed"],
     ["Extracted opinions", counts.extracted_opinions, "Complete and partial reviews combined"]]) {
     const card = node("article", "metric-card");
     card.append(node("span", "small-label", label), node("strong", "", value.toLocaleString()), node("span", "", note));
     cards.append(card);
   }
   $("coverage-notes").replaceChildren(...report.notes.map((note) => node("p", "", note)));
-  $("overall-caption").textContent = `${view.eligible_reviews} eligible reviews in the selected scope. Mixed is preserved.`;
+  $("overall-caption").textContent = `${batch.neural_summary ? "Original hybrid: " : ""}${view.eligible_reviews} eligible reviews in the selected scope. Mixed is preserved.`;
   $("overall-chart").replaceChildren(...polarities.map((polarity) => bar(polarity, view.overall_counts[polarity], view.eligible_reviews, colors[polarity],
     () => applyEvidence(view.overall_row_ids[polarity], `${scopeLabel} / overall ${polarity}`))));
   const coverage = $("coverage-chart");
@@ -206,7 +224,7 @@ function renderDashboard() {
 $("dashboard-scope").addEventListener("change", () => { clearFilters(); renderDashboard(); });
 
 function clearFilters(render = true) {
-  for (const id of ["review-search", "status-filter", "polarity-filter", "category-filter"]) $(id).value = "";
+  for (const id of ["review-search", "status-filter", "polarity-filter", "category-filter", "neural-filter"]) $(id).value = "";
   evidenceIds = null;
   $("evidence-filter").hidden = true;
   page = 1;
@@ -216,10 +234,13 @@ function filteredRows() {
   const search = $("review-search").value.toLocaleLowerCase().trim();
   return batch.rows.filter((row) => {
     const records = row.analysis?.records || [];
+    const routed = row.analysis?.routed_analysis;
+    const isNeural = routed?.selected_method === "independent_neural";
     if (evidenceIds && !evidenceIds.has(row.row_id)) return false;
     if ($("status-filter").value && (row.analysis?.status || row.execution_status) !== $("status-filter").value) return false;
-    if ($("polarity-filter").value && (row.analysis?.overall || "Unanalyzed") !== $("polarity-filter").value) return false;
-    if ($("category-filter").value && !records.some((r) => r.category === $("category-filter").value)) return false;
+    if ($("polarity-filter").value && (isNeural ? routed.overall : row.analysis?.overall || "Unanalyzed") !== $("polarity-filter").value) return false;
+    if ($("neural-filter").value && row.analysis?.neural_recovery?.recovery_status !== $("neural-filter").value) return false;
+    if ($("category-filter").value && !(isNeural ? routed.categories : records).some((r) => r.category === $("category-filter").value)) return false;
     const text = `${row.review_text || ""} ${row.supplied_review_id || ""} ${records.map((r) => `${r.category} ${r.issue} ${r.opinion_expression}`).join(" ")}`.toLocaleLowerCase();
     return !search || text.includes(search);
   });
@@ -246,10 +267,39 @@ function renderReviewTable() {
     details.type = "button";
     details.setAttribute("aria-label", `View result and trace for review ${row.row_number}`);
     details.addEventListener("click", () => loadDetail(row));
-    return [row.row_number, id, node("span", "review-text-cell", row.review_text || "Blank / missing"), opinions,
-      badge(row.analysis?.overall || "Unanalyzed"), reviewScoreDisplay(row.analysis), badge(row.analysis?.status || row.execution_status), details];
+    let cells = [row.row_number, id, node("span", "review-text-cell", row.review_text || "Blank / missing"), opinions,
+      badge(row.analysis?.overall || "Unanalyzed"), reviewScoreDisplay(row.analysis), badge(row.analysis?.status || row.execution_status)];
+    if (batch.neural_summary) {
+      const n = row.analysis?.neural_recovery;
+      const original = node("div", "original-hybrid-cell");
+      original.append(badge(row.analysis?.status || row.execution_status), badge(row.analysis?.overall || "Unanalyzed"), reviewScoreDisplay(row.analysis));
+      const originalDetails = node("details");
+      originalDetails.append(node("summary", "", `Original aspect results (${row.analysis?.records.length || 0})`), opinions);
+      original.append(originalDetails);
+      cells = [row.row_number, id, node("span", "review-text-cell", row.review_text || "Blank / missing"), original];
+      cells.push(node("span", "neural-status", n?.recovery_status.replaceAll("_", " ") || "Not analyzed"),
+        neuralOpinions(n), n ? badge(n.combined_overall) : "—");
+    }
+    if (batch.routed_summary) {
+      const r = row.analysis?.routed_analysis;
+      const selectedNeural = r?.selected_method === "independent_neural";
+      const original = node("details");
+      original.append(node("summary", "", `${row.analysis?.status || row.execution_status} / ${row.analysis?.overall || "Unanalyzed"}`),
+        reviewScoreDisplay(row.analysis), opinions);
+      cells = [row.row_number, id, node("span", "review-text-cell", row.review_text || "Blank / missing"), original,
+        node("span", "neural-status", r ? selectedNeural ? `ML/DL · ${r.route_status}` : "Hybrid retained" : "Not analyzed"),
+        selectedNeural ? routedCategoryLines(r) : "See retained hybrid result",
+        node("span", "pill", selectedNeural ? r.overall : row.analysis?.overall || "Unanalyzed"),
+        node("span", "score-number", selectedNeural ? `Model index: ${number(r.review_index, true)}` : `Lexical: ${number(row.analysis?.review_score, true)}`)];
+    }
+    return [...cells, details];
   });
-  $("review-table").replaceChildren(table(["Row", "Review ID", "Original review", "Aspect-level results", "Overall", "Review score", "Status", "Details"], values));
+  const headers = batch.routed_summary
+    ? ["Row", "Review ID", "Original review", "Original hybrid (expand)", "Selected method", "Independent categories", "Selected overall", "Selected index"]
+    : batch.neural_summary
+    ? ["Row", "Review ID", "Original review", "Original hybrid", "Neural recovery", "Additional predictions", "Overall with additions"]
+    : ["Row", "Review ID", "Original review", "Aspect-level results", "Overall", "Review score", "Status"];
+  $("review-table").replaceChildren(table([...headers, "Details"], values));
   if (!rows.length) $("review-table").append(node("p", "no-records", "No reviews match these filters. Reset filters to show all submitted rows."));
   $("review-table-count").textContent = `${rows.length.toLocaleString()} of ${batch.rows.length.toLocaleString()} rows`;
   $("page-description").textContent = `${rows.length ? start + 1 : 0}–${Math.min(start + size, rows.length)} of ${rows.length.toLocaleString()} · Page ${page} / ${pages}`;
@@ -269,7 +319,7 @@ async function loadDetail(row) {
     $("detail-status").textContent = `Review ${row.row_number} loaded. Scroll below for results and compiler stages.`;
   } catch (failure) { if (request === detailRequest) $("detail-status").textContent = failure.message; }
 }
-for (const id of ["review-search", "status-filter", "polarity-filter", "category-filter", "page-size"]) $(id).addEventListener(id === "review-search" ? "input" : "change", () => { page = 1; renderReviewTable(); });
+for (const id of ["review-search", "status-filter", "polarity-filter", "category-filter", "neural-filter", "page-size"]) $(id).addEventListener(id === "review-search" ? "input" : "change", () => { page = 1; renderReviewTable(); });
 $("reset-filters").addEventListener("click", () => clearFilters());
 $("previous-page").addEventListener("click", () => { page--; renderReviewTable(); });
 $("next-page").addEventListener("click", () => { page++; renderReviewTable(); });
@@ -295,6 +345,10 @@ $("clear-batch").addEventListener("click", async () => {
     resetResults();
     $("results-section").hidden = true;
     $("batch-output").hidden = true;
+    $("neural-dashboard").replaceChildren();
+    $("neural-dashboard").hidden = true;
+    $("routed-dashboard").replaceChildren();
+    $("routed-dashboard").hidden = true;
     for (const id of ["review-table", "batch-conclusions", "run-metadata", "category-table", "category-chart", "complaint-chart", "coverage-chart", "overall-chart", "metric-cards", "coverage-notes"]) $(id).replaceChildren();
     csvFile = null;
     $("csv-file").value = "";

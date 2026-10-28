@@ -4,6 +4,7 @@ import json
 from functools import lru_cache
 from importlib.resources import files
 from typing import Any
+from .compiler_profiles import current_profile
 
 
 def validate_vocabulary(vocabulary: dict[str, Any]) -> None:
@@ -44,12 +45,20 @@ def validate_vocabulary(vocabulary: dict[str, Any]) -> None:
             raise ValueError(f"Unknown allowed aspect for alias {alias!r}.")
 
 
-@lru_cache(maxsize=1)
-def load_vocabulary() -> dict[str, Any]:
-    content = files("hotel_compiler").joinpath("resources/domain.json").read_text(
+@lru_cache(maxsize=2)
+def _load_vocabulary(profile) -> dict[str, Any]:
+    name = 'domain_expanded.json' if profile == 'expanded' else 'domain.json'
+    content = files("hotel_compiler").joinpath('resources', name).read_text(
         encoding="utf-8"
     )
     vocabulary = json.loads(content)
     validate_vocabulary(vocabulary)
     return vocabulary
+
+
+def load_vocabulary() -> dict[str, Any]:
+    return _load_vocabulary(current_profile())
+
+
+load_vocabulary.cache_clear = _load_vocabulary.cache_clear
 

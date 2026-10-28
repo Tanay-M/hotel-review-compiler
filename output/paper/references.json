@@ -29,7 +29,9 @@
   "28": "Y. Kim, “Convolutional Neural Networks for Sentence Classification,” in Proc. EMNLP, 2014, pp. 1746–1751, doi: 10.3115/v1/D14-1181.",
   "29": "W. Zhang, X. Li, Y. Deng, L. Bing, and W. Lam, “A survey on aspect-based sentiment analysis: Tasks, methods, and challenges,” IEEE Trans. Knowl. Data Eng., vol. 35, no. 11, pp. 11019–11038, 2023, doi: 10.1109/TKDE.2022.3230975.",
   "30": "S. U. S. Chebolu, F. Dernoncourt, N. Lipka, and T. Solorio, “Survey of aspect-based sentiment analysis datasets,” arXiv preprint arXiv:2204.05232, 2022. [Online]. Available: https://arxiv.org/abs/2204.05232",
-  "31": "TextBlob contributors, “TextBlob 0.19.0 documentation,” accessed Oct. 15, 2026. [Online]. Available: https://textblob.readthedocs.io/en/stable/",
-  "32": "J. Liu, “515K hotel reviews data in Europe,” Kaggle dataset, accessed Oct. 15, 2026. [Online]. Available: https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe",
-  "33": "Crawlfeeds, “Booking Italy hotel reviews,” user-supplied CSV export, received Oct. 18, 2026. Source file and SHA-256 retained in the project provenance archive."
+  "31": "W. Wang, F. Wei, L. Dong, H. Bao, N. Yang, and M. Zhou, “MiniLM: Deep self-attention distillation for task-agnostic compression of pre-trained transformers,” arXiv preprint arXiv:2002.10957, 2020. [Online]. Available: https://arxiv.org/abs/2002.10957",
+  "32": "S. M. Jiménez Zafra, G. Berardi, A. Esuli, D. Marcheggiani, M. T. Martín-Valdivia, and A. Moreo Fernández, “A multi-lingual annotated dataset for aspect-oriented opinion mining,” in Proc. EMNLP, 2015, pp. 2533–2538, doi: 10.18653/v1/D15-1302.",
+  "33": "TextBlob contributors, “TextBlob 0.19.0 documentation,” accessed Oct. 15, 2026. [Online]. Available: https://textblob.readthedocs.io/en/stable/",
+  "34": "J. Liu, “515K hotel reviews data in Europe,” Kaggle dataset, accessed Oct. 15, 2026. [Online]. Available: https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe",
+  "35": "Crawlfeeds, “Booking Hotel Reviews Dataset: Booking Italy hotel reviews,” Hugging Face dataset, CC BY-NC 4.0, accessed Oct. 21, 2026. [Online]. Available: https://huggingface.co/datasets/crawlfeeds/Booking-Hotel-Reviews-Dataset"
 }

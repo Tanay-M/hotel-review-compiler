@@ -1,10 +1,10 @@
 "use strict";
 
-const methodNames = {hybrid: "VADER + TextBlob hybrid", sentiwordnet: "SentiWordNet compiler"};
+const methodNames = {hybrid: "VADER + TextBlob hybrid", hybrid_neural: "Hybrid + neural recovery (MiniLM)", hybrid_routed: "Hybrid → fine-tuned DL reanalysis", sentiwordnet: "SentiWordNet compiler (expanded)", sentiwordnet_original: "SentiWordNet compiler (original)"};
 function renderWholeText() {
   const container = $("whole-text-summary");
   container.replaceChildren();
-  container.hidden = analysis?.method !== "hybrid";
+  container.hidden = !["hybrid", "hybrid_neural", "hybrid_routed"].includes(analysis?.method);
   if (container.hidden) return;
   const whole = analysis.whole_text;
   container.append(node("h3", "", "Whole-review lexical sentiment"), fields([
@@ -77,18 +77,29 @@ function renderHybridTrace(panel, trace) {
 
 $("analysis-method").addEventListener("change", () => {
   resetResults();
+  $("compare-button").textContent = ["hybrid_neural", "hybrid_routed"].includes($("analysis-method").value) ? "Compare methods" : "Compare both methods";
   $("method-description").textContent = $("analysis-method").value === "hybrid"
     ? "Independent grammatical extraction with VADER and TextBlob sentiment evidence."
-    : "Original controlled lexer, predictive grammar and SentiWordNet sense scoring.";
+    : $("analysis-method").value === "hybrid_routed"
+      ? "Complete reviews keep the hybrid. Partial and Unsupported reviews go to an fine-tuned MiniLM transformer that reads every original sentence with a category query."
+    : $("analysis-method").value === "hybrid_neural"
+      ? "Original hybrid analysis plus a local MiniLM model for eligible unscored aspects in Partial reviews. Predictions and abstentions remain traceable."
+    : $("analysis-method").value === "sentiwordnet"
+      ? "Expanded deterministic grammar, broad adjective coverage and genuine SentiWordNet sense scoring."
+      : "Original paper baseline with its preserved controlled vocabulary and grammar.";
 });
 
 $("compare-button").addEventListener("click", async () => {
   if (busy) return;
   resetResults(); error(""); loading(true);
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 30000);
+  const timeout = setTimeout(() => controller.abort(), 120000);
   try {
-    const results = await Promise.all(["sentiwordnet", "hybrid"].map(async method => {
+    const compilerMethod = $("analysis-method").value === "sentiwordnet_original" ? "sentiwordnet_original" : "sentiwordnet";
+    const methods = [compilerMethod, "hybrid"];
+    if ($("analysis-method").value === "hybrid_neural") methods.push("hybrid_neural");
+    if ($("analysis-method").value === "hybrid_routed") methods.push("hybrid_routed");
+    const results = await Promise.all(methods.map(async method => {
       const response = await fetch("/api/analyze", {method: "POST", headers: {"Content-Type": "application/json"},
         body: JSON.stringify({text: review.value, method}), signal: controller.signal});
       const result = await response.json();
@@ -96,14 +107,16 @@ $("compare-button").addEventListener("click", async () => {
       return {...result, method, method_label: methodNames[method]};
     }));
     const display = result => { analysis = result; selectedStage = "tokens"; renderResults(); };
-    display(results.find(r => r.method === $("analysis-method").value));
+    display(results.find(r => r.method === $("analysis-method").value) || results[0]);
     const comparison = $("method-comparison");
     comparison.hidden = false;
-    comparison.append(node("h3", "", "Same review · two independent methods"),
-      table(["Method", "Status", "Overall", "Aspect contexts", "Aspect mean", "Net strength", "Evidence"], results.map(result => {
+    comparison.append(node("h3", "", "Same review · method comparison"),
+      table(["Method", "Original status", "Original overall", "Lexical contexts", "Lexical mean", "Neural result / count", "Selected overall", "Evidence"], results.map(result => {
         const button = node("button", "secondary small", "Show results & trace"); button.type = "button";
         button.addEventListener("click", () => display(result));
-        return [result.method_label, result.status, result.overall, result.records.length, number(result.review_score, true), result.net_score_band, button];
+        return [result.method_label, result.status, result.overall, result.records.length, number(result.review_score, true),
+          result.routed_analysis?.route_status || result.neural_recovery?.recovered.length || "—",
+          result.routed_analysis?.selected_method === "independent_neural" ? result.routed_analysis.overall : result.neural_recovery?.combined_overall || result.overall, button];
       })), node("p", "score-note", "This is a live comparison, not an accuracy test. The methods can extract different contexts; opinions are not paired by position."));
   } catch (failure) { error(failure.name === "AbortError" ? "Comparison timed out. Check the local server." : failure.message); }
   finally { clearTimeout(timeout); loading(false); }

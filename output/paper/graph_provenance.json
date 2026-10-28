@@ -1,0 +1,142 @@
+{
+  "verified": "2026-10-27",
+  "checks": "SemEval classification recomputed from predictions; SemEval pair-F1 from saved pair counts; Trip-MA metrics recomputed from all saved gold/predicted pair sets; SVG bar labels checked against metric CSVs.",
+  "model_execution": "No model training or inference was rerun for compression. Original measured outputs remain unchanged.",
+  "figures": [
+    {
+      "figure": 1,
+      "asset": "architecture_approved",
+      "kind": "Explanatory architecture, not a result graph",
+      "generator": "scripts/build_approved_paper_architecture.py (uses build_architecture_approval.py)",
+      "evaluator": null,
+      "data": {},
+      "assets": {
+        "svg": "101cae95bccac31fbc2e4138ad93c5a1c8b512f545e5574d195bf4541cc5bcb8",
+        "pdf": "322b32e8585fdc8a3fba362b52392f8f965f593553c23f864bae0a73f1c26e7e",
+        "png": "dfd52a58bc5d295b447a216e76e3ddb82dc2b6741ef7ab024134b7f00da04a98"
+      }
+    },
+    {
+      "figure": 2,
+      "asset": "performance_comparison",
+      "kind": "Measured SemEval mapped development metrics",
+      "generator": "scripts/paper_figures.py: charts",
+      "evaluator": "hotel_compiler/research_runner.py: evaluate_semeval",
+      "data": {
+        "output/experiments/2026-10-21/expanded-sentiwordnet-release/semeval-development/metrics.csv": "d3f013fa55f012e68b8a213e78b220b87eedb6dc0630035d470757339bbb5ee9",
+        "output/experiments/2026-10-21/expanded-sentiwordnet-release/semeval-development/predictions.csv": "8613e726a4d13cfb7d3e4920e9a68b8ddd43a448981e064867859c4507bc02a4"
+      },
+      "values": [
+        {
+          "system": "SentiWordNet compiler (expanded)",
+          "task": "end-to-end coarse category sentiment; eligible mapped sentences",
+          "cases": "148",
+          "correct": "72",
+          "scored": "81",
+          "accuracy": "0.4864864864864865",
+          "coverage": "0.5472972972972973",
+          "conditional_accuracy": "0.8888888888888888",
+          "macro_f1": "0.40371103414151416",
+          "accuracy_ci95_low": "0.3931034482758621",
+          "accuracy_ci95_high": "0.6",
+          "gold_coarse_pairs": "162",
+          "predicted_coarse_pairs": "112",
+          "matched_coarse_pairs": "81",
+          "tuple_precision": "0.7232142857142857",
+          "tuple_recall": "0.5",
+          "tuple_f1": "0.5912408759124088"
+        },
+        {
+          "system": "VADER-TextBlob hybrid",
+          "task": "end-to-end coarse category sentiment; eligible mapped sentences",
+          "cases": "148",
+          "correct": "85",
+          "scored": "94",
+          "accuracy": "0.5743243243243243",
+          "coverage": "0.6351351351351351",
+          "conditional_accuracy": "0.9042553191489362",
+          "macro_f1": "0.39994425863991084",
+          "accuracy_ci95_low": "0.4899328859060403",
+          "accuracy_ci95_high": "0.6573426573426573",
+          "gold_coarse_pairs": "162",
+          "predicted_coarse_pairs": "145",
+          "matched_coarse_pairs": "99",
+          "tuple_precision": "0.6827586206896552",
+          "tuple_recall": "0.6111111111111112",
+          "tuple_f1": "0.6449511400651465"
+        }
+      ],
+      "assets": {
+        "svg": "c15cf4c2b1b804d10467a979190b6c2c2ae72bbb52e9a8baf11685aaa526ba62",
+        "pdf": "0022ff07215a4d53b86b270193cb9a439fa868a8beb95095d5e4e4c5e46362b7",
+        "png": "ae7450f464103b9d8abbcc534e244157ad02ff83bd6c0135e8c65e79ccc84836"
+      }
+    },
+    {
+      "figure": 3,
+      "asset": "dl_joint_pair_f1",
+      "kind": "Measured Trip-MA follow-up pair F1",
+      "generator": "scripts/build_dl_paper_assets.py: build",
+      "evaluator": "hotel_compiler/routed_cli.py: evaluate",
+      "data": {
+        "output/neural/2026-10-23-dl-pair-evaluation/metrics.csv": "6cb83e1de2f21a3aea77698688fea3f13e4445dca87f1c5dc6a75889ef5a5ba8",
+        "output/neural/2026-10-23-dl-pair-evaluation/predictions.csv": "96d618a0f24073f87beb49e31c31fdb2da1bc764f9d2b41dc14cfc07ea9aa0c4"
+      },
+      "values": [
+        {
+          "scope": "all_test",
+          "system": "Hybrid",
+          "segments": "1474",
+          "gold_pairs": "724",
+          "predicted_pairs": "777",
+          "matched_pairs": "314",
+          "precision": "0.4041184041184041",
+          "recall": "0.43370165745856354",
+          "pair_micro_f1": "0.4183877415056629",
+          "exact_segment_match": "0.6058344640434192"
+        },
+        {
+          "scope": "all_test",
+          "system": "Routed pipeline",
+          "segments": "1474",
+          "gold_pairs": "724",
+          "predicted_pairs": "746",
+          "matched_pairs": "367",
+          "precision": "0.49195710455764075",
+          "recall": "0.5069060773480663",
+          "pair_micro_f1": "0.4993197278911565",
+          "exact_segment_match": "0.6472184531886025"
+        },
+        {
+          "scope": "hybrid_partial_or_unsupported",
+          "system": "Hybrid",
+          "segments": "1113",
+          "gold_pairs": "414",
+          "predicted_pairs": "365",
+          "matched_pairs": "127",
+          "precision": "0.34794520547945207",
+          "recall": "0.30676328502415456",
+          "pair_micro_f1": "0.32605905006418484",
+          "exact_segment_match": "0.6756513926325247"
+        },
+        {
+          "scope": "hybrid_partial_or_unsupported",
+          "system": "Routed pipeline",
+          "segments": "1113",
+          "gold_pairs": "414",
+          "predicted_pairs": "334",
+          "matched_pairs": "180",
+          "precision": "0.5389221556886228",
+          "recall": "0.43478260869565216",
+          "pair_micro_f1": "0.48128342245989303",
+          "exact_segment_match": "0.7304582210242587"
+        }
+      ],
+      "assets": {
+        "svg": "73af12bf22f6b39be9735cc25143a4a82c48abe81edc16d7cc592aa9d0363786",
+        "pdf": "cd435f5c0fa49adfaf457a59d201c036411036c5ef6f7399c896c9c407534f88",
+        "png": "f9508647f19d53623c9943eaf549dd7c2b7a06ea64a71be4980f724521774880"
+      }
+    }
+  ]
+}

@@ -11,7 +11,7 @@
 .mode-tabs button{padding:11px 22px;background:transparent;color:#58665b;border:1px solid transparent;border-radius:8px;font-weight:600}
 .mode-tabs button[aria-pressed=true]{background:var(--green);color:white}
 .muted{color:#687668;font-size:12px}
-.upload-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.upload-grid{display:grid;grid-template-columns:1fr;gap:0}
 .drop-zone{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;border:1px dashed #9aae98;border-radius:12px;min-height:210px;background:#f7f9f2;cursor:pointer;text-align:center;padding:24px}
 .drop-zone:hover,.drop-zone.dragging{background:#edf4e7;border-color:var(--green)}
 .drop-zone:focus-within{outline:3px solid #9fb996;outline-offset:3px}
@@ -19,10 +19,8 @@
 .drop-zone>span:last-of-type{font-size:11px;color:#64705f}
 .upload-icon{font-size:28px;color:var(--green);width:48px;height:48px;background:#e9efdf;border-radius:12px;display:grid;place-items:center}
 .drop-zone input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
-.column-fields label,.table-controls label,.scope-selector label,.pagination label{display:flex;flex-direction:column;gap:7px;font-size:11px;font-weight:600;color:#465341}
-.column-fields{display:flex;flex-direction:column;gap:15px}
-.column-fields input,.table-controls input,.table-controls select,.scope-selector select,.pagination select{padding:10px 12px;border:1px solid #d6dece;border-radius:7px;background:white;font:inherit;color:#243529;min-width:0}
-.column-fields p{font-size:11px;color:#687563;margin:0;line-height:1.65}
+.table-controls label,.scope-selector label,.pagination label{display:flex;flex-direction:column;gap:7px;font-size:11px;font-weight:600;color:#465341}
+.table-controls input,.table-controls select,.scope-selector select,.pagination select{padding:10px 12px;border:1px solid #d6dece;border-radius:7px;background:white;font:inherit;color:#243529;min-width:0}
 .demo-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:20px;margin-top:20px;border-top:1px solid var(--line)}
 .demo-actions a{color:var(--green);font-size:11px;margin-left:auto}
 .dashboard-heading{margin:32px 0 20px}.dashboard-heading h2{font-size:25px}.dashboard-heading p{margin-bottom:0}
@@ -50,7 +48,7 @@
 .text-button:disabled{color:#778273;text-decoration:none;cursor:default}
 .finding{border-top:1px solid var(--line);padding:16px 0}.finding p{font-size:12px;line-height:1.8;margin:0 0 8px}.finding .text-button{font-size:11px}
 .dashboard>section.card{margin-bottom:20px}
-.table-controls{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr auto;gap:10px;align-items:end;margin:20px 0}
+.table-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;align-items:end;margin:20px 0}
 .table-controls .secondary{margin-bottom:1px;min-height:36px}.table-controls input,.table-controls select{width:100%;box-sizing:border-box}
 .evidence-filter{font-size:12px;border-left:3px solid var(--green);padding:9px 12px;background:#eef4e6;color:#43573e}
 .pagination{display:flex;gap:12px;align-items:center;font-size:11px;flex-wrap:wrap;margin-top:20px}.pagination>span{margin-right:auto}.pagination label{flex-direction:row;align-items:center}.pagination select{padding:7px}
@@ -66,3 +64,12 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 @media(max-width:950px){.metric-cards{grid-template-columns:repeat(2,1fr)}.table-controls{grid-template-columns:1.5fr 1fr 1fr}.scope-selector{align-items:flex-start}.scope-selector label{min-width:270px}.dashboard-heading{flex-wrap:wrap}.dashboard-actions{justify-content:flex-start}.table-controls label:first-child{grid-column:1 / -1}}
 @media(max-width:700px){.upload-grid,.chart-grid{grid-template-columns:1fr}.scope-selector{flex-direction:column;gap:12px}.scope-selector label{min-width:0;width:100%}.column-fields{display:grid;grid-template-columns:1fr 1fr}.column-fields p{grid-column:1 / -1}.demo-actions a{margin-left:0}.metric-card{padding:18px}.metric-card>strong{font-size:29px}.table-controls{grid-template-columns:1fr 1fr}.table-controls label:first-child{grid-column:1 / -1}.dashboard-actions{width:100%}.results-card>.section-heading{flex-direction:column;align-items:flex-start;gap:16px}.results-card .result-summary{justify-content:flex-start;flex-wrap:wrap}.review-score-summary{max-width:100%;flex-wrap:wrap}}
 @media(max-width:450px){.column-fields{grid-template-columns:1fr}.metric-cards{gap:9px}.metric-card{padding:15px}.metric-card .small-label{font-size:9px}.drop-zone{min-height:180px;padding:20px}.mode-tabs button{padding:10px 15px}.pagination{gap:8px}.pagination>span{width:100%}.dashboard-actions .small{font-size:10px}}
+
+/* Separate presentation for additional neural predictions. */
+.neural-panel{background:#f3f8fc;border:1px solid #c6dce9;border-radius:12px;padding:22px;margin:20px 0;color:#26465c}
+.neural-panel h3{margin:5px 0 18px}.neural-panel .eyebrow{color:#366987}.neural-panel .score-note{line-height:1.75;font-size:12px}
+.neural-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}.neural-metrics .metric-card{border-color:#d4e2eb}.neural-metrics .metric-card>strong{color:#255776}
+.neural-decisions{margin-top:18px}.neural-decisions summary{cursor:pointer;font-weight:600;font-size:13px}.neural-decisions .table-wrap{margin-top:16px;max-height:500px;overflow:auto}
+.neural-opinions{min-width:210px;max-width:330px;font-size:11px;line-height:1.7}.neural-opinions strong{display:block}.neural-opinions p{margin:0 0 12px}.neural-status{display:block;color:#245d80;background:#e8f3fb;border-radius:5px;padding:5px 8px;font-size:11px;min-width:95px}
+.original-hybrid-cell{min-width:175px;max-width:260px;display:flex;flex-wrap:wrap;gap:7px}.original-hybrid-cell .review-score-display,.original-hybrid-cell details{width:100%}.original-hybrid-cell summary{font-size:11px;cursor:pointer;margin-top:9px}.original-hybrid-cell .row-opinions{min-width:0;margin-top:12px}
+@media(max-width:700px){.neural-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.neural-panel{padding:16px}.neural-metrics .metric-card{padding:14px}}

@@ -1,10 +1,18 @@
 # Team 17 - Hotel Review Compiler
 
+**Current research release:** The [eight-page IEEE paper](output/paper/Team_17_IEEE_Conference_Paper.pdf) includes the approved full architecture with dataset blocks, expanded SentiWordNet versus independent Hybrid results, and selective MiniLM deep learning reanalysis. Only Partial/Unsupported Hybrid reviews enter the independent model; Complete Hybrid results are retained. On the separate mapped Trip-MA experiment, overall pair-F1 rises from 0.4184 to 0.4993, with Facilities regression. Booking coverage is not accuracy. See the [DL implementation](docs/dl-reanalysis-implementation.md), [paper evidence](output/paper/PAPER_README.md), [paper/code viva guide](docs/paper-and-code-viva-guide.md), and [maintained Markdown Q&A](Research_Paper_Viva_QA.md).
+
+**DL reproduction:** Training code and aggregate measurements are included. Local fine-tuned weights, Python/CUDA environments and downloaded/prepared benchmark text are excluded from Git. Follow [the run guide](docs/research-run-guide.md) and [training-data documentation](docs/neural-training-datasets.md) to acquire sources and prepare/train the model. A fresh clone does not include the trained DL checkpoint; unavailable models remain explicit rather than silently substituting another method.
+
+**Faculty upload folder:** Open [dataset](dataset/README.md) for all previously used CSV inputs, including the cleaned real Booking 500 demo, upload-sized full-corpus parts, benchmark sentences and clearly labeled synthetic tests. The upload panel now detects supported headers automatically; the column-mapping fields have been removed. The folder describes each input's actual role.
+
 A deterministic, compiler-style aspect-based hotel review analyzer for a Compiler Design course project.
+
+**Expanded SentiWordNet and real-data demo:** Double-click [Start_Demo.bat](Start_Demo.bat), then choose expanded SentiWordNet or the hybrid. In **CSV & dashboard**, click **Use real Booking 500** for the [cleaned real reviews](output/datasets/booking_cleaned/README.md). The original baseline remains a separate profile. Expanded SentiWordNet has over 21,000 source-backed opinion entries, 772 aspect phrases and its own deterministic grammar, without VADER/TextBlob scoring. See [implementation and fair-comparison results](docs/expanded-sentiwordnet-and-demo.md). Stop the launcher-managed server with [Stop_Demo.bat](Stop_Demo.bat).
 
 **Research and demo update:** The SentiWordNet compiler and independent TextBlob grammar / VADER–TextBlob hybrid are available in the UI and research runner, with five-band labels, source verification, tables and figures. See [the run guide](docs/research-run-guide.md), [module pseudocode](docs/implemented-modules-and-pseudocode.md), and [Booking vocabulary expansion](docs/hybrid-vocabulary-expansion.md). Whole-text scoring stays separate from aspect sentiment. The hybrid has 671 aspect phrases and 497 reviewed lexical forms; the original baseline remains frozen.
 
-**Paper and datasets (21 October):** [IEEE paper, Word](output/paper/Team_17_IEEE_Conference_Paper.docx), [PDF](output/paper/Team_17_IEEE_Conference_Paper.pdf), [figure/table bundle](output/paper/Team_17_Paper_Figures_and_Tables.zip), and [real CSV datasets](output/datasets/README.md) are included. The expanded hybrid obtains 85/148 correct (57.43%, macro-F1 0.3999) versus baseline 42/148 (28.38%, 0.2260) on the inspected SemEval adaptation. Tuple-F1 falls versus the earlier hybrid; all results are development measurements. The newer Booking Italy cohort was audited for hybrid vocabulary coverage only, not a two-system accuracy comparison. See [dataset provenance and licenses](data/README.md). Non-commercial dataset licenses remain separate from project code.
+**Paper and datasets (21 October):** [IEEE paper, Word](output/paper/Team_17_IEEE_Conference_Paper.docx), [PDF](output/paper/Team_17_IEEE_Conference_Paper.pdf), [figure/table bundle](output/paper/Team_17_Paper_Figures_and_Tables.zip), and [real CSV datasets](output/datasets/README.md) are included. The paper compares only current SentiWordNet versus Hybrid. On the inspected SemEval adaptation, SentiWordNet obtains 72/148 correct (48.65%, macro-F1 0.4037) and Hybrid 85/148 (57.43%, 0.3999). Hybrid has greater recall and tuple-F1; SentiWordNet has greater tuple precision. Both are also evaluated for processing coverage on 3,089 cleaned Booking Italy reviews and a nested random 500-review demo subset. These are development results; Booking coverage is not annotated accuracy. See [paper evidence](output/paper/PAPER_README.md) and [dataset provenance/licenses](data/README.md).
 
 For the faculty review, open [the complete project reference](docs/complete-project-reference.md): all recognized vocabulary, grammar and phase rules, original SentiWordNet scores and domain adjustments, status labels, dashboard mean calculations, diagnostics, examples, and code locations in one file.
 
@@ -142,6 +150,12 @@ print(result.to_dict(include_trace=True))
 The same function is used by the CLI, browser adapter, and bulk engine. It has no storage or UI side effects. Source positions are zero-based Python character offsets; `text[start:end]` extracts the span. These are character positions, not byte offsets.
 
 ## Validate it
+
+### Optional neural recovery experiment
+
+The latest [fine-tuned DL stage](docs/dl-reanalysis-implementation.md) reanalyzes Partial/Unsupported reviews from their full original text, predicts categories and sentiment independently, and selects that result instead of appending hybrid opinions. Select **Hybrid → fine-tuned DL reanalysis** in the web demo. The report includes held-out improvements, regressions, taxonomy limitations and reproducible CSV/figure exports.
+
+The separate [neural recovery guide](docs/neural-recovery.md) covers real human-labelled Webis training data, hotel-disjoint splits, a small MiniLM/SetFit GPU training run, validation-gated recovery of missing sentiment in Partial hybrid outputs, and CSV/figure exports. Use `.venv-neural` and `requirements-neural.txt`; the existing demo does not require PyTorch. Original lexical predictions and diagnostics are retained.
 
 ```powershell
 python -m unittest discover -s tests -v

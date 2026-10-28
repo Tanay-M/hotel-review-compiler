@@ -1,23 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="252pt" height="155pt" viewBox="0 0 252 155"><polyline points="29,126.0 240,126.0" fill="none" stroke="black" stroke-width="0.65"/>
 <text x="24" y="128.0" font-family="Times New Roman,serif" font-size="7" text-anchor="end" >0</text>
-<polyline points="29,94.72985170857511 240,94.72985170857511" fill="none" stroke="black" stroke-width="0.65"/>
-<text x="24" y="96.72985170857511" font-family="Times New Roman,serif" font-size="7" text-anchor="end" >1000</text>
-<polyline points="29,63.45970341715022 240,63.45970341715022" fill="none" stroke="black" stroke-width="0.65"/>
-<text x="24" y="65.45970341715022" font-family="Times New Roman,serif" font-size="7" text-anchor="end" >2000</text>
-<polyline points="29,32.189555125725335 240,32.189555125725335" fill="none" stroke="black" stroke-width="0.65"/>
-<text x="24" y="34.189555125725335" font-family="Times New Roman,serif" font-size="7" text-anchor="end" >3000</text>
-<rect x="65" y="119.43326885880077" width="39" height="6.566731141199226" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
-<text x="84.5" y="124.71663442940039" font-family="Times New Roman,serif" font-size="7" text-anchor="middle" >210</text>
-<rect x="65" y="44.291102514506775" width="39" height="75.142166344294" fill="rgb(178,178,178)" stroke="black" stroke-width="0.7" />
-<text x="84.5" y="83.86218568665377" font-family="Times New Roman,serif" font-size="7" text-anchor="middle" >2403</text>
-<rect x="65" y="29.000000000000007" width="39" height="15.29110251450677" fill="rgb(63,63,63)" stroke="black" stroke-width="0.7" />
-<text x="84.5" y="139" font-family="Times New Roman,serif" font-size="7.5" text-anchor="middle" >Before</text>
-<rect x="165" y="118.37008381689233" width="39" height="7.629916183107673" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
-<text x="184.5" y="124.18504190844617" font-family="Times New Roman,serif" font-size="7" text-anchor="middle" >244</text>
-<rect x="165" y="41.53932946486138" width="39" height="76.83075435203095" fill="rgb(178,178,178)" stroke="black" stroke-width="0.7" />
-<text x="184.5" y="81.95470664087685" font-family="Times New Roman,serif" font-size="7" text-anchor="middle" >2457</text>
-<rect x="165" y="28.999999999999986" width="39" height="12.53932946486138" fill="rgb(63,63,63)" stroke="black" stroke-width="0.7" />
-<text x="184.5" y="139" font-family="Times New Roman,serif" font-size="7.5" text-anchor="middle" >Expanded</text>
+<polyline points="29,94.59825186144383 240,94.59825186144383" fill="none" stroke="black" stroke-width="0.65"/>
+<text x="24" y="96.59825186144383" font-family="Times New Roman,serif" font-size="7" text-anchor="end" >1000</text>
+<polyline points="29,63.196503722887655 240,63.196503722887655" fill="none" stroke="black" stroke-width="0.65"/>
+<text x="24" y="65.19650372288766" font-family="Times New Roman,serif" font-size="7" text-anchor="end" >2000</text>
+<polyline points="29,31.794755584331497 240,31.794755584331497" fill="none" stroke="black" stroke-width="0.65"/>
+<text x="24" y="33.7947555843315" font-family="Times New Roman,serif" font-size="7" text-anchor="end" >3000</text>
+<rect x="65" y="124.39851084493364" width="39" height="1.6014891550663646" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<polyline points="65,125.19925542246682 55,125.19925542246682" fill="none" stroke="black" stroke-width="0.65"/>
+<rect x="42.5" y="119.19925542246682" width="9.0" height="9" fill="white"/>
+<text x="47" y="127.19925542246682" font-family="Times New Roman,serif" font-size="7" text-anchor="middle" >51</text>
+<rect x="65" y="47.02460343153125" width="39" height="77.37390741340239" fill="rgb(178,178,178)" stroke="black" stroke-width="0.7" />
+<text x="84.5" y="87.71155713823244" font-family="Times New Roman,serif" font-size="7" text-anchor="middle" >2464</text>
+<rect x="65" y="29.000000000000007" width="39" height="18.02460343153124" fill="rgb(63,63,63)" stroke="black" stroke-width="0.7" />
+<text x="84.5" y="139" font-family="Times New Roman,serif" font-size="7.5" text-anchor="middle" >SentiWordNet</text>
+<rect x="165" y="118.27516995791518" width="39" height="7.724830042084817" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
+<text x="184.5" y="124.13758497895759" font-family="Times New Roman,serif" font-size="7" text-anchor="middle" >246</text>
+<rect x="165" y="41.21528002589835" width="39" height="77.05988993201683" fill="rgb(178,178,178)" stroke="black" stroke-width="0.7" />
+<text x="184.5" y="81.74522499190677" font-family="Times New Roman,serif" font-size="7" text-anchor="middle" >2454</text>
+<rect x="165" y="29.000000000000004" width="39" height="12.215280025898348" fill="rgb(63,63,63)" stroke="black" stroke-width="0.7" />
+<text x="184.5" y="139" font-family="Times New Roman,serif" font-size="7.5" text-anchor="middle" >Hybrid</text>
 <rect x="30" y="10" width="7" height="6" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
 <text x="41" y="16" font-family="Times New Roman,serif" font-size="6.8" text-anchor="start" >Complete</text>
 <rect x="106" y="10" width="7" height="6" fill="rgb(178,178,178)" stroke="black" stroke-width="0.7" />

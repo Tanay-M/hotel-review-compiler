@@ -19,9 +19,14 @@ from .research_data import load_semeval
 from .research_metrics import (classification_metrics, clustered_accuracy_interval,
                                coarse_category, map_semeval_category, LABELS)
 from .sentiment_policy import overall_polarity
+from .compiler_profiles import current_profile
 
 SYSTEMS = ('SentiWordNet compiler', 'VADER-TextBlob hybrid')
 STRENGTHS = ('Strong Negative','Weak Negative','Neutral','Weak Positive','Strong Positive','Unavailable')
+
+
+def system_names():
+    return (('SentiWordNet compiler (expanded)' if current_profile()=='expanded' else SYSTEMS[0]), SYSTEMS[1])
 
 
 def write_table(path, rows, fields=None):
@@ -40,6 +45,7 @@ def run_metadata(source, engine, role, **extra):
         'created_utc':datetime.now(timezone.utc).isoformat(), 'dataset_role':role,
         'source':str(Path(source).resolve()),'source_sha256':sha256(Path(source).read_bytes()).hexdigest(),
         'analysis_fingerprint':analysis_fingerprint(),'research_code_fingerprint':digest.hexdigest(),
+        'compiler_profile':current_profile(),
         'vader_weight':engine.policy.vader_weight,
         'textblob_weight':1-engine.policy.vader_weight,
         'neutral_boundary':engine.policy.bands.neutral,'strong_boundary':engine.policy.bands.strong,
@@ -53,7 +59,7 @@ def run_metadata(source, engine, role, **extra):
         'missing_evidence':'Neither lexical nor contextual domain evidence => unavailable, not neutral.',
         'vocabulary_policy':'Category-guarded canonical scoring copy for reviewed native-unknown terms. Original text and pre-normalization scores retained; original library lexicons, fusion weights and contextual rules unchanged.',
         'strength_policy':'Descriptive score intervals, not independently validated five-class human labels.',
-        'compiler_scope':'Existing controlled six-category grammar; partial means recognized opinions only.',
+        'compiler_scope':f'{current_profile()} deterministic six-category grammar; partial means recognized opinions only.',
         'hybrid_scope':'Independent TextBlob Pattern POS/NP/VP chunks and rule attachment; six-category lexicon separate from baseline. No dependency parser or trained hotel classifier.',
         'evaluation_design':'Development/exploratory comparison; previously inspected SemEval errors mean this is not an untouched holdout.',
         **extra,
@@ -78,6 +84,7 @@ def export_metadata(out, values):
 
 
 def compare_csv(path, out, engine, role, *, repeats=5, text_column='review', id_column='sr.no'):
+    SYSTEMS=system_names()
     source=read_review_csv(path,text_column=text_column,id_column=id_column)
     rows=[];opinions=[];diagnostics=[];valid=[];token_rows=[];phrase_rows=[];segment_rows=[]
     for item in source.rows:
@@ -212,6 +219,7 @@ def _group(rows,key):
 
 
 def benchmark(texts,engine,repeats):
+    SYSTEMS=system_names()
     # Sizes use only existing reviews, never fabricate/repeat rows to reach 500.
     sizes=sorted({min(20,len(texts)),min(50,len(texts)),min(100,len(texts)),len(texts)})
     analyze_review(texts[0]);analyze_hybrid_review(texts[0],engine=engine)
@@ -231,6 +239,7 @@ def benchmark(texts,engine,repeats):
 
 
 def evaluate_semeval(path,out,engine,*,bootstrap_repeats=1000):
+    SYSTEMS=system_names()
     sentences=load_semeval(path);predictions=[];scope_rows=[];tuple_counts={s:Counter() for s in SYSTEMS}
     cases={s:[] for s in SYSTEMS};excluded=Counter()
     for sentence in sentences:

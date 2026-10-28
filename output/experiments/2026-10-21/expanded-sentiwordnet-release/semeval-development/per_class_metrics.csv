@@ -1,0 +1,7 @@
+﻿system,label,support,precision,recall,f1
+SentiWordNet compiler (expanded),Negative,41,1.0,0.14634146341463414,0.2553191489361702
+SentiWordNet compiler (expanded),Neutral,4,0.16666666666666666,0.25,0.2
+SentiWordNet compiler (expanded),Positive,103,0.9420289855072463,0.6310679611650486,0.7558139534883721
+VADER-TextBlob hybrid,Negative,41,0.9090909090909091,0.24390243902439024,0.38461538461538464
+VADER-TextBlob hybrid,Neutral,4,0.0,0.0,0.0
+VADER-TextBlob hybrid,Positive,103,0.9259259259259259,0.7281553398058253,0.8152173913043478

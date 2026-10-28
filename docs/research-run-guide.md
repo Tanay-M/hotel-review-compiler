@@ -1,6 +1,8 @@
 # Running the two-system paper experiments
 
-Implemented 15 October 2026; publication update 21 October. The two systems are the SentiWordNet compiler and the VADER–TextBlob hybrid. The offline research runner needs no WebUI, SQL or LLM API. The [current paper](../output/paper/PAPER_README.md) uses `output/experiments/2026-10-21/hybrid-vocabulary-paper/`. [Published CSVs](../output/datasets/README.md) and [source acquisition/licensing notes](../data/README.md) are included in Git; the raw SemEval XML and upstream archives require a separate download.
+**Expanded compiler update:** Use `--compiler-profile expanded` on `compare` or `evaluate-semeval` to compare the broader SentiWordNet compiler against the unchanged hybrid. Omitting it retains the original profile. Final expanded results are under `output/experiments/2026-10-21/expanded-sentiwordnet-release/`; [the comparison reference](expanded-sentiwordnet-and-demo.md) provides measured results, real-data cleaning, source maps, launchers and full-corpus commands. The IEEE paper now uses these current results and labels the two approaches simply SentiWordNet and Hybrid.
+
+Implemented 15 October 2026; publication update 21 October. The two systems are the SentiWordNet compiler and the VADER–TextBlob hybrid. The offline research runner needs no WebUI, SQL or LLM API. The [current paper](../output/paper/PAPER_README.md) uses `output/experiments/2026-10-21/expanded-sentiwordnet-release/`. [Published CSVs](../output/datasets/README.md) and [source acquisition/licensing notes](../data/README.md) are included in Git; the raw SemEval XML and upstream archives require a separate download.
 
 Current hybrid is v2 with independent TextBlob grammatical extraction. See [implementation, policy and module pseudocode](independent-hybrid.md). Earlier `paper/` runs preserve v1 results; `independent-hybrid-v2/` contains the new comparison. The WebUI now exposes both independent methods for live demonstrations; see [hybrid demo instructions](web-hybrid-demo.md). Saved paper experiments remain separate. The inspected SemEval benchmark is development evidence, not an untouched holdout.
 
@@ -75,4 +77,4 @@ Runtime alternates method order and measures warm independent core execution. Bo
 
 [Implemented module/step pseudocode](implemented-modules-and-pseudocode.md) supports Sections 3 and 4. [Editable architecture](hybrid-architecture.mmd) groups the original eight blocks into four manuscript modules and starts with preprocessing.
 
-The complete manuscript follows results review. Use the IEEE conference two-column Word template and numbered IEEE references. The 30-paper candidate list still needs a synthesized literature survey. Preserve adverse measured results and distinguish authored tests, curated demos, random samples and benchmark gold in captions.
+The complete manuscript and synthesized 30-work literature survey are in `output/paper/`, using an IEEE-style two-column Word layout and numbered references. Preserve adverse measured results and distinguish authored tests, curated demos, random samples and benchmark gold in captions.

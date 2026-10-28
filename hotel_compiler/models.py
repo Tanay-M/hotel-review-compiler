@@ -127,6 +127,7 @@ class AnalysisResult:
     tokens: tuple[Token, ...] = field(repr=False)
     ast: ReviewAST = field(repr=False)
     semantics: tuple[SemanticRecord, ...] = field(repr=False)
+    compiler_profile: str = 'original'
 
     @property
     def review_score(self) -> float | None:
@@ -147,6 +148,9 @@ class AnalysisResult:
 
     def to_dict(self, include_trace: bool = False) -> dict[str, Any]:
         output = {
+            "compiler_profile": self.compiler_profile,
+            "method": "sentiwordnet" if self.compiler_profile == 'expanded' else "sentiwordnet_original",
+            "method_label": f"SentiWordNet compiler ({self.compiler_profile})",
             "review_id": self.review_id,
             "review_text": self.review_text,
             "status": self.status,

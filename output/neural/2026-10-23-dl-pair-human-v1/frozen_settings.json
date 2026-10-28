@@ -1,0 +1,127 @@
+{
+  "model_type": "fine-tuned category-conditioned MiniLM transformer",
+  "best_epoch": 3,
+  "selection": "validation pair micro-F1 only; first epoch wins ties",
+  "epochs": 3,
+  "seed": 172026,
+  "max_length": 160,
+  "batch_size": 8,
+  "gradient_accumulation": 2,
+  "encoder_learning_rate": 2e-05,
+  "classifier_learning_rate": 0.0002,
+  "weight_decay": 0.01,
+  "class_weights": [
+    0.23339694738388062,
+    1.2937291860580444,
+    1.6810544729232788,
+    0.7918193936347961
+  ],
+  "training_state_counts": {
+    "0": 14318,
+    "3": 1244,
+    "2": 276,
+    "1": 466
+  },
+  "admitted_training_segments": 2038,
+  "training_pairs": 16304,
+  "optimizer_steps": 3057,
+  "encoder_parameter": "bert.encoder.layer.0.attention.self.query.weight",
+  "encoder_hash_before": "37cd347d0b4299ae014caff80bbd196d9f597b14548b26027f800e300128486c",
+  "encoder_hash_after": "0ba75b0285d6fef791ee8849ada49807237347ed5b1781429a673fc783241b45",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "data_provenance": {
+    "human_training_segments": 2040,
+    "ai_training_segments": 0,
+    "ai_labels_sha256": null
+  },
+  "source_data_manifest": {
+    "source": "Trip-MA English / Trip-MAML author release",
+    "revision": "a9f47df668d3e2ec37bb13e04d1005fb1623d91d",
+    "sources": {
+      "english_training.json": "80c970ddb148dd3eadd504a13838b519b369a8b4239f009fb079327e065fbbd7",
+      "english_test.json": "08e1948f6bbfb61a95cca9b84a7f315e12cf068bf39d5b485e28e887768bee72",
+      "README.md": "963503a7fca8e43fcf646554440e8240b8c354ff6c29c1e1a0e20bd7c4f6ccad"
+    },
+    "counts": {
+      "train": {
+        "segments": 2040,
+        "reviews": 180,
+        "hotels": 157,
+        "category_support": {
+          "Excluded": 333,
+          "NotRelated": 140,
+          "Service": 337,
+          "Food": 138,
+          "Other": 474,
+          "Room": 358,
+          "Facilities": 111,
+          "Cleanliness": 102
+        }
+      },
+      "validation": {
+        "segments": 602,
+        "reviews": 42,
+        "hotels": 39,
+        "category_support": {
+          "Other": 132,
+          "Excluded": 58,
+          "Room": 84,
+          "Service": 100,
+          "Facilities": 33,
+          "Food": 49,
+          "Cleanliness": 22,
+          "NotRelated": 37
+        }
+      },
+      "test": {
+        "segments": 1474,
+        "reviews": 111,
+        "hotels": 103,
+        "category_support": {
+          "Facilities": 71,
+          "Service": 245,
+          "Cleanliness": 71,
+          "Other": 378,
+          "Room": 220,
+          "Excluded": 215,
+          "NotRelated": 147,
+          "Food": 117
+        }
+      }
+    },
+    "crosswalk": {
+      "ROOMS": "Room",
+      "CLEANLINESS": "Cleanliness",
+      "SERVICE": "Service",
+      "CHECKIN": "Service",
+      "FOOD": "Food",
+      "BUILDING": "Facilities",
+      "BUSINESS": "Facilities",
+      "LOCATION": "Excluded",
+      "VALUE": "Excluded",
+      "OTHER": "Other",
+      "NOTRELATED": "NotRelated"
+    },
+    "label_policy": "Human labels; p/ip Positive, n/in Negative, x/ix Neutral/Mixed. Absence uses exhaustive source annotations.",
+    "staff_policy": "No separately supervised Staff class. Staff-related feedback remains within source Service.",
+    "split_policy": "Official test retained; remove overlapping training hotels; derive validation by hotel hash; remove cross-split text duplicates.",
+    "text_policy": "Surface tokens recovered from source serialization and detokenized; no generated reviews or inferred human labels.",
+    "licence": "No explicit dataset licence found in author repository; local research use, no public redistribution included.",
+    "files": {
+      "exclusions.csv": "b16fd345c1acbd8e26890d34458b003548d0a8b3309798e30b580dc29b72871f",
+      "test.csv": "d758a0ed7401c6467738b5569af3f5bc416e089933ddb2bab95099deef8b6b69",
+      "train.csv": "8e0a4d0b097bde76f7510d0f09b7e76c01d04ff777920b978b7480437044d26c",
+      "validation.csv": "c1405471d39099a744edca6e9ab178b61dd68ab9ab2ff276656770705ced07ac"
+    }
+  },
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "transformers": "4.48.3",
+    "numpy": "2.5.4"
+  },
+  "total_seconds": 248.01730549999047,
+  "peak_tensor_bytes": 534907392,
+  "gpu": "NVIDIA GeForce RTX 2050",
+  "evaluation_scope": "Previously inspected Trip-MA benchmark; later follow-up results are exploratory, not a new untouched test."
+}

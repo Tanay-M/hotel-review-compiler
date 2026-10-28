@@ -83,6 +83,11 @@ function resetResults() {
   $("diagnostics").replaceChildren();
   $("analysis-scope").textContent = "";
   $("whole-text-summary").hidden = true;
+  $("neural-result").hidden = true;
+  $("neural-result").replaceChildren();
+  $("routed-result").hidden = true;
+  $("routed-result").replaceChildren();
+  $("original-results-heading").hidden = true;
   $("method-comparison").hidden = true;
   $("method-comparison").replaceChildren();
 }
@@ -114,6 +119,16 @@ function renderResults() {
   reviewScore.append(node("span", "", "Review score"), reviewScoreDisplay(analysis));
   summary.replaceChildren(node("span", "method-label", analysis.method_label || "SentiWordNet compiler"), badge(analysis.status), badge(analysis.overall), reviewScore);
   renderWholeText();
+  renderNeuralResults();
+  renderRoutedResult();
+  const routed = analysis.routed_analysis;
+  if (routed?.selected_method === "independent_neural") {
+    summary.replaceChildren(node("span", "method-label", "Selected: independent ML/DL"),
+      badge(routed.route_status), node("span", "pill", routed.overall),
+      node("span", "score-number", `Model index: ${number(routed.review_index, true)}`));
+    $("analysis-scope").textContent = `“${analysis.review_text}”\nOriginal hybrid: ${analysis.status} / ${analysis.overall}. The independent neural result is selected above. Original lexical evidence and trace are retained below.`;
+  }
+  $("original-results-heading").hidden = !routed;
   $("analysis-scope").textContent = `“${analysis.review_text}”` +
     (analysis.status === "partial" ? "\nPartial analysis: sentiment and review score use recognized opinions only." :
       analysis.status === "unsupported" ? "\nNo supported aspect-opinion records were found. Inspect the diagnostics and tokens below." :
@@ -164,7 +179,7 @@ function renderTrace() {
     button.tabIndex = selected ? 0 : -1;
   });
   const trace = analysis.trace;
-  if (analysis.method === "hybrid") { renderHybridTrace(panel, trace); return; }
+  if (["hybrid", "hybrid_neural", "hybrid_routed"].includes(analysis.method)) { renderHybridTrace(panel, trace); return; }
   if (selectedStage === "tokens") {
     panel.append(node("p", "trace-intro", `${trace.lexical_analysis.length} tokens. Each token retains its original text and zero-based source positions.`));
     panel.append(table(["#", "Source text", "Normalized value", "Token class", "Normalization / verb form", "Span"], trace.lexical_analysis.map((token, index) => [
@@ -248,7 +263,7 @@ async function analyze() {
   }
   loading(true);
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 15000);
+  const timeout = setTimeout(() => controller.abort(), ["hybrid_neural", "hybrid_routed"].includes($("analysis-method").value) ? 120000 : 15000);
   try {
     const response = await fetch("/api/analyze", {
       method: "POST", headers: {"Content-Type": "application/json"},
@@ -293,6 +308,18 @@ $("download-button").addEventListener("click", () => {
   const record = [analysis.method || "sentiwordnet", analysis.review_id, analysis.review_text, analysis.status, analysis.overall, analysis.review_score, analysis.review_score_scope, analysis.net_score_band, analysis.whole_text?.score ?? null, analysis.records.length,
     analysis.records.map((r) => `${r.category} / ${r.issue}: ${r.opinion_expression} -> ${r.polarity} (${number(r.score, true)})`).join("; "),
     analysis.diagnostics.map((d) => `${d.code}: ${d.message}`).join("; ")];
+  if (analysis.neural_recovery) {
+    const n = analysis.neural_recovery;
+    values.push("neural_recovery_status", "neural_added_opinions", "augmented_overall", "neural_results", "neural_model_id");
+    record.push(n.recovery_status, n.recovered.length, n.combined_overall,
+      n.recovered.map(a => `${a.category} / ${a.aspect}: ${a.context} -> ${a.model_label}`).join("; "), n.model_id);
+  }
+  if (analysis.routed_analysis) {
+    const r = analysis.routed_analysis;
+    values.push("selected_method", "routed_status", "neural_overall", "model_direction_index", "independent_categories");
+    record.push(r.selected_method, r.route_status, r.overall, r.review_index,
+      r.categories.map(c => `${c.category}: ${c.label} (${c.model_direction_index})`).join("; "));
+  }
   const cell = (value) => {
     if (value == null) return '""';
     if (typeof value === "number") return String(value);
@@ -315,6 +342,12 @@ async function initialize() {
     const response = await fetch("/api/config");
     if (!response.ok) throw new Error("Could not load the demo vocabulary. Refresh the page after checking the local server.");
     config = await response.json();
+    const neuralOption = $("analysis-method").querySelector('[value="hybrid_neural"]');
+    neuralOption.disabled = !config.neural_recovery?.available;
+    neuralOption.title = config.neural_recovery?.message || "Neural recovery is unavailable on this server.";
+    const routedOption = $("analysis-method").querySelector('[value="hybrid_routed"]');
+    routedOption.disabled = !config.routed_reanalysis?.available;
+    routedOption.title = config.routed_reanalysis?.message || "Independent neural model is unavailable.";
     for (const example of config.examples) {
       const button = node("button", "", example.label);
       button.type = "button";
@@ -324,6 +357,7 @@ async function initialize() {
     }
     const content = $("vocabulary-content");
     content.replaceChildren(node("p", "", "The lists below describe the SentiWordNet baseline. The hybrid uses an independent hotel-aspect dictionary and grammatical opinion discovery; it is not restricted to this opinion list."), node("p", "", `${config.categories.length} categories · ${Object.keys(config.aspects).length} baseline aspect phrases · ${Object.keys(config.opinions).length} baseline opinion terms`));
+    if (config.expanded_sentiwordnet) content.append(node("p", "", `Expanded SentiWordNet: ${config.expanded_sentiwordnet.aspect_phrases} aspect phrases, ${config.expanded_sentiwordnet.opinion_terms.toLocaleString()} opinion entries and ${config.expanded_sentiwordnet.source_synsets.toLocaleString()} genuine source synsets. Uses deterministic grammar, native adjective/verb senses, bounded pronoun resolution and explicit recovery diagnostics. The original profile remains available separately.`));
     if (config.hybrid_vocabulary) content.append(node("p", "", `Hybrid: ${config.hybrid_vocabulary.aspect_phrases} aspect phrases and ${config.hybrid_vocabulary.reviewed_lexical_forms} reviewed opinion forms. Unknown forms are normalized only in a separate, category-guarded scoring copy; original evidence remains in the Scoring trace. Version: ${config.hybrid_vocabulary.version}.`));
     for (const [title, values] of [["Categories", config.categories], ["Aspect phrases", Object.keys(config.aspects)], ["Opinion terms", Object.keys(config.opinions)]]) {
       content.append(node("h3", "", title));

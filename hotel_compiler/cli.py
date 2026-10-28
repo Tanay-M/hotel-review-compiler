@@ -48,6 +48,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--review-id", help="Optional external review identifier.")
     parser.add_argument("--json", action="store_true", help="Print structured JSON instead of a table.")
     parser.add_argument("--trace", action="store_true", help="Include all compiler stages.")
+    parser.add_argument('--compiler-profile',choices=['original','expanded'],default='original',help='Original paper baseline or expanded SentiWordNet grammar/resources.')
     args = parser.parse_args(argv)
     # Unicode review text should work in Windows terminals and redirected files.
     if hasattr(sys.stdout, "reconfigure"):
@@ -58,7 +59,7 @@ def main(argv: list[str] | None = None) -> int:
         text = args.review
         if text is None:
             text = input("Hotel review: ") if sys.stdin.isatty() else sys.stdin.read()
-        result = analyze_review(text, args.review_id)
+        result = analyze_review(text, args.review_id, profile=args.compiler_profile)
     except (ValueError, TypeError, ResourceError, EOFError) as error:
         print(f"Error: {error}", file=sys.stderr)
         return 2

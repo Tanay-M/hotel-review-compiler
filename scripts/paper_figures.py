@@ -8,7 +8,7 @@ from pdf2image import convert_from_path
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'output'/'paper'/'assets'
-RUN=ROOT/'output'/'experiments'/'2026-10-21'/'hybrid-vocabulary-paper'
+RUN=ROOT/'output'/'experiments'/'2026-10-21'/'expanded-sentiwordnet-release'
 WIDTH=252
 
 
@@ -31,6 +31,13 @@ class Figure:
         self.c.setDash([3,2] if dashed else [])
         self.c.rect(x,y,w,h,stroke=1,fill=0 if dashed else 1);self.c.setDash([])
         self.svg.append(f'<rect x="{x}" y="{self.height-y-h}" width="{w}" height="{h}" fill="{"none" if dashed else f"rgb({int(fill*255)},{int(fill*255)},{int(fill*255)})"}" stroke="black" stroke-width="0.7" {"stroke-dasharray=\"3 2\"" if dashed else ""}/>')
+
+    def value(self,x,y,label,size=6.5):
+        # White backing keeps numeric labels readable across dotted grid lines.
+        width=self.c.stringWidth(label,'Times-Roman',size)+2
+        self.c.setFillColorRGB(1,1,1);self.c.rect(x-width/2,y-1,width,size+2,stroke=0,fill=1)
+        self.svg.append(f'<rect x="{x-width/2}" y="{self.height-y-size-1}" width="{width}" height="{size+2}" fill="white"/>')
+        self.text(x,y,label,size)
 
     def line(self,points,arrow=False,dashed=False):
         self.c.setStrokeColorRGB(0,0,0);self.c.setLineWidth(.65);self.c.setDash([2,2] if dashed else [])
@@ -80,18 +87,18 @@ def architecture():
 
     f=Figure('module2_grammar',282);f.legend(272)
     f.text(14,255,'Original text to both paths',7.3,italic=True,anchor='start')
-    f.group(244,'Baseline Lexical and Syntax',['Regex\nScanning','Phrase\nMatching','Token\nClassification','Predictive\nParsing','Clause\nRecovery','AST\nGeneration'])
+    f.group(244,'SentiWordNet Grammar',['Phrase\nMatching','Morphology\nGuards','Predictive\nParsing','Bounded\nRecovery','Target\nResolution','AST\nGeneration'])
     f.line([(46,253),(46,225)],True)
-    f.line([(46,153),(46,134)],True);f.text(52,132,'Baseline AST to Module 3',6.9,italic=True,anchor='start')
+    f.line([(46,153),(46,134)],True);f.text(52,132,'SentiWordNet AST to Module 3',6.9,italic=True,anchor='start')
     f.group(119,'Independent Hybrid Grammar',['Contraction\nExpansion','Source\nMapping','POS\nTagging','Phrase\nChunking','Noun\nPhrases','Clause\nSegmentation'],established=(2,3))
     f.line([(7,85),(14,85)],True);f.text(14,102,'Module 1',6.2,italic=True,anchor='start')
     f.line([(46,28),(46,2)],True);f.text(52,4,'Hybrid contexts to Module 3',6.9,italic=True,anchor='start');f.save()
 
     f=Figure('module3_scoring',326);f.legend(316)
     f.text(14,299,'Separate Module 2 paths',7.3,italic=True,anchor='start')
-    f.group(288,'Baseline Semantics and Lookup',['Aspect\nBinding','Category\nMapping','Sense\nLookup','P/N\nExtraction','Lexical\nScore','Scoring\nTrace'],established=(2,3,4))
+    f.group(288,'SentiWordNet Semantic Scoring',['Aspect\nBinding','Category\nMapping','Sense\nLookup','P/N\nExtraction','Lexical\nScore','Scoring\nTrace'],established=(2,3,4))
     f.line([(46,297),(46,269)],True)
-    f.line([(46,197),(46,178)],True);f.text(52,176,'Baseline evidence to Module 4',6.9,italic=True,anchor='start')
+    f.line([(46,197),(46,178)],True);f.text(52,176,'SentiWordNet evidence to Module 4',6.9,italic=True,anchor='start')
     f.rect(3,16,246,147,dashed=True);f.text(126,152,'Hybrid Attachment and Scoring',8.4,bold=True)
     for x,label in [(14,'Aspect\nMatching'),(94,'Opinion\nAttachment'),(174,'Context\nSelection')]:f.node(x,114,label)
     f.line([(7,129),(14,129)],True)
@@ -109,7 +116,7 @@ def architecture():
     f=Figure('module4_synthesis',301);f.legend(291)
     f.text(126,276,'Separate evidence from Module 3',7.3,italic=True)
     for top,title,labels,established in [
-        (267,'Baseline Adjustments',['Domain\nPreference','Degree\nWeighting','Negation\nAdjustment'],(2,)),
+        (267,'SentiWordNet Adjustments',['Domain\nPreference','Degree\nWeighting','Negation\nAdjustment'],(2,)),
         (192,'Independent Hybrid Integration',['Evidence\nFusion','Context\nRules','Trace\nRetention'],())]:
         f.rect(3,top-64,246,64,dashed=True);f.text(126,top-11,title,8.4,bold=True)
         for i,(x,label) in enumerate(zip([14,94,174],labels)):f.node(x,top-52,label,i in established)
@@ -135,7 +142,7 @@ def charts():
     for i,(key,label) in enumerate([('accuracy','Accuracy'),('macro_f1','Macro-F1'),('tuple_f1','Tuple-F1')]):
         for method,m in enumerate(metrics):
             x=52+i*69+method*19;value=float(m[key]);f.rect(x,y0,17,h*value,0 if method==0 else .70)
-            f.text(x+8.5,y0+h*value+3,f'{value:.3f}',6.5)
+            f.value(x+8.5,y0+h*value+3,f'{value:.3f}')
         f.text(70+i*69,16,label,7.3)
     f.text(10,138,'Score',7.5,anchor='start');f.rect(115,139,7,6,0);f.text(126,139,'SentiWordNet',6.7,anchor='start');f.rect(193,139,7,6,.70);f.text(204,139,'Hybrid',6.7,anchor='start');f.save()
 
@@ -143,7 +150,7 @@ def charts():
     f=Figure('random_coverage',155);base=29;h=97
     for tick in [0,50,100,150,200]:
         y=base+h*tick/200;f.line([(29,y),(240,y)],dashed=True);f.text(24,y-2,str(tick),7,anchor='end')
-    for i,system in enumerate(['SentiWordNet compiler','VADER-TextBlob hybrid']):
+    for i,system in enumerate(list(dict.fromkeys(r['system'] for r in coverage))):
         bottom=base
         for status,shade in [('complete',1),('partial',.70),('unsupported',.25)]:
             count=next(int(r['reviews']) for r in coverage if r['system']==system and r['status']==status)
@@ -152,42 +159,45 @@ def charts():
                 if shade<.5:
                     f.c.setFillColorRGB(1,1,1);f.c.setFont('Times-Roman',8);f.c.drawCentredString(84.5+i*100,bottom+height/2-2,str(count));f.c.setFillColorRGB(0,0,0)
                 else:f.text(84.5+i*100,bottom+height/2-2,str(count),8)
+            elif count:
+                f.line([(65+i*100,bottom+height/2),(55+i*100,bottom+height/2)])
+                f.value(48+i*100,bottom+height/2-2,str(count),7)
             bottom+=height
         f.text(84.5+i*100,16,'SentiWordNet' if i==0 else 'Hybrid',7.5)
     for x,label,shade in [(30,'Complete',1),(106,'Partial',.70),(168,'Unsupported',.25)]:
         f.rect(x,139,7,6,shade);f.text(x+11,139,label,6.8,anchor='start')
     f.save()
 
-    timing=read(RUN/'random200'/'runtime_summary.csv')
-    f=Figure('runtime_comparison',151);x0,y0,w,h=31,29,205,99
-    ymax=max(float(r['mean_seconds'])+float(r['stdev_seconds']) for r in timing)*1.1
-    for tick in [ymax*i/4 for i in range(5)]:
-        y=y0+h*tick/ymax;f.line([(x0,y),(240,y)],dashed=True);f.text(26,y-2,f'{tick:.1f}',7,anchor='end')
-    for method,system in enumerate(['SentiWordNet compiler','VADER-TextBlob hybrid']):
-        points=[]
-        for r in timing:
-            if r['system']!=system:continue
-            n=int(r['reviews']);x=x0+w*(n-20)/180;y=y0+h*float(r['mean_seconds'])/ymax
-            error=h*float(r['stdev_seconds'])/ymax
-            f.line([(x,y-error),(x,y+error)]);f.line([(x-2,y-error),(x+2,y-error)]);f.line([(x-2,y+error),(x+2,y+error)])
-            f.rect(x-1.9,y-1.9,3.8,3.8,0 if method==0 else 1);points.append((x,y))
-        f.line(points,dashed=method==1)
-    for n in [20,50,100,200]:f.text(x0+w*(n-20)/180,18,str(n),7)
-    f.text(130,5,'Number of original reviews',7.5);f.text(5,139,'Seconds',7.3,anchor='start')
-    f.text(116,139,'SentiWordNet: solid',6.7,anchor='start');f.text(192,139,'Hybrid: dashed',6.7,anchor='start');f.save()
+    classes=read(RUN/'semeval-development/per_class_metrics.csv')
+    f=Figure('class_f1_comparison',151);base=29;h=99
+    for tick in [0,.25,.5,.75,1]:
+        y=base+h*tick;f.line([(29,y),(240,y)],dashed=True);f.text(24,y-2,f'{tick:.2f}',7,anchor='end')
+    for i,label in enumerate(['Negative','Neutral','Positive']):
+        data=[r for r in classes if r['label']==label]
+        for method,row in enumerate(data):
+            x=52+i*69+method*19;value=float(row['f1']);f.rect(x,base,17,h*value,0 if method==0 else .70)
+            f.value(x+8.5,base+h*value+3,f'{value:.3f}')
+        f.text(70+i*69,16,label,7.3)
+    f.text(10,138,'F1',7.5,anchor='start');f.rect(115,139,7,6,0);f.text(126,139,'SentiWordNet',6.7,anchor='start');f.rect(193,139,7,6,.70);f.text(204,139,'Hybrid',6.7,anchor='start');f.save()
 
-    f=Figure('booking_vocabulary_coverage',155);base=29;h=97
+    coverage=read(RUN/'booking-all/coverage.csv')
+    f=Figure('booking_vocabulary_coverage',155);base=29;h=97;n=3089
     for tick in [0,1000,2000,3000]:
-        y=base+h*tick/3102;f.line([(29,y),(240,y)],dashed=True);f.text(24,y-2,str(tick),7,anchor='end')
-    for i,counts in enumerate([(210,2403,489),(244,2457,401)]):
+        y=base+h*tick/n;f.line([(29,y),(240,y)],dashed=True);f.text(24,y-2,str(tick),7,anchor='end')
+    for i,system in enumerate(list(dict.fromkeys(r['system'] for r in coverage))):
         bottom=base
-        for count,shade in zip(counts,[1,.70,.25]):
-            height=h*count/3102;f.rect(65+i*100,bottom,39,height,shade)
-            if shade<.5:
-                f.c.setFillColorRGB(1,1,1);f.c.setFont('Times-Roman',7);f.c.drawCentredString(84.5+i*100,bottom+height/2-2,str(count));f.c.setFillColorRGB(0,0,0)
-            else:f.text(84.5+i*100,bottom+height/2-2,str(count),7)
+        for status,shade in [('complete',1),('partial',.70),('unsupported',.25)]:
+            count=next(int(r['reviews']) for r in coverage if r['system']==system and r['status']==status)
+            height=h*count/n;f.rect(65+i*100,bottom,39,height,shade)
+            if count>150:
+                if shade<.5:
+                    f.c.setFillColorRGB(1,1,1);f.c.setFont('Times-Roman',7);f.c.drawCentredString(84.5+i*100,bottom+height/2-2,str(count));f.c.setFillColorRGB(0,0,0)
+                else:f.text(84.5+i*100,bottom+height/2-2,str(count),7)
+            else:
+                f.line([(65+i*100,bottom+height/2),(55+i*100,bottom+height/2)])
+                f.value(47+i*100,bottom+height/2-2,str(count),7)
             bottom+=height
-        f.text(84.5+i*100,16,'Before' if i==0 else 'Expanded',7.5)
+        f.text(84.5+i*100,16,'SentiWordNet' if i==0 else 'Hybrid',7.5)
     for x,label,shade in [(30,'Complete',1),(106,'Partial',.70),(168,'Unsupported',.25)]:
         f.rect(x,139,7,6,shade);f.text(x+11,139,label,6.8,anchor='start')
     f.save()

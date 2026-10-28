@@ -13,6 +13,7 @@ from importlib.resources import files
 import json
 import re
 import socket
+from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from .pipeline import MAX_REVIEW_LENGTH, analyze_review
@@ -26,6 +27,9 @@ from .web_analysis import analyze_hybrid_demo, validate_method, METHODS
 from .hybrid import HybridDependencyError
 from .hybrid_nlp import domain as hybrid_domain
 from .hybrid_vocabulary import vocabulary as hybrid_vocabulary
+from .compiler_profiles import compiler_profile
+from .web_neural import NeuralDependencyError, analyze_neural_demo, neural_availability
+from .web_routed import availability as routed_availability, analyze_demo as analyze_routed_demo
 
 
 MAX_BODY_BYTES = 65_536
@@ -34,6 +38,8 @@ _ASSETS = {
     "/app.js": ("app.js", "text/javascript; charset=utf-8"),
     "/dashboard.js": ("dashboard.js", "text/javascript; charset=utf-8"),
     "/hybrid.js": ("hybrid.js", "text/javascript; charset=utf-8"),
+    "/neural.js": ("neural.js", "text/javascript; charset=utf-8"),
+    "/routed.js": ("routed.js", "text/javascript; charset=utf-8"),
     "/demo.csv": ("demo.csv", "text/csv; charset=utf-8"),
     "/reviews_100.csv": ("reviews_100.csv", "text/csv; charset=utf-8"),
     "/styles.css": ("styles.css", "text/css; charset=utf-8"),
@@ -92,6 +98,12 @@ class DemoHandler(BaseHTTPRequestHandler):
             self._send(HTTPStatus.OK, payload, content_type)
         elif path == "/api/config":
             vocabulary = load_vocabulary()
+            with compiler_profile('expanded'):
+                expanded = load_vocabulary()
+                expanded_scope = {'aspect_phrases':len(expanded['aspects']),
+                                  'opinion_terms':len(expanded['opinions']),
+                                  'source_synsets':len(load_synsets()),
+                                  'opinion_aliases':len(expanded['opinion_aliases'])}
             self._json(HTTPStatus.OK, {
                 "categories": vocabulary["categories"],
                 "aspects": vocabulary["aspects"],
@@ -106,6 +118,9 @@ class DemoHandler(BaseHTTPRequestHandler):
                 "max_review_length": MAX_REVIEW_LENGTH,
                 "examples": _EXAMPLES,
                 "methods": METHODS,
+                "neural_recovery": neural_availability(),
+                "routed_reanalysis": routed_availability(),
+                "expanded_sentiwordnet": expanded_scope,
                 "hybrid_vocabulary": {
                     "version": hybrid_vocabulary()['version'],
                     "aspect_phrases": sum(len(v) for v in hybrid_domain()['aspects'].values()),
@@ -113,7 +128,16 @@ class DemoHandler(BaseHTTPRequestHandler):
                 },
             })
         elif path == "/api/health":
-            self._json(HTTPStatus.OK, {"status": "ok"})
+            self._json(HTTPStatus.OK, {"status": "ok", "application": "team17-hotel-review-compiler",
+                                       "compiler_profiles": ["original", "expanded"],
+                                       "neural_ui_version": 2, "neural_recovery": neural_availability(),
+                                       "routed_reanalysis": routed_availability()})
+        elif path == '/api/real-demo.csv':
+            demo=Path(__file__).resolve().parents[1]/'output/datasets/booking_cleaned/booking_italy_cleaned_demo_500.csv'
+            if not demo.is_file():
+                self._json(HTTPStatus.NOT_FOUND,{'error':'The cleaned Booking demo CSV is not installed. Upload a local real-review CSV.'})
+            else:
+                self._send(HTTPStatus.OK,demo.read_bytes(),'text/csv; charset=utf-8','booking_italy_cleaned_demo_500.csv')
         elif path == "/api/demo.csv":
             try:
                 query = parse_qs(urlsplit(self.path).query)
@@ -202,23 +226,30 @@ class DemoHandler(BaseHTTPRequestHandler):
                     raise ValueError("Select one review-text and one ID column.")
                 filename = unquote(self.headers.get("X-File-Name", "upload.csv")).replace("\\", "/").split("/")[-1][:128] or "upload.csv"
                 session = self.server.batch_store.submit(payload, source_name=filename,
-                    method=query.get("method", ["sentiwordnet"])[0],
+                    method=query.get("method", ["sentiwordnet_original"])[0],
                     text_column=query.get("text_column", ["review_text"])[0], id_column=query.get("id_column", ["review_id"])[0])
                 self._json(HTTPStatus.OK, session.overview())
                 return
             body = json.loads(payload.decode("utf-8"))
             if not isinstance(body, dict):
                 raise ValueError("Send a JSON object containing review text.")
-            method = validate_method(body.get("method", "sentiwordnet"))
-            analyzer = analyze_hybrid_demo if method == "hybrid" else analyze_review
-            result = analyzer(body.get("text"), body.get("review_id"))
+            method = validate_method(body.get("method", "sentiwordnet_original"))
+            if method == 'hybrid':
+                result = analyze_hybrid_demo(body.get('text'),body.get('review_id'))
+            elif method == 'hybrid_neural':
+                result = analyze_neural_demo(body.get('text'),body.get('review_id'))
+            elif method == 'hybrid_routed':
+                result = analyze_routed_demo(body.get('text'),body.get('review_id'))
+            else:
+                from .web_analysis import analyze_compiler_demo
+                result = analyze_compiler_demo(body.get('text'),body.get('review_id'),method=method)
         except (UnicodeError, ValueError, TypeError) as error:
             self._json(HTTPStatus.BAD_REQUEST, {"error": str(error)})
             return
         except (TimeoutError, socket.timeout):
             self._json(HTTPStatus.REQUEST_TIMEOUT, {"error": "The request took too long to arrive."})
             return
-        except (ResourceError, HybridDependencyError) as error:
+        except (ResourceError, HybridDependencyError, NeuralDependencyError) as error:
             self._json(HTTPStatus.SERVICE_UNAVAILABLE, {"error": str(error)})
             return
         except BatchBusyError as error:
@@ -255,6 +286,7 @@ def create_server(host: str = "127.0.0.1", port: int = 8000) -> ThreadingHTTPSer
         raise ValueError("Port must be between 0 and 65535.")
     # Validate resources before reporting that the server is ready.
     load_synsets()
+    with compiler_profile('expanded'): load_synsets()
     server = ThreadingHTTPServer((host, port), DemoHandler)
     server.batch_store = BatchStore()
     return server

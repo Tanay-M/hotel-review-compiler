@@ -5,10 +5,12 @@
 *.json text eol=lf
 *.html text eol=lf
 *.css text eol=lf
-*.svg text eol=lf
+*.svg text eol=lf whitespace=-blank-at-eol
 *.md text eol=lf
 *.txt text eol=lf
 *.ps1 text eol=crlf
+*.bat text eol=crlf
+*.mjs text eol=lf
 
 # Preserve exact CSV input hashes and upstream lexical resource bytes
 *.csv -text whitespace=cr-at-eol

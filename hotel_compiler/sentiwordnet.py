@@ -8,6 +8,7 @@ from importlib.resources import files
 
 from .models import AspectResult, ScoreEvidence, SemanticRecord
 from .vocabulary import load_vocabulary
+from .compiler_profiles import current_profile, compiler_profile
 
 
 class ResourceError(RuntimeError):
@@ -22,12 +23,13 @@ class SentiSynset:
     gloss: str
 
 
-@lru_cache(maxsize=1)
-def load_synsets() -> dict[str, SentiSynset]:
+@lru_cache(maxsize=2)
+def _load_synsets(profile) -> dict[str, SentiSynset]:
     resource_dir = files("hotel_compiler").joinpath("resources")
     try:
-        data = resource_dir.joinpath("sentiwordnet.tsv").read_bytes()
-        provenance = json.loads(resource_dir.joinpath("provenance.json").read_text(encoding="utf-8"))
+        suffix = '_expanded' if profile == 'expanded' else ''
+        data = resource_dir.joinpath(f'sentiwordnet{suffix}.tsv').read_bytes()
+        provenance = json.loads(resource_dir.joinpath(f'provenance{suffix}.json').read_text(encoding="utf-8"))
     except (OSError, ValueError) as error:
         raise ResourceError("The packaged SentiWordNet resource is missing or unreadable.") from error
     if hashlib.sha256(data).hexdigest() != provenance["subset_sha256"]:
@@ -41,15 +43,24 @@ def load_synsets() -> dict[str, SentiSynset]:
             float(positive), float(negative), tuple(terms.split()), gloss
         )
     try:
-        vocabulary = load_vocabulary()
+        with compiler_profile(profile):
+            vocabulary = load_vocabulary()
     except (OSError, ValueError, TypeError, KeyError) as error:
         raise ResourceError("The controlled vocabulary is missing or inconsistent.") from error
     for term, spec in vocabulary["opinions"].items():
         for selected in [spec, *spec.get("category_senses", {}).values()]:
             sense = synsets.get(selected["synset"])
-            if sense is None or term not in {t.rsplit("#", 1)[0] for t in sense.terms}:
+            if sense is None or spec.get('source_lemma', term) not in {t.rsplit("#", 1)[0] for t in sense.terms}:
                 raise ResourceError(f"Missing or mismatched SentiWordNet sense for {term!r}.")
     return synsets
+
+
+def load_synsets() -> dict[str, SentiSynset]:
+    return _load_synsets(current_profile())
+
+
+load_synsets.cache_clear = _load_synsets.cache_clear
+load_synsets.__wrapped__ = lambda: _load_synsets.__wrapped__(current_profile())
 
 
 def evaluate(semantic: SemanticRecord, review_id: str) -> AspectResult:

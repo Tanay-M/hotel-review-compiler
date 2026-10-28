@@ -18,6 +18,8 @@ hotel-compiler-web = "hotel_compiler.web:main"
 hotel-compiler-batch = "hotel_compiler.batch_cli:main"
 hotel-compiler-evaluate = "hotel_compiler.evaluation:main"
 hotel-compiler-research = "hotel_compiler.research_cli:main"
+hotel-compiler-neural = "hotel_compiler.neural_cli:main"
+hotel-compiler-routed = "hotel_compiler.routed_cli:main"
 
 [tool.setuptools.packages.find]
 include = ["hotel_compiler*"]

@@ -1,0 +1,126 @@
+{
+  "resource": "SentiWordNet 3.0.0",
+  "profile": "expanded",
+  "license": "CC BY-SA 3.0",
+  "source_archive_sha256": "b66876a17aaeb4c7c7c8d2f5bb2cf91fde16e1b76e2421e5480fedd17ad248c1",
+  "subset_sha256": "915ad056d752fbe3320a2fef6587aeb2062eceb5fccaf257715fe0b56a5a036a",
+  "opinion_terms": 21181,
+  "aspect_phrases": 772,
+  "opinion_aliases": 752,
+  "selected_synsets": 14311,
+  "new_adjective_lemmas": 20812,
+  "native_verb_lemmas": 13,
+  "aspect_category_conflicts_retaining_original": [
+    {
+      "aspect": "shower",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "showers",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "toilet",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "toilets",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "bathroom ceiling",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "bedside lamp",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "door",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "doors",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "hair dryer",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "hairdryer",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "shower head",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "shower heads",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "showerhead",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "sink",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "sinks",
+      "original_category": "Facilities",
+      "hybrid_category": "Room"
+    },
+    {
+      "aspect": "reception",
+      "original_category": "Staff",
+      "hybrid_category": "Service"
+    },
+    {
+      "aspect": "front desk",
+      "original_category": "Staff",
+      "hybrid_category": "Service"
+    },
+    {
+      "aspect": "shuttle service",
+      "original_category": "Facilities",
+      "hybrid_category": "Service"
+    },
+    {
+      "aspect": "room cleaning",
+      "original_category": "Cleanliness",
+      "hybrid_category": "Service"
+    },
+    {
+      "aspect": "drinking water",
+      "original_category": "Facilities",
+      "hybrid_category": "Food"
+    },
+    {
+      "aspect": "kettle",
+      "original_category": "Facilities",
+      "hybrid_category": "Food"
+    }
+  ],
+  "sense_selection": "Keep original configured senses; new native entries use lowest WordNet lemma rank, never sentiment magnitude or benchmark labels.",
+  "original_resource_hashes": {
+    "domain.json": "dc30dc84fbc518827d02727280bef76e06fd20ddf96e578fd23296d439fca14e",
+    "sentiwordnet.tsv": "7ac9c17ddc46ffaa68bfbc7a8743072519b881daad0ac6fd54e468fb674e7109",
+    "provenance.json": "fc85afa967c019ee2b101f0c5a6d62054ce43a07248ed8fe71dc283db759d793"
+  }
+}

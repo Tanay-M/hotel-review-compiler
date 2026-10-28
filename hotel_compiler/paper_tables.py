@@ -23,7 +23,7 @@ def paper_tables(batch: BatchResult, report: dict) -> dict[str, bytes]:
     aggregation = report["aggregation"]
     counts = aggregation["coverage"]["counts"]
     tables = {"reviews.csv": batch_csv_bytes(batch), "aspects.csv": batch_csv_bytes(batch, "aspects")}
-    if batch.method == "hybrid":
+    if batch.method in {"hybrid", "hybrid_neural", "hybrid_routed"}:
         evidence_rows = []
         for row in batch.rows:
             if not row.analysis:
@@ -105,6 +105,56 @@ def paper_tables(batch: BatchResult, report: dict) -> dict[str, bytes]:
         "Record dataset provenance, annotation protocol, model/rule version, limits, hardware, repeated timing methods, and limitations.\n"
         "The ZIP contains no JSON and does not draft or submit a paper.\n"
     ).encode("utf-8")
+    if batch.method == 'hybrid_neural':
+        from .web_neural import recovery_summary
+        summary = recovery_summary(batch)
+        rows = []
+        for row in batch.rows:
+            if not row.analysis: continue
+            for a in row.analysis.recovery.attempts:
+                p = a.probabilities or {}
+                rows.append([row.row_id, row.source.ordinal, a.record_index, a.category, a.aspect,
+                             a.context, a.start, a.end, a.decision, a.reason, a.model_label,
+                             p.get('Negative'), p.get('Objective'), p.get('Positive'), a.polarity_index,
+                             row.analysis.recovery.model_id])
+        tables['neural_decisions.csv'] = _csv(['row_id', 'row_number', 'record_index', 'category',
+            'aspect', 'context', 'start', 'end', 'decision', 'reason', 'model_label',
+            'negative_probability', 'objective_probability', 'positive_probability',
+            'model_polarity_index', 'model_id'], rows)
+        tables['neural_summary.csv'] = _csv(['field', 'value'],
+            [[key, summary[key]] for key in ('model_id', 'assisted_reviews', 'added_opinions',
+                'eligible_contexts', 'abstained_contexts', 'model_errors', 'not_eligible_contexts')] +
+            [['acceptance_policy', str(summary['policy'])],
+             ['scope', 'Original lexical aggregates retained. Neural additions are separate predictions, not measured accuracy.']])
+        tables['README.txt'] += (
+            '\nNEURAL RECOVERY: original hybrid statuses, scores and aggregate tables are unchanged.\n'
+            'Additional accepted opinions and the combined label are separate columns in reviews.csv.\n'
+            'neural_decisions.csv records every unscored candidate, probability and abstention.\n'
+            'Model probabilities/indices are not lexical sentiment scores or strong/weak labels.\n'
+            'neural_assisted is not complete, and recovery counts are not accuracy.\n'
+        ).encode('utf-8')
+    if batch.method == 'hybrid_routed':
+        rows = []
+        for row in batch.rows:
+            if not row.analysis: continue
+            for d in row.analysis.routed.decisions:
+                p = d['probabilities']
+                rows.append([row.row_id, row.source.ordinal, d['sentence'], d['category'], d['context'],
+                    d['start'], d['end'], d['label'], d['accepted'], d['in_scope'], d['reason'],
+                    *[p[s] for s in ('Absent', 'Negative', 'Neutral/Mixed', 'Positive')], d['model_direction_index']])
+        tables['independent_neural_decisions.csv'] = _csv(['row_id', 'row_number', 'sentence', 'category', 'context',
+            'start', 'end', 'predicted_label', 'accepted', 'in_scope', 'reason', 'p_absent', 'p_negative',
+            'p_neutral_mixed', 'p_positive', 'model_direction_index'], rows)
+        tables['README.txt'] += (
+            '\nINDEPENDENT ROUTING: Partial/Unsupported reviews are reanalyzed from ALL original sentences.\n'
+            'Neural predictions replace the selected review analysis, not append to hybrid opinions.\n'
+            'Legacy aggregate tables remain original hybrid comparison evidence. See reviews.csv neural columns.\n'
+            'The learned category-polarity model pools Staff under Service; Facilities maps Building/Business.\n'
+            'Neutral/Mixed is the source merged label. No five-strength or neutral-intensity ground truth is claimed.\n'
+            'model_direction_index=(Ppos-Pneg)/(Ppos+Pneg); it is not a calibrated sentiment rating.\n'
+            'Review index averages available sentence indices by category, then categories equally; any accepted ambiguous category makes it unavailable.\n'
+            'Reanalyzed does not mean completely understood or verified correct.\n'
+        ).encode('utf-8')
     return tables
 
 

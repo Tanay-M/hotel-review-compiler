@@ -18,10 +18,12 @@ from docx.shared import Inches, Mm, Pt, RGBColor
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'output'/'paper'
-RUN=ROOT/'output'/'experiments'/'2026-10-21'/'hybrid-vocabulary-paper'
+RUN=ROOT/'output'/'experiments'/'2026-10-21'/'expanded-sentiwordnet-release'
 VOCAB=ROOT/'output/experiments/2026-10-18/booking-vocabulary/report'
 ASSETS=OUT/'assets'
 NAME='Team_17_IEEE_Conference_Paper'
+DL=ROOT/'output/neural/2026-10-23-dl-pair-evaluation'
+DL_RUN=ROOT/'output/neural/2026-10-23-dl-pair-human-v1'
 
 
 def read_csv(path):
@@ -55,9 +57,11 @@ def bibliography():
       5:'T. De Smedt and W. Daelemans, “Pattern for Python,” J. Mach. Learn. Res., vol. 13, pp. 2063–2067, 2012.',
       29:'W. Zhang, X. Li, Y. Deng, L. Bing, and W. Lam, “A survey on aspect-based sentiment analysis: Tasks, methods, and challenges,” IEEE Trans. Knowl. Data Eng., vol. 35, no. 11, pp. 11019–11038, 2023, doi: 10.1109/TKDE.2022.3230975.',
       30:'S. U. S. Chebolu, F. Dernoncourt, N. Lipka, and T. Solorio, “Survey of aspect-based sentiment analysis datasets,” arXiv preprint arXiv:2204.05232, 2022. [Online]. Available: https://arxiv.org/abs/2204.05232',
-      31:'TextBlob contributors, “TextBlob 0.19.0 documentation,” accessed Oct. 15, 2026. [Online]. Available: https://textblob.readthedocs.io/en/stable/',
-      32:'J. Liu, “515K hotel reviews data in Europe,” Kaggle dataset, accessed Oct. 15, 2026. [Online]. Available: https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe',
-      33:'Crawlfeeds, “Booking Italy hotel reviews,” user-supplied CSV export, received Oct. 18, 2026. Source file and SHA-256 retained in the project provenance archive.',
+      31:'W. Wang, F. Wei, L. Dong, H. Bao, N. Yang, and M. Zhou, “MiniLM: Deep self-attention distillation for task-agnostic compression of pre-trained transformers,” arXiv preprint arXiv:2002.10957, 2020. [Online]. Available: https://arxiv.org/abs/2002.10957',
+      32:'S. M. Jiménez Zafra, G. Berardi, A. Esuli, D. Marcheggiani, M. T. Martín-Valdivia, and A. Moreo Fernández, “A multi-lingual annotated dataset for aspect-oriented opinion mining,” in Proc. EMNLP, 2015, pp. 2533–2538, doi: 10.18653/v1/D15-1302.',
+      33:'TextBlob contributors, “TextBlob 0.19.0 documentation,” accessed Oct. 15, 2026. [Online]. Available: https://textblob.readthedocs.io/en/stable/',
+      34:'J. Liu, “515K hotel reviews data in Europe,” Kaggle dataset, accessed Oct. 15, 2026. [Online]. Available: https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe',
+      35:'Crawlfeeds, “Booking Hotel Reviews Dataset: Booking Italy hotel reviews,” Hugging Face dataset, CC BY-NC 4.0, accessed Oct. 21, 2026. [Online]. Available: https://huggingface.co/datasets/crawlfeeds/Booking-Hotel-Reviews-Dataset',
     }
     for number,identifier in ACL_ORDER.items():
         source=json.loads((OUT/'sources'/f'{identifier}.json').read_text(encoding='utf-8'));m=source['metadata']
@@ -78,73 +82,83 @@ def bibliography():
         if 'citation_doi' in m:text+=', doi: '+m['citation_doi'][0]
         else:text+='. [Online]. Available: '+source['url']
         refs[number]=text.rstrip('.')+'.'
-    assert set(refs)==set(range(1,34))
+    assert set(refs)==set(range(1,36))
     return refs
 
 
 ALGORITHMS={
-1:('Source preserving preprocessing',[
- 'Input: review text or CSV records; size limits',
- 'Output: retained rows, original text, validation issues',
- 'Decode UTF-8; map serial ID and review fields.',
- 'For each record r:',
- '    Retain row identity and exact original review.',
- '    Check headers, field count, blank text and length.',
- '    Record duplicate flags without dropping r.',
- '    If invalid: preserve r with its validation issues.',
- '    Else: send the original review to both methods.',
- 'Return every submitted row and its evidence.'
+1:('Preprocessing and Validation',[
+ 'Input: data X; limits Λ',
+ 'Output: records R',
+ 'R ← ∅',
+ 'for each r ∈ Decode(X) do',
+ '    (id, x) ← Extract(r)',
+ '    d ← Validate(r, Λ)',
+ '    b ← IsDuplicate(x, R)',
+ '    R ← R ∪ {(id, x, d, b)}',
+ 'end for',
+ 'return R'
 ]),
-2:('Independent grammatical aspect attachment',[
- 'Input: original review x; merged aspect dictionary A',
- 'Output: aspect contexts C and linguistic diagnostics',
- 'Expand contractions in a source-mapped working copy.',
- 'Run PatternParser; retain POS and phrase chunks.',
- 'Longest-match A; split contrasts and predicates.',
- 'For each segment s:',
- '    Find adjectives and lexical opinion candidates.',
- '    Exclude Price/Location topics; retain diagnostics.',
- '    Attach attributive opinions forward to nouns.',
- '    Attach predicates backward; verb opinions to objects.',
- '    Share coordinated targets only under valid patterns.',
- '    Inherit only safe shared or unique pronoun targets.',
- '    Retain unresolved predicates without inventing scores.',
- '    Emit original contexts, target spans and rule names.',
- 'Return C and all unresolved/scope diagnostics.'
+2:('Aspect–Opinion Extraction',[
+ 'Input: review x',
+ 'Output: candidates Cₛ, Cₕ',
+ 'T ← TokenizeAndMatch(x)',
+ 'A ← ParseAndRecover(T)',
+ 'Cₛ ← ResolveTargets(A)',
+ 'P ← PatternParser(x)',
+ 'Q ← SegmentAndMatch(P)',
+ 'Cₕ ← AttachOpinions(Q)',
+ 'return Cₛ, Cₕ'
 ]),
-3:('Evidence aware hybrid sentiment',[
- 'Input: aspect context x, category c, weight w = 0.5',
- 'Output: native/effective evidence, fusion L and final H',
- 'Run native VADER(x) and PatternAnalyzer(x); retain both.',
- 'If either fails: return unavailable with component error.',
- 'Set x* = x; find reviewed lexical aliases allowed for c.',
- 'Replace native-unknown matches in scoring copy x* only.',
- 'If x* differs: rescore both; preserve source-span matches.',
- 'If rescoring fails: return unavailable with component error.',
- 'Determine lexical-evidence flags eV and eT.',
- 'If both flags: L = w*V.compound + (1-w)*T.polarity.',
- 'Else if one flag: L = that supported component score.',
- 'Else: L = unavailable.',
- 'H = L; find applicable category-context rules.',
- 'If rule signs agree: H = first configured rule score.',
- 'Retain x, x*, native/effective V, T, L, H and rule.',
- 'Retain assessments and subjectivity; do not infer confidence.',
- 'Assign descriptive polarity and strength; return evidence.'
+3:('Sentiment Scoring',[
+ 'Input: candidates Cₛ, Cₕ',
+ 'Output: scored opinions Oₛ, Oₕ',
+ 'Oₛ ← ∅; Oₕ ← ∅',
+ 'for each c ∈ Cₛ do',
+ '    (P, N) ← SenseScores(c)',
+ '    D ← DomainRule(c, P − N)',
+ '    s ← clip(D × Degree(c) × Negation(c))',
+ '    Oₛ[c] ← (s, Band(s))',
+ 'end for',
+ 'for each c ∈ Cₕ do',
+ '    x* ← AliasCopy(c)',
+ '    (V, T, eV, eT) ← ScoreBoth(x*)',
+ '    f ← Fuse(V, T, eV, eT)',
+ '    s ← ContextRule(c, f)',
+ '    Oₕ[c] ← (s, Band(s))',
+ 'end for',
+ 'return Oₛ, Oₕ'
 ]),
-4:('Review synthesis and comparable evaluation',[
- 'Input: each method’s opinions and optional human labels',
- 'Output: review rows, traces, metrics and paper artifacts',
- 'For each method and review independently:',
- '    Preserve opinions, missing scores and diagnostics.',
- '    Set Mixed when positive and negative coexist.',
- '    Compute mean only under the method’s score policy.',
- '    Keep whole-text sentiment separate from aspect mean.',
- 'Export one review row and separate method opinion rows.',
- 'If gold labels exist: apply the declared category mapping.',
- '    Count missing/Mixed classification cases as errors.',
- '    Compute accuracy, class F1 and coarse tuple metrics.',
- 'Else: export coverage without accuracy claims.',
- 'Save source/code hashes, environment, tables and figures.'
+4:('Aggregation and Evaluation',[
+ 'Input: opinions O; diagnostics Δ; optional gold G',
+ 'Output: results R; metrics M',
+ 'R ← ∅',
+ 'for each method m and review i do',
+ '    S ← AvailableScores(O[m,i])',
+ '    μ ← ReviewMean(O[m,i], m)',
+ '    y ← Mixed if BothSigns(S) else Band(μ)',
+ '    q ← Status(O[m,i], Δ[m,i])',
+ '    R[m,i] ← (μ, y, q)',
+ 'end for',
+ 'M ← Evaluate(O, G) if G exists else Coverage(R)',
+ 'Export(R, O, M)',
+ 'return R, M'
+]),
+5:('Independent Deep Learning Reanalysis',[
+ 'Input: review x; hybrid H; model θ; thresholds τ',
+ 'Output: selected result Y',
+ 'if H.status ∉ {Partial, Unsupported}: return H',
+ 'Y ← ∅',
+ 'for each u ∈ Sentences(x) do',
+ '    if MaxPairLength(u) > 160: continue',
+ '    for each c ∈ Categories do',
+ '        p ← Softmax(f_θ(u, q_c))',
+ '        y ← ArgMax(p)',
+ '        if InScope(c) ∧ y ≠ Absent ∧ p[y] ≥ τ[c]:',
+ '            Y ← Y ∪ {(c, y, Span(u), p)}',
+ '    end for',
+ 'end for',
+ 'return Aggregate(Y) if Y ≠ ∅ else Abstain'
 ])}
 
 
@@ -184,30 +198,67 @@ def setup(doc):
         if ppr is not None:
             for el in list(ppr):
                 if el.tag==qn('w:pBdr'):ppr.remove(el)
-    doc.core_properties.title='An Auditable Grammar Assisted Hybrid for Aspect Sentiment Analysis of Hotel Reviews'
+    doc.core_properties.title='Auditable Aspect Sentiment Analysis of Hotel Reviews with Selective Deep Learning Reanalysis'
     doc.core_properties.author='Tanay Mohta and Aditya Rawat'
     doc.core_properties.subject='Compiler design project and development evaluation'
-    doc.core_properties.keywords='hotel reviews, aspect sentiment, SentiWordNet, VADER, TextBlob'
+    doc.core_properties.keywords='hotel reviews, aspect sentiment, SentiWordNet, VADER, TextBlob, MiniLM, deep learning'
     settings=doc.settings.element
     compat=OxmlElement('w:doNotHyphenateCaps');settings.append(compat)
 
 
 def paragraph(doc,text='',**options):
-    p=doc.add_paragraph();p.add_run(text)
+    p=doc.add_paragraph();append_notation(p,text)
     for run in p.runs:font(run)
     for k,v in options.items():setattr(p.paragraph_format,k,v)
     return p
 
 
+def append_notation(p,text):
+    """Typeset the small set of inline DL indices with editable Word runs."""
+    symbols={'q_c':('q','c'),'tau_c':('τ','c'),'y_j':('y','j'),'w_y':('w','y'),'f_θ':('f','θ')}
+    for part in re.split(r'(q_c|tau_c|y_j|w_y|f_θ)',text):
+        if part in symbols:
+            base,index=symbols[part];font(p.add_run(base));r=p.add_run(index);font(r);r.font.subscript=True
+        elif part:p.add_run(part)
+
+
 def algorithm(doc,number):
     title,lines=ALGORITHMS[number]
-    p=paragraph(doc,f'Algorithm {number}  {title}',first_line_indent=Pt(0),space_before=Pt(6),space_after=Pt(3),keep_with_next=True)
+    p=paragraph(doc,f'Algorithm {number}  {title}',first_line_indent=Pt(0),space_before=Pt(4),space_after=Pt(2),keep_with_next=True)
     for r in p.runs:font(r,8.5,True)
-    for i,line in enumerate(lines,1):
-        p=paragraph(doc,f'{i:02d}  '+line,first_line_indent=Pt(0),space_after=Pt(0),keep_with_next=i<len(lines),keep_together=True)
-        p.paragraph_format.line_spacing=Pt(9.3)
-        for r in p.runs:font(r,8.3)
-    p.paragraph_format.space_after=Pt(6)
+    def rule(p,side):
+        borders=p._p.get_or_add_pPr().find(qn('w:pBdr'))
+        if borders is None:
+            borders=OxmlElement('w:pBdr');p._p.get_or_add_pPr().append(borders)
+        edge=OxmlElement('w:'+side)
+        for key,value in [('val','single'),('sz','4'),('space','1'),('color','000000')]:
+            edge.set(qn('w:'+key),value)
+        borders.append(edge)
+    rule(p,'top');rule(p,'bottom')
+    step=0
+    for i,line in enumerate(lines):
+        label=line.startswith(('Input:','Output:'))
+        if not label:step+=1
+        p=paragraph(doc,first_line_indent=Pt(0),space_after=Pt(0),keep_with_next=i<len(lines)-1,keep_together=True)
+        p.paragraph_format.line_spacing=Pt(9.5)
+        if label:
+            key,value=line.split(':',1)
+            font(p.add_run(key+':'),8.5,True)
+            font(p.add_run(value),8.5)
+        else:
+            p.paragraph_format.tab_stops.add_tab_stop(Pt(15))
+            font(p.add_run(f'{step}:\t'),8.5)
+            content=line.lstrip();indent=(len(line)-len(content))//4
+            font(p.add_run('    '*indent),8.5)
+            match=re.match(r'^(for each|end for|return)\b',content)
+            if match:
+                font(p.add_run(match.group()),8.5,True)
+                font(p.add_run(content[match.end():]),8.5)
+            else:
+                append_notation(p,content)
+                for r in p.runs:font(r,8.5)
+    rule(p,'bottom')
+    p.paragraph_format.space_after=Pt(4)
 
 
 def image(doc,name,caption):
@@ -217,26 +268,72 @@ def image(doc,name,caption):
     p=doc.add_paragraph(caption,'Caption');p.alignment=WD_ALIGN_PARAGRAPH.JUSTIFY;p.paragraph_format.keep_together=True
 
 
+
+def wide_architecture(doc,name,caption):
+    # Full detailed diagram spans both columns within Proposed Systems.
+    section=doc.add_section(WD_SECTION_START.CONTINUOUS)
+    section._sectPr.find(qn('w:cols')).set(qn('w:num'),'1')
+    p=doc.add_paragraph();p.alignment=WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.first_line_indent=Pt(0);p.paragraph_format.space_after=Pt(0)
+    p.paragraph_format.keep_with_next=True
+    run=p.add_run();run.add_picture(str(ASSETS/f'{name}.png'),width=Inches(7.1))
+    run._r.xpath('.//wp:docPr')[0].set('descr',caption)
+    p=doc.add_paragraph(caption,'Caption');p.alignment=WD_ALIGN_PARAGRAPH.JUSTIFY
+    section=doc.add_section(WD_SECTION_START.CONTINUOUS)
+    cols=section._sectPr.find(qn('w:cols'));cols.set(qn('w:num'),'2');cols.set(qn('w:space'),'360')
+
+
 def table(doc,key):
     metrics=read_csv(RUN/'semeval-development'/'metrics.csv')
     classes=read_csv(RUN/'semeval-development'/'per_class_metrics.csv')
     if key=='datasets':
         caption='TABLE I\nEXPERIMENTAL COHORTS AND AVAILABLE LABELS'
         headers=['Cohort','Size','Label and role']
-        rows=[['Booking curated','100 reviews','No aspect gold; supported-language demo'],
-              ['Booking random','200 reviews','No aspect gold; coverage and runtime'],
-              ['SemEval Hotels','30 reviews\n266 sentences','Human opinions; 148 mapped classification cases'],
-              ['Booking Italy','4,367 rows\n3,102 bodies','No aspect gold; vocabulary development']]
+        rows=[['SemEval Hotels','30 reviews\n266 sentences','Human opinions; 148 mapped classification cases'],
+              ['Booking random','200 reviews','No aspect gold; processing coverage'],
+              ['Booking Italy','3,089 reviews','Cleaned from 4,367 rows; no aspect gold'],
+              ['Italy demo subset','500 reviews','Random subset of the 3,089; no aspect gold'],
+              ['Trip-MA train','2,040 segments','Human categories/polarity; 180 reviews; 2,038 usable'],
+              ['Trip-MA validation','602 segments','42 reviews; checkpoint/threshold selection'],
+              ['Trip-MA test','1,474 segments','111 reviews; follow-up mapped pair evaluation']]
         widths=[1.02,.73,1.70]
     elif key=='vocabulary':
-        caption='TABLE II\nVOCABULARY DEVELOPMENT ON BOOKING ITALY'
-        headers=['Measure','Before','Expanded'];rows=[]
-        data={r['measure']:r for r in read_csv(VOCAB/'coverage_comparison.csv')}
-        for key_,label in [('Aspect phrases','Aspect phrases'),('Reviewed lexical forms','Reviewed lexical forms'),('Reviews with at least one scored aspect','Bodies with scored aspects'),('Complete processing','Complete bodies'),('Partial processing','Partial bodies'),('Unsupported processing','Unsupported bodies'),('Scored contexts','Scored contexts'),('Adjective occurrences without lexical lookup support','Unsupported adjective occurrences')]:
-            row=data[key_];rows.append([label,f'{int(row["before"]):,}',f'{int(row["after"]):,}'])
-        widths=[1.65,.90,.90]
+        caption='TABLE II\nPROCESSING COVERAGE ON CLEANED BOOKING ITALY'
+        headers=['Cohort / outcome','SentiWordNet','Hybrid'];rows=[]
+        for subdir, label in [('booking-cleaned500','500'),('booking-all','3,089')]:
+            data=read_csv(RUN/subdir/'coverage.csv')
+            systems=list(dict.fromkeys(r['system'] for r in data))
+            for status, title in [('complete','Complete'),('partial','Partial'),('unsupported','Unsupported')]:
+                rows.append([f'{label}: {title}',*[str(next(r['reviews'] for r in data if r['system']==sys and r['status']==status)) for sys in systems]])
+            vals=[]
+            for sys in systems:
+                group=[r for r in data if r['system']==sys]
+                n=int(group[0]['submitted'])
+                scored=sum(int(r['reviews']) for r in group if r['status'] in {'complete','partial'})
+                vals.append(f'{scored:,} ({100*scored/n:.2f}%)')
+            rows.append([f'{label}: Any scored',*vals])
+        widths=[1.35,1.05,1.05]
+    elif key=='compact_coverage':
+        caption='TABLE II\nREAL REVIEW PROCESSING OUTCOMES'
+        headers=['Cohort / method','C','P','U'];rows=[]
+        for subdir,label in [('random200','Random 200'),('booking-cleaned500','Italy 500'),('booking-all','Italy 3,089')]:
+            data=read_csv(RUN/subdir/'coverage.csv')
+            systems=list(dict.fromkeys(r['system'] for r in data))
+            for sys,name in zip(systems,['SentiWordNet','Hybrid']):
+                rows.append([label+' / '+name,*[next(r['reviews'] for r in data if r['system']==sys and r['status']==status) for status in ('complete','partial','unsupported')]])
+        widths=[1.90,.50,.55,.50]
+    elif key=='compact_lexical':
+        caption='TABLE III\nMAPPED SEMEVAL DEVELOPMENT PERFORMANCE'
+        headers=['Measure','SentiWordNet','Hybrid'];s,h=metrics
+        rows=[['Correct / eligible',f'{s["correct"]}/148',f'{h["correct"]}/148'],
+              ['Accuracy (%)',f'{100*float(s["accuracy"]):.2f}',f'{100*float(h["accuracy"]):.2f}'],
+              ['Coverage (%)',f'{100*float(s["coverage"]):.2f}',f'{100*float(h["coverage"]):.2f}'],
+              ['Macro-F1',f'{float(s["macro_f1"]):.4f}',f'{float(h["macro_f1"]):.4f}']]
+        for label,k in [('Pair precision','tuple_precision'),('Pair recall','tuple_recall'),('Pair-F1','tuple_f1')]:
+            rows.append([label,f'{float(s[k]):.4f}',f'{float(h[k]):.4f}'])
+        widths=[1.45,1,1]
     elif key=='metrics':
-        caption='TABLE III\nEND TO END DEVELOPMENT COMPARISON'
+        caption='TABLE IV\nSEMEVAL DEVELOPMENT COMPARISON'
         headers=['Measure','SentiWordNet','Hybrid']
         s,h=metrics
         pct=lambda v:f'{100*float(v):.2f}%'
@@ -249,12 +346,42 @@ def table(doc,key):
         for label,k in [('Tuple precision','tuple_precision'),('Tuple recall','tuple_recall'),('Tuple-F1','tuple_f1')]:rows.append([label,f'{float(s[k]):.4f}',f'{float(h[k]):.4f}'])
         widths=[1.45,1,1]
     elif key=='classes':
-        caption='TABLE IV\nCLASS SUPPORT AND F1 ON THE MAPPED SCOPE'
+        caption='TABLE V\nCLASS SUPPORT AND F1 ON THE SEMEVAL MAPPING'
         headers=['Class','Support','SWN F1','Hybrid F1'];rows=[]
         for label in ['Negative','Neutral','Positive']:
             s,h=[r for r in classes if r['label']==label]
             rows.append([label,s['support'],f'{float(s["f1"]):.4f}',f'{float(h["f1"]):.4f}'])
         widths=[.88,.56,1.0,1.01]
+    elif key=='dl_training':
+        caption='TABLE III\nDEEP LEARNING TRAINING CONFIGURATION'
+        headers=['Parameter','Value']
+        settings=json.loads((DL_RUN/'frozen_settings.json').read_text())
+        rows=[['Usable segments / pairs',f'{settings["admitted_training_segments"]:,} / {settings["training_pairs"]:,}'],
+              ['Epochs / selected epoch',f'{settings["epochs"]} / {settings["best_epoch"]}'],
+              ['Batch / accumulation','8 / 2 (effective 16)'],
+              ['Encoder / head learning rate','2 × 10⁻⁵ / 2 × 10⁻⁴'],
+              ['Optimizer / decay','AdamW / 0.01'],
+              ['Schedule / clipping','Linear, 10% warmup / 1.0'],
+              ['Max pair / seed','160 tokens / 172026'],
+              ['Training device','RTX 2050; mixed precision'],
+              ['Encoder / head updates','Both trained; 3,057 steps']]
+        widths=[1.65,1.8]
+    elif key=='dl_metrics':
+        caption='TABLE IV\nTRIP-MA CATEGORY POLARITY PAIR PERFORMANCE'
+        headers=['Scope / method','P (%)','R (%)','F1 (%)','Exact (%)'];rows=[]
+        for r in read_csv(DL/'metrics.csv'):
+            scope='All' if r['scope']=='all_test' else 'Unresolved'
+            method='Hybrid' if r['system']=='Hybrid' else 'Hybrid + DL'
+            rows.append([scope+' / '+method,*[f'{100*float(r[k]):.2f}' for k in ('precision','recall','pair_micro_f1','exact_segment_match')]])
+        widths=[1.17,.53,.53,.57,.65]
+    elif key=='dl_categories':
+        caption='TABLE V\nMAPPED TRIP-MA CATEGORY PERFORMANCE'
+        headers=['Category','Gold pairs','Hybrid F1','DL route F1'];rows=[]
+        data=read_csv(DL/'per_category_comparison.csv')
+        for c in ['Room','Cleanliness','Service','Food','Facilities']:
+            a,b=[r for r in data if r['category']==c]
+            rows.append([c,a['gold_pairs'],f'{float(a["pair_micro_f1"]):.4f}',f'{float(b["pair_micro_f1"]):.4f}'])
+        widths=[1.0,.65,.85,.95]
     else:raise ValueError(key)
     p=paragraph(doc,caption,first_line_indent=Pt(0),space_before=Pt(6),space_after=Pt(3),keep_with_next=True)
     p.alignment=WD_ALIGN_PARAGRAPH.CENTER
@@ -305,6 +432,13 @@ def frac(numerator,denominator):
     el.extend([n,d]);return el
 
 
+def summation(items):
+    n=OxmlElement('m:nary');pr=OxmlElement('m:naryPr');ch=OxmlElement('m:chr');ch.set(qn('m:val'),'∑');pr.append(ch);n.append(pr)
+    low=OxmlElement('m:sub');low.append(mr('j = 1'));high=OxmlElement('m:sup');high.append(mr('B'));body=OxmlElement('m:e')
+    for item in items:body.append(item)
+    n.extend([low,high,body]);return n
+
+
 def equation(doc,key):
     p=doc.add_paragraph();p.paragraph_format.first_line_indent=Pt(0);p.paragraph_format.space_before=Pt(5);p.paragraph_format.space_after=Pt(5);p.alignment=WD_ALIGN_PARAGRAPH.CENTER
     math=OxmlElement('m:oMath')
@@ -315,8 +449,17 @@ def equation(doc,key):
         n=OxmlElement('m:nary');pr=OxmlElement('m:naryPr');ch=OxmlElement('m:chr');ch.set(qn('m:val'),'∑');pr.append(ch);n.append(pr)
         for tag,content in [('sub',mr('j = 1')),('sup',sub('m','i')),('e',sub('H','ij'))]:node=OxmlElement('m:'+tag);node.append(content);n.append(node)
         items=[sub('R','i'),mr(' = '),frac([mr('1')],[sub('m','i')]),n];number=3
-    else:
-        items=[mr('Accuracy = '),frac([mr('C')],[mr('N')]),mr('   Coverage = '),frac([mr('S')],[mr('N')])];number=4
+    elif key=='dl_prob':
+        items=[sub('p','c'),mr(' = softmax('),sub('f','θ'),mr('(u, '),sub('q','c'),mr('))')];number=4
+    elif key=='dl_loss':
+        numerator=[summation([sub('w','yⱼ'),mr(' log '),sub('p','j,yⱼ')])]
+        denominator=[summation([sub('w','yⱼ')])]
+        items=[mr('L = −'),frac(numerator,denominator)];number=5
+    elif key=='dl_direction':
+        items=[sub('d','c'),mr(' = '),frac([sub('p','+'),mr(' − '),sub('p','−')],[sub('p','+'),mr(' + '),sub('p','−')])];number=6
+    elif key=='metrics':
+        items=[mr('Accuracy = '),frac([mr('C')],[mr('N')]),mr('   Coverage = '),frac([mr('S')],[mr('N')])];number=7
+    else:raise ValueError(key)
     for item in items:math.append(item)
     p._p.append(math);run=p.add_run(f'    ({number})');font(run,9)
 
@@ -335,8 +478,11 @@ def build():
     abstract=False;refs=bibliography()
     for block in blocks:
         if block=='## Abstract':abstract=True;continue
+        if block=='## III. Architectural Diagram':continue
         if block.startswith('## '):doc.add_paragraph(block[3:].upper(),'Heading 1');continue
         if block.startswith('### '):doc.add_paragraph(block[4:],'Heading 2');continue
+        if block.startswith('{{WIDEFIG:'):
+            name,caption=block[10:-2].split('|',1);wide_architecture(doc,name,caption);continue
         if block.startswith('{{FIG:'):
             name,caption=block[6:-2].split('|',1);image(doc,name,caption);continue
         if block.startswith('{{ALG:'):algorithm(doc,int(block[6:-2]));continue
@@ -344,7 +490,7 @@ def build():
         if block.startswith('{{EQ:'):equation(doc,block[5:-2]);continue
         if block=='{{REFERENCES}}':
             for number,text in refs.items():
-                p=paragraph(doc,f'[{number}]  {text}',first_line_indent=Inches(-.19),left_indent=Inches(.19),space_after=Pt(2),keep_together=True)
+                p=paragraph(doc,f'[{number}]  {text}',first_line_indent=Inches(-.19),left_indent=Inches(.19),space_after=Pt(1),keep_together=True)
                 p.alignment=WD_ALIGN_PARAGRAPH.JUSTIFY
                 for r in p.runs:font(r,8)
             continue
@@ -373,7 +519,7 @@ def build():
     (OUT/'references.json').write_text(json.dumps({n:refs[n] for n in sorted(refs)},ensure_ascii=False,indent=2),encoding='utf-8')
     (OUT/'manuscript_source.md').write_text(raw.replace('{{REFERENCES}}','\n\n'.join(f'[{n}] {refs[n]}' for n in sorted(refs))),encoding='utf-8')
     print(f'Word manuscript: {path}')
-    print(f'33 references, 4 algorithms, 8 figures, 4 tables; {len(raw.split())} prose/source words before references and algorithms.')
+    print(f'{len(refs)} references, {len(re.findall(r"{{ALG:",raw))} algorithms, {len(re.findall(r"{{(?:WIDE)?FIG:",raw))} figures, {len(re.findall(r"{{TABLE:",raw))} tables; {len(raw.split())} prose/source words before references and algorithms.')
 
 
 if __name__=='__main__':build()

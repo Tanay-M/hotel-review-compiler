@@ -12,6 +12,7 @@ from .batch_models import BatchResult, RowOutcome
 from .csv_input import CSVInput, CSVLimits, read_review_csv
 from .pipeline import analyze_review
 from .sentiwordnet import ResourceError, load_synsets
+from .compiler_profiles import current_profile
 
 
 def analysis_fingerprint() -> str:
@@ -26,6 +27,10 @@ def analysis_fingerprint() -> str:
         digest.update(name.encode("utf-8") + b"\0")
         digest.update(root.joinpath(name).read_bytes())
         digest.update(b"\0")
+    if current_profile() == 'expanded':
+        for name in ('compiler_profiles.py','expanded_parser.py','resources/domain_expanded.json',
+                     'resources/sentiwordnet_expanded.tsv','resources/provenance_expanded.json'):
+            digest.update(name.encode()+b'\0'+root.joinpath(name).read_bytes()+b'\0')
     return digest.hexdigest()
 
 
@@ -62,7 +67,8 @@ def analyze_batch(
         rows.append(outcome)
         if progress:
             progress(len(rows), len(source.rows))
-    return BatchResult(identifier, created_at, fingerprint, source, tuple(rows), round(perf_counter() - started, 6))
+    return BatchResult(identifier, created_at, fingerprint, source, tuple(rows), round(perf_counter() - started, 6),
+                       method='sentiwordnet' if current_profile()=='expanded' else 'sentiwordnet_original')
 
 
 def analyze_csv(

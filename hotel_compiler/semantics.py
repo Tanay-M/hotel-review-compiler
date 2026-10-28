@@ -14,7 +14,7 @@ def analyze_semantics(
     for index, clause in enumerate(ast.clauses):
         if clause.connector not in {"and", "but", "however"}:
             previous_subject = None
-        inherited = clause.subject is None
+        inherited = clause.subject is None or clause.form in {'resolved_pronoun_predicate','expanded_shared_predicate'}
         subject = clause.subject or previous_subject
         if subject is None:
             diagnostics.append(Diagnostic(

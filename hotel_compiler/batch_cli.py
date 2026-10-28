@@ -8,6 +8,7 @@ from .csv_input import CSVLimits
 from .exports import export_batch
 from .reporting import build_report, render_report
 from .sentiwordnet import ResourceError
+from .compiler_profiles import compiler_profile
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -20,6 +21,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--max-rows", type=int, default=1_000, help="Maximum data rows (default: 1000).")
     parser.add_argument("--progress", action="store_true", help="Print progress every 25 rows and at completion.")
     parser.add_argument("--include-partial", action="store_true", help="Also display a separate recognized-opinions view including partial reviews; primary scope remains complete reviews.")
+    parser.add_argument('--compiler-profile',choices=['original','expanded'],default='original')
     args = parser.parse_args(argv)
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, "reconfigure"):
@@ -30,11 +32,12 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Processed {done}/{total} reviews", file=sys.stderr)
 
     try:
-        batch = analyze_csv(
-            args.csv_file, text_column=args.text_column, id_column=args.id_column,
-            limits=CSVLimits(max_rows=args.max_rows), batch_id=args.batch_id,
-            progress=report_progress if args.progress else None,
-        )
+        with compiler_profile(args.compiler_profile):
+            batch = analyze_csv(
+                args.csv_file, text_column=args.text_column, id_column=args.id_column,
+                limits=CSVLimits(max_rows=args.max_rows), batch_id=args.batch_id,
+                progress=report_progress if args.progress else None,
+            )
         paths = export_batch(batch, args.output_dir, include_partial_report=args.include_partial)
     except FileExistsError:
         print("Error: An export file already exists. Choose a different --output-dir; existing results were preserved.", file=sys.stderr)

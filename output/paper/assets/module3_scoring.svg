@@ -4,7 +4,7 @@
 <text x="147" y="11" font-family="Times New Roman,serif" font-size="6.7" text-anchor="start" >Project implementation</text>
 <text x="14" y="27" font-family="Times New Roman,serif" font-size="7.3" text-anchor="start" font-style="italic">Separate Module 2 paths</text>
 <rect x="3" y="38" width="246" height="103" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
-<text x="126" y="49" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Baseline Semantics and Lookup</text>
+<text x="126" y="49" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">SentiWordNet Semantic Scoring</text>
 <rect x="14" y="57" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
 <text x="46.0" y="70.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Aspect</text>
 <text x="46.0" y="78.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Binding</text>
@@ -37,7 +37,7 @@
 <polygon points="46,57 47.54242196898808,53.63682672620291 44.45757803101192,53.63682672620291" fill="black"/>
 <polyline points="46,129 46,148" fill="none" stroke="black" stroke-width="0.65"/>
 <polygon points="46,148 47.54242196898808,144.6368267262029 44.45757803101192,144.6368267262029" fill="black"/>
-<text x="52" y="150" font-family="Times New Roman,serif" font-size="6.9" text-anchor="start" font-style="italic">Baseline evidence to Module 4</text>
+<text x="52" y="150" font-family="Times New Roman,serif" font-size="6.9" text-anchor="start" font-style="italic">SentiWordNet evidence to Module 4</text>
 <rect x="3" y="163" width="246" height="147" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
 <text x="126" y="174" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Hybrid Attachment and Scoring</text>
 <rect x="14" y="182" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />

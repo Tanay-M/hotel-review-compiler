@@ -1,28 +1,88 @@
 {
-  "updated": "2026-10-21",
-  "pages": 9,
-  "research_works": 30,
-  "total_references": 33,
-  "pseudocode_algorithms": 4,
-  "architecture_diagrams": 4,
-  "measured_charts": 4,
-  "tables": 4,
-  "native_math_equations": 4,
-  "reference_order": "all 33 cited in first-appearance order",
-  "metric_table": "matches saved development metric CSV",
+  "updated": "2026-10-27",
+  "pages": 8,
+  "research_works": 32,
+  "total_references": 35,
+  "pseudocode_algorithms": 5,
+  "architecture_diagrams": 1,
+  "measured_charts": 2,
+  "tables": 5,
+  "native_math_equations": 6,
+  "architecture_revision": "User-approved five-stage architecture spans both columns; datasets use connected data blocks, training and evaluation are separate, and the detailed status-decision section is removed. Only Partial/Unsupported reviews feed DL.",
+  "compression": "Repeated prose and redundant figures removed; original IEEE typography, margins and page size unchanged.",
+  "algorithm_revision": "Five compact pseudocodes; Algorithm 5 implements only Partial/Unsupported whole-review reanalysis with the fine-tuned DL checkpoint.",
+  "algorithm_style_sources": [
+    "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/Editing-Mathematics.pdf",
+    "https://ctan.math.washington.edu/tex-archive/macros/latex2e/contrib/algorithmicx/algorithmicx.pdf"
+  ],
+  "reference_order": "all 35 cited in first-appearance order",
+  "metric_table": "SemEval lexical and Trip-MA DL tables match separate saved metric CSVs",
   "author_details": "two supplied names; affiliations/emails intentionally omitted until supplied",
   "evaluation_scope": "development/exploratory; not untouched holdout",
   "rendering": "Microsoft Word 16 native export plus canonical DOCX skill rasterizer",
-  "visual_review": "all 9 final rendered pages inspected; final reference page balanced",
-  "experiment_root": "output\\experiments\\2026-10-21\\hybrid-vocabulary-paper",
-  "booking_vocabulary_evidence": "output\\experiments\\2026-10-18\\booking-vocabulary\\report",
+  "visual_review": "all 8 final rendered pages inspected; final reference page balanced",
+  "experiment_root": "output\\experiments\\2026-10-21\\expanded-sentiwordnet-release",
+  "comparison": "SentiWordNet versus Hybrid on mapped SemEval; Hybrid versus Hybrid-DL on mapped Trip-MA; no cross-dataset ranking",
+  "dl_checkpoint": "minilm-dl-pair-ed2d9d623f83",
+  "dl_training_settings": "output\\neural\\2026-10-23-dl-pair-human-v1\\frozen_settings.json",
+  "dl_results": [
+    {
+      "scope": "all_test",
+      "system": "Hybrid",
+      "segments": "1474",
+      "gold_pairs": "724",
+      "predicted_pairs": "777",
+      "matched_pairs": "314",
+      "precision": "0.4041184041184041",
+      "recall": "0.43370165745856354",
+      "pair_micro_f1": "0.4183877415056629",
+      "exact_segment_match": "0.6058344640434192"
+    },
+    {
+      "scope": "all_test",
+      "system": "Routed pipeline",
+      "segments": "1474",
+      "gold_pairs": "724",
+      "predicted_pairs": "746",
+      "matched_pairs": "367",
+      "precision": "0.49195710455764075",
+      "recall": "0.5069060773480663",
+      "pair_micro_f1": "0.4993197278911565",
+      "exact_segment_match": "0.6472184531886025"
+    },
+    {
+      "scope": "hybrid_partial_or_unsupported",
+      "system": "Hybrid",
+      "segments": "1113",
+      "gold_pairs": "414",
+      "predicted_pairs": "365",
+      "matched_pairs": "127",
+      "precision": "0.34794520547945207",
+      "recall": "0.30676328502415456",
+      "pair_micro_f1": "0.32605905006418484",
+      "exact_segment_match": "0.6756513926325247"
+    },
+    {
+      "scope": "hybrid_partial_or_unsupported",
+      "system": "Routed pipeline",
+      "segments": "1113",
+      "gold_pairs": "414",
+      "predicted_pairs": "334",
+      "matched_pairs": "180",
+      "precision": "0.5389221556886228",
+      "recall": "0.43478260869565216",
+      "pair_micro_f1": "0.48128342245989303",
+      "exact_segment_match": "0.7304582210242587"
+    }
+  ],
+  "booking_cleaning_manifest": "output/datasets/booking_cleaned/cleaning_manifest.json",
   "results": {
-    "SentiWordNet compiler": {
+    "SentiWordNet compiler (expanded)": {
       "cases": "148",
-      "correct": "42",
-      "accuracy": "0.28378378378378377",
-      "macro_f1": "0.226010101010101",
-      "tuple_f1": "0.4339622641509434"
+      "correct": "72",
+      "accuracy": "0.4864864864864865",
+      "macro_f1": "0.40371103414151416",
+      "tuple_f1": "0.5912408759124088"
     },
     "VADER-TextBlob hybrid": {
       "cases": "148",
@@ -32,7 +92,7 @@
       "tuple_f1": "0.6449511400651465"
     }
   },
-  "prior_version": "archive/pre-vocabulary-update-2026-10-21.zip",
+  "prior_version": "archive/pre-approved-dataset-diagram-2026-10-27.zip",
   "fonts": [
     "BCDEEE+TimesNewRomanPSMT",
     "BCDFEE+TimesNewRomanPSMT",
@@ -44,7 +104,7 @@
     "BCDLEE+CambriaMath"
   ],
   "sha256": {
-    "Team_17_IEEE_Conference_Paper.docx": "881cf1919b95f338b5723df4480447731fff1bc49f8ee2d846b22ece73a907be",
-    "Team_17_IEEE_Conference_Paper.pdf": "f2227a4fb46031fe9e9d8de905defe06f84402cbfdad0f81b9535ee53b3643f9"
+    "Team_17_IEEE_Conference_Paper.docx": "568a677ed0b510fab5245fa998586e2ac54ebbc8f8ef96fb79fbdefb4f62e6ff",
+    "Team_17_IEEE_Conference_Paper.pdf": "b33992ea41e3a73de2dd5d755be77a0a5cc9004b9b5195386606f687434d8999"
   }
 }

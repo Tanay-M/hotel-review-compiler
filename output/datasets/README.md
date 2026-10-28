@@ -1,5 +1,7 @@
 # Real hotel review inputs
 
+**New demo:** [Cleaned Booking reviews](booking_cleaned/README.md) include a 500-review random demo, all 3,089 unique nonblank reviews, four UI-ready parts and source maps. Use **CSV & dashboard → Use real Booking 500** in the website. Neither wording nor selection is altered to make a model succeed.
+
 These are real source reviews, not authored examples. Open CSVs in Excel or upload the two-column inputs using `sr.no` and `review` in the WebUI. See [source attribution](ATTRIBUTION.md) and [dataset licenses/acquisition](../../data/README.md).
 
 | File | Rows | Purpose |

@@ -4,7 +4,7 @@ The core hybrid and its research exports remain unchanged. This adapter exposes
 the existing dashboard record contract and retains every unscored candidate.
 """
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 from datetime import datetime, timezone
 from hashlib import sha256
 from importlib.resources import files
@@ -17,13 +17,33 @@ from .hybrid import HybridAnalysis, HybridAspect, analyze_hybrid_review, default
 from .sentiment_policy import DEFAULT_POLICY
 
 
-METHODS = {"sentiwordnet": "SentiWordNet compiler", "hybrid": "VADER + TextBlob hybrid"}
+METHODS = {"sentiwordnet": "SentiWordNet compiler (expanded)",
+           "sentiwordnet_original": "SentiWordNet compiler (original)",
+           "hybrid": "VADER + TextBlob hybrid",
+           "hybrid_neural": "Hybrid + neural recovery (MiniLM)",
+           "hybrid_routed": "Hybrid → fine-tuned DL reanalysis"}
 
 
 def validate_method(method):
     if not isinstance(method, str) or method not in METHODS:
-        raise ValueError("Choose hybrid or sentiwordnet as the analysis method.")
+        raise ValueError("Choose hybrid_routed, hybrid_neural, hybrid, sentiwordnet, or sentiwordnet_original.")
     return method
+
+
+def analyze_compiler_demo(text, review_id=None, *, method='sentiwordnet'):
+    from .pipeline import analyze_review
+    validate_method(method)
+    if method in {'hybrid', 'hybrid_neural', 'hybrid_routed'}: raise ValueError('Use the hybrid analyzer for hybrid.')
+    return analyze_review(text,review_id,profile='original' if method=='sentiwordnet_original' else 'expanded')
+
+
+def analyze_compiler_batch(source, *, method='sentiwordnet'):
+    from .batch import analyze_batch
+    from .compiler_profiles import compiler_profile
+    validate_method(method)
+    if method in {'hybrid', 'hybrid_neural', 'hybrid_routed'}: raise ValueError('Use the hybrid analyzer for hybrid.')
+    with compiler_profile('original' if method=='sentiwordnet_original' else 'expanded'):
+        return replace(analyze_batch(source),method=method)
 
 
 @dataclass(frozen=True)
@@ -105,13 +125,29 @@ def analyze_hybrid_demo(text, review_id=None, *, engine=None):
     return HybridDemoResult(analyze_hybrid_review(text, review_id, engine=engine))
 
 
-def analyze_hybrid_batch(source):
+def analyze_hybrid_batch(source, *, neural=False, routed=False):
+    if neural and routed: raise ValueError('Select one neural architecture.')
     engine = default_engine()  # Missing shared dependencies fail the upload once.
+    predictor = None
+    if neural:
+        from .web_neural import get_neural_predictor, augment_demo
+        predictor = get_neural_predictor()
+    if routed:
+        from .web_routed import get_model, route_demo
+        predictor = get_model()
     digest = sha256()
     for name in ("hybrid.py", "hybrid_nlp.py", "hybrid_vocabulary.py", "sentiment_policy.py", "web_analysis.py", "resources/hybrid_domain.json", "resources/hybrid_vocabulary.json"):
         digest.update(name.encode() + b"\0" + files("hotel_compiler").joinpath(name).read_bytes())
     digest.update(json.dumps({"versions": engine.versions, "resources": engine.lexicon_hashes,
                               "policy": asdict(engine.policy)}, sort_keys=True).encode())
+    if neural:
+        for name in ('web_neural.py', 'neural_fallback.py', 'neural_data.py'):
+            digest.update(name.encode() + b'\0' + files('hotel_compiler').joinpath(name).read_bytes())
+        digest.update(json.dumps({'model_id': predictor.model_id, 'policy': asdict(predictor.policy)}, sort_keys=True).encode())
+    if routed:
+        for name in ('web_routed.py', 'routed_model.py', 'routed_data.py'):
+            digest.update(name.encode() + b'\0' + files('hotel_compiler').joinpath(name).read_bytes())
+        digest.update(json.dumps({'model_id': predictor.model_id, 'thresholds': predictor.thresholds}, sort_keys=True).encode())
     identifier = str(uuid4())
     created = datetime.now(timezone.utc).isoformat()
     started = perf_counter()
@@ -123,9 +159,13 @@ def analyze_hybrid_batch(source):
         else:
             try:
                 result = analyze_hybrid_demo(row.review_text, row.supplied_review_id or row_id, engine=engine)
+                if neural:
+                    result = augment_demo(result, predictor)
+                if routed:
+                    result = route_demo(result, predictor)
                 outcome = RowOutcome(row_id, row, "analyzed", analysis=result)
             except Exception as error:
                 outcome = RowOutcome(row_id, row, "processing_error", processing_error=f"{type(error).__name__}: {error}")
         rows.append(outcome)
     return BatchResult(identifier, created, digest.hexdigest(), source, tuple(rows),
-                       round(perf_counter() - started, 6), method="hybrid")
+                       round(perf_counter() - started, 6), method="hybrid_routed" if routed else "hybrid_neural" if neural else "hybrid")

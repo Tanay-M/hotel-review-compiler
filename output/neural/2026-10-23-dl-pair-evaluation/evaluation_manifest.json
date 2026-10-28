@@ -1,0 +1,15 @@
+{
+  "model_id": "minilm-dl-pair-ed2d9d623f83",
+  "test_sha256": "d758a0ed7401c6467738b5569af3f5bc416e089933ddb2bab95099deef8b6b69",
+  "route_counts": {
+    "not_routed": 361,
+    "abstained": 830,
+    "reanalyzed": 283
+  },
+  "paired_cluster_bootstrap_f1_difference_95pct": [
+    0.04936166796593594,
+    0.11668093577376376
+  ],
+  "scope": "Trip-MA five mapped categories; Staff pooled Service; Neutral and Mixed merged by source. Entire test includes no-in-scope segments.",
+  "selection": "Checkpoint and thresholds frozen using validation before test predictions. No adjustments made in this evaluator."
+}

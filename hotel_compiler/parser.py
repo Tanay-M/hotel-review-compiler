@@ -242,5 +242,8 @@ class ReviewParser:
 
 
 def parse(tokens: tuple[Token, ...]) -> tuple[ReviewAST, tuple[Diagnostic, ...]]:
+    if load_vocabulary().get('grammar_profile') == 'expanded':
+        from .expanded_parser import parse_expanded
+        return parse_expanded(tokens, ReviewParser)
     return ReviewParser(tokens).parse()
 

@@ -3,14 +3,18 @@
 from .models import AnalysisResult
 from .front_end import compile_frontend, MAX_REVIEW_LENGTH
 from .sentiwordnet import evaluate
+from .compiler_profiles import compiler_profile, current_profile
 
 
-def analyze_review(text: str, review_id: str | None = None) -> AnalysisResult:
+def analyze_review(text: str, review_id: str | None = None, *, profile: str | None = None) -> AnalysisResult:
     """Compile a review into aspect-level records and an inspectable stage trace.
 
     Unsupported language is returned as diagnostics. Bad API argument types,
     oversized inputs, and broken lexical resources are explicit exceptions.
     """
+    if profile is not None:
+        with compiler_profile(profile):
+            return analyze_review(text, review_id)
     front = compile_frontend(text, review_id)
     identifier, tokens, ast, semantics = front.review_id, front.tokens, front.ast, front.semantics
     records = tuple(evaluate(record, identifier) for record in semantics)
@@ -27,5 +31,6 @@ def analyze_review(text: str, review_id: str | None = None) -> AnalysisResult:
         overall = "Neutral"
     else:
         overall = "Unanalyzed"
-    return AnalysisResult(identifier, text, status, overall, records, diagnostics, tokens, ast, semantics)
+    return AnalysisResult(identifier, text, status, overall, records, diagnostics, tokens, ast, semantics,
+                          compiler_profile=current_profile())
 

@@ -1,0 +1,175 @@
+{
+  "purpose": "Local faculty demonstration copies of existing input datasets",
+  "training": "These upload CSVs are demo/development/evaluation inputs, not labelled DL training data. MiniLM training separately uses human-labelled Trip-MA; source text and weights remain local.",
+  "copy_policy": "Byte-identical copies; original files are retained. No review editing or success-based selection.",
+  "files": [
+    {
+      "file": "booking_italy_cleaned_demo_500.csv",
+      "source": "output/datasets/booking_cleaned/booking_italy_cleaned_demo_500.csv",
+      "role": "Real Booking Italy; random cleaned demo subset",
+      "rows": 500,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "89e5e99ca49684067c86a4fbeae1250e66887af7e1f7744166311db5c5442898",
+      "ui_uploadable": true
+    },
+    {
+      "file": "booking_italy_cleaned_part_01.csv",
+      "source": "output/datasets/booking_cleaned/booking_italy_cleaned_part_01.csv",
+      "role": "Real Booking Italy; consecutive part of full cleaned corpus",
+      "rows": 1000,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "e1015d782c4190925a272f1b3779717ec5150065f00632faa5ba948aab13e5f4",
+      "ui_uploadable": true
+    },
+    {
+      "file": "booking_italy_cleaned_part_02.csv",
+      "source": "output/datasets/booking_cleaned/booking_italy_cleaned_part_02.csv",
+      "role": "Real Booking Italy; consecutive part of full cleaned corpus",
+      "rows": 1000,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "6b2ec7f4bcc05faeeded538a49c1da5fd5440a8dae44388cd082aada19d7945d",
+      "ui_uploadable": true
+    },
+    {
+      "file": "booking_italy_cleaned_part_03.csv",
+      "source": "output/datasets/booking_cleaned/booking_italy_cleaned_part_03.csv",
+      "role": "Real Booking Italy; consecutive part of full cleaned corpus",
+      "rows": 1000,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "8c3f07e4eb52e7f39d354897df9a137a08af05eb3b2f8d3c23a95c9b99f038e3",
+      "ui_uploadable": true
+    },
+    {
+      "file": "booking_italy_cleaned_part_04.csv",
+      "source": "output/datasets/booking_cleaned/booking_italy_cleaned_part_04.csv",
+      "role": "Real Booking Italy; consecutive part of full cleaned corpus",
+      "rows": 89,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "7f11205762e355850d03d46b51e4c0df7294a55de27c93d15b6227fc4dc571df",
+      "ui_uploadable": true
+    },
+    {
+      "file": "real_booking_curated_100.csv",
+      "source": "output/datasets/real_hotel_demo_100.csv",
+      "role": "Real older Booking source; intentionally curated demonstration",
+      "rows": 100,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "b93a4f58d3fcc2fb1ae7221287eb68714d36dc84a918e082ca0dbb2357d30f00",
+      "ui_uploadable": true
+    },
+    {
+      "file": "real_booking_random_200.csv",
+      "source": "output/datasets/real_hotel_random_200.csv",
+      "role": "Real older Booking source; random eligible sample",
+      "rows": 200,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "9ac73713d6e9ed3e65706127f4951ae9c9f7b77515b1c3bf1fd3c36bf7778d1a",
+      "ui_uploadable": true
+    },
+    {
+      "file": "semeval_hotel_benchmark_266.csv",
+      "source": "output/datasets/semeval_hotels_266_sentences.csv",
+      "role": "Real benchmark sentences; human annotations remain in original XML",
+      "rows": 266,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "15e77e7f7bd4dbe7f5b9a710f2651c5a0f55fa6755e016e726c679fda022d89c",
+      "ui_uploadable": true
+    },
+    {
+      "file": "synthetic_reviews_100.csv",
+      "source": "examples/hotel_reviews_100.csv",
+      "role": "Authored synthetic examples; not organic reviews",
+      "rows": 100,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "3172b6c07e8265c993fb743fd8b577df4d9f4899906ff9671224ab1e7c9a8e14",
+      "ui_uploadable": true
+    },
+    {
+      "file": "synthetic_bulk_regression.csv",
+      "source": "examples/bulk_demo.csv",
+      "role": "Authored regression examples; includes deliberately invalid rows",
+      "rows": 12,
+      "columns": [
+        "review_id",
+        "review_text"
+      ],
+      "sha256": "61a820d63ed08b10b5253289abdd3691469bac0dbec80372a0d7717cbacd932f",
+      "ui_uploadable": true
+    },
+    {
+      "file": "synthetic_ui_demo_12.csv",
+      "source": "hotel_compiler/web_assets/demo.csv",
+      "role": "Authored UI demo; includes deliberate invalid-input cases",
+      "rows": 12,
+      "columns": [
+        "review_id",
+        "review_text"
+      ],
+      "sha256": "61a820d63ed08b10b5253289abdd3691469bac0dbec80372a0d7717cbacd932f",
+      "ui_uploadable": true
+    },
+    {
+      "file": "synthetic_load_test_100.csv",
+      "source": "output/batches/inputs/demo-100.csv",
+      "role": "Repeated authored cases used for bulk tests",
+      "rows": 100,
+      "columns": [
+        "review_id",
+        "review_text"
+      ],
+      "sha256": "f119929117a21bd2c16caf1e29bc32db19ba1af2bc7be0f7c990c74271e17994",
+      "ui_uploadable": true
+    },
+    {
+      "file": "synthetic_load_test_500.csv",
+      "source": "output/batches/inputs/demo-500.csv",
+      "role": "Repeated authored cases used for bulk tests",
+      "rows": 500,
+      "columns": [
+        "review_id",
+        "review_text"
+      ],
+      "sha256": "ff49e8dcb8bc9a19e80567c5fd5c7f870b9552d6719f444922c5521df836a997",
+      "ui_uploadable": true
+    },
+    {
+      "file": "full_corpus/booking_italy_cleaned_all_3089.csv",
+      "source": "output/datasets/booking_cleaned/booking_italy_cleaned_all.csv",
+      "role": "Same cleaned Italy corpus; exceeds 1000-row UI limit",
+      "rows": 3089,
+      "columns": [
+        "sr.no",
+        "review"
+      ],
+      "sha256": "d571f2ba6217e527a8142cae61858b22dc79c890a8144768faa3d8e01339465e",
+      "ui_uploadable": false
+    }
+  ]
+}

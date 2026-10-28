@@ -4,7 +4,7 @@
 <text x="147" y="11" font-family="Times New Roman,serif" font-size="6.7" text-anchor="start" >Project implementation</text>
 <text x="126" y="25" font-family="Times New Roman,serif" font-size="7.3" text-anchor="middle" font-style="italic">Separate evidence from Module 3</text>
 <rect x="3" y="34" width="246" height="64" fill="none" stroke="black" stroke-width="0.7" stroke-dasharray="3 2"/>
-<text x="126" y="45" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">Baseline Adjustments</text>
+<text x="126" y="45" font-family="Times New Roman,serif" font-size="8.4" text-anchor="middle" font-weight="bold">SentiWordNet Adjustments</text>
 <rect x="14" y="56" width="64" height="30" fill="rgb(255,255,255)" stroke="black" stroke-width="0.7" />
 <text x="46.0" y="69.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Domain</text>
 <text x="46.0" y="77.80000000000001" font-family="Times New Roman,serif" font-size="8" text-anchor="middle" >Preference</text>

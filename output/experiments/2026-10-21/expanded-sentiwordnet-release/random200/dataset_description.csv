@@ -1,0 +1,2 @@
+﻿dataset_role,submitted,valid,unique_supplied_texts,mean_characters,gold_sentiment_labels,compiler_extracted_opinions,hybrid_extracted_opinions
+random_real,200,200,200,194.915,not provided; no accuracy or F1 inferred,516,626

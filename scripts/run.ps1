@@ -26,6 +26,13 @@ $taskProjectPython = Join-Path $taskRoot '.venv\Scripts\python.exe'
 if (Test-Path -LiteralPath $taskProjectPython) {
     $taskPython = $taskProjectPython
 }
+if ($taskModule -eq 'hotel_compiler.web') {
+    $taskNeuralPython = Join-Path $taskRoot '.venv-neural\Scripts\python.exe'
+    $taskNeuralModel = Join-Path $taskRoot 'output\neural\2026-10-23-webis-v1\models\finetuned\recovery_manifest.json'
+    if ((Test-Path -LiteralPath $taskNeuralPython) -and (Test-Path -LiteralPath $taskNeuralModel)) {
+        $taskPython = $taskNeuralPython
+    }
+}
 $taskInstalledPython = Get-Command python -ErrorAction SilentlyContinue
 if (-not $taskPython -and $taskInstalledPython -and $taskInstalledPython.Source -notlike '*\WindowsApps\*') {
     $taskPython = $taskInstalledPython.Source

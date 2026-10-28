@@ -108,6 +108,29 @@ class HybridWebTests(unittest.TestCase):
         self.assertEqual(self.request("DELETE", f"/api/batches/{batch['batch_id']}")[0], 200)
         self.assertEqual(self.request("GET", f"/api/batches/{batch['batch_id']}")[0], 404)
 
+    def test_expanded_compiler_and_original_profile_are_separate(self):
+        status,body=self.analyze('I loved the breakfast.','sentiwordnet')
+        result=json.loads(body)
+        self.assertEqual(status,200)
+        self.assertEqual(result['compiler_profile'],'expanded')
+        self.assertEqual(result['records'][0]['opinion_term'],'verb_love')
+        status,body=self.analyze('I loved the breakfast.','sentiwordnet_original')
+        result=json.loads(body)
+        self.assertEqual(status,200)
+        self.assertEqual(result['compiler_profile'],'original')
+        self.assertFalse(result['records'])
+
+    def test_real_demo_serves_only_the_review_input(self):
+        from pathlib import Path
+        path=Path(__file__).resolve().parents[1]/'output/datasets/booking_cleaned/booking_italy_cleaned_demo_500.csv'
+        if not path.exists(): self.skipTest('Optional prepared real demo not installed.')
+        status,body=self.request('GET','/api/real-demo.csv')
+        self.assertEqual(status,200)
+        self.assertEqual(body,path.read_bytes())
+        rows=list(csv.DictReader(StringIO(body.decode('utf-8-sig'))))
+        self.assertEqual(len(rows),500)
+        self.assertEqual(list(rows[0]),['sr.no','review'])
+
     def test_invalid_methods_and_missing_dependencies_are_visible_and_preserve_batch(self):
         source = b"sr.no,review\n1,The staff were helpful.\n"
         batch = json.loads(self.upload(source, "sentiwordnet")[1])
